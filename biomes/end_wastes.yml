@@ -1,0 +1,7 @@
+id: END_WASTES
+type: BIOME
+extends: [ TERRAIN, ENVIRONMENT ]
+vanilla: minecraft:end_highlands
+
+palette:
+  - BLOCK:minecraft:end_stone: 319

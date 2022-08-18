@@ -1,0 +1,47 @@
+id: END
+version: 0.1.0
+author: Aureus
+
+generator: NOISE_3D
+
+addons:
+  biome-provider-pipeline: "1.+"
+  biome-provider-single: "1.+"
+  biome-provider-extrusion: "1.+"
+  chunk-generator-noise-3d: "1.+"
+  config-biome: "1.+"
+  config-flora: "1.+"
+  config-noise-function: "1.+"
+  config-ore: "1.+"
+  config-palette: "1.+"
+  config-distributors: "1.+"
+  config-locators: "1.+"
+  config-feature: "1.+"
+  structure-terrascript-loader: "1.+"
+  structure-sponge-loader: "1.+"
+  language-yaml: "1.+"
+  generation-stage-feature: "1.+"
+  structure-function-check-noise-3d: "1.+"
+  palette-block-shortcut: "1.+"
+  structure-block-shortcut: "1.+"
+  terrascript-function-sampler: "1.+"
+
+biomes:
+  type: SINGLE
+  biome: END_WASTES
+  
+functions:
+  lerp:
+    # Linear interpolation between two values
+    arguments:
+      - t
+      - at # Value of t where output = a
+      - a
+      - bt # Value of t where output = b
+      - b
+      # Values of t between at and bt will be interpolated
+    expression: |
+      if(at<bt,
+        if(t<=at,a,if(t>=bt,b,a*(t-bt)/(at-bt)+b*(t-at)/(bt-at))),
+        if(t>=at,a,if(t<=bt,b,a*(t-bt)/(at-bt)+b*(t-at)/(bt-at)))
+      )
