@@ -1,0 +1,8 @@
+num height = 7+randomInt(7);
+
+for (num y = -5+randomInt(3); y <= height ; y = y + 1) {
+    block(0, y, 0, "minecraft:obsidian");
+    block(0, y, 1, "minecraft:obsidian");
+    block(1, y, 0, "minecraft:obsidian");
+    block(1, y, 1, "minecraft:obsidian");
+}

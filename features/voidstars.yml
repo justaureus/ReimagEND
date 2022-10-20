@@ -1,0 +1,44 @@
+id: VOIDSTARS
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 4
+      padding: 3
+      salt: 7115
+    - type: SAMPLER
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        frequency: 0.06
+        salt: 6541
+      threshold: -0.7
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 0
+        max: 319
+      amount: 1
+      salt: 2913
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - voidstar_a: 1
+    - voidstar_b: 1
+    - voidstar_c: 1
+    - voidstar_d: 1
+    - voidstar_e: 1
+    - voidstar_f: 1
+    - voidstar_g: 1

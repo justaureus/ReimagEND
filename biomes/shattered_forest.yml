@@ -1,0 +1,13 @@
+id: SHATTERED_FOREST
+type: BIOME
+extends: [ TERRAIN, ENVIRONMENT ]
+vanilla: minecraft:end_highlands
+
+palette:
+  - BLOCK:minecraft:end_stone: 319
+
+features:
+  preprocessors:
+    - SHATTERED_GROUND
+  trees:
+    - SHATTERED_TREES

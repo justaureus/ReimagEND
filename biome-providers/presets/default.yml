@@ -1,0 +1,15 @@
+biomes:
+  type: PIPELINE
+  resolution: 2
+  initial-size: 10
+  blend:
+    sampler:
+      type: CONSTANT
+  pipeline:
+
+    # End Only
+    source: $biome-providers/sources/end.yml:source
+
+    stages:
+      - << biome-providers/stages/expand.yml:stages
+      - << biome-providers/stages/smooth.yml:stages

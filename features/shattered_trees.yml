@@ -1,0 +1,29 @@
+id: SHATTERED_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 5
+  padding: 7
+  salt: 4678
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - small_shattered_tree: 3
+    - large_shattered_tree: 1
