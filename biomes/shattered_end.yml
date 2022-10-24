@@ -4,10 +4,8 @@ extends: [ TERRAIN, ENVIRONMENT ]
 vanilla: minecraft:end_highlands
 
 palette:
-  - BLOCK:minecraft:end_stone: 319
+  - SHATTERED_GROUND: 319
 
 features:
-  preprocessors:
-    - SHATTERED_GROUND
   trees:
     - SHATTERED_PILLARS

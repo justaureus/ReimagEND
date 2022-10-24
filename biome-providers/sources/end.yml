@@ -4,6 +4,8 @@ source:
     - END_WASTES: 1
     - SHATTERED_END: 1
     - SHATTERED_FOREST: 1
+    - VOID: 1
+    - STARFIELD: 1
   sampler:
     dimensions: 2
     type: LINEAR
