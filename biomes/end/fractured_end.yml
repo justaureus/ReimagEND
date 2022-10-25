@@ -14,12 +14,12 @@ terrain:
             simplex3(x*5, y*flatness, z*5)
           ),
           lerp(y, min, 0, min+taper,
-            simplex3(x/5, (y-undercarriageTranslate)*flatness, z/5) * undercarriageMask(x, y/2, z) * 1.3
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
           )
         )
       )
     variables:
-      threshold: $configuration.yml:island-threshold
+      threshold: 0.6
       max: $configuration.yml:island-max-height
       min: $configuration.yml:island-min-height
       taper: $configuration.yml:island-taper

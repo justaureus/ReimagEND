@@ -4,8 +4,8 @@ source:
     - END_WASTES: 1
     - SHATTERED_END: 1
     - SHATTERED_FOREST: 1
-    - WARPED_BARRENS: 1
     - CHORUVE_FOREST: 1
+    - WARPED_BARRENS: 1
     - FRACTURED_END: 1
     - STARFIELD: 1
     - VOID: 1

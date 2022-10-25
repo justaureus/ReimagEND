@@ -8,6 +8,7 @@ features:
     - SNOW
   trees:
     - SPRUCE_TREES
+    - CLOUDS
   flora:
     - GRASS
   postprocessors:

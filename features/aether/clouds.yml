@@ -1,0 +1,37 @@
+id: CLOUDS
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 8
+      padding: 13
+      salt: 8769
+    - type: SAMPLER
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        frequency: 0.1
+        salt: 3268
+      threshold: -0.1
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 175
+        max: 225
+      amount: 1
+      salt: 2913
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: cloud

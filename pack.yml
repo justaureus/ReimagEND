@@ -86,22 +86,12 @@ stages:
   - id: postprocessors
     type: FEATURE
 
+functions:
+  "<<":
+    - math/functions/terrace.yml:functions
+    - math/functions/lerp.yml:functions
+    - math/functions/maskSmooth.yml:functions
+
 samplers:
   "<<":
     - math/samplers/simplex.yml:samplers
-
-functions:
-  lerp:
-    # Linear interpolation between two values
-    arguments:
-      - t
-      - at # Value of t where output = a
-      - a
-      - bt # Value of t where output = b
-      - b
-      # Values of t between at and bt will be interpolated
-    expression: |
-      if(at<bt,
-        if(t<=at,a,if(t>=bt,b,a*(t-bt)/(at-bt)+b*(t-at)/(bt-at))),
-        if(t>=at,a,if(t<=bt,b,a*(t-bt)/(at-bt)+b*(t-at)/(bt-at)))
-      )

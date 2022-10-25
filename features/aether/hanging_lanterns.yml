@@ -13,7 +13,7 @@ locator:
     - type: PATTERN
       range: &range
         min: 21
-        max: 319
+        max: 225
       pattern:
         type: MATCH
         block: minecraft:stone
@@ -27,5 +27,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: 
-    - hanging_lantern: 1
+  structures: hanging_lantern

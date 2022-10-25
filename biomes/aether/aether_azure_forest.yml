@@ -7,11 +7,3 @@ colors:
   grass: 0x3ccfad
   foliage: 0x3c79cf
 
-features:
-  postprocessors:
-    - HANGING_LANTERNS
-  flora:
-    - GRASS
-  trees:
-    - DENSE_TEMPERATE_TREE_PATCHES
-

@@ -27,7 +27,6 @@ layers:
     - minecraft:stone: 10
     - minecraft:cobblestone: 5
     - minecraft:mossy_cobblestone: 3
-    - minecraft:moss_block: 2
     layers: 1
     sampler:
       type: DOMAIN_WARP

@@ -22,7 +22,7 @@ locator:
     - type: RANDOM
       height: &range
         min: 0
-        max: 319
+        max: 225
       amount: 1
       salt: 2913
     - type: PATTERN

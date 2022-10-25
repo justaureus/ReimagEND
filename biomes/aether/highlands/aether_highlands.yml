@@ -17,10 +17,10 @@ features:
     - SNOW
   trees:
     - SPRUCE_BUSH_PATCHES
+    - CLOUDS
   flora:
     - GRASS
     - FERNS
   preprocessors:
     - HANGING_LANTERNS
-  landforms:
-    - MOSSY_BOULDERS
+  

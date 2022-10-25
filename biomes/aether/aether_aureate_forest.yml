@@ -7,12 +7,3 @@ colors:
   grass: 0xFFD700
   foliage: 0xFFD700
 
-features:
-  postprocessors:
-    - HANGING_LANTERNS
-  flora:
-    - GRASS
-    - MIXED_FLOWER_COVER
-  trees:
-    - DENSE_TEMPERATE_TREE_PATCHES
-
