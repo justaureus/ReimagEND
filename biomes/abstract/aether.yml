@@ -1,0 +1,9 @@
+id: AETHER
+type: BIOME
+abstract: true
+
+colors:
+  fog: 0xc8e8e7
+  water: 0xbadfe6
+  water-fog: 0xbadfe6
+  sky: 0xc8e8e7

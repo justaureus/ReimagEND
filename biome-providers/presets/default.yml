@@ -8,7 +8,14 @@ biomes:
   pipeline:
 
     # End Only
-    source: $biome-providers/sources/end.yml:source
+    #source: $biome-providers/sources/end.yml:source
+
+    #Aether Only
+    #source: $biome-providers/sources/aether.yml:source
+
+    #Both End and Aether
+    source: $biome-providers/sources/reimagEND.yml:source
+
 
     stages:
       - << biome-providers/stages/expand.yml:stages

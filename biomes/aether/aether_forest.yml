@@ -1,0 +1,14 @@
+id: AETHER_FOREST
+type: BIOME
+extends: [ AETHER, AETHER_PLAINS, TERRAIN ]
+vanilla: minecraft:forest
+
+features:
+  postprocessors:
+    - HANGING_LANTERNS
+  flora:
+    - GRASS
+    - MIXED_FLOWER_COVER
+  trees:
+    - DENSE_TEMPERATE_TREE_PATCHES
+

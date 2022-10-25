@@ -9,6 +9,13 @@ source:
     - FRACTURED_END: 1
     - STARFIELD: 1
     - VOID: 1
+    - AETHER_PLAINS: 1
+    - AETHER_FOREST: 1
+    - AETHER_AUREATE_FOREST: 1
+    - AETHER_AZURE_FOREST: 1
+    - AETHER_HIGHLANDS: 1
+    - AETHER_HIGHLANDS_FOREST: 1
+
   sampler:
     dimensions: 2
     type: LINEAR

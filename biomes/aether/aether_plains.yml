@@ -1,0 +1,22 @@
+id: AETHER_PLAINS
+type: BIOME
+extends: [ AETHER, TERRAIN ]
+vanilla: minecraft:plains
+
+colors:
+  grass: 0xd2de85
+  foliage: 0xd2de85
+
+palette:
+  - AETHER_GRASS: 319
+
+features:
+  trees:
+    - OAK_BUSH_PATCHES
+  flora:
+    - GRASS
+    - MIXED_FLOWER_COVER
+  preprocessors:
+    - HANGING_LANTERNS
+  landforms:
+    - MOSSY_BOULDERS
