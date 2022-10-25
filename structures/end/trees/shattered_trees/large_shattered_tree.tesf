@@ -2,10 +2,10 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-num trunkHeight = 4+randomInt(4);
+num trunkHeight = 4+randomInt(8);
 str trunkBlock = "minecraft:obsidian";
 str altTrunkBlock = "minecraft:black_concrete";
-num trunkWidth = 1;
+num trunkWidth = 2;
 str rootBlockX = "minecraft:obsidian";
 str rootBlockZ = "minecraft:obsidian";
 str altRootBlock = "minecraft:black_concrete";
@@ -99,7 +99,7 @@ for (num i = 0; i < trunkHeight; i = i + 1) {
             for (num l = 0; l <= branchLength; l = l + 1) {
                 placeBranchBlock = branchBlock;
                 if (randomInt(2) == 0) placeBranchBlock = altSideBranchBlock;
-                block(l*dx+ox, l*dy+oy, l*dz+oz, "minecraft:stone");
+                block(l*dx+ox, l*dy+oy, l*dz+oz, branchBlock);
             }
             // Rotate angle of next branch
             branchAngle = branchAngle + goldenAngle;
@@ -166,7 +166,7 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     // Rotate angle of next branch
     branchAngle = branchAngle + goldenAngle;
     // Generate leaf cluster at the end of the branch
-    num radius = topBranchLeafRadiusMin-randomInt(2);
+    num radius = topBranchLeafRadiusMin-randomInt(3);
     num radiusSquared = pow(radius, 2);
     // Leaf cluster origin (end of branch)
     num lox = ox+branchLength*dx;

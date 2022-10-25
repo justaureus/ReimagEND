@@ -1,0 +1,48 @@
+id: ENDSHIP
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 50
+      padding: 50
+      salt: 5715
+    - type: SAMPLER
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        frequency: 0.06
+        salt: 6541
+      threshold: -0.7
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 200
+        max: 250
+      amount: 1
+      salt: 3678
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 3
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: -3
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: 
+    - endship: 1

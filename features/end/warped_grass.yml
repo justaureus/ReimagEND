@@ -1,4 +1,4 @@
-id: SHATTERED_GROUND
+id: WARPED_GRASS
 type: FEATURE
 
 distributor:
@@ -6,7 +6,7 @@ distributor:
   sampler:
     type: POSITIVE_WHITE_NOISE
     salt: 4689
-  threshold: 0.7
+  threshold: 0.1
 
 locator:
   type: PATTERN
@@ -18,12 +18,14 @@ locator:
     patterns:
       - type: MATCH
         block: minecraft:end_stone
-        offset: 0
+        offset: -1
       - type: MATCH_AIR
-        offset: 1
+        offset: 0
 
 
 structures:
   distribution:
     type: WHITE_NOISE
-  structures: BLOCK:minecraft:air
+  structures: 
+    - BLOCK:minecraft:nether_sprouts: 5
+    - BLOCK:minecraft:warped_roots: 2

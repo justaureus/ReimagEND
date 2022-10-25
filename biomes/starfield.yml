@@ -1,9 +1,0 @@
-id: STARFIELD
-type: BIOME
-extends: [ VOID, ENVIRONMENT ]
-vanilla: minecraft:end_highlands
-
-features:
-  trees:
-    - VOIDSTARS
-

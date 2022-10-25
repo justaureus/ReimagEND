@@ -1,0 +1,15 @@
+id: AETHER_HIGHLANDS_FOREST
+type: BIOME
+extends: [ AETHER, AETHER_HIGHLANDS, TERRAIN ]
+vanilla: minecraft:snowy_taiga
+
+features:
+  slabs:
+    - SNOW
+  trees:
+    - SPRUCE_TREES
+  flora:
+    - GRASS
+  postprocessors:
+    - TREE_SNOW
+    - HANGING_LANTERNS
