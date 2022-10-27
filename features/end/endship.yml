@@ -1,13 +1,13 @@
-id: VOIDSTARS
+id: ENDSHIP
 type: FEATURE
 
 distributor:
   type: AND
   distributors:
     - type: PADDED_GRID
-      width: 13
-      padding: 15
-      salt: 7115
+      width: 50
+      padding: 50
+      salt: 5715
     - type: SAMPLER
       sampler:
         type: CELLULAR
@@ -21,24 +21,28 @@ locator:
   locators:
     - type: RANDOM
       height: &range
-        min: 0
-        max: 225
+        min: 200
+        max: 250
       amount: 1
-      salt: 2913
+      salt: 3678
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 3
     - type: PATTERN
       range: *range
       pattern:
         type: MATCH_AIR
         offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: -3
 
 structures:
   distribution:
-    type: WHITE_NOISE
+    type: CONSTANT
   structures: 
-    - voidstar_a: 1
-    - voidstar_b: 1
-    - voidstar_c: 1
-    - voidstar_d: 1
-    - voidstar_e: 1
-    - voidstar_f: 1
-    - voidstar_g: 1
+    - endship: 1

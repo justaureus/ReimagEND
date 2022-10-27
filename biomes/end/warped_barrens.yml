@@ -1,0 +1,13 @@
+id: WARPED_BARRENS
+type: BIOME
+extends: [ TERRAIN, END ]
+vanilla: minecraft:end_highlands
+
+palette:
+  - BLOCK:minecraft:end_stone: 319
+
+features:
+  flora:
+    - WARPED_GRASS
+  trees:
+    - WARPED_MUSHROOMS

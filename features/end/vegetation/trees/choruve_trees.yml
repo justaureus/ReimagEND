@@ -1,0 +1,28 @@
+id: CHORUVE_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 18
+  padding: 14
+  salt: 4678
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - small_choruve_tree: 3

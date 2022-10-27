@@ -1,0 +1,19 @@
+id: AETHER_AZURE_FOREST
+type: BIOME
+extends: [ AETHER, AETHER_FOREST, TERRAIN ]
+vanilla: minecraft:forest
+
+colors:
+  grass: 0x3ccfad
+  foliage: 0x3c79cf
+
+features:
+  postprocessors:
+    - HANGING_LANTERNS
+  flora:
+    - GRASS
+    - BLUE_FLOWERS
+  trees:
+    - DENSE_TEMPERATE_TREE_PATCHES
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES

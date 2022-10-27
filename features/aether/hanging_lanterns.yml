@@ -1,0 +1,30 @@
+id: HANGING_LANTERNS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 18
+  padding: 12
+  salt: 6578
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 21
+        max: 225
+      pattern:
+        type: MATCH
+        block: minecraft:stone
+        offset: 1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: 0
+structures:
+  distribution:
+    type: CONSTANT
+  structures: hanging_lantern

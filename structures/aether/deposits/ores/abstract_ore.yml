@@ -1,0 +1,9 @@
+id: ABSTRACT_ORE
+type: ORE
+abstract: true
+
+replace:
+  - minecraft:stone
+  - minecraft:cobblestone
+  - minecraft:mossy_cobblestone
+

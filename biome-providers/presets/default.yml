@@ -1,15 +1,31 @@
 biomes:
   type: PIPELINE
-  resolution: 2
-  initial-size: 10
+  resolution: 4
+  initial-size: 15
   blend:
     sampler:
       type: CONSTANT
   pipeline:
 
-    # End Only
-    source: $biome-providers/sources/end.yml:source
+    # End Only (Don't Use. WIP)
+    #source: $biome-providers/sources/end.yml:source
+
+    #Aether Only (Don't Use. WIP)
+    #source: $biome-providers/sources/aether.yml:source
+
+    #Both End and Aether
+    source: $biome-providers/sources/reimagEND.yml:source
+
 
     stages:
+      - << biome-providers/stages/end_distribution.yml:stages 
+      - << biome-providers/stages/aether_distribution.yml:stages 
       - << biome-providers/stages/expand.yml:stages
+      - << biome-providers/stages/expand.yml:stages
+      - << biome-providers/stages/smooth.yml:stages
+      - << biome-providers/stages/smooth.yml:stages
+      - << biome-providers/stages/smooth.yml:stages
+      - << biome-providers/stages/expand.yml:stages
+      - << biome-providers/stages/smooth.yml:stages
+      - << biome-providers/stages/smooth.yml:stages
       - << biome-providers/stages/smooth.yml:stages
