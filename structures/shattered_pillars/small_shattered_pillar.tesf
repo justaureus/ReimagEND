@@ -1,8 +1,0 @@
-num height = 7+randomInt(5);
-
-for (num y = -5+randomInt(3); y <= height ; y = y + 1) {
-    block(0, y, 0, "minecraft:obsidian");
-}
-
-if (randomInt(7) == 0) entity(0, height+2, 0, "minecraft:end_crystal");
-

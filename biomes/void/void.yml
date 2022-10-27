@@ -1,0 +1,51 @@
+id: VOID
+type: BIOME
+extends: [ END ]
+vanilla: minecraft:end_highlands
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression: |
+      -1+threshold-
+      lerp(y, max, 0, max-taper,
+        max(
+          lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
+            simplex3(x, y*flatness, z)
+          ),
+          lerp(y, min, 0, min+taper,
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          )
+        )
+      )
+    variables:
+      threshold: $configuration.yml:island-threshold
+      max: $configuration.yml:island-max-height
+      min: $configuration.yml:island-min-height
+      taper: $configuration.yml:island-taper
+      flatness: $configuration.yml:island-flatness
+      undercarriageTranslate: $configuration.yml:island-undercarriage-translate
+    samplers:
+      simplex3:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.01 / ${configuration.yml:island-scale}
+      undercarriageMask:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: RIDGED
+          octaves: 3
+          gain: 1
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.005 / ${configuration.yml:island-scale}
+
+palette:
+  - BLOCK:minecraft:end_stone: 319
+

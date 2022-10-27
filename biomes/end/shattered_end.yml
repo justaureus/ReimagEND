@@ -1,0 +1,11 @@
+id: SHATTERED_END
+type: BIOME
+extends: [ TERRAIN, END ]
+vanilla: minecraft:end_highlands
+
+palette:
+  - SHATTERED_GROUND: 319
+
+features:
+  trees:
+    - SHATTERED_PILLARS

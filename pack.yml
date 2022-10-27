@@ -1,6 +1,6 @@
 id: END
-version: 0.1.0
-author: Aureus
+version: 0.5.0
+author: "Aureus, RogueShade"
 
 generator: NOISE_3D
 
@@ -84,19 +84,20 @@ stages:
   # Used to generate features that must come after all other features, such as snow on trees.
   - id: postprocessors
     type: FEATURE
-    
+
 functions:
-  lerp:
-    # Linear interpolation between two values
-    arguments:
-      - t
-      - at # Value of t where output = a
-      - a
-      - bt # Value of t where output = b
-      - b
-      # Values of t between at and bt will be interpolated
-    expression: |
-      if(at<bt,
-        if(t<=at,a,if(t>=bt,b,a*(t-bt)/(at-bt)+b*(t-at)/(bt-at))),
-        if(t>=at,a,if(t<=bt,b,a*(t-bt)/(at-bt)+b*(t-at)/(bt-at)))
-      )
+  "<<":
+    - math/functions/terrace.yml:functions
+    - math/functions/lerp.yml:functions
+    - math/functions/maskSmooth.yml:functions
+
+samplers:
+  "<<":
+    - math/samplers/simplex.yml:samplers
+
+blend:
+  palette:
+    resolution: 2
+    amplitude: 2
+    sampler:
+      type: WHITE_NOISE

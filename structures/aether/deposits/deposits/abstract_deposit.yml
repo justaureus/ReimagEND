@@ -1,0 +1,9 @@
+id: ABSTRACT_DEPOSIT
+type: ORE
+abstract: true
+
+replace:
+  - minecraft:stone
+  - minecraft:cobblestone
+  - minecraft:mossy_cobblestone
+size: 32
