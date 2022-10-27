@@ -1,0 +1,19 @@
+source:
+  type: SAMPLER
+  biomes:
+    - END_WASTES: 1
+    - SHATTERED_END: 1
+    - SHATTERED_FOREST: 1
+  sampler:
+    dimensions: 2
+    type: LINEAR
+    min: -1
+    max: -0.65
+    sampler:
+      type: FBM
+      lacunarity: 3
+      gain: 0.4
+      octaves: 4
+      sampler:
+        type: CELLULAR
+        frequency: 1 / 100
