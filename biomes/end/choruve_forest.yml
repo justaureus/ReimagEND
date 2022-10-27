@@ -7,5 +7,7 @@ palette:
   - BLOCK:minecraft:end_stone: 319
 
 features:
+  flora:
+    - CHORUVE_GRASS
   trees:
     - CHORUVE_TREES

@@ -4,8 +4,6 @@ extends: [ AETHER, TERRAIN ]
 vanilla: minecraft:snowy_plains
 
 colors:
-  water: 0x62529E
-  water-fog: 0x62529E
   grass: 0x9edbca
   foliage: 0x9edbca
 
@@ -17,10 +15,13 @@ features:
     - SNOW
   trees:
     - SPRUCE_BUSH_PATCHES
-    - CLOUDS
+    - SPARSE_SPRUCE_TREES
   flora:
     - GRASS
     - FERNS
-  preprocessors:
+    - SWEET_BERRY_BUSH_PATCHES
+  postprocessors:
+    - TREE_SNOW
     - HANGING_LANTERNS
-  
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES

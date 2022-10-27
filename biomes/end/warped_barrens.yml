@@ -7,7 +7,7 @@ palette:
   - BLOCK:minecraft:end_stone: 319
 
 features:
-  preprocessors:
+  flora:
     - WARPED_GRASS
   trees:
     - WARPED_MUSHROOMS

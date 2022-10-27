@@ -13,10 +13,10 @@ palette:
 features:
   trees:
     - OAK_BUSH_PATCHES
-    - CLOUDS
   flora:
     - GRASS
     - MIXED_FLOWER_COVER
-  preprocessors:
+  postprocessors:
     - HANGING_LANTERNS
-  
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES  

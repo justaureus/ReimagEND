@@ -68,7 +68,7 @@ iron-high:
   averageCountPerChunk: 90
   salt: 2031
   range:
-    min: 104
+    min: 63
     max: 128
 
 copper:

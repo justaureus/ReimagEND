@@ -32,8 +32,8 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH
-        block: minecraft:grass_block
+        type: MATCH_SET
+        blocks: $features/aether/vegetation/meta.yml:plantable-blocks
         offset: -1
 
 structures:
@@ -53,9 +53,9 @@ structures:
     - BLOCK:minecraft:allium: 3
     - BLOCK:minecraft:red_tulip: 3
     - BLOCK:minecraft:orange_tulip: 3
-    - BLOCK:minecraft:lilac: 1
-    - BLOCK:minecraft:peony: 1
-    - BLOCK:minecraft:rose_bush: 1
+    - lilac: 1
+    - peony: 1
+    - rose_bush: 1
     - BLOCK:minecraft:dandelion: 3
     - BLOCK:minecraft:oxeye_daisy: 3
     - BLOCK:minecraft:azure_bluet: 1

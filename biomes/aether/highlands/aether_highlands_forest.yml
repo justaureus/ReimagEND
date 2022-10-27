@@ -8,9 +8,12 @@ features:
     - SNOW
   trees:
     - SPRUCE_TREES
-    - CLOUDS
   flora:
     - GRASS
+    - SPRUCE_BUSH_PATCHES
+    - SWEET_BERRY_BUSH_PATCHES
   postprocessors:
     - TREE_SNOW
     - HANGING_LANTERNS
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES

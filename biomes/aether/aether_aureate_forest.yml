@@ -5,5 +5,15 @@ vanilla: minecraft:forest
 
 colors:
   grass: 0xFFD700
-  foliage: 0xFFD700
+  foliage: 0xffe975
 
+features:
+  postprocessors:
+    - HANGING_LANTERNS
+  flora:
+    - GRASS
+    - YELLOW_FLOWERS
+  trees:
+    - DENSE_TEMPERATE_TREE_PATCHES
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES

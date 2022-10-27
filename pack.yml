@@ -1,5 +1,5 @@
 id: END
-version: 0.4.0
+version: 0.5.0
 author: "Aureus, RogueShade"
 
 generator: NOISE_3D
@@ -31,7 +31,6 @@ biomes: $biome-providers/presets/default.yml:biomes
 
 # Single biome - to change the single biome to use, check the configuration file.
 #biomes: $biome-providers/presets/single.yml:biomes
-
 
 stages:
   # Used to generate lava at the bottom of the world.
@@ -95,3 +94,10 @@ functions:
 samplers:
   "<<":
     - math/samplers/simplex.yml:samplers
+
+blend:
+  palette:
+    resolution: 2
+    amplitude: 2
+    sampler:
+      type: WHITE_NOISE

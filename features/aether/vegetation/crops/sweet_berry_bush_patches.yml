@@ -1,11 +1,11 @@
-id: SPRUCE_TREES
+id: SWEET_BERRY_BUSH_PATCHES
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 6
+  width: 30
   padding: 2
-  salt: 9591
+  salt: 1510
 
 locator:
   type: AND
@@ -13,23 +13,15 @@ locator:
     - type: TOP
       range: &range
         min: 64
-        max: 319
+        max: 180
     - type: PATTERN
       range: *range
       pattern:
         type: MATCH_SET
         blocks: $features/aether/vegetation/meta.yml:plantable-blocks
         offset: -1
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_SET
-        blocks:
-          - minecraft:snow
-          - minecraft:air
-        offset: 0
 
 structures:
   distribution:
     type: CONSTANT
-  structures: spruce_tree_procedural
+  structures: sweet_berry_bush_patch
