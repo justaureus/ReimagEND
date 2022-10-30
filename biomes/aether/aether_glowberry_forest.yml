@@ -1,11 +1,11 @@
-id: AETHER_AUREATE_FOREST
+id: AETHER_GLOWBERRY_FOREST
 type: BIOME
 extends: [ AETHER, AETHER_FOREST, TERRAIN ]
 vanilla: minecraft:forest
 
 colors:
-  grass: 0xFFD700
-  foliage: 0xffe975
+  grass: 0x779234
+  foliage: 0x779234
 
 features:
   postprocessors:
@@ -14,6 +14,7 @@ features:
     - GRASS
     - YELLOW_FLOWERS
   trees:
-    - DENSE_TEMPERATE_TREE_PATCHES
+    - GLOWBERRY_TREES
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
+    #- CLOUDS

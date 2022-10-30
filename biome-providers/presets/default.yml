@@ -7,10 +7,10 @@ biomes:
       type: CONSTANT
   pipeline:
 
-    # End Only (Don't Use. WIP)
+    # End Only 
     #source: $biome-providers/sources/end.yml:source
 
-    #Aether Only (Don't Use. WIP)
+    #Aether Only
     #source: $biome-providers/sources/aether.yml:source
 
     #Both End and Aether

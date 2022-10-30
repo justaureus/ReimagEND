@@ -5,16 +5,16 @@ distributor:
   type: AND
   distributors:
     - type: PADDED_GRID
-      width: 13
-      padding: 15
+      width: 8
+      padding: 6
       salt: 7115
     - type: SAMPLER
       sampler:
         type: CELLULAR
         return: CellValue
-        frequency: 0.06
+        frequency: 0.05
         salt: 6541
-      threshold: -0.7
+      threshold: -0.4
 
 locator:
   type: AND

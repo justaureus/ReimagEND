@@ -1,11 +1,11 @@
-id: SPRUCE_TREES
+id: AZURE_TREES
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 6
-  padding: 2
-  salt: 9591
+  width: 9
+  padding: 10
+  salt: 5468
 
 locator:
   type: AND
@@ -32,4 +32,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: spruce_tree_procedural
+  structures: azure_tree

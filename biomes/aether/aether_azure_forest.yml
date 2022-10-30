@@ -14,6 +14,7 @@ features:
     - GRASS
     - BLUE_FLOWERS
   trees:
-    - DENSE_TEMPERATE_TREE_PATCHES
+    - AZURE_TREES
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
+    #- CLOUDS

@@ -14,7 +14,7 @@ stages:
     default-to:
       - AETHER_PLAINS: 1
       - AETHER_FOREST: 1
-      - AETHER_AUREATE_FOREST: 1
+      - AETHER_GLOWBERRY_FOREST: 1
       - AETHER_AZURE_FOREST: 1
     to: 
       aether_highlands:

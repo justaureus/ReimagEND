@@ -13,3 +13,4 @@ features:
     - DENSE_TEMPERATE_TREE_PATCHES
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
+    #- CLOUDS
