@@ -17,3 +17,4 @@ features:
     - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
+    #- CLOUDS
