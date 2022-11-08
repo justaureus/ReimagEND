@@ -16,6 +16,7 @@ stages:
       - WARPED_BARRENS: 1
       - CHORUVE_FOREST: 1
       - JAGGED_END: 1
+      - DARK_END: 1
     to: 
       shattered_end:
         - SHATTERED_END: 2
