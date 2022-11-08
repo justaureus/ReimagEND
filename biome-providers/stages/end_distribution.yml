@@ -15,7 +15,7 @@ stages:
       - END_WASTES: 1
       - WARPED_BARRENS: 1
       - CHORUVE_FOREST: 1
-      - FRACTURED_END: 1
+      - JAGGED_END: 1
     to: 
       shattered_end:
         - SHATTERED_END: 2

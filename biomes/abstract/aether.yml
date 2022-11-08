@@ -1,7 +1,7 @@
 id: AETHER
 type: BIOME
 abstract: true
-extends: [ ORES_DEFAULT, DEPOSITS_DEFAULT ]
+extends: [ ORES_DEFAULT, DEPOSITS_DEFAULT, CARVING_LAND ]
 
 # Overworld Atmosphere
 #colors:
@@ -14,3 +14,8 @@ extends: [ ORES_DEFAULT, DEPOSITS_DEFAULT ]
 colors:
   fog: 0x000000
   sky: 0x000000
+
+climate:
+  precipitation: none
+  temperature: 0.5
+  downfall: 0.5

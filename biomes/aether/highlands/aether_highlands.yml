@@ -1,6 +1,6 @@
 id: AETHER_HIGHLANDS
 type: BIOME
-extends: [ AETHER, TERRAIN ]
+extends: [ AETHER, EQ_DEFAULT]
 vanilla: minecraft:snowy_plains
 
 colors:
@@ -16,6 +16,7 @@ features:
   trees:
     - SPRUCE_BUSH_PATCHES
     - SPARSE_SPRUCE_TREES
+    - BIG_UPWARD_ICE_SPIKES
   flora:
     - GRASS
     - FERNS
@@ -23,6 +24,7 @@ features:
   postprocessors:
     - TREE_SNOW
     - HANGING_LANTERNS
+    - CEILING_ICICLES
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
     #- CLOUDS

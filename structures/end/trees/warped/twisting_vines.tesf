@@ -1,0 +1,7 @@
+num length = 2+randomInt(5);
+
+for (num y = 0; y < length; y = y + 1) {
+    block(0, y, 0, "minecraft:twisting_vines_plant");
+}
+
+block(0, length, 0, "minecraft:twisting_vines");

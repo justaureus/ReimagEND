@@ -1,14 +1,12 @@
-id: VOID
+id: EQ_DEFAULT
 type: BIOME
-extends: [ END ]
-vanilla: minecraft:the_void
-color: 0x000000
+abstract: true
 
 terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold-
+      -1+threshold+
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
@@ -35,7 +33,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.01 / ${configuration.yml:island-scale}
+            frequency: 0.002 / ${configuration.yml:island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -46,7 +44,3 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${configuration.yml:island-scale}
-
-palette:
-  - BLOCK:minecraft:end_stone: 319
-

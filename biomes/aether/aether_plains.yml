@@ -1,6 +1,6 @@
 id: AETHER_PLAINS
 type: BIOME
-extends: [ AETHER, TERRAIN ]
+extends: [ AETHER, EQ_DEFAULT ]
 vanilla: minecraft:plains
 
 colors:

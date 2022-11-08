@@ -1,0 +1,35 @@
+id: OBSIDIAN_SPIKES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 7
+  padding: 9
+  salt: 3247
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 60
+        max: 255
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -1
+
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures:
+    - obsidian_spike: 1
+  

@@ -1,7 +1,7 @@
 id: STARFIELD
 type: BIOME
 extends: [ VOID, END ]
-vanilla: minecraft:end_highlands
+vanilla: minecraft:the_void
 
 features:
   trees:

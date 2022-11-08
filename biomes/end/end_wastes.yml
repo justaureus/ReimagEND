@@ -1,7 +1,8 @@
 id: END_WASTES
 type: BIOME
-extends: [ TERRAIN, END ]
+extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
+color: 0xFFFBC9
 
 palette:
   - BLOCK:minecraft:end_stone: 319

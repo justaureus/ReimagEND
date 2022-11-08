@@ -13,11 +13,16 @@ stages:
     default-from: aether
     default-to:
       - AETHER_PLAINS: 1
+      - AETHER_BUMPY: 1
       - AETHER_FOREST: 1
-      - AETHER_GLOWBERRY_FOREST: 1
+      - AETHER_LUSH_FOREST: 1
       - AETHER_AZURE_FOREST: 1
+      - AETHER_DRIFTLANDS: 1
+      - AETHER_LAVENDER_DRIFTLANDS: 1
+      - AETHER_CRIMSON_HEIGHTS: 1
     to: 
       aether_highlands:
       - AETHER_HIGHLANDS: 2
       - AETHER_HIGHLANDS_FOREST: 1
+
         

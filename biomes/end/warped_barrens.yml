@@ -1,6 +1,6 @@
 id: WARPED_BARRENS
 type: BIOME
-extends: [ TERRAIN, END ]
+extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
 
 palette:
