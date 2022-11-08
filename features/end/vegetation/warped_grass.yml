@@ -29,3 +29,4 @@ structures:
   structures: 
     - BLOCK:minecraft:nether_sprouts: 5
     - BLOCK:minecraft:warped_roots: 2
+    - twisting_vines: 2

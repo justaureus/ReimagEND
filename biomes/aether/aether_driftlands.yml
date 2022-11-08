@@ -1,6 +1,7 @@
-id: TERRAIN
+id: AETHER_DRIFTLANDS
 type: BIOME
-abstract: true
+extends: [ AETHER ]
+vanilla: minecraft:plains
 
 terrain:
   sampler:
@@ -22,7 +23,7 @@ terrain:
       max: $configuration.yml:island-max-height
       min: $configuration.yml:island-min-height
       taper: $configuration.yml:island-taper
-      flatness: $configuration.yml:island-flatness
+      flatness: 2
       undercarriageTranslate: $configuration.yml:island-undercarriage-translate
     samplers:
       simplex3:
@@ -33,7 +34,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.002 / ${configuration.yml:island-scale}
+            frequency: 0.02 / ${configuration.yml:island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -43,4 +44,29 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.005 / ${configuration.yml:island-scale}
+            frequency: 0.00005 / ${configuration.yml:island-scale}
+
+colors:
+  grass: 0xd2de85
+  foliage: 0xd2de85
+
+palette:
+  - AETHER_GRASS: 319
+
+slant:
+  - threshold: 3.5
+    palette:
+      - MOSS_STONE: 319
+      
+features:
+  trees:
+    - OAK_BUSH_PATCHES
+    - SPARSE_OAK_TREES
+  flora:
+    - GRASS
+    - MIXED_FLOWER_COVER
+  postprocessors:
+    - HANGING_LANTERNS
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES  
+    #- CLOUDS

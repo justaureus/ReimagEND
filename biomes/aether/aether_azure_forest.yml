@@ -1,12 +1,15 @@
 id: AETHER_AZURE_FOREST
 type: BIOME
-extends: [ AETHER, AETHER_FOREST, TERRAIN ]
+extends: [ AETHER, AETHER_FOREST, EQ_DEFAULT]
 vanilla: minecraft:forest
 
 colors:
   grass: 0x3ccfad
   foliage: 0x3c79cf
 
+palette:
+  - AETHER_BLUE_GRASS: 319
+  
 features:
   postprocessors:
     - HANGING_LANTERNS

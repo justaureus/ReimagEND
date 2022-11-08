@@ -1,30 +1,38 @@
-id: GRASS
+id: SPARSE_OAK_TREES
 type: FEATURE
 
 distributor:
   type: SAMPLER
   sampler:
     type: POSITIVE_WHITE_NOISE
-    salt: 7544
-  threshold: 0.125
+    salt: 3458
+  threshold: 0.00125
 
 locator:
   type: AND
   locators:
-    - type: SURFACE
+    - type: TOP
       range: &range
-        min: -64
-        max: 319
+        min: 100
+        max: 255
     - type: PATTERN
       range: *range
       pattern:
         type: MATCH_SET
         blocks: $features/aether/vegetation/meta.yml:plantable-blocks
         offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
 
 structures:
   distribution:
     type: WHITE_NOISE
+    seed: 3457
   structures:
-    - BLOCK:minecraft:grass: 6
-    - tall_grass: 1
+    - oak_tree_procedural: 1

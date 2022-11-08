@@ -22,13 +22,21 @@ biome-distribution:
   # will increase the distance between temperature changes, which results in things like
   # hot and cold biomes generating further apart - and vice versa when decreasing it.
   # Default: 60
-
+  
+  end-scale: 50
+  # Controls the scale of end biomes.
+  # Default: 50
+  
+  aether-scale: 50
+  # Controls the scale of aether biomes. 
+  # Default: 50
+  
   precipitation-scale: 50
   # Controls the scale of precipitation zones. Same idea as temperature zones, where
   # humid biomes generate away from arid biomes, and biomes of similar precipitation
   # generate together.
   # Default: 50
-  
+
   elevation-scale: 35
   # Controls the scale of elevation zones. Most land biomes belong to
   # an elevation zone, in addition to temperature and precipitation. How far apart / close

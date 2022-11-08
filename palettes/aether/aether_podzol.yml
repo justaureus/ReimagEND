@@ -3,10 +3,10 @@ type: PALETTE
 
 layers:
   - materials:
-      - minecraft:grass_block: 6
+      - minecraft:grass_block: 4
       - minecraft:coarse_dirt: 1
-      - minecraft:podzol: 4
-      - minecraft:gravel: 1
+      - minecraft:podzol: 1
+      - minecraft:gravel: 2
     layers: 1
     sampler:
       type: DOMAIN_WARP

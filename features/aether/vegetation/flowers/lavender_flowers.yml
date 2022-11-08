@@ -1,4 +1,4 @@
-id: YELLOW_FLOWERS
+id: LAVENDER_FLOWERS
 type: FEATURE
 
 distributor:
@@ -7,8 +7,8 @@ distributor:
     - type: SAMPLER
       sampler:
         type: POSITIVE_WHITE_NOISE
-        salt: 3146
-      threshold: 0.2
+        salt: 2347
+      threshold: 0.4
     - type: SAMPLER
       sampler:
         type: PROBABILITY
@@ -20,7 +20,7 @@ distributor:
           sampler:
             type: OPEN_SIMPLEX_2
             salt: 5468
-      threshold: 0.2
+      threshold: 0.4
 
 locator:
   type: AND
@@ -45,10 +45,10 @@ structures:
     sampler:
       type: CELLULAR
       return: CellValue
-      frequency: 0.03
-      seed: 5790
+      frequency: 0.06
+      seed: 9231
   structures:
-    - BLOCK:minecraft:oxeye_daisy: 2
-    - sunflower: 1
-    - BLOCK:minecraft:dandelion: 4
-    - BLOCK:minecraft:orange_tulip: 3
+    - BLOCK:minecraft:allium: 10
+    - lilac: 3
+    - peony: 1
+

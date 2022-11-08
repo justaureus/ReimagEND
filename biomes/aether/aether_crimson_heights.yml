@@ -1,14 +1,13 @@
-id: VOID
+id: AETHER_CRIMSON_HEIGHTS
 type: BIOME
-extends: [ END ]
-vanilla: minecraft:the_void
-color: 0x000000
+extends: [ AETHER ]
+vanilla: minecraft:plains
 
 terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold-
+      -1+threshold+
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
@@ -20,11 +19,11 @@ terrain:
         )
       )
     variables:
-      threshold: $configuration.yml:island-threshold
-      max: $configuration.yml:island-max-height
-      min: $configuration.yml:island-min-height
+      threshold: 0.6
+      max: 300
+      min: 100
       taper: $configuration.yml:island-taper
-      flatness: $configuration.yml:island-flatness
+      flatness: 2
       undercarriageTranslate: $configuration.yml:island-undercarriage-translate
     samplers:
       simplex3:
@@ -35,7 +34,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.01 / ${configuration.yml:island-scale}
+            frequency: 0.02 / ${configuration.yml:island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -45,8 +44,30 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.005 / ${configuration.yml:island-scale}
+            frequency: 0.0005 / ${configuration.yml:island-scale}
+
+colors:
+  grass: 0xdb1818
+  foliage: 0xFFFFFF
 
 palette:
-  - BLOCK:minecraft:end_stone: 319
+  - AETHER_PODZOL: 319
 
+slant:
+  - threshold: 3.5
+    palette:
+      - MOSS_STONE: 319
+      
+features:
+  trees:
+    - OAK_BUSH_PATCHES
+    - SPARSE_OAK_TREES
+  flora:
+    - GRASS
+    - FERNS
+    - REDWHITE_FLOWERS
+  postprocessors:
+    - HANGING_LANTERNS
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES  
+    #- CLOUDS

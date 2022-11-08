@@ -16,7 +16,6 @@ biomes:
     #Both End and Aether
     source: $biome-providers/sources/reimagEND.yml:source
 
-
     stages:
       - << biome-providers/stages/end_distribution.yml:stages 
       - << biome-providers/stages/aether_distribution.yml:stages 
