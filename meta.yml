@@ -57,7 +57,15 @@ biome-distribution:
   # Controls the scale of the placement of cave biomes, larger scale = bigger areas of
   # any given cave biome, smaller scale = smaller cave biomes.
   # Default: 200
-
+  
+  main-end-scale: 5
+  # Controls general size of the main end island.  Larger scale = larger main end island.
+  # Default: 5
+  
+  void-buffer-scale: 20
+  # Controls size of void "buffer" zone between main and outer end areas.  Larger scale = larger main end island.
+  # Default: 20
+  
   global-scale: 1
   # Modifies the scale of everything, you can use this parameter to if you
   # want just about every biome to be larger or smaller.
