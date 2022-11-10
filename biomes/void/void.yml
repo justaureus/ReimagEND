@@ -2,7 +2,7 @@ id: VOID
 type: BIOME
 extends: [ END ]
 vanilla: minecraft:the_void
-color: 0x000000
+color: 0x1a1a1a
 
 terrain:
   sampler:
