@@ -2,6 +2,7 @@ id: AETHER_CRIMSON_HEIGHTS
 type: BIOME
 extends: [ AETHER ]
 vanilla: minecraft:plains
+color: $biomes/colors.yml:AETHER_CRIMSON_HEIGHTS
 
 terrain:
   sampler:

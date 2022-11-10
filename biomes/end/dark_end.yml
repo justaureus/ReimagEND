@@ -2,6 +2,7 @@ id: DARK_END
 type: BIOME
 extends: [ END, EQ_SPIKES ]
 vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:DARK_END
 
 palette:
   - DARK_END: 319
