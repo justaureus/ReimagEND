@@ -2,8 +2,8 @@ distribution-map: &distribution-map
   type: EXPRESSION
   expression: split((noise(x/spread,z/spread)+1)*4/(radius/spread)-1)
   variables:
-    spread: 500
-    radius: 5
+    spread: 35
+    radius: 10
   functions:
     split:
       arguments: [x]
@@ -28,11 +28,9 @@ stages:
     sampler: *distribution-map
     from: outer_end
     to:
-      - end: 32
-      #- shattered_end: 3
-      - starvoid: 16
       - aether: 32
-      #- aether_highlands: 1
+      - STARFIELD: 28
+      - end: 36
   - type: REPLACE_LIST
     sampler:
       dimensions: 2
@@ -49,13 +47,10 @@ stages:
           frequency: 1 / ${meta.yml:biome-distribution.continental-scale} / ${meta.yml:biome-distribution.global-scale}
     default-from: end
     default-to:
-      - end: 3
+      - end: 2
       - shattered_end: 1
-      - void: 1
+      - void: 3
     to:
       aether:
-        - aether: 3
+        - aether: 2
         - aether_highlands: 1
-        - void: 1
-      starvoid:
-        - STARFIELD: 1
