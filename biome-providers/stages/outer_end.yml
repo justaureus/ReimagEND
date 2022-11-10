@@ -29,7 +29,7 @@ stages:
     from: outer_end
     to:
       - aether: 32
-      - STARFIELD: 28
+      - STARFIELD: 48
       - end: 36
   - type: REPLACE_LIST
     sampler:
@@ -49,7 +49,7 @@ stages:
     default-to:
       - end: 2
       - shattered_end: 1
-      - void: 3
+      - void: 1
     to:
       aether:
         - aether: 2
