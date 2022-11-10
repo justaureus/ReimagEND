@@ -2,7 +2,6 @@ id: WARPED_BARRENS
 type: BIOME
 extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
-color: $biomes/colors.yml:WARPED_BARRENS
 
 palette:
   - BLOCK:minecraft:end_stone: 319

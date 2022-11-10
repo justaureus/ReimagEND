@@ -2,7 +2,6 @@ id: AETHER_PLAINS
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT ]
 vanilla: minecraft:plains
-color: $biomes/colors.yml:AETHER_PLAINS
 
 colors:
   grass: 0xd2de85

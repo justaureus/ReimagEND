@@ -2,7 +2,6 @@ id: AETHER_FOREST
 type: BIOME
 extends: [ AETHER, AETHER_PLAINS, EQ_DEFAULT]
 vanilla: minecraft:forest
-color: $biomes/colors.yml:AETHER_FOREST
 
 features:
   postprocessors:

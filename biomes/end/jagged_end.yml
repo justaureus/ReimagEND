@@ -2,7 +2,6 @@ id: JAGGED_END
 type: BIOME
 extends: [ END ]
 vanilla: minecraft:end_highlands
-color: $biomes/colors.yml:JAGGED_END
 
 terrain:
   sampler:
