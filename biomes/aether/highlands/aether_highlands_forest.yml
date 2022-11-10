@@ -2,6 +2,7 @@ id: AETHER_HIGHLANDS_FOREST
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT ]
 vanilla: minecraft:snowy_taiga
+color: $biomes/colors.yml:AETHER_HIGHLANDS_FOREST
 
 colors:
   grass: 0x9edbca

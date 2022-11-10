@@ -2,6 +2,7 @@ id: CHORUVE_FOREST
 type: BIOME
 extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:CHORUVE_FOREST
 
 palette:
   - BLOCK:minecraft:end_stone: 319

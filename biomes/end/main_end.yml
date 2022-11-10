@@ -2,7 +2,7 @@ id: MAIN_END
 type: BIOME
 extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:the_end
-color: 0x4d004d
+color: $biomes/colors.yml:MAIN_END
 
 palette:
   - BLOCK:minecraft:end_stone: 319

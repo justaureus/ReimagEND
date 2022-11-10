@@ -2,6 +2,7 @@ id: AETHER_LAVENDER_DRIFTLANDS
 type: BIOME
 extends: [ AETHER ]
 vanilla: minecraft:plains
+color: $biomes/colors.yml:AETHER_LAVENDER_DRIFTLANDS
 
 terrain:
   sampler:
