@@ -7,7 +7,7 @@ source:
   sampler:
     type: EXPRESSION
     expression: |
-      circle(centerRadius, x+noise(x,z), z+noise(x,z), 1) + circle(centerRadius+buffer, x+noise(x,z), z+noise(x,z), 0.5)
+      circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1) + circle(centerRadius+buffer, x+noise(x,z)-1, z+noise(x,z)-1, 0.5)
     variables:
       centerRadius: ${meta.yml:biome-distribution.main-end-scale}
       buffer: ${meta.yml:biome-distribution.void-buffer-scale}
