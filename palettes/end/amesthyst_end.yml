@@ -1,0 +1,26 @@
+id: AMETHYST_END
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:calcite: 6
+      - minecraft:diorite: 3
+      - minecraft:smooth_basalt: 2
+      - minecraft:obsidian: 6
+      - minecraft:crying_obsidian: 3
+      - minecraft:amethyst_block: 3
+    layers: 1
+sampler:
+  type: DOMAIN_WARP
+  amplitude: 1
+  warp:
+    type: GAUSSIAN
+  sampler:
+    type: FBM
+    octaves: 2
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.04
+      salt: 6881
+  
+
