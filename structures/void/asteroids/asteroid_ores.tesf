@@ -1,0 +1,4 @@
+num blockSelection = randomInt(34);
+if(blockSelection <= 27) structure(0, 0, 0, "asteroid_palette", "NONE");
+else if(blockSelection <= 32) block(0, 0, 0,"minecraft:deepslate_coal_ore");
+else if(blockSelection <= 33) block(0, 0, 0,"minecraft:deepslate_iron_ore");

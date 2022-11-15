@@ -1,0 +1,25 @@
+id: MIX_END
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:obsidian: 3
+      - minecraft:crying_obsidian: 1
+      - minecraft:black_stained_glass: 2
+      - minecraft:purple_stained_glass: 2
+      - minecraft:magenta_stained_glass: 2
+      - minecraft:black_concrete: 3
+      - minecraft:purple_concrete: 3
+    layers: 1
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.2
+          salt: 7690

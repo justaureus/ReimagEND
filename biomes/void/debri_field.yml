@@ -1,8 +1,8 @@
-id: MAIN_END
+id: DEBRI_FIELD
 type: BIOME
 extends: [ END ]
-vanilla: minecraft:the_end
-color: $biomes/colors.yml:MAIN_END
+vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:DEBRI_FIELD
 
 terrain:
   sampler:
@@ -12,19 +12,21 @@ terrain:
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, y*flatness, z)
+              lerp(y, min-undercarriageTranslate, 0, min+10,
+                max((simplex(x,z)+1)/2,simplex3(x, y*flatness, z))
+              )
           ),
           lerp(y, min, 0, min+taper,
-            simplex3(x, (y-undercarriageTranslate)*flatness, z) * 7
+            simplex3(x, (y-undercarriageTranslate), z) * undercarriageMask(x, y, z)
           )
         )
       )
     variables:
-      threshold: 0.75
-      max: 75
-      min: 0
+      threshold: $configuration.yml:island-threshold
+      max: $configuration.yml:island-max-height
+      min: $configuration.yml:island-min-height
       taper: $configuration.yml:island-taper
-      flatness: 7
+      flatness: $configuration.yml:island-flatness
       undercarriageTranslate: $configuration.yml:island-undercarriage-translate
     samplers:
       simplex3:
@@ -35,7 +37,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.002 / ${configuration.yml:island-scale}
+            frequency: 0.5 / ${configuration.yml:island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -45,7 +47,12 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.005 / ${configuration.yml:island-scale}
+            frequency: 0.1 / ${configuration.yml:island-scale}
 
 palette:
-  - BLOCK:minecraft:end_stone: 319
+  - MIX_END: 319
+
+features:
+  trees:
+    - ASTEROIDS
+    - ICY_ASTEROIDS

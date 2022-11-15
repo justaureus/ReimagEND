@@ -1,0 +1,19 @@
+num randPrecision = 100;
+
+num length = 10 + randomInt(5);
+num yTranslate = 0;
+num radiusInt = randomInt(3);
+num maxRadius = 5;
+num radius = maxRadius;
+
+for (num y = 0; y < length; y = y + 2) {
+    radiusInt = randomInt(3);
+    radius = maxRadius-radiusInt;
+    for (num x = -radius; x < radius; x = x + 1) {
+        for (num z = -radius; z < radius; z = z + 1) {
+            if (pow(x,2)+pow(z,2) < pow(radius,2)) {
+                    block(x, y, z, "minecraft:obsidian", false);
+            }
+        }
+    }    
+}

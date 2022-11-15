@@ -23,5 +23,6 @@ stages:
         - SHATTERED_END: 2
         - SHATTERED_FOREST: 1
       void:
-        - VOID: 3
-        - STARFIELD: 1
+        - VOID: 4
+        - STARFIELD: 2
+        - DEBRI_FIELD: 1

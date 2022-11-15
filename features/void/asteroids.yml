@@ -1,0 +1,37 @@
+id: ASTEROIDS
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 5
+      padding: 2
+      salt: 3214
+    - type: SAMPLER
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        frequency: 0.05
+        salt: 8344
+      threshold: -0.6
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 100
+        max: 125
+      amount: 1
+      salt: 1276
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: asteroid
