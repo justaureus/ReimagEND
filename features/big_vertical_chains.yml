@@ -1,0 +1,32 @@
+id: BIG_VERTICAL_CHAINS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 15
+  padding: 20
+  salt: 8472
+
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 60
+        max: 255
+      pattern:
+        type: MATCH_SOLID
+        offset: 1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: big_vertical_chain
+
+  

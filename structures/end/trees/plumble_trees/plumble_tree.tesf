@@ -2,19 +2,19 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-num trunkHeight = 15+randomInt(4);
-str trunkBlock = "minecraft:purple_concrete";
-str altTrunkBlock = "minecraft:black_concrete";
+num trunkHeight = 10+randomInt(10);
+str trunkBlock = "minecraft:black_concrete";
+str altTrunkBlock = "minecraft:purple_concrete";
 num trunkWidth = 1;
-str rootBlockX = "minecraft:purple_concrete";
+str rootBlockX = trunkBlock;
 str rootBlockZ = rootBlockX;
 str altRootBlock = altTrunkBlock;
 
 num sideBranchInterval = 3+randomInt(1);
-num sideBranchMinHeight = 9+randomInt(3);
+num sideBranchMinHeight = 5+randomInt(3);
 num sideBranchLengthMin = 5+randomInt(3);
 num sideBranchLengthVariation = 1;
-num sideBranchVerticalVariation = 1;
+num sideBranchVerticalVariation = 3;
 num sideBranchVerticalDirection = -(3+randomInt(randPrecision)/randPrecision)/3;
 num sideBranchLeafRadiusMin = 1;
 num sideBranchLeafTranslate = 0;
@@ -118,7 +118,7 @@ for (num i = 0; i < trunkHeight; i = i + 1) {
     for (num x = 0; x < trunkWidth; x = x + 1) {
         for (num z = 0; z < trunkWidth; z = z + 1) {
             placeTrunkBlock = trunkBlock;
-            if (randomInt(2) == 0) placeTrunkBlock = altTrunkBlock;
+            if (randomInt(3) == 0) placeTrunkBlock = altTrunkBlock;
             block(x, i, z, placeTrunkBlock);
         }
     }
@@ -149,7 +149,7 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     str placeBranchBlock = branchBlock;
     for (num l = 0; l <= branchLength; l = l + 1) {
         placeBranchBlock = branchBlock;
-        if (randomInt(2) == 0) placeBranchBlock = altTopBranchBlock;
+        if (randomInt(3) == 0) placeBranchBlock = altTopBranchBlock;
         block(l*dx+ox, l*dy+oy, l*dz+oz, placeBranchBlock);
     }
     // Rotate angle of next branch
@@ -164,4 +164,4 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     structure(lox, loy, loz, topBranchLeafStructure, "NONE", "CW_90", "CCW_90", "CW_180");
 }
 
-block(0, -1, 0, "minecraft:end_stone");
+block(0, -1, 0, "minecraft:black_concrete");

@@ -1,0 +1,33 @@
+id: CRYING_ICICLES
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 7652
+  threshold: 0.09
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 60
+        max: 255
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:purple_concrete
+        offset: 1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: crying_icicle
+
+  

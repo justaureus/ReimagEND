@@ -1,0 +1,32 @@
+num length = 20+randomInt(7);
+num radius = 4+randomInt(2);
+
+str chainBlock = "minecraft:cyan_terracotta";
+str altChainBlock = "minecraft:gray_concrete";
+if (randomInt(2) == 0) {
+    chainBlock = "minecraft:gray_concrete";
+    altChainBlock = "minecraft:cyan_terracotta";
+}
+for (num y = 0; y < length; y = y + 6) {
+        block(0,-y+1,1,chainBlock);
+        block(0,-y+1,-1,chainBlock);
+        block(0,-y,1,chainBlock);
+        block(0,-y,-1,chainBlock);
+        block(0,-y-1,1,chainBlock);
+        block(0,-y-1,-1,chainBlock);
+        block(0,-y-2,1,chainBlock);
+        block(0,-y-2,-1,chainBlock);
+        block(0,-y-2,0,altChainBlock);
+}
+
+for (num y = 3; y < length; y = y + 6) {
+        block(1,-y+1,0,altChainBlock);
+        block(-1,-y+1,0,altChainBlock);
+        block(1,-y,0,altChainBlock);
+        block(-1,-y,0,altChainBlock);
+        block(1,-y-1,0,altChainBlock);
+        block(-1,-y-1,0,altChainBlock);
+        block(1,-y-2,0,altChainBlock);
+        block(-1,-y-2,0,altChainBlock);
+        block(0,-y-2,0,chainBlock);
+}

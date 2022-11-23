@@ -5,16 +5,16 @@ distributor:
   type: AND
   distributors:
     - type: PADDED_GRID
-      width: 5
-      padding: 2
-      salt: 8472
+      width: 8
+      padding: 10
+      salt: 9367
     - type: SAMPLER
       sampler:
         type: CELLULAR
         return: CellValue
         frequency: 0.05
-        salt: 3456
-      threshold: -0.6
+        salt: 5428
+      threshold: -0.01
 
 locator:
   type: AND
@@ -33,5 +33,7 @@ locator:
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: icy_asteroid
+    type: WHITE_NOISE
+  structures: 
+    - icy_asteroid: 5
+    - spiky_ice_asteroid: 1
