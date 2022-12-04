@@ -3,23 +3,32 @@ biomes:
   resolution: 4
   initial-size: 15
   blend:
+    amplitude: 2
+    resolution: 2
     sampler:
-      type: CONSTANT
+      type: GAUSSIAN
   pipeline:
 
     # End Only 
     #source: $biome-providers/sources/end.yml:source
 
-    #Aether Only
+    # Aether Only
     #source: $biome-providers/sources/aether.yml:source
 
-    #Both End and Aether
+    # Both End and Aether
     source: $biome-providers/sources/reimagEND.yml:source
 
     stages:
+      # Distributes main end island and outer end seperately
       - << biome-providers/stages/outer_end.yml:stages
+
+      # Distributes outer end biomes
       - << biome-providers/stages/end_distribution.yml:stages 
+
+      # Distributes aether biomes
       - << biome-providers/stages/aether_distribution.yml:stages 
+
+      # Expanding and smoothing the edges of biomes
       - << biome-providers/stages/expand.yml:stages
       - << biome-providers/stages/expand.yml:stages
       - << biome-providers/stages/smooth.yml:stages
@@ -29,3 +38,5 @@ biomes:
       - << biome-providers/stages/smooth.yml:stages
       - << biome-providers/stages/smooth.yml:stages
       - << biome-providers/stages/smooth.yml:stages
+
+

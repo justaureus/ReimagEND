@@ -23,9 +23,9 @@ terrain:
       threshold: 0.6
       max: 300
       min: 100
-      taper: $configuration.yml:island-taper
+      taper: ${meta.yml:terrain-configuration.island-taper}
       flatness: 2
-      undercarriageTranslate: $configuration.yml:island-undercarriage-translate
+      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
         dimensions: 3
@@ -35,7 +35,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.02 / ${configuration.yml:island-scale}
+            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -45,7 +45,7 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.0005 / ${configuration.yml:island-scale}
+            frequency: 0.0005 / ${meta.yml:terrain-configuration.island-scale}
 
 colors:
   grass: 0xdb1818

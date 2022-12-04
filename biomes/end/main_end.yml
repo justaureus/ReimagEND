@@ -21,11 +21,11 @@ terrain:
       )
     variables:
       threshold: 0.75
-      max: 75
+      max: 70
       min: 0
-      taper: $configuration.yml:island-taper
+      taper: ${meta.yml:terrain-configuration.island-taper}
       flatness: 7
-      undercarriageTranslate: $configuration.yml:island-undercarriage-translate
+      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
         dimensions: 3
@@ -35,7 +35,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.002 / ${configuration.yml:island-scale}
+            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -45,7 +45,7 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.005 / ${configuration.yml:island-scale}
+            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
 
 palette:
   - BLOCK:minecraft:end_stone: 319

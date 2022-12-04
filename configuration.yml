@@ -1,8 +1,0 @@
-# These values can be used to customize different aspects of the terrain of this pack
-island-scale: 1
-island-max-height: 250
-island-min-height: -40
-island-undercarriage-translate: -10
-island-flatness: 5
-island-taper: 100
-island-threshold: 0.4
