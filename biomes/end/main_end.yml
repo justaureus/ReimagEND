@@ -15,7 +15,7 @@ terrain:
             simplex3(x, y*flatness, z)
           ),
           lerp(y, min, 0, min+taper,
-            simplex3(x, (y-undercarriageTranslate)*flatness, z) * 7
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * 10
           )
         )
       )
@@ -24,7 +24,7 @@ terrain:
       max: 70
       min: 0
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 7
+      flatness: 6
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -46,6 +46,10 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
+
+features:
+  trees:
+    - MAIN_PILLARS
 
 palette:
   - BLOCK:minecraft:end_stone: 319

@@ -2,7 +2,7 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-num trunkHeight = 4+randomInt(8);
+num trunkHeight = 12+randomInt(10);
 str trunkBlock = "minecraft:obsidian";
 str altTrunkBlock = "minecraft:black_concrete";
 num trunkWidth = 2;
@@ -10,9 +10,9 @@ str rootBlockX = "minecraft:obsidian";
 str rootBlockZ = "minecraft:obsidian";
 str altRootBlock = "minecraft:black_concrete";
 
-num sideBranchInterval = 1+randomInt(2);
-num sideBranchMinHeight = 6+randomInt(3);
-num sideBranchLengthMin = 4+randomInt(2);
+num sideBranchInterval = 2+randomInt(2);
+num sideBranchMinHeight = 7+randomInt(3);
+num sideBranchLengthMin = 5+randomInt(2);
 num sideBranchLengthVariation = 2;
 num sideBranchVerticalVariation = 1;
 num sideBranchVerticalDirection = 0.8+randomInt(randPrecision)/randPrecision/4;

@@ -1,0 +1,15 @@
+num length = 2 + randomInt(6); 
+
+num i = 0;
+
+if(getBlock(0, 1, 0) == "minecraft:air") {
+        fail;
+}
+
+for (i; i < length; i = i + 1) {
+    if(getBlock(0, -i - 1, 0) != "minecraft:air") {
+        break;
+    }
+    block(0, -i, 0, "minecraft:cobweb", false);
+
+}

@@ -1,4 +1,4 @@
-id: PEARLESCENT_END
+id: PEARLESCENT_GROUND
 type: PALETTE
 
 layers:
@@ -23,5 +23,6 @@ sampler:
       return: "CellValue"
       frequency: 0.5
       salt: 9345
+      
   
 

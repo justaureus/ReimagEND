@@ -1,0 +1,28 @@
+num radius = 4+randomInt(3);
+num random = randomInt(3);
+str setBlock = "minecraft:amethyst_block";
+
+
+if (getBlock(0,1,0) == "minecraft:air") fail;
+if (getBlock(3,1,0) == "minecraft:air") fail;
+if (getBlock(0,1,3) == "minecraft:air") fail;
+if (getBlock(-3,1,0) == "minecraft:air") fail;
+if (getBlock(0,1,-3) == "minecraft:air") fail;
+
+for (num y = -1; y < 30; y = y + 1) {
+    for (num x = -radius; x < radius; x = x + 1) {
+        for (num z = -radius; z < radius; z = z + 1) {
+            if ((pow(x,2)*(3+random))+(pow(y,2)/(3+random))+(pow(z,2)*(3+random)) < pow(radius,2)) {
+                structure(x, -y, z, "bee_nest_block","NONE");
+            }  
+        }
+    }
+}
+
+entity(4, -2, 0, "minecraft:bee");
+entity(0, -2, 4, "minecraft:bee");
+entity(-4, -2, 0, "minecraft:bee");
+entity(0, -2, -4, "minecraft:bee");
+entity(4, -2, 4, "minecraft:bee");
+entity(-4, -2, -4, "minecraft:bee");
+

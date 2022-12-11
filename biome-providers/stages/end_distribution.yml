@@ -13,6 +13,7 @@ stages:
     default-from: end
     default-to:
       - END_WASTES: 1
+      - END_HIGHLANDS: 1
       - WARPED_BARRENS: 1
       - CHORUVE_FOREST: 1
       - JAGGED_END: 1

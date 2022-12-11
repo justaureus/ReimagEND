@@ -1,0 +1,54 @@
+num randPrecision = 100;
+
+num length = 10 + randomInt(randPrecision)/randPrecision*5;
+num radius = 3 + randomInt(randPrecision)/randPrecision*2;
+// Direction vector
+num dx = 0;
+num dy = -randomInt(randPrecision)/randPrecision;
+num dz = 0;
+
+
+// Normalize vector
+num mag = sqrt(pow(dx,2)+pow(dy,2)+pow(dz,2));
+dx = dx/mag;
+dy = dy/mag;
+dz = dz/mag;
+
+for(num l = 0; l <= length; l = l + 1) {
+
+    // Reduce radius inversely to length
+    num r = (radius/length * -l) + radius;
+
+    // Generate sphere at each point
+    for(num x = -r; x <= r; x = x + 1) {
+        for(num y = -r; y <= r; y = y + 1) {
+            for(num z = -r; z <= r; z = z + 1) {
+                if (pow(x,2)+pow(y,2)-1+pow(z,2) < pow(r,2)) {
+                    if (l/length < 0.01) {
+                        block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:dirt", false);
+                    } else {
+                        block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:stone", false);
+                    }
+                }
+            }
+        }
+    }
+}
+
+for(num x = -radius; x <= radius; x = x + 1) {
+    for(num y = 0; y <= 15; y = y + 1) {
+        for(num z = -radius; z <= radius; z = z + 1) {
+            structure(x,-y,z,"grass_replace_dirt","NONE");
+            structure(x,-y,z,"ore_block","NONE");
+        }
+    }
+}
+
+block(0,0,0, "minecraft:chest", false);
+structure(2,-2,2,"pillar_ruin","NONE");
+structure(-2,-2,-2,"pillar_ruin","NONE");
+structure(-2,-2,2,"pillar_ruin","NONE");
+structure(2,-2,-2,"pillar_ruin","NONE");
+
+
+

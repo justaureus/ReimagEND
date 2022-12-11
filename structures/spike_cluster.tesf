@@ -52,4 +52,12 @@ for (num i = 0; i < spikes; i = i + 1) {
             }
         }
     }
-}    
+}   
+
+for (num x = -40; x < 40; x = x + 1) {
+  for (num y = -40; y < 40; y = y + 1) {
+    for (num z = -40; z < 40; z = z + 1) {
+      structure(x,y,z,"amethyst_buds", "NONE");
+    }
+  }  
+}

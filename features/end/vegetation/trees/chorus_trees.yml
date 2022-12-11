@@ -1,0 +1,28 @@
+id: CHORUS_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 6
+  padding: 8
+  salt: 2677
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: 
+    - chorus_tree: 1

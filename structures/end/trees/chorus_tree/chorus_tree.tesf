@@ -1,0 +1,39 @@
+num length = 2+randomInt(6);
+
+str nFace = "false";
+if (randomInt(2) == 0) {
+    nFace = "true";
+    structure(0,length,-1,"chorus_branch_north","NONE");
+}
+
+str eFace = "false";
+if (randomInt(2) == 0) {
+    eFace = "true";
+    structure(1,length,0,"chorus_branch_east","NONE");
+}
+str sFace = "false";
+if (randomInt(2) == 0) {
+    sFace = "true";
+    structure(0,length,1,"chorus_branch_south","NONE");
+}
+str wFace = "false";
+if (randomInt(2) == 0) {
+    wFace = "true";
+    structure(-1,length,0,"chorus_branch_west","NONE");
+}
+
+for (num y = 0; y < length; y = y + 1) {
+    if (getBlock(0,y,0) != "minecraft:air") {
+        fail;
+    }
+    block(0,y,0,"minecraft:chorus_plant[up=true,down=true]");
+}
+
+if (nFace == "false" && eFace == "false" && sFace == "false" && wFace == "false") {
+    block(0,length,0,"minecraft:chorus_flower[age=5]"); 
+} else {
+    block(0,length,0,"minecraft:chorus_plant[down=true,north="+nFace+",east="+eFace+",south="+sFace+",west="+wFace+"]");
+}
+
+
+

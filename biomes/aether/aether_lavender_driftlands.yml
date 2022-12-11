@@ -69,4 +69,5 @@ features:
     - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
+    - HANGING_BEE_NESTS
     #- CLOUDS
