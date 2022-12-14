@@ -31,6 +31,6 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - small_shattered_pillar: 10
-    - medium_shattered_pillar: 4
-    - large_shattered_pillar: 2
+    - shattered_pillar: 150
+    - end_pillar: 2
+    - leaning_end_pillar: 1

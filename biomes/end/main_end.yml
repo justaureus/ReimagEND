@@ -50,6 +50,6 @@ terrain:
 features:
   trees:
     - MAIN_PILLARS
-
+    
 palette:
   - BLOCK:minecraft:end_stone: 319

@@ -8,7 +8,7 @@ distributor:
       sampler:
         type: EXPRESSION
         expression: |
-          max(circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1),circle(centerRadius-50, x+noise(x,z)-1, z+noise(x,z)-1, 0.5))
+          max(circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1),circle(centerRadius-70, x+noise(x,z)-1, z+noise(x,z)-1, 0.5))
         variables:
           centerRadius: ${meta.yml:biome-distribution.main-end-scale}
           buffer: ${meta.yml:biome-distribution.void-buffer-scale}
@@ -49,6 +49,6 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - small_shattered_pillar: 10
-    - medium_shattered_pillar: 4
-    - large_shattered_pillar: 2
+    - shattered_pillar: 150
+    - end_pillar: 2
+    - leaning_end_pillar: 1
