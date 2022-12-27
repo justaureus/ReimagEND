@@ -1,7 +1,6 @@
 biomes:
   type: PIPELINE
   resolution: 4
-  initial-size: 15
   blend:
     amplitude: 2
     resolution: 2

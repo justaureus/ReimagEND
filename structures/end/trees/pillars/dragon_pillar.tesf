@@ -1,0 +1,61 @@
+num randPrecision = 100;
+
+num height = 50 + randomInt(20);
+num yTranslate = -20;
+num radius = 4+randomInt(2);
+str setBlock = "minecraft:obsidian";
+str altBlock = "minecraft:crying_obsidian";
+
+for(num y = yTranslate; y <= height+yTranslate; y = y + 1) {
+    for(num x = -radius; x <= radius; x = x + 1) {
+        for(num z = -radius; z <= radius; z = z + 1) {
+            if (pow(x,2)+pow(z,2) < pow(radius,2)) {
+                
+                if (randomInt(15) == 0) { setBlock = altBlock;
+                } else setBlock = "minecraft:obsidian";
+                block(x, y, z, setBlock, false);
+            }   
+        }
+    }
+}
+
+for(num y = yTranslate+height-5; y <= height+yTranslate+4; y = y + 1) {
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(-radius, y, 0, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(0, y, -radius, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(radius, y, 0, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(0, y, radius, setBlock, false);
+
+    if (y < yTranslate+height+3) {
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(radius-1, y, radius-1, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(-radius+1, y, -radius+1, setBlock, false);
+    
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(-radius+1, y, radius-1, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(radius-1, y, -radius+1, setBlock, false);
+    }
+
+}   
+
+block(0, height+yTranslate+1, 0, "minecraft:bedrock"); 
+entity(0, height+yTranslate+2, 0, "minecraft:end_crystal");   

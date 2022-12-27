@@ -2,8 +2,8 @@ distribution-map: &distribution-map
   type: EXPRESSION
   expression: split((noise(x/spread,z/spread)+1)*4/(radius/spread)-1)
   variables:
-    spread: 40
-    radius: 15
+    spread: 1300
+    radius: 500
   functions:
     split:
       arguments: [x]
@@ -44,7 +44,7 @@ stages:
         octaves: 4
         sampler:
           type: CELLULAR
-          frequency: 1 / ${meta.yml:biome-distribution.continental-scale} / ${meta.yml:biome-distribution.global-scale}
+          frequency: 1 / ${meta.yml:biome-distribution.end-scale} / ${meta.yml:biome-distribution.global-scale}
     default-from: end
     default-to:
       - end: 2
