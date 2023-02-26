@@ -1,0 +1,26 @@
+id: AETHER_WEBBED_FOREST
+type: BIOME
+extends: [ AETHER, AETHER_PLAINS, EQ_DEFAULT]
+vanilla: minecraft:forest
+color: $biomes/colors.yml:AETHER_WEBBED_FOREST
+
+colors:
+  grass: 0x4c5e3f
+  foliage: 0x4c5e3f
+
+palette:
+  - AETHER_PODZOL: 319
+
+features:
+  postprocessors:
+    - HANGING_LANTERNS
+    - HANGING_COBWEBS
+  flora:
+    - GRASS
+    - FERNS
+  trees:
+    - WEB_TREES
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES
+    - GRAVES
+    #- CLOUDS

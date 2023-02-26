@@ -20,6 +20,8 @@ stages:
       - AETHER_DRIFTLANDS: 1
       - AETHER_LAVENDER_DRIFTLANDS: 1
       - AETHER_CRIMSON_HEIGHTS: 1
+      - AETHER_WEBBED_FOREST: 1
+      - AETHER_CLOUDLANDS: 1
     to: 
       aether_highlands:
       - AETHER_HIGHLANDS: 2

@@ -68,7 +68,7 @@ biome-distribution:
   # Controls the scale of the entire end.
   # Default: 50
 
-  end-biome-scale: 800
+  end-biome-scale: 300
   # Controls the scale of end biomes in particular.
   # Default: 300
   

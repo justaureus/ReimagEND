@@ -1,0 +1,38 @@
+id: WEB_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 7
+  padding: 6
+  salt: 1230
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 100
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/aether/vegetation/meta.yml:plantable-blocks
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - dead_tree_procedural: 1
+    - web_tree_procedural: 6
+    - web_tree_procedural_2: 3

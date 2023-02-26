@@ -1,0 +1,29 @@
+id: GRAVES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 24
+  padding: 15
+  salt: 6990
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 100
+        max: 225
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: 1
+structures:
+  distribution:
+    type: CONSTANT
+  structures: grave

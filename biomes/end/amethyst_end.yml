@@ -6,3 +6,7 @@ color: $biomes/colors.yml:AMETHYST_END
 
 palette:
   - AMETHYST_END: 319
+
+features:
+  landforms:
+    - AMETHYST_CLUMPS

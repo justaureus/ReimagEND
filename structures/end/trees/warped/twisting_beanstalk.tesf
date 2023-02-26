@@ -1,0 +1,35 @@
+num randPrecision = 100;
+
+num height = 20+randomInt(15);
+num direction = randomInt(randPrecision)/randPrecision;
+num dirInterval = 1;
+str mainBlock = "minecraft:warped_wart_block";
+str altBlock = "minecraft:stripped_warped_hyphae";
+str setBlock = mainBlock;
+str checkBlock = "";
+num radius = 2;
+
+if (randomInt(2) == 0) {
+    direction = direction*-1;
+    dirInterval= dirInterval*-1;
+}
+
+for (num l = 0; l < height; l = l + 1) {
+    setBlock = mainBlock;
+    checkBlock = getBlock(0,l,0);
+
+    if (checkBlock != "minecraft:air" && checkBlock != "minecraft:warped_wart_block" && checkBlock != "minecraft:stripped_warped_hyphae") fail;
+    
+    for (num x = -radius; x < radius; x = x + 1) {
+        for (num y = -radius; y < radius; y = y + 1) {
+            for (num z = -radius; z < radius; z = z + 1) {
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(radius,2)) {
+                    setBlock = mainBlock;
+                    if (randomInt(2) == 0 ) setBlock = altBlock;
+                block(x+cos(direction),l+y,z+sin(direction),setBlock);
+                }
+            }
+        }
+    }  
+    direction = direction + dirInterval;
+}
