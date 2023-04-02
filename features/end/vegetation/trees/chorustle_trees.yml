@@ -1,24 +1,19 @@
-id: OBSIDIAN_SPIKES
+id: CHORUSTLE_TREES
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 7
-  padding: 9
-  salt: 3247
+  width: 43
+  padding: 35
+  salt: 6780
 
 locator:
   type: AND
   locators:
     - type: TOP
       range: &range
-        min: 60
-        max: 255
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_AIR
-        offset: 0
+        min: 64
+        max: 319
     - type: PATTERN
       range: *range
       pattern:
@@ -26,11 +21,7 @@ locator:
         block: minecraft:end_stone
         offset: -1
 
-
 structures:
   distribution:
     type: CONSTANT
-  structures:
-    - obsidian_spike: 4
-    - obsidian_spike_cluster: 1
-  
+  structures: chorustle

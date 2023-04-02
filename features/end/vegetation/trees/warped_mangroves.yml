@@ -1,0 +1,28 @@
+id: WARPED_MANGROVES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 12
+  padding: 16
+  salt: 9567
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - warped_mangrove: 1

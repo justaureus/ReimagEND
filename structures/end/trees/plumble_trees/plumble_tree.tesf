@@ -27,7 +27,7 @@ str sideBranchBlockY = trunkBlock;
 str sideBranchBlockZ = trunkBlock;
 str altSideBranchBlock = altRootBlock;
 
-num topBranches = 1;
+num topBranches = 1+randomInt(2);
 num topBranchLengthUpwardsMin = 8+randomInt(4);
 num topBranchLengthOutwardsMin = 2+randomInt(2);
 num topBranchVerticalDirection = 1;

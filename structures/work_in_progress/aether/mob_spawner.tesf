@@ -1,0 +1,103 @@
+num width = 12;
+num height = 7;
+num length = 12;
+str setBlock = "ruin_block";
+
+// dungeon sides
+for (num y = 0; y < height; y = y + 1) {
+    for (num x = -length/2; x < length/2; x = x + 1) {
+        for (num z = -width/2; z < width/2; z = z + 1) {
+            block(x,y,z,"minecraft:air");
+        }
+    }
+}
+
+for (num y = -1; y <= height; y = y + 1) {
+    for (num x = -length/2; x <= length/2; x = x + 1) {
+        for (num z = -width/2; z <= width/2; z = z + 1) {
+
+            // walls by length (x)
+            if ( (x == -length/2) || (x == length/2) && (z > 2 || z < -2)) {
+                structure(x,y,z,setBlock,"NONE");
+            }
+
+            // walls by width (z)
+            if ((z == -width/2) || (z == width/2) && (z > 2 || z < -2)) {
+                structure(x,y,z,setBlock,"NONE");
+            }
+
+            // pillars
+            if ((x == 3 || x == -3) && (z == 3 || z == -3)) {
+                structure(x,y,z,setBlock,"NONE");
+            }
+
+            // floor
+            if (y == 0) {
+                structure(x,y,z,setBlock,"NONE");
+            }
+
+            if (y == -1 && ((x < length/2-1) && (x > -length/2+1)) && ((z < width/2-1) && (z > -width/2+1))) {
+                structure(x,y,z,setBlock,"NONE");
+            }
+
+            // roof
+            if (y == height-1) {
+                structure(x,y,z,setBlock,"NONE");
+            }
+
+            if (y == height && ((x < length/2-1) && (x > -length/2+1)) && ((z < width/2-1) && (z > -width/2+1))) {
+                structure(x,y,z,setBlock,"NONE");
+            }
+
+            // obsidian
+            if ((x < 3 && x > -3) && (z < 3 && z > -3) && (y == 0 || y == height-1) ) {
+                block(x,y,z,"minecraft:obsidian");
+            }
+
+            // chains
+            if (x == 0 && z == 0 && (y != 3 && y > 0 && y < height)) {
+                block(x,y,z,"minecraft:chain");
+            }
+
+            // iron bars
+            // z-sides
+            if (x == 0 && (z == 1 || z == -1) && (y > 0 && y < height)) {
+                block(x,y,z,"minecraft:iron_bars[east=true,west=true]");
+            }
+
+            // x-sides
+            if (z == 0 && (x == 1 || x == -1) && (y > 0 && y < height)) {
+                block(x,y,z,"minecraft:iron_bars[north=true,south=true]");
+            }
+
+            // corners
+            if (z == 1 && x == 1 && (y > 0 && y < height)) {
+                block(x,y,z,"minecraft:iron_bars[north=true,west=true]");
+            }
+
+            if (z == 1 && x == -1 && (y > 0 && y < height)) {
+                block(x,y,z,"minecraft:iron_bars[north=true,east=true]");
+            }
+
+            if (z == -1 && x == 1 && (y > 0 && y < height)) {
+                block(x,y,z,"minecraft:iron_bars[south=true,west=true]");
+            }
+
+            if (z == -1 && x == -1 && (y > 0 && y < height)) {
+                block(x,y,z,"minecraft:iron_bars[south=true,east=true]");
+            }
+
+            
+        }
+    }
+}
+
+block(0,3,0, "minecraft:spawner");
+num random = randomInt(3);
+if (random == 0) state(0,3,0,"type=ZOMBIE");    
+if (random == 1) state(0,3,0,"type=SKELETON");  
+if (random == 2) {
+    // future spider webs
+    state(0,3,0,"type=SPIDER");  
+}
+

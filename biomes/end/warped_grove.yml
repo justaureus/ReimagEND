@@ -1,15 +1,15 @@
-id: CHORUVE_FOREST
+id: WARPED_GROVE
 type: BIOME
 extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
-color: $biomes/colors.yml:CHORUVE_FOREST
+color: $biomes/colors.yml:WARPED_GROVE
 
 palette:
   - BLOCK:minecraft:end_stone: 319
 
 features:
   flora:
-    - CHORUVE_GRASS
+    - WARPED_GRASS
   trees:
-    - CHORUVE_TREES
-    - CHORUSTLE_TREES
+    - WARPED_MANGROVES
+    - TWISTING_BEANSTALKS

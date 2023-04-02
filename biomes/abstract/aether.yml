@@ -19,3 +19,7 @@ climate:
   precipitation: none
   temperature: 0.5
   downfall: 0.5
+
+features:
+  structures:
+    - MOB_SPAWNERS

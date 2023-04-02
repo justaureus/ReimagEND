@@ -1,5 +1,5 @@
-id: END
-version: 1.0.0
+id: REIMAGEND
+version: 1.8.0
 author: "Aureus, RogueShade"
 
 generator: NOISE_3D
@@ -43,6 +43,9 @@ stages:
   - id: preprocessors
     type: FEATURE
   
+  - id: structures
+    type: FEATURE
+
   # Used for things like boulders and features that act like a part of the terrain.
   - id: landforms
     type: FEATURE
@@ -63,19 +66,9 @@ stages:
   - id: deposits
     type: FEATURE
   
-  # Used for biome specific river variant features.
-  # NOTE - Individual biomes should extend from configs in biomes/abstract/features/river
-  #        rather than overwriting this key themselves.
-  - id: river-decoration
-    type: FEATURE
-  
   # Used for larger things that generate on the surface like trees, some other features are
   # also treated as trees like ice spikes.
   - id: trees
-    type: FEATURE
-    
-  # Used for small features placed underwater like sea-grass.
-  - id: underwater-flora
     type: FEATURE
     
   # Used for small features placed on the surface like tall grass and vines.

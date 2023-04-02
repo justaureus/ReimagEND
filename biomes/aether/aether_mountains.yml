@@ -1,30 +1,30 @@
-id: PEARLESCENT_END
+id: AETHER_MOUNTAINS
 type: BIOME
-extends: [ END ]
-vanilla: minecraft:end_highlands
-color: $biomes/colors.yml:PEARLESCENT_END  
+extends: [ AETHER ]
+vanilla: minecraft:plains
+color: $biomes/colors.yml:AETHER_DRIFTLANDS
 
 terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold+4*
+      -1+threshold+
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x*5, y*flatness, z*5)
-          ) * trigonal(x,y,z),
+            simplex3(x, y/1.5, z)
+          ),
           lerp(y, min, 0, min+taper,
-            (simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3)
-          ) * trigonal(x,y,z)
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          )
         )
-      ) * trigonal(x,y,z)
+      )
     variables:
       threshold: ${meta.yml:terrain-configuration.island-threshold}
-      max: ${meta.yml:terrain-configuration.island-max-height}
+      max: 300
       min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: ${meta.yml:terrain-configuration.island-flatness}
+      flatness: 0.1
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -35,7 +35,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -46,18 +46,33 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
-      trigonal:
-        dimensions: 3
-        type: CELLULAR
-        return: CellValue
-        frequency: 0.05
-        salt: 3146
-palette:
-  - PEARLESCENT_GROUND: 319
 
+colors:
+  grass: 0xd2de85
+  foliage: 0xd2de85
+
+palette:
+  - SNOW: 319
+  - AETHER_GRASS: 175
+
+slant:
+  - threshold: 3.5
+    palette:
+      - MOSSY_COBBLESTONE_STONE: 319
+      
 features:
-  landforms:
-    - BIG_HORIZONTAL_CHAINS
-    - BIG_VERTICAL_CHAINS
+  slabs:
+    - SNOW_LAYERS
+  trees:
+    - OAK_BUSH_PATCHES
+    - SPARSE_OAK_TREES
   flora:
-    - PEARL_WEEDS
+    - GRASS
+    - MIXED_FLOWER_COVER
+  postprocessors:
+    - HANGING_LANTERNS
+    - TREE_SNOW
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES  
+    #- CLOUDS
+  

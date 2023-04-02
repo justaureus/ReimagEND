@@ -1,4 +1,4 @@
-id: ISLAND_RUINS
+id: FLYING_ISLANDS
 type: FEATURE
 
 distributor:
@@ -30,4 +30,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: island_ruin
+  structures: flying_island

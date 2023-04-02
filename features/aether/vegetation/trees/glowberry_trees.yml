@@ -31,5 +31,7 @@ locator:
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: glowberry_tree
+    type: WHITE_NOISE
+  structures: 
+    - glowberry_tree: 4
+    - big_glowberry_tree: 1

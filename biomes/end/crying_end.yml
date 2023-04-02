@@ -55,5 +55,6 @@ features:
   trees:
     - PLUMBLE_TREES
     - TWIRL_WEEDS
+    - CRYING_TENDRILS
   postprocessors:
     - CRYING_ICICLES

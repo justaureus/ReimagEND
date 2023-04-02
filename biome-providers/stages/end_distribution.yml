@@ -15,10 +15,13 @@ stages:
       - END_WASTES: 1
       - END_HIGHLANDS: 1
       - WARPED_BARRENS: 1
+      - WARPED_GROVE: 1
       - CHORUVE_FOREST: 1
+      - CRAGGY_END: 1
       - JAGGED_END: 1
       - DARK_END: 1
       - AMETHYST_END: 1
+      - TAINTED_END: 1
       - CRYING_END: 1
       - PEARLESCENT_END: 1
     to: 

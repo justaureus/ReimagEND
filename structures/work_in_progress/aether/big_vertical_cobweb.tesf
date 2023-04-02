@@ -1,3 +1,5 @@
+// WIP Procedural Cobweb
+
 num randPrecision = 100;
 
 num d = randomInt(randPrecision)/randPrecision;

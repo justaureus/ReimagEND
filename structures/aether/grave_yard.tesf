@@ -1,0 +1,6 @@
+num graves = 3+randomInt(2);
+num xRange = 15;
+num zRange = 15;
+for(num g = 0; g < graves; g = g + 1) {
+    structure(randomInt(xRange),0,randomInt(zRange),"grave","NONE","CW90","CW180","CCW90");
+}

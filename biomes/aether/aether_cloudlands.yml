@@ -1,6 +1,6 @@
 id: AETHER_CLOUDLANDS
 type: BIOME
-extends: [ AETHER, AETHER_PLAINS ]
+extends: [ AETHER ]
 vanilla: minecraft:forest
 color: $biomes/colors.yml:AETHER_CLOUDLANDS
 
@@ -8,7 +8,7 @@ terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold-
+      -1+threshold+
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
@@ -24,7 +24,7 @@ terrain:
       max: ${meta.yml:terrain-configuration.island-max-height}
       min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: ${meta.yml:terrain-configuration.island-flatness}
+      flatness: 1
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -35,7 +35,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.1 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -45,11 +45,16 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.05 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
 
+palette:
+  - BLOCK:minecraft:white_stained_glass: 319
 colors:
   grass: 0x4c5e3f
   foliage: 0x4c5e3f
 
 features:
+  structures:
+    - FLYING_ISLANDS
+  landforms:
     - CLOUDS

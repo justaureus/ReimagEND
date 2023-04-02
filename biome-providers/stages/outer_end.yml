@@ -3,7 +3,7 @@ distribution-map: &distribution-map
   expression: split((noise(x/spread,z/spread)+1)*4/(radius/spread)-1)
   variables:
     spread: 1300
-    radius: 500
+    radius: 1000
   functions:
     split:
       arguments: [x]

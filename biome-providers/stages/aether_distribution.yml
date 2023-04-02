@@ -22,6 +22,8 @@ stages:
       - AETHER_CRIMSON_HEIGHTS: 1
       - AETHER_WEBBED_FOREST: 1
       - AETHER_CLOUDLANDS: 1
+      - AETHER_MOUNTAINS: 1
+      - AETHER_DISCUS_AETHER: 1
     to: 
       aether_highlands:
       - AETHER_HIGHLANDS: 2

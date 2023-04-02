@@ -25,5 +25,7 @@ locator:
         offset: 1
 structures:
   distribution:
-    type: CONSTANT
-  structures: grave
+    type: WHITE_NOISE
+  structures: 
+    - grave: 4
+    - grave_yard: 1

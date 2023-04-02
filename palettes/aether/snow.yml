@@ -1,0 +1,44 @@
+id: SNOW
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:snow_block: 1
+    layers: 1
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.3
+          salt: 9846   
+  - materials:
+      - minecraft:snow_block: 1
+    layers: 1
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.1
+          salt: 9846   
+  - materials:
+      - minecraft:snow_block: 1
+      - minecraft:coarse_dirt: 1
+      - minecraft:dirt: 3
+    layers: 3
+    sampler:
+      type: WHITE_NOISE
+      salt: 9888
+  - materials: minecraft:stone
+    layers: 1

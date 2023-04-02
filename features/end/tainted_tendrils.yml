@@ -1,19 +1,25 @@
-id: OBSIDIAN_SPIKES
+id: TAINTED_TENDRILS
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 7
-  padding: 9
-  salt: 3247
+  width: 16
+  padding: 12
+  salt: 4398
 
 locator:
   type: AND
   locators:
     - type: TOP
       range: &range
-        min: 60
-        max: 255
+        min: 64
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:black_concrete
+        offset: -1
     - type: PATTERN
       range: *range
       pattern:
@@ -22,15 +28,10 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH
-        block: minecraft:end_stone
-        offset: -1
-
+        type: MATCH_AIR
+        offset: 10
 
 structures:
   distribution:
     type: CONSTANT
-  structures:
-    - obsidian_spike: 4
-    - obsidian_spike_cluster: 1
-  
+  structures: tainted_tendril

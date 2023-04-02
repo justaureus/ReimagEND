@@ -1,0 +1,34 @@
+id: MOB_SPAWNERS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 125
+  padding: 100
+  salt: 1901
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 175
+        max: 200
+      pattern:
+        type: MATCH_SOLID
+        offset: 5
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -5
+        
+structures:
+  distribution:
+    type: CONSTANT
+  structures: mob_spawner
