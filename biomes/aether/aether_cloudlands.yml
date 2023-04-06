@@ -1,7 +1,7 @@
 id: AETHER_CLOUDLANDS
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:forest
+vanilla: minecraft:the_void
 color: $biomes/colors.yml:AETHER_CLOUDLANDS
 
 terrain:

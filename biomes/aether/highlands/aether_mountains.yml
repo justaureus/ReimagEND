@@ -1,8 +1,8 @@
 id: AETHER_MOUNTAINS
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:plains
-color: $biomes/colors.yml:AETHER_DRIFTLANDS
+vanilla: minecraft:snowy_slopes
+color: $biomes/colors.yml:AETHER_MOUNTAINS
 
 terrain:
   sampler:
@@ -12,7 +12,7 @@ terrain:
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, y/1.5, z)
+            simplex3(x, y/3, z)
           ),
           lerp(y, min, 0, min+taper,
             simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
@@ -24,7 +24,7 @@ terrain:
       max: 300
       min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 0.1
+      flatness: 1
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -48,15 +48,14 @@ terrain:
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
 
 colors:
-  grass: 0xd2de85
-  foliage: 0xd2de85
+  grass: 0x9edbca
+  foliage: 0x9edbca
 
 palette:
   - SNOW: 319
-  - AETHER_GRASS: 175
 
 slant:
-  - threshold: 3.5
+  - threshold: 3
     palette:
       - MOSSY_COBBLESTONE_STONE: 319
       
@@ -72,6 +71,7 @@ features:
   postprocessors:
     - HANGING_LANTERNS
     - TREE_SNOW
+    - CEILING_ICICLES
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     #- CLOUDS

@@ -2,6 +2,7 @@ num radius = 3+randomInt(2);
 num length = 20+randomInt(10);
 num xTranslate = 0;
 num zTranslate = 0;
+str setBlock = "minecraft:black_concrete";
 for(num l = 0; l <= length; l = l + 1) {
 
     // Reduce radius inversely to length
@@ -11,8 +12,10 @@ for(num l = 0; l <= length; l = l + 1) {
     for(num x = -r; x <= r; x = x + 1) {
         for(num y = -r; y <= r; y = y + 1) {
             for(num z = -r; z <= r; z = z + 1) {
+                setBlock = "minecraft:black_concrete";
+                if (randomInt(4) == 0) setBlock = "minecraft:sculk";
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                    block(x + xTranslate, l + y - radius, z + zTranslate, "minecraft:black_concrete", false);                  
+                    block(x + xTranslate, l + y - radius, z + zTranslate, setBlock, false);                  
                 }
             }
         }

@@ -24,8 +24,9 @@ for(num l = 0; l <= length; l = l + 1) {
     for(num x = -r; x <= r; x = x + 1) {
         for(num y = -r; y <= r; y = y + 1) {
             for(num z = -r; z <= r; z = z + 1) {
+                setBlock = "minecraft:black_concrete";
+                if (randomInt(4) == 0) setBlock = "minecraft:sculk";
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        setBlock = "minecraft:black_concrete";
                         block(l*dx + x, l*dy + y - radius, l*dz + z, setBlock, false);                    
                 }
             }
