@@ -3,7 +3,7 @@ num goldenAngle = 2.39996;
 num pi = 3.14159;
 num twopi = 6.28318530718;
 
-num trunkHeight = 12+randomInt(9);
+num trunkHeight = 16+randomInt(12);
 str trunkBlock = "minecraft:oak_log";
 str rootBlock = "minecraft:oak_wood";
 

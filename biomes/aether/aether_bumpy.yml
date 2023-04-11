@@ -1,7 +1,7 @@
 id: AETHER_BUMPY
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:plains
+vanilla: minecraft:windswept_hills
 color: $biomes/colors.yml:AETHER_BUMPY
 
 terrain:

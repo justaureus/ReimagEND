@@ -18,7 +18,6 @@ stages:
       - WARPED_GROVE: 1
       - CHORUVE_FOREST: 1
       - CRAGGY_END: 1
-      - JAGGED_END: 1
       - DARK_END: 1
       - AMETHYST_END: 1
       - TAINTED_END: 1
@@ -26,8 +25,9 @@ stages:
       - PEARLESCENT_END: 1
     to: 
       shattered_end:
-        - SHATTERED_END: 2
-        - SHATTERED_FOREST: 1
+        - SHATTERED_END: 4
+        - SHATTERED_FOREST: 2
+        - JAGGED_END: 1
       void:
         - VOID: 4
         - STARFIELD: 2

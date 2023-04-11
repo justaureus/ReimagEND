@@ -46,12 +46,6 @@ biome-distribution:
   # increase that scale to 2, that biome will generate 600 blocks wide.
   # Default: 1
 
-  continental-scale: 100
-  # Controls the scale of land / coastal / oceanic distribution. Increasing
-  # this produces larger landmasses and larger oceans, and vice-versa when
-  # decreasing it.
-  # Default: 100
-
   main-end-scale: 150
   # Controls general size of the main end island.  Larger scale = larger main end island.
   # Default: 150
@@ -62,15 +56,15 @@ biome-distribution:
 
   small-pillar-radius: 80
   # Controls the radius of small pillars at the main end island from the center of the island
-  # Default: 70
+  # Default: 80
 
-  end-scale: 150
+  end-scale: 250
   # Controls the scale of the entire end.
-  # Default: 150
+  # Default: 250
 
-  end-biome-scale: 300
+  end-biome-scale: 150
   # Controls the scale of end biomes in particular.
-  # Default: 300
+  # Default: 150
   
   aether-scale: 50
   # Controls the scale of the entire aether. 

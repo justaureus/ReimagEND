@@ -1,7 +1,7 @@
 id: AETHER_FOREST
 type: BIOME
 extends: [ AETHER, AETHER_PLAINS, EQ_DEFAULT]
-vanilla: minecraft:forest
+vanilla: minecraft:windswept_forest
 color: $biomes/colors.yml:AETHER_FOREST
 
 features:

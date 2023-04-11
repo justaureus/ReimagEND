@@ -1,7 +1,7 @@
 id: AETHER_DISCUS_AETHER
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:plains
+vanilla: minecraft:windswept_hills
 color: $biomes/colors.yml:AETHER_DRIFTLANDS
 
 terrain:

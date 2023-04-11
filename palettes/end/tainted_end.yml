@@ -4,9 +4,9 @@ type: PALETTE
 layers:
   - materials:
       - minecraft:end_stone: 5
-      - minecraft:black_concrete: 1
+      - minecraft:black_concrete: 2
       - minecraft:sculk: 1
-      - minecraft:black_concrete_powder: 1
+      - minecraft:black_concrete_powder: 2
       - minecraft:end_stone: 5
     layers: 1
     sampler:

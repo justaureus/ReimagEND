@@ -1,7 +1,7 @@
 id: AETHER_PLAINS
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT ]
-vanilla: minecraft:plains
+vanilla: minecraft:windswept_hills
 color: $biomes/colors.yml:AETHER_PLAINS
 
 colors:

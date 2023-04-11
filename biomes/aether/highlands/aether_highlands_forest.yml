@@ -1,7 +1,7 @@
 id: AETHER_HIGHLANDS_FOREST
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT ]
-vanilla: minecraft:snowy_taiga
+vanilla: minecraft:windswept_forest
 color: $biomes/colors.yml:AETHER_HIGHLANDS_FOREST
 
 colors:

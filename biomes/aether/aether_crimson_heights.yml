@@ -1,7 +1,7 @@
 id: AETHER_CRIMSON_HEIGHTS
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:plains
+vanilla: minecraft:windswept_hills
 color: $biomes/colors.yml:AETHER_CRIMSON_HEIGHTS
 
 terrain:
