@@ -1,7 +1,7 @@
-id: AETHER_DRIFTLANDS
+id: AETHER_ANCIENT_WASTES
 type: BIOME
 extends: [ AETHER ]
-color: $biomes/colors.yml:AETHER_DRIFTLANDS
+color: $biomes/colors.yml:AETHER_ANCIENT_WASTES
 
 terrain:
   sampler:
@@ -11,19 +11,19 @@ terrain:
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, y*flatness, z)
+            simplex3(x, -y*flatness, z)
           ),
-          lerp(y, min, 0, min+taper,
-            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          lerp(y, min+undercarriageTranslate, 0, min+taper,
+            simplex3(x, (-y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
           )
         )
       )
     variables:
       threshold: ${meta.yml:terrain-configuration.island-threshold}
-      max: ${meta.yml:terrain-configuration.island-max-height}
-      min: ${meta.yml:terrain-configuration.island-min-height}
+      max: 250
+      min: 0
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 2
+      flatness: 9
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -34,7 +34,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -44,14 +44,14 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
 
 colors:
   grass: 0xd2de85
   foliage: 0xd2de85
 
 palette:
-  - AETHER_GRASS: 319
+  - AETHER_PODZOL: 319
 
 slant:
   - threshold: 3.5
@@ -59,12 +59,18 @@ slant:
       - MOSS_STONE: 319
       
 features:
+  structures:
+    - ANCIENT_TOWERS
+    - CLUSTERED_SMALL_RUINS
+    - CLUSTERED_SMALL_TALL_RUINS
+    - BIG_PILLAR_RUINS
+    - PILLAR_RUINS
   trees:
     - OAK_BUSH_PATCHES
     - SPARSE_OAK_TREES
   flora:
     - GRASS
-    - MIXED_FLOWER_COVER
+    - FERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     #- CLOUDS

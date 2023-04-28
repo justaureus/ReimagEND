@@ -1,7 +1,7 @@
-id: AETHER_DRIFTLANDS
+id: AETHER_RUGGED_CLIFFS
 type: BIOME
 extends: [ AETHER ]
-color: $biomes/colors.yml:AETHER_DRIFTLANDS
+color: $biomes/colors.yml:AETHER_RUGGED_CLIFFS
 
 terrain:
   sampler:
@@ -19,9 +19,9 @@ terrain:
         )
       )
     variables:
-      threshold: ${meta.yml:terrain-configuration.island-threshold}
-      max: ${meta.yml:terrain-configuration.island-max-height}
-      min: ${meta.yml:terrain-configuration.island-min-height}
+      threshold: 0.7
+      max: 250
+      min: 0
       taper: ${meta.yml:terrain-configuration.island-taper}
       flatness: 2
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
@@ -44,14 +44,14 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.0005 / ${meta.yml:terrain-configuration.island-scale}
 
 colors:
   grass: 0xd2de85
   foliage: 0xd2de85
 
 palette:
-  - AETHER_GRASS: 319
+  - AETHER_PODZOL: 319
 
 slant:
   - threshold: 3.5
@@ -64,7 +64,7 @@ features:
     - SPARSE_OAK_TREES
   flora:
     - GRASS
-    - MIXED_FLOWER_COVER
+    - FERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     #- CLOUDS

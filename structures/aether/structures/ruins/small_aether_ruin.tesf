@@ -1,0 +1,12 @@
+num length = 4+randomInt(3);
+num width = 4+randomInt(3);
+str setStructure = "small_pillar";
+for (num x = -length/2; x < length/2; x = x + 1) {
+    structure(x,-2,width/2,setStructure,"NONE");
+    structure(x,-2,-width/2,setStructure,"NONE");
+}
+
+for (num z = -width/2; z < width/2; z = z + 1) {
+    structure(length/2,-2,z,setStructure,"NONE");
+    structure(-length/2,-2,z,setStructure,"NONE");
+}

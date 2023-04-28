@@ -1,8 +1,7 @@
 id: AETHER_DISCUS_AETHER
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:windswept_hills
-color: $biomes/colors.yml:AETHER_DRIFTLANDS
+color: $biomes/colors.yml:AETHER_DISCUS_AETHER
 
 terrain:
   sampler:
@@ -66,8 +65,6 @@ features:
   flora:
     - GRASS
     - MIXED_FLOWER_COVER
-  postprocessors:
-    - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     #- CLOUDS

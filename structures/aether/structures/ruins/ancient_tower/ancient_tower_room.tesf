@@ -1,0 +1,12 @@
+num random = randomInt(4);
+if (random == 0) structure(4,0,4,"empty_room","NONE");
+if (random == 1) {
+    structure(-1,0,-1,"vex_spawner_room","NONE");
+    for (num y = 0; y < 5; y = y + 1) {
+        block(5,10-y,5,"minecraft:chain"); 
+    }
+    block(5,6,5,"minecraft:spawner"); 
+    state(5,6,5,"type=VEX"); 
+}
+if (random == 2) structure(0,0,0,"library_room","NONE");
+if (random == 3) structure(0,0,0,"portal_room","NONE");

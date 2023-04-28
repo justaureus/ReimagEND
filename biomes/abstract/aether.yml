@@ -2,24 +2,28 @@ id: AETHER
 type: BIOME
 abstract: true
 extends: [ ORES_DEFAULT, DEPOSITS_DEFAULT, CARVING_LAND ]
+vanilla: minecraft:windswept_hills
 
 # Overworld Atmosphere
-#colors:
+# colors:
 #  fog: 0xc8e8e7
 #  water: 0xbadfe6
 #  water-fog: 0xbadfe6
 #  sky: 0xc8e8e7
 
 # End Atmosphere
-colors:
-  fog: 0x000000
-  sky: 0x000000
+# colors:
+#  fog: 0x000000
+#  sky: 0x000000
 
-climate:
-  precipitation: none
-  temperature: 0.5
-  downfall: 0.5
+# climate:
+#  precipitation: none
+#  temperature: 0.5
+#  downfall: 0.5
 
 features:
+  postprocessors:
+    - HANGING_LANTERNS
   structures:
     - MOB_SPAWNERS
+    - MINESHAFTS

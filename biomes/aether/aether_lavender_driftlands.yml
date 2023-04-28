@@ -1,7 +1,6 @@
 id: AETHER_LAVENDER_DRIFTLANDS
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:windswept_hills
 color: $biomes/colors.yml:AETHER_LAVENDER_DRIFTLANDS
 
 terrain:
@@ -65,8 +64,6 @@ features:
   flora:
     - GRASS
     - LAVENDER_FLOWERS
-  postprocessors:
-    - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     - HANGING_BEE_NESTS

@@ -1,7 +1,6 @@
 id: AETHER_HIGHLANDS_FOREST
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT ]
-vanilla: minecraft:windswept_forest
 color: $biomes/colors.yml:AETHER_HIGHLANDS_FOREST
 
 colors:
@@ -18,6 +17,7 @@ features:
     - SPRUCE_TREES
   flora:
     - GRASS
+    - FERNS
     - SPRUCE_BUSH_PATCHES
     - SWEET_BERRY_BUSH_PATCHES
   postprocessors:

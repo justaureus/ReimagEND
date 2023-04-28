@@ -1,7 +1,6 @@
 id: AETHER_WEBBED_FOREST
 type: BIOME
 extends: [ AETHER, AETHER_PLAINS, EQ_DEFAULT]
-vanilla: minecraft:windswept_forest
 color: $biomes/colors.yml:AETHER_WEBBED_FOREST
 
 colors:

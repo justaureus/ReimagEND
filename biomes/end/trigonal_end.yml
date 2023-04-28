@@ -1,17 +1,18 @@
-id: AETHER_DRIFTLANDS
+id: TRIGONAL_END
 type: BIOME
-extends: [ AETHER ]
-color: $biomes/colors.yml:AETHER_DRIFTLANDS
+extends: [ END ]
+vanilla: minecraft:end_midlands
+color: $biomes/colors.yml:TRIGONAL_END
 
 terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold+
+      -1+threshold+4*
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, y*flatness, z)
+            simplex3(x*5, y*flatness, z*5)
           ),
           lerp(y, min, 0, min+taper,
             simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
@@ -19,11 +20,11 @@ terrain:
         )
       )
     variables:
-      threshold: ${meta.yml:terrain-configuration.island-threshold}
+      threshold: 0.3
       max: ${meta.yml:terrain-configuration.island-max-height}
       min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 2
+      flatness: ${meta.yml:terrain-configuration.island-flatness}
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -34,7 +35,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -44,27 +45,7 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
-
-colors:
-  grass: 0xd2de85
-  foliage: 0xd2de85
+            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
 
 palette:
-  - AETHER_GRASS: 319
-
-slant:
-  - threshold: 3.5
-    palette:
-      - MOSS_STONE: 319
-      
-features:
-  trees:
-    - OAK_BUSH_PATCHES
-    - SPARSE_OAK_TREES
-  flora:
-    - GRASS
-    - MIXED_FLOWER_COVER
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES  
-    #- CLOUDS
+  - TRIGONAL_GROUND: 319

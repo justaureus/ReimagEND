@@ -45,10 +45,10 @@ for(num x = -radius; x <= radius; x = x + 1) {
 }
 
 block(0,0,0, "minecraft:chest", false);
-structure(2,-2,2,"pillar_ruin","NONE");
-structure(-2,-2,-2,"pillar_ruin","NONE");
-structure(-2,-2,2,"pillar_ruin","NONE");
-structure(2,-2,-2,"pillar_ruin","NONE");
+structure(2,-2,2,"small_pillar_ruin","NONE");
+structure(-2,-2,-2,"small_pillar_ruin","NONE");
+structure(-2,-2,2,"small_pillar_ruin","NONE");
+structure(2,-2,-2,"small_pillar_ruin","NONE");
 
 
 

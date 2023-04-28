@@ -17,7 +17,7 @@ for (num y = -1; y <= height; y = y + 1) {
         for (num z = -width/2; z <= width/2; z = z + 1) {
 
             // walls by length (x)
-            if ( (x == -length/2) || (x == length/2) && (z > 2 || z < -2)) {
+            if ( (x == -length/2) || (x == length/2) && (x > 2 || x < -2)) {
                 structure(x,y,z,setBlock,"NONE");
             }
 
@@ -97,7 +97,7 @@ num random = randomInt(3);
 if (random == 0) state(0,3,0,"type=ZOMBIE");    
 if (random == 1) state(0,3,0,"type=SKELETON");  
 if (random == 2) {
-    // future spider webs
     state(0,3,0,"type=SPIDER");  
+    // future spider webs
 }
 

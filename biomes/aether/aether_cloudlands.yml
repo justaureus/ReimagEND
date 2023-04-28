@@ -1,6 +1,5 @@
 id: AETHER_CLOUDLANDS
 type: BIOME
-extends: [ AETHER ]
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:AETHER_CLOUDLANDS
 
@@ -54,7 +53,5 @@ colors:
   foliage: 0x4c5e3f
 
 features:
-  structures:
-    - FLYING_ISLANDS
   landforms:
     - CLOUDS

@@ -1,0 +1,73 @@
+num length = 11+(5*randomInt(2));
+num width = 5;
+num height = 8;
+num direction = randomInt(2);
+if (recursions() > 2) fail;
+str setBlock = "mineshaft_block";
+for (num l = 0; l < length; l = l + 1) {
+    
+    if (direction == 0) {
+        if (getBlock(l,0,0) == "minecraft:air") fail;
+
+        for (num y = 0; y < height; y = y + 1) {
+            for (num w = -width/2; w <= width/2; w = w + 1) {
+            
+                if (l % 5 == 0) {
+                    // headframe
+                    if (y == height-1) {
+                        structure(l,y,w,setBlock,"NONE");
+                    }
+                    // support beams
+                    if ((w == width/2) || (w == -width/2) && y < height-1) {
+                        block(l,y,w,"minecraft:oak_log");
+                    }
+    
+                    if ((y < height-1) && (w != width/2) && (w != -width/2)) {
+                        block(l,y,w,"minecraft:air");
+                    }
+                } else block(l,y,w,"minecraft:air");
+    
+                if (y == 0) {
+                    structure(l,y,w,setBlock,"NONE");
+                }
+    
+                if (y == 1 && w == 0) {
+                    structure(l,y,w,"mineshaft_rail","NONE");
+                } 
+            }
+        }
+    } else if (direction == 1) {
+         if (getBlock(0,0,l) == "minecraft:air") fail;
+
+        for (num y = 0; y < height; y = y + 1) {
+            for (num w = -width/2; w <= width/2; w = w + 1) {
+            
+                if (l % 5 == 0) {
+                    // headframe
+                    if (y == height-1) {
+                        structure(w,y,l,setBlock,"NONE");
+                    }
+                    // support beams
+                    if ((w == width/2) || (w == -width/2) && y < height-1) {
+                        block(w,y,l,"minecraft:oak_log");
+                    }
+                    block(width/2,0,l,"minecraft:oak_planks");
+                    block(width/2,0,l,"minecraft:oak_planks");
+    
+                    if ((y < height-1) && (w != width/2) && (w != -width/2)) {
+                        block(w,y,l,"minecraft:air");
+                    }
+                } else block(w,y,l,"minecraft:air");
+    
+                if (y == 0) {
+                    structure(w,y,l,setBlock,"NONE");
+                }
+    
+                if (y == 1 && w == 0) {
+                    structure(w,y,l,"mineshaft_rail","NONE");
+                } 
+            }
+        }
+    }
+}
+

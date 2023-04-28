@@ -1,7 +1,6 @@
 id: AETHER_MOUNTAINS
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:windswept_gravelly_hills
 color: $biomes/colors.yml:AETHER_MOUNTAINS
 
 terrain:
@@ -67,7 +66,7 @@ features:
     - SPARSE_OAK_TREES
   flora:
     - GRASS
-    - MIXED_FLOWER_COVER
+    - FERNS
   postprocessors:
     - HANGING_LANTERNS
     - TREE_SNOW

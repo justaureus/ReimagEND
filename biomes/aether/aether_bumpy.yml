@@ -1,7 +1,6 @@
 id: AETHER_BUMPY
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:windswept_hills
 color: $biomes/colors.yml:AETHER_BUMPY
 
 terrain:
@@ -65,9 +64,6 @@ features:
     - SPARSE_OAK_TREES
   flora:
     - GRASS
-    
-  postprocessors:
-    - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     #- CLOUDS

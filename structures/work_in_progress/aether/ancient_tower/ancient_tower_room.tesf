@@ -1,5 +1,0 @@
-num random = randomInt(0);
-if (random == 0) structure(0,0,0,"empty_room","NONE");
-if (random == 1) structure(0,0,0,"vex_spawner_room","NONE");
-if (random == 2) structure(0,0,0,"library_room","NONE");
-if (random == 3) structure(0,0,0,"portal_room","NONE");

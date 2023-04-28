@@ -1,7 +1,6 @@
 id: AETHER_AZURE_FOREST
 type: BIOME
 extends: [ AETHER, AETHER_FOREST, EQ_DEFAULT]
-vanilla: minecraft:windswept_forest
 color: $biomes/colors.yml:AETHER_AZURE_FOREST
 
 colors:
@@ -12,8 +11,6 @@ palette:
   - AETHER_BLUE_GRASS: 319
   
 features:
-  postprocessors:
-    - HANGING_LANTERNS
   flora:
     - GRASS
     - BLUE_FLOWERS

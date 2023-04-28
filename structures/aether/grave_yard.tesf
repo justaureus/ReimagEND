@@ -16,7 +16,6 @@ for(num g = 0; g < graves; g = g + 1) {
         getBlock(xRandom,y,zRandom) != "minecraft:gravel" &&
         getBlock(xRandom,y,zRandom) != "minecraft:coarse_dirt") {
         continue;
-        block(xRandom,y,zRandom,"minecraft:red_concrete");
         }
     structure(xRandom,y,zRandom,"grave","NONE","CW_90","CW_180","CCW_90");
     }
