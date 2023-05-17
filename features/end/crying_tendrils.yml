@@ -1,0 +1,37 @@
+id: CRYING_TENDRILS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 16
+  padding: 12
+  salt: 7905
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:black_concrete
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 10
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: crying_tendril

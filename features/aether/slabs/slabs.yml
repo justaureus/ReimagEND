@@ -1,0 +1,16 @@
+id: SLABS
+type: FEATURE
+abstract: true
+
+distributor:
+  type: "YES"
+
+locator:
+  type: SURFACE
+  range:
+    min: 62
+    max: 319
+
+structures:
+  distribution:
+    type: CONSTANT

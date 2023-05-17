@@ -6,7 +6,7 @@ num radius = 1.5 + randomInt(randPrecision)/randPrecision*3;
 num dx = (randomInt(randPrecision)/randPrecision-0.5)*1.5;
 num dy = 0.5 + randomInt(randPrecision)/randPrecision;
 num dz = (randomInt(randPrecision)/randPrecision-0.5)*1.5;
-
+str setBlock = "minecraft:obsidian";
 
 // Normalize vector
 num mag = sqrt(pow(dx,2)+pow(dy,2)+pow(dz,2));
@@ -28,10 +28,12 @@ for(num l = 0; l <= length; l = l + 1) {
                         block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:end_stone", false);
                     }
                     else if (l/length < 0.5) {
-                        block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:obsidian", false);
+                        setBlock = "minecraft:obsidian";
+                        if (randomInt(4) == 0) setBlock = "minecraft:crying_obsidian";
+                        block(l*dx + x, l*dy + y - radius, l*dz + z, setBlock, false);
                     }
                     else {
-                        block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:crying_obsidian", false);
+                        block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:purple_concrete", false);
                     }
                 }
             }

@@ -1,0 +1,21 @@
+num radius = 4+randomInt(3);
+num random = randomInt(3);
+str setBlock = "minecraft:amethyst_block";
+
+for (num y = 0; y < 30; y = y + 1) {
+    for (num x = -radius; x < radius; x = x + 1) {
+        for (num z = -radius; z < radius; z = z + 1) {
+            if ((pow(x,2)*(3+random))+(pow(y,2)/(3+random))+(pow(z,2)*(3+random)) < pow(radius,2)) {
+                block(x, y, z, setBlock);
+            }  
+        }
+    }
+}
+
+for (num x = -radius; x < radius; x = x + 1) {
+  for (num y = 0; y < radius*3; y = y + 1) {
+    for (num z = -radius; z < radius; z = z + 1) {
+      structure(x,y,z,"amethyst_buds", "NONE");
+    }
+  }  
+}

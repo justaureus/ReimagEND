@@ -1,7 +1,6 @@
 id: AETHER_CRIMSON_HEIGHTS
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:plains
 color: $biomes/colors.yml:AETHER_CRIMSON_HEIGHTS
 
 terrain:
@@ -67,8 +66,6 @@ features:
     - GRASS
     - FERNS
     - REDWHITE_FLOWERS
-  postprocessors:
-    - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     #- CLOUDS

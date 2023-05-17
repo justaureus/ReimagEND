@@ -65,7 +65,7 @@ iron-uniform:
     max: 94
 
 iron-high:
-  averageCountPerChunk: 90
+  averageCountPerChunk: 40
   salt: 2031
   range:
     min: 63

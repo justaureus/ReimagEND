@@ -2,7 +2,7 @@ source:
   type: SAMPLER
   biomes:
     - outer_end: 1
-    - VOID: 2
+    - MAIN_END_VOID: 2
     - MAIN_END: 1
   sampler:
     type: EXPRESSION

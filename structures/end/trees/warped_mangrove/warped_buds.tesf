@@ -1,0 +1,7 @@
+if(getBlock(0, 0, 0) != "minecraft:warped_wart_block") {
+        fail;
+}
+
+str setBlock = "minecraft:warped_roots";
+
+if(getBlock(0, 1, 0) == "minecraft:air") block(0,1,0, setBlock, false);

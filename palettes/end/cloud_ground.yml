@@ -1,0 +1,25 @@
+id: CLOUD_GROUND
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:white_stained_glass: 20
+      - minecraft:light_gray_stained_glass: 6
+    layers: 1
+sampler:
+  type: WHITE_NOISE
+  amplitude: 1
+  warp:
+    type: "OPEN_SIMPLEX_2"
+    frequency: 0.01
+  sampler:
+    type: FBM
+    octaves: 2
+    sampler:
+      type: "CELLULAR"
+      return: "CellValue"
+      frequency: 0.05
+      salt: 9345
+      
+  
+

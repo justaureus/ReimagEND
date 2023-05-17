@@ -2,7 +2,7 @@ num length = 2 + randomInt(6);
 
 num i = 0;
 
-if(getBlock(0, 1, 0) == "minecraft:air") {
+if(getBlock(0, 1, 0) == "minecraft:air" || getBlock(0, 1, 0) == "minecraft:dark_oak_leaves") {
         fail;
 }
 

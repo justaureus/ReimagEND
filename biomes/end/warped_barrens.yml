@@ -1,7 +1,7 @@
 id: WARPED_BARRENS
 type: BIOME
 extends: [ END, EQ_DEFAULT ]
-vanilla: minecraft:end_highlands
+vanilla: minecraft:end_midlands
 color: $biomes/colors.yml:WARPED_BARRENS
 
 palette:
@@ -12,3 +12,4 @@ features:
     - WARPED_GRASS
   trees:
     - WARPED_MUSHROOMS
+    - TWISTING_BEANSTALKS

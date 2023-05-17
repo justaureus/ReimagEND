@@ -1,0 +1,13 @@
+num radius = 3+randomInt(3);
+num height = 5+randomInt(5);
+str setBlock = "minecraft:mushroom_stem";
+
+for (num y = 0; y < height; y = y + 1) {
+    for (num x = -radius; x <= radius; x = x + radius) {
+        for (num z = -radius; z <= radius; z = z + radius) {
+            if (y % 2 == 0) structure(0,y,0,"chorustle_spike_cluster","NONE");
+        }
+    } 
+}
+
+

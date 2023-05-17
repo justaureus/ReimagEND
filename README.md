@@ -7,3 +7,22 @@ As of Terra version 6.2, there is no easy way to set generators on the Fabric an
 Due to this, the only platform that you can easily use this pack on is the Bukkit version.  Please keep this in mind before creating issues related to the Fabric or Forge platforms.
 
 ### This pack is a WORK IN PROGRESS.  It is currently survival ready however it is not feature complete.  Expect frequent changes which may be incompatible (i.e, cause chunk borders) with older versions of the pack.
+
+## INSTALLATION
+Follow this [installation guide](https://terra.polydev.org/install/index.html) for your particular platform.
+
+#### Bukkit.yml Quick Reference 
+##### Affects just the Vanilla End Dimension
+```
+worlds:
+  world_the_end:
+    generator: Terra:REIMAGEND
+```
+##### More than One Config Pack for Multiple Worlds 
+```
+worlds:
+  world:
+    generator: Terra:OVERWORLD
+  world_the_end:
+    generator: Terra:REIMAGEND
+```

@@ -1,0 +1,17 @@
+num length = 3+randomInt(5);
+num random = randomInt(4);
+str setBlock = " ";
+if (random == 0) {
+    setBlock = "minecraft:stone_bricks";
+} else if (random == 1) {
+    setBlock = "minecraft:mossy_stone_bricks";
+} else if (random == 2) {
+    setBlock = "minecraft:cracked_stone_bricks";
+} else if (random == 3) {
+    setBlock = "minecraft:chiseled_stone_bricks";
+}
+
+block(0,0,0,setBlock);
+
+
+

@@ -59,3 +59,5 @@ features:
   landforms:
     - BIG_HORIZONTAL_CHAINS
     - BIG_VERTICAL_CHAINS
+  flora:
+    - PEARL_WEEDS

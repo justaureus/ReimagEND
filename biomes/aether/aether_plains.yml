@@ -1,7 +1,6 @@
 id: AETHER_PLAINS
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT ]
-vanilla: minecraft:plains
 color: $biomes/colors.yml:AETHER_PLAINS
 
 colors:
@@ -17,8 +16,6 @@ features:
   flora:
     - GRASS
     - MIXED_FLOWER_COVER
-  postprocessors:
-    - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     #- CLOUDS

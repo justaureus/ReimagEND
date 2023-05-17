@@ -46,35 +46,41 @@ biome-distribution:
   # increase that scale to 2, that biome will generate 600 blocks wide.
   # Default: 1
 
-  continental-scale: 100
-  # Controls the scale of land / coastal / oceanic distribution. Increasing
-  # this produces larger landmasses and larger oceans, and vice-versa when
-  # decreasing it.
-  # Default: 100
-
-  main-end-scale: 5
+  main-end-scale: 150
   # Controls general size of the main end island.  Larger scale = larger main end island.
-  # Default: 5
+  # Default: 150
   
-  void-buffer-scale: 20
+  void-buffer-scale: 1000
   # Controls size of void "buffer" zone between main and outer end areas.  Larger scale = larger main end island.
-  # Default: 20
+  # Default: 1000
 
-  end-scale: 50
-  # Controls the scale of end biomes.
-  # Default: 50
+  small-pillar-radius: 80
+  # Controls the radius of small pillars at the main end island from the center of the island
+  # Default: 80
+
+  end-scale: 250
+  # Controls the scale of the entire end.
+  # Default: 250
+
+  end-biome-scale: 150
+  # Controls the scale of end biomes in particular.
+  # Default: 150
   
   aether-scale: 50
-  # Controls the scale of aether biomes. 
+  # Controls the scale of the entire aether. 
   # Default: 50
 
-  precipitation-scale: 50
+  aether-biome-scale: 400
+  # Controls the scale of aether biomes in particular. 
+  # Default: 400
+  
+  # \/ MIGHT BE USED IN THE FUTURE \/
+
+  # precipitation-scale: 50
   # Controls the scale of precipitation zones. Same idea as temperature zones, where
   # humid biomes generate away from arid biomes, and biomes of similar precipitation
   # generate together.
   # Default: 50
-  
-  # \/ MIGHT BE USED IN THE FUTURE \/
 
   # temperature-scale: 60
   # Controls the scale of temperature zones. Most biomes are placed according to
@@ -84,8 +90,6 @@ biome-distribution:
   # hot and cold biomes generating further apart - and vice versa when decreasing it.
   # Default: 60
   
-  
-
   # elevation-scale: 35
   # Controls the scale of elevation zones. Most land biomes belong to
   # an elevation zone, in addition to temperature and precipitation. How far apart / close

@@ -1,0 +1,40 @@
+id: CLUSTERED_SMALL_TALL_RUINS
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 11
+      padding: 7
+      salt: 5366
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 3188
+      threshold: 0.2
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 75
+        max: 175
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: medium_aether_ruin

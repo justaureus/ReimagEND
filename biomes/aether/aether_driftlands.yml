@@ -1,7 +1,6 @@
 id: AETHER_DRIFTLANDS
 type: BIOME
 extends: [ AETHER ]
-vanilla: minecraft:plains
 color: $biomes/colors.yml:AETHER_DRIFTLANDS
 
 terrain:
@@ -66,8 +65,6 @@ features:
   flora:
     - GRASS
     - MIXED_FLOWER_COVER
-  postprocessors:
-    - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     #- CLOUDS

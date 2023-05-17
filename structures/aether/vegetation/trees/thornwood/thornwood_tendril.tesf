@@ -1,0 +1,26 @@
+num radius = 1.5;
+num length = 20+randomInt(10);
+num xTranslate = 0;
+num zTranslate = 0;
+str setBlock = "minecraft:dark_oak_wood";
+
+for(num l = 0; l <= length; l = l + 1) {
+    
+    
+    // Reduce radius inversely to length
+    num r = (radius/length * -l) + radius;
+    // Generate sphere at each point
+    for(num x = -r; x <= r; x = x + 1) {
+        for(num y = -r; y <= r; y = y + 1) {
+            for(num z = -r; z <= r; z = z + 1) {
+                setBlock = "minecraft:dark_oak_wood";
+                if (randomInt(4) == 0) setBlock = "minecraft:stripped_dark_oak_wood";
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                    block(x + xTranslate, l + y - radius, z + zTranslate, setBlock, false);                  
+                }
+            }
+        }
+    }
+    xTranslate = xTranslate+(1-randomInt(3));
+    zTranslate = zTranslate+(1-randomInt(3));
+}

@@ -1,0 +1,32 @@
+id: PILLAR_RUINS
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 5005
+  threshold: 0.1
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 75
+        max: 175
+      amount: 1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures:
+    - horizontal_pillar: 1
+    - vertical_pillar: 1
+
+  

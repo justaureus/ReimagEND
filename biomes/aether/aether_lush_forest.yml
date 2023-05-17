@@ -1,7 +1,6 @@
 id: AETHER_LUSH_FOREST
 type: BIOME
 extends: [ AETHER, AETHER_FOREST, EQ_DEFAULT]
-vanilla: minecraft:forest
 color: $biomes/colors.yml:AETHER_LUSH_FOREST
 
 colors:
@@ -12,8 +11,7 @@ palette:
   - AETHER_MOSS_GRASS: 319
 
 features:
-  postprocessors:
-    - HANGING_LANTERNS
+
   flora:
     - GRASS
     - SMALL_DRIPLEAF

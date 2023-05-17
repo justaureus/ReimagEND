@@ -2,6 +2,8 @@ num length = 3+randomInt(5);
 num random = randomInt(4);
 str face = "";
 
+if (getBlock(0,0,0) == "minecraft:air") fail;
+
 for (num y = 0; y < length; y = y + 1) {
     if (random == 0) {
         block(0,y,0,"minecraft:stone_bricks");

@@ -1,11 +1,11 @@
-id: GLOWBERRY_TREES
+id: WEB_TREES
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 8
+  width: 7
   padding: 6
-  salt: 5468
+  salt: 1230
 
 locator:
   type: AND
@@ -31,5 +31,8 @@ locator:
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: glowberry_tree
+    type: WHITE_NOISE
+  structures: 
+    - dead_tree_procedural: 1
+    - web_tree_procedural: 6
+    - web_tree_procedural_2: 3

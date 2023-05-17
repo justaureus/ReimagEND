@@ -1,0 +1,100 @@
+num randPrecision = 100;
+
+num height = 50 + randomInt(20);
+num yTranslate = -20;
+num radius = 4+randomInt(2);
+str setBlock = "minecraft:obsidian";
+str altBlock = "minecraft:crying_obsidian";
+
+for(num y = yTranslate; y <= height+yTranslate; y = y + 1) {
+    for(num x = -radius; x <= radius; x = x + 1) {
+        for(num z = -radius; z <= radius; z = z + 1) {
+            if (pow(x,2)+pow(z,2) < pow(radius,2)) {
+                
+                if (randomInt(15) == 0) { setBlock = altBlock;
+                } else setBlock = "minecraft:obsidian";
+                block(x, y, z, setBlock, false);
+            }   
+        }
+    }
+}
+
+for(num y = yTranslate+height-5; y <= height+yTranslate+4; y = y + 1) {
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(-radius, y, 0, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(0, y, -radius, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(radius, y, 0, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(0, y, radius, setBlock, false);
+
+    if (y < yTranslate+height+3) {
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(radius-1, y, radius-1, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(-radius+1, y, -radius+1, setBlock, false);
+    
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(-radius+1, y, radius-1, setBlock, false);
+
+    if (randomInt(15) == 0) { setBlock = altBlock;
+    } else setBlock = "minecraft:obsidian";
+    block(radius-1, y, -radius+1, setBlock, false);
+    }
+  
+}
+
+if (randomInt(3) == 0) {
+    for (num y = yTranslate+height; y < yTranslate+height+5; y = y + 1) {
+        for (num x = -3; x <= 3; x = x + 1) {
+            for (num z = -3; z <= 3; z = z + 1) {
+                // z-sides
+                if (x == 0 && (z == 2 || z == -2) && y > yTranslate+height) {
+                    block(x,y,z,"minecraft:iron_bars[east=true,west=true]");
+                    block(x+1,y,z,"minecraft:iron_bars[east=true,west=true]");
+                    block(x-1,y,z,"minecraft:iron_bars[east=true,west=true]");
+                }
+
+                // x-sides
+                if (z == 0 && (x == 2 || x == -2) && y > yTranslate+height) {
+                    block(x,y,z,"minecraft:iron_bars[north=true,south=true]");
+                    block(x,y,z+1,"minecraft:iron_bars[north=true,south=true]");
+                    block(x,y,z-1,"minecraft:iron_bars[north=true,south=true]");
+                }
+
+                // corners
+                if (z == 2 && x == 2 && y > yTranslate+height) {
+                    block(x,y,z,"minecraft:iron_bars[north=true,west=true]");
+                }
+
+                if (z == 2 && x == -2 && y > yTranslate+height) {
+                    block(x,y,z,"minecraft:iron_bars[north=true,east=true]");
+                }
+
+                if (z == -2 && x == 2 && y > yTranslate+height) {
+                    block(x,y,z,"minecraft:iron_bars[south=true,west=true]");
+                }
+
+                if (z == -2 && x == -2 && y > yTranslate+height) {
+                    block(x,y,z,"minecraft:iron_bars[south=true,east=true]");
+                }
+            }
+        }
+    } 
+}
+
+block(0, height+yTranslate+1, 0, "minecraft:bedrock"); 
+entity(0, height+yTranslate+2, 0, "minecraft:end_crystal");   

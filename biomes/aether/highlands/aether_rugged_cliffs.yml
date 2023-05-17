@@ -1,0 +1,70 @@
+id: AETHER_RUGGED_CLIFFS
+type: BIOME
+extends: [ AETHER ]
+color: $biomes/colors.yml:AETHER_RUGGED_CLIFFS
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression: |
+      -1+threshold+
+      lerp(y, max, 0, max-taper,
+        max(
+          lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
+            simplex3(x, y*flatness, z)
+          ),
+          lerp(y, min, 0, min+taper,
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          )
+        )
+      )
+    variables:
+      threshold: 0.7
+      max: 250
+      min: 0
+      taper: ${meta.yml:terrain-configuration.island-taper}
+      flatness: 2
+      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+    samplers:
+      simplex3:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
+      undercarriageMask:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: RIDGED
+          octaves: 3
+          gain: 1
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.0005 / ${meta.yml:terrain-configuration.island-scale}
+
+colors:
+  grass: 0xd2de85
+  foliage: 0xd2de85
+
+palette:
+  - AETHER_PODZOL: 319
+
+slant:
+  - threshold: 3.5
+    palette:
+      - MOSS_STONE: 319
+      
+features:
+  trees:
+    - OAK_BUSH_PATCHES
+    - SPARSE_OAK_TREES
+  flora:
+    - GRASS
+    - FERNS
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES  
+    #- CLOUDS

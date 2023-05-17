@@ -31,5 +31,6 @@ structures:
   distribution:
     type: CONSTANT
   structures:
-    - obsidian_spike: 1
+    - obsidian_spike: 4
+    - obsidian_spike_cluster: 1
   

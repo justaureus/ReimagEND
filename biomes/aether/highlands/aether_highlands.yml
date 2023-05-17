@@ -1,7 +1,6 @@
 id: AETHER_HIGHLANDS
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT]
-vanilla: minecraft:snowy_plains
 color: $biomes/colors.yml:AETHER_HIGHLANDS
 
 colors:

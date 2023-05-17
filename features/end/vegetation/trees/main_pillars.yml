@@ -8,9 +8,9 @@ distributor:
       sampler:
         type: EXPRESSION
         expression: |
-          max(circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1),circle(centerRadius-70, x+noise(x,z)-1, z+noise(x,z)-1, 0.5))
+          max(circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1),circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 0.5))
         variables:
-          centerRadius: ${meta.yml:biome-distribution.main-end-scale}
+          centerRadius: ${meta.yml:biome-distribution.small-pillar-radius}
           buffer: ${meta.yml:biome-distribution.void-buffer-scale}
         functions:
           circle:    {arguments: [r, x, z, l], expression: "if(x*x+z*z>r*r,-1,l)"}

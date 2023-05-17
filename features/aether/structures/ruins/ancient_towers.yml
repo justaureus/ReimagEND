@@ -1,0 +1,29 @@
+id: ANCIENT_TOWERS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 57
+  padding: 43
+  salt: 4858
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 75
+        max: 200
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+        
+structures:
+  distribution:
+    type: CONSTANT
+  structures: ancient_tower

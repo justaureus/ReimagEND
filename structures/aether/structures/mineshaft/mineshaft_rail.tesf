@@ -1,0 +1,4 @@
+if (getBlock(0,-1,0) == "minecraft:oak_planks" ||
+getBlock(0,-1,0) == "minecraft:oak_slab[type=top]") {
+    block(0,0,0,"minecraft:rail");
+}

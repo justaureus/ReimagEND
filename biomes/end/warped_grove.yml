@@ -1,0 +1,15 @@
+id: WARPED_GROVE
+type: BIOME
+extends: [ END, EQ_DEFAULT ]
+vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:WARPED_GROVE
+
+palette:
+  - BLOCK:minecraft:end_stone: 319
+
+features:
+  flora:
+    - WARPED_GRASS
+  trees:
+    - WARPED_MANGROVES
+    - TWISTING_BEANSTALKS

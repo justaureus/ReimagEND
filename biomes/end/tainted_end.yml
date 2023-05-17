@@ -1,0 +1,13 @@
+id: TAINTED_END
+type: BIOME
+extends: [ END, EQ_DEFAULT ]
+vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:TAINTED_END
+
+
+features:
+  landforms:
+    - TAINTED_TENDRILS
+    - TAINTED_SPIKES
+palette:
+  - TAINTED_END: 319

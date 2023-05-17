@@ -1,0 +1,27 @@
+num height = 15+randomInt(10);
+num radius = 5;
+num baseHeight = 2;
+num checkBot = 10;
+num yTranslate = 0;
+str setBlock = "ruin_block";
+
+for (num l = 0; l < checkBot; l = l + 1) {
+    if (getBlock(radius/2,-l,radius/2) == "minecraft:air" || getBlock(radius/2,-l,radius/2) == "minecraft:grass" ||
+    getBlock(-radius/2,-l,radius/2) == "minecraft:air" || getBlock(-radius/2,-l,radius/2) == "minecraft:grass" ||
+    getBlock(radius/2,-l,-radius/2) == "minecraft:air" || getBlock(radius/2,-l,-radius/2) == "minecraft:grass" ||
+    getBlock(-radius/2,-l,radius/2) == "minecraft:air" || getBlock(-radius/2,-l,-radius/2) == "minecraft:grass") continue;
+    yTranslate = -l;
+    break;
+}
+
+for (num y = 0; y < height; y = y + 1) {
+    for (num x = -radius/2; x <= radius/2; x = x + 1) {
+        for (num z = -radius/2; z <= radius/2; z = z + 1) {
+            if (pow(x,2)+pow(z,2) < pow(radius-2.5,2) && y > baseHeight && y < (height-baseHeight)) structure(x,y+yTranslate,z,setBlock,"NONE");
+
+            if (pow(x,2)+pow(z,2) < (pow(radius,2)) && y >= height-baseHeight) structure(x,y+yTranslate,z,setBlock,"NONE");
+
+            if (pow(x,2)+pow(z,2) < pow(radius,2) && y <= baseHeight) structure(x,y+yTranslate,z,setBlock,"NONE");
+        }
+    }
+}

@@ -1,0 +1,27 @@
+id: PEARL_WEEDS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 15
+  padding: 20
+  salt: 6667
+
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 60
+        max: 255
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: pearl_weed
+
+  
