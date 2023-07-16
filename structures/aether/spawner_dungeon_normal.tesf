@@ -1,0 +1,6 @@
+structure(0,0,0,"spawner_dungeon_normal_sc","NONE");
+
+num random = randomInt(3);
+if (random == 0) state(0, 3, 0,"type=ZOMBIE");
+if (random == 1) state(0, 3, 0,"type=SKELETON");
+if (random == 2) state(0, 3, 0,"type=SPIDER");

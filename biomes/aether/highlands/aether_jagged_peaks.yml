@@ -2,6 +2,7 @@ id: AETHER_JAGGED_PEAKS
 type: BIOME
 extends: [ AETHER ]
 color: $biomes/colors.yml:AETHER_JAGGED_PEAKS
+vanilla: minecraft:the_end
 
 terrain:
   sampler:

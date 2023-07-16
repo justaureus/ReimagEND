@@ -23,6 +23,7 @@ stages:
       - AMETHYST_END: 1
       - TAINTED_END: 1
       - CRYING_END: 1
+      - CORRUPTED_END: 1
       - PEARLESCENT_END: 1
     to: 
       shattered_end:

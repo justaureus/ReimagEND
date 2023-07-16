@@ -2,6 +2,7 @@ id: AETHER_HIGHLANDS
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT]
 color: $biomes/colors.yml:AETHER_HIGHLANDS
+vanilla: minecraft:the_end
 
 colors:
   grass: 0x9edbca

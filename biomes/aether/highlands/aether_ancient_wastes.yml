@@ -2,6 +2,7 @@ id: AETHER_ANCIENT_WASTES
 type: BIOME
 extends: [ AETHER ]
 color: $biomes/colors.yml:AETHER_ANCIENT_WASTES
+vanilla: minecraft:the_end
 
 terrain:
   sampler:

@@ -7,4 +7,6 @@ color: $biomes/colors.yml:STARFIELD
 features:
   trees:
     - VOIDSTARS
+#  preprocessors:
+#    - STAR_TRAIL
 

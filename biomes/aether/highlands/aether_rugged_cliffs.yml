@@ -2,6 +2,7 @@ id: AETHER_RUGGED_CLIFFS
 type: BIOME
 extends: [ AETHER ]
 color: $biomes/colors.yml:AETHER_RUGGED_CLIFFS
+vanilla: minecraft:the_end
 
 terrain:
   sampler:

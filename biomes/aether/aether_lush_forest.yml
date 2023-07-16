@@ -2,6 +2,7 @@ id: AETHER_LUSH_FOREST
 type: BIOME
 extends: [ AETHER, AETHER_FOREST, EQ_DEFAULT]
 color: $biomes/colors.yml:AETHER_LUSH_FOREST
+vanilla: minecraft:the_end
 
 colors:
   grass: 0x779234

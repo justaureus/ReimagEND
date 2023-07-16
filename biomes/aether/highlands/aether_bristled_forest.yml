@@ -2,6 +2,7 @@ id: AETHER_BRISTLED_FOREST
 type: BIOME
 extends: [ AETHER ]
 color: $biomes/colors.yml:AETHER_BRISTLED_FOREST
+vanilla: minecraft:the_end
 
 terrain:
   sampler:

@@ -2,6 +2,7 @@ id: AETHER_MOUNTAINS
 type: BIOME
 extends: [ AETHER ]
 color: $biomes/colors.yml:AETHER_MOUNTAINS
+vanilla: minecraft:the_end
 
 terrain:
   sampler:

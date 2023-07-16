@@ -1,12 +1,13 @@
 num randPrecision = 100;
 
-num length = 10 + randomInt(5);
+num length = 10 + randomInt(15);
 num yTranslate = 0;
+num yInt = 2;
 num radiusInt = randomInt(3);
 num maxRadius = 5;
 num radius = maxRadius;
 
-for (num y = 0; y < length; y = y + 2) {
+for (num y = 0; y < length; y = y + yInt) {
     radiusInt = randomInt(3);
     radius = maxRadius-radiusInt;
     for (num x = -radius; x < radius; x = x + 1) {
@@ -16,4 +17,6 @@ for (num y = 0; y < length; y = y + 2) {
             }
         }
     }    
+
+    yInt = yInt+randomInt(2);
 }

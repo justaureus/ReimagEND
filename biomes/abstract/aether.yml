@@ -25,5 +25,5 @@ features:
   postprocessors:
     - HANGING_LANTERNS
   structures:
-    - MOB_SPAWNERS
+    - SPAWNER_DUNGEONS_NORMAL
     - MINESHAFTS

@@ -1,34 +1,36 @@
-id: MOB_SPAWNERS
+id: LEVITATING_PILLARS
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 125
-  padding: 100
-  salt: 1901
+  width: 16
+  padding: 17
+  salt: 9443
 
 locator:
   type: AND
   locators:
-    - type: PATTERN
+    - type: TOP
       range: &range
-        min: 175
-        max: 200
-      pattern:
-        type: MATCH_SOLID
-        offset: 5
+        min: 64
+        max: 319
     - type: PATTERN
       range: *range
       pattern:
         type: MATCH_SOLID
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
         offset: 0
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SOLID
-        offset: -5
-        
+        type: MATCH_AIR
+        offset: 10
+
 structures:
   distribution:
     type: CONSTANT
-  structures: mob_spawner
+  structures: levitating_pillar

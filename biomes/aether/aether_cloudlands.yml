@@ -2,6 +2,7 @@ id: AETHER_CLOUDLANDS
 type: BIOME
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:AETHER_CLOUDLANDS
+vanilla: minecraft:the_end
 
 terrain:
   sampler:
