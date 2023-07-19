@@ -2,13 +2,13 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-num trunkHeight = 12+randomInt(12);
+num trunkHeight = 8+randomInt(9);
 str trunkBlock = "minecraft:dark_oak_log";
 str rootBlock = "minecraft:dark_oak_wood";
 
-num sideBranchInterval = 10;
+num sideBranchInterval = 3;
 num sideBranchMinHeight = 3+randomInt(3);
-num sideBranchLengthMin = 4+randomInt(2);
+num sideBranchLengthMin = 7+randomInt(2);
 num sideBranchLengthVariation = 2;
 num sideBranchVerticalVariation = 0;
 num sideBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/2;
@@ -22,11 +22,11 @@ str sideBranchBlockX = "minecraft:dark_oak_log[axis=x]";
 str sideBranchBlockY = "minecraft:dark_oak_log[axis=y]";
 str sideBranchBlockZ = "minecraft:dark_oak_log[axis=z]";
 
-num topBranches = 5+randomInt(2);
-num topBranchLengthUpwardsMin = 3+randomInt(5);
-num topBranchLengthOutwardsMin = 8+randomInt(5);
-num topBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/3;
-num topBranchLeafRadiusMin = 3;
+num topBranches = 5+randomInt(5);
+num topBranchLengthUpwardsMin = 8+randomInt(5);
+num topBranchLengthOutwardsMin = 12+randomInt(5);
+num topBranchVerticalDirection = 0.1+randomInt(randPrecision)/randPrecision/3;
+num topBranchLeafRadiusMin = 4;
 num topBranchLeafTranslate = 0;
 num topBranchLeafTopFlatness = 2;
 num topBranchLeafBottomFlatness = 3;
@@ -164,9 +164,9 @@ block(0, -1, 0, "minecraft:dirt");
 
 num twopi = pi*2;
 
-for (num v = 35; v > trunkHeight; v = v - 1) {
-    num rx = sin(randomInt(randPrecision)/randPrecision * twopi) * (randomInt(9) + 3);
-    num rz = cos(randomInt(randPrecision)/randPrecision * twopi) * (randomInt(9) + 3);
+for (num v = trunkHeight+10; v > trunkHeight; v = v - 1) {
+    num rx = sin(randomInt(randPrecision)/randPrecision * twopi) * (randomInt(3)+1);
+    num rz = cos(randomInt(randPrecision)/randPrecision * twopi) * (randomInt(3)+1);
     structure(rx, v, rz, "hanging_cobweb", "NONE");
     structure(-rx, v, rz, "hanging_cobweb", "NONE");
     structure(rx, v, -rz, "hanging_cobweb", "NONE");

@@ -1,4 +1,4 @@
-id: WEB_TREES
+id: GRIM_TREES
 type: FEATURE
 
 distributor:
@@ -12,7 +12,7 @@ locator:
   locators:
     - type: TOP
       range: &range
-        min: 100
+        min: 50
         max: 319
     - type: PATTERN
       range: *range
@@ -33,6 +33,5 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - dead_tree_procedural: 1
-    - web_tree_procedural: 6
-    - web_tree_procedural_2: 3
+    - grim_tree_procedural: 5
+    - big_grim_tree_procedural: 1

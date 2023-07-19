@@ -48,8 +48,8 @@ terrain:
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
 
 colors:
-  grass: 0x619961
-  foliage: 0x619961
+  grass: 0x635229
+  foliage: 0x635229
 
 palette:
   - AETHER_PODZOL: 319

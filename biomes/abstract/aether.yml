@@ -22,6 +22,8 @@ vanilla: minecraft:windswept_hills
 #  downfall: 0.5
 
 features:
+  preprocessors:
+    - CLOUD_PLANE
   postprocessors:
     - HANGING_LANTERNS
   structures:

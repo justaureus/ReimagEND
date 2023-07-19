@@ -1,15 +1,15 @@
-id: AETHER_WEBBED_FOREST
+id: AETHER_GRIM_WOODLANDS
 type: BIOME
 extends: [ AETHER, AETHER_PLAINS, EQ_DEFAULT]
-color: $biomes/colors.yml:AETHER_WEBBED_FOREST
+color: $biomes/colors.yml:AETHER_GRIM_WOODLANDS
 vanilla: minecraft:the_end
 
 colors:
-  grass: 0x4c5e3f
-  foliage: 0x4c5e3f
+  grass: 0x242423
+  foliage: 0x242423
 
 palette:
-  - AETHER_PODZOL: 319
+  - AETHER_GRIM_PODZOL: 319
 
 features:
   postprocessors:
@@ -19,7 +19,7 @@ features:
     - GRASS
     - FERNS
   trees:
-    - WEB_TREES
+    - GRIM_TREES
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
     - GRAVES
