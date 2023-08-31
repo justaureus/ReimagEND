@@ -1,4 +1,0 @@
-num tendrils = 3+randomInt(3);
-for (num i = 0; i < tendrils; i = i + 1) {
-    structure(0,0,0,"thornwood_tendril","NONE");
-}

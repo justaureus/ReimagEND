@@ -1,0 +1,30 @@
+id: AETHER_GLIDED_SAND
+
+type: PALETTE
+
+layers:
+  - materials: 
+    - minecraft:sand: 3
+    - minecraft:yellow_concrete_powder: 2
+    layers: 2
+  - materials: 
+    - minecraft:sandstone: 3
+    - minecraft:yellow_concrete: 2
+    layers: 2
+  - materials: 
+    - minecraft:stone: 10
+    - minecraft:cobblestone: 5
+    - minecraft:mossy_cobblestone: 3
+    layers: 1
+sampler:
+  type: DOMAIN_WARP
+  amplitude: 1
+  warp:
+    type: GAUSSIAN
+  sampler:
+    type: FBM
+    octaves: 2
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.2
+      salt: 293

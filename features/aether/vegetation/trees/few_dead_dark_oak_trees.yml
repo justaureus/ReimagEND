@@ -1,0 +1,42 @@
+id: FEW_DEAD_DARK_OAK_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 9
+  padding: 11
+  salt: 1119
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 100
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/aether/vegetation/meta.yml:plantable-blocks
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - dead_great_dark_oak_tree: 5
+    - great_dark_oak_tree: 1

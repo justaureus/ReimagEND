@@ -15,9 +15,13 @@ layers:
     - minecraft:mossy_cobblestone: 3
     layers: 1
     sampler:
-      type: OPEN_SIMPLEX_2
-      frequency: 0.2
-      salt: 293  
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: OPEN_SIMPLEX_2
+        frequency: 0.02
   - materials: 
     - minecraft:snow_block: 15
     - minecraft:stone: 10

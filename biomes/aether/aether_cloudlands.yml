@@ -49,9 +49,6 @@ terrain:
 
 palette:
   - BLOCK:minecraft:white_stained_glass: 319
-colors:
-  grass: 0x4c5e3f
-  foliage: 0x4c5e3f
 
 features:
   landforms:

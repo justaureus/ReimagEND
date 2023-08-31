@@ -1,26 +1,23 @@
-id: AETHER_HIGHLANDS
+id: AETHER_FROSTY_WOODS
 type: BIOME
-extends: [ AETHER, EQ_DEFAULT]
-color: $biomes/colors.yml:AETHER_HIGHLANDS
+extends: [ AETHER, AETHER_HIGHLANDS ]
+color: $biomes/colors.yml:AETHER_AUREATE_FOREST
 vanilla: minecraft:the_end
 
 colors:
-  grass: 0xb6dbd9
-  foliage: 0xc3dbda
-
-palette:
-  - AETHER_PODZOL: 319
+  grass: 0x9edbca
+  foliage: 0xc3dbd5
 
 features:
   slabs:
     - SNOW
   trees:
-    - SPRUCE_BUSH_PATCHES
-    - SPARSE_SPRUCE_TREES
-    - BIG_UPWARD_ICE_SPIKES
+    - DENSE_TEMPERATE_TREE_PATCHES
+    - DENSE_GREAT_OAK_TREES
   flora:
     - GRASS
     - FERNS
+    - SPRUCE_BUSH_PATCHES
     - SWEET_BERRY_BUSH_PATCHES
   postprocessors:
     - TREE_SNOW

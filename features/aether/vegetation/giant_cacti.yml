@@ -1,0 +1,38 @@
+id: GIANT_CACTI
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 15
+  padding: 18
+  salt: 3145
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 100
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: 
+          - minecraft:sand
+          - minecraft:yellow_concrete_powder
+          - minecraft:orange_concrete_powder
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: giant_cactus

@@ -1,0 +1,18 @@
+id: AETHER_GLIDED_DESERT
+type: BIOME
+extends: [ AETHER, EQ_DEFAULT]
+color: $biomes/colors.yml:AETHER_GLIDED_DESERT
+vanilla: minecraft:the_end
+
+palette:
+  - AETHER_GLIDED_SAND: 319
+
+features:
+  trees:
+    - GIANT_CACTI
+  postprocessors:
+    - HANGING_LANTERNS
+    - CEILING_ICICLES
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES
+    #- CLOUDS

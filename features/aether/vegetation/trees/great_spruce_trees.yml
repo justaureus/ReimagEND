@@ -1,4 +1,4 @@
-id: DENSE_THORNWOOD_TREES
+id: GREAT_SPRUCE_TREES
 type: FEATURE
 
 distributor:
@@ -13,8 +13,8 @@ distributor:
         type: PROBABILITY
         sampler:
           type: OPEN_SIMPLEX_2
-          salt: 1222
-      threshold: 0.75
+          salt: 3234
+      threshold: 0.4
 
 locator:
   type: AND
@@ -46,4 +46,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: thornwood_tree
+  structures: great_spruce_tree

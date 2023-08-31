@@ -6,7 +6,7 @@ vanilla: minecraft:the_end
 
 colors:
   grass: 0x242423
-  foliage: 0x242423
+  foliage: 0x333332
 
 palette:
   - AETHER_GRIM_PODZOL: 319

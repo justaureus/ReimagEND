@@ -5,11 +5,13 @@ extends: [ ORES_DEFAULT, DEPOSITS_DEFAULT, CARVING_LAND ]
 vanilla: minecraft:windswept_hills
 
 # Overworld Atmosphere
-# colors:
+colors:
 #  fog: 0xc8e8e7
 #  water: 0xbadfe6
 #  water-fog: 0xbadfe6
 #  sky: 0xc8e8e7
+  grass: 0xd2de85
+  foliage: 0xbdcc60
 
 # End Atmosphere
 # colors:

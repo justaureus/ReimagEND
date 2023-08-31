@@ -10,6 +10,7 @@ features:
     - MIXED_FLOWER_COVER
   trees:
     - DENSE_TEMPERATE_TREE_PATCHES
+    - GREAT_OAK_TREES
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
     #- CLOUDS
