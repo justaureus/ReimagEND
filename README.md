@@ -8,7 +8,7 @@ Due to this, the only platform that you can easily use this pack on is the Bukki
 
 ### This pack is a WORK IN PROGRESS.  It is currently survival ready however it is not feature complete.  Expect frequent changes which may be incompatible (i.e, cause chunk borders) with older versions of the pack. 
 
-### ADDITIONAL NOTE: There are no loot tables for dungeons at the moment.
+### ADDITIONAL NOTE: There are no loot tables for custom dungeons (Ancient Towers & Mob Spawner Dungeons) at the moment. Vanilla End City loot tables are not affected.
 
 ## INSTALLATION
 Follow this [installation guide](https://terra.polydev.org/install/index.html) for your particular platform.
