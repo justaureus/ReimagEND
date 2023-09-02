@@ -3,30 +3,16 @@ num goldenAngle = 2.39996;
 num pi = 3.14159;
 num twopi = 6.28318530718;
 
-num trunkHeight = 16+randomInt(12);
 str trunkBlock = "minecraft:oak_log";
-str rootBlock = "minecraft:oak_wood";
 
-num sideBranchInterval = 2+randomInt(2);
-num sideBranchMinHeight = 2+randomInt(3);
-num sideBranchLengthMin = 2+randomInt(2);
-num sideBranchLengthVariation = 2+randomInt(2);
-num sideBranchVerticalVariation = 0;
-num sideBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/4;
-num sideBranchLeafRadiusMin = 4;
-num sideBranchLeafTranslate = 0;
-num sideBranchLeafTopFlatness = 1;
-num sideBranchLeafBottomFlatness = 2;
-num sideBranchLeafDensity = 0.5;
-str sideBranchLeafStructure = "azalea_leaves_clump";
-str sideBranchBlockX = "minecraft:oak_log[axis=x]";
-str sideBranchBlockY = "minecraft:oak_log[axis=y]";
-str sideBranchBlockZ = "minecraft:oak_log[axis=z]";
+num trunkRadius = 2.5+randomInt(2);
+num length = 30+randomInt(20);
+num trunkTranslate = 2;
 
-num topBranches = 3+randomInt(3);
-num topBranchLengthUpwardsMin = 5+randomInt(5);
-num topBranchLengthOutwardsMin = 6+randomInt(5);
-num topBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/2;
+num topBranches = 6+randomInt(4);
+num topBranchLengthUpwardsMin = 7+randomInt(6);
+num topBranchLengthOutwardsMin = 4+randomInt(6);
+num topBranchVerticalDirection = 1;
 num topBranchLeafRadiusMin = 4;
 num topBranchLeafTranslate = 0;
 num topBranchLeafTopFlatness = 1;
@@ -37,32 +23,41 @@ str topBranchBlockX = "minecraft:oak_log[axis=x]";
 str topBranchBlockY = "minecraft:oak_log[axis=y]";
 str topBranchBlockZ = "minecraft:oak_log[axis=z]";
 
-// Generate roots at base of trunk
-num roots = 1+randomInt(3);
-num rootMaxDepth = 3;
-num rootHeight = 5;
-num rootLength = 2;
-num rootAngle = randomInt(randPrecision)/randPrecision*2*pi;
-for (num r = 0; r < roots; r = r + 1) {
-    num dx = sin(rootAngle);
-    num dz = cos(rootAngle);
-    for (num l = 0; l <= rootLength; l = l + 1) {
-        num height = rootHeight * (1-(l/rootLength));
-        bool bottomedOut = false;
-        for (num h = height; h >= -rootMaxDepth; h = h - 1) {
-            if (check(round(l*dx),round(h),round(l*dz)) != "AIR") {
-                bottomedOut = true;
-                break;
+num sideBranchInterval = 3+randomInt(2);
+num sideBranchMinHeight = 3+randomInt(3);
+num sideBranchLengthMin = 7+randomInt(4);
+num sideBranchLengthVariation = 2;
+num sideBranchVerticalVariation = 0;
+num sideBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/2;
+num sideBranchLeafRadiusMin = 4;
+num sideBranchLeafTranslate = 0;
+num sideBranchLeafTopFlatness = 1;
+num sideBranchLeafBottomFlatness = 2;
+num sideBranchLeafDensity = 0.5;
+str sideBranchLeafStructure = "azalea_leaves_clump";
+str sideBranchBlockX = "minecraft:oak_log[axis=x]";
+str sideBranchBlockY = "minecraft:oak_log[axis=y]";
+str sideBranchBlockZ = "minecraft:oak_log[axis=z]";
+
+// tree trunk
+for(num h = trunkTranslate; h <= trunkTranslate+length; h = h + 1) {
+    // Reduce radius inversely to length
+    num r = (trunkRadius/length * -h/2) + trunkRadius;
+
+    // Generate sphere at each point
+    for(num x = -r; x <= r; x = x + 1) {
+        for(num y = -r; y <= r; y = y + 1) {
+            for(num z = -r; z <= r; z = z + 1) {
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                    block(x, h + y - trunkRadius, z, trunkBlock, false);                  
+                }
             }
-            block(l*dx, h, l*dz, rootBlock);
         }
-        if (!bottomedOut) break;
     }
-    rootAngle = rootAngle + goldenAngle;
 }
 
 num branchAngle = randomInt(randPrecision)/randPrecision*2*pi;
-for (num i = 0; i < trunkHeight; i = i + 1) {
+for (num i = 0; i < length; i = i + 1) {
     if (i > sideBranchMinHeight) {
         if (i % sideBranchInterval == 0) {
             // Branch direction vector
@@ -127,7 +122,7 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     dz = dz/mag;
     // Branch origin
     num ox = 0;
-    num oy = trunkHeight;
+    num oy = length-3;
     num oz = 0;
     // Set branch block based on largest unsigned vector component
     str branchBlock = topBranchBlockY;
@@ -161,7 +156,7 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     }
 }
 
-for (num v = 35; v > (trunkHeight - 5); v = v - 1) {
+for (num v = 35; v > (length - 5); v = v - 1) {
     num rx = sin(randomInt(randPrecision)/randPrecision * twopi);
     num rz = cos(randomInt(randPrecision)/randPrecision * twopi);
     structure(rx, v, rz, "glow_berries", "NONE");
@@ -169,5 +164,3 @@ for (num v = 35; v > (trunkHeight - 5); v = v - 1) {
     structure(rx, v, -rz, "glow_berries", "NONE");
     structure(-rx, v, -rz, "glow_berries", "NONE");
 }
-
-block(0, -1, 0, "minecraft:dirt");

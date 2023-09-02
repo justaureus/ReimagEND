@@ -2,17 +2,26 @@ id: WARPED_MANGROVES
 type: FEATURE
 
 distributor:
-  type: PADDED_GRID
-  width: 16
-  padding: 23
-  salt: 8768
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 6
+      padding: 9
+      salt: 2221
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 3355
+      threshold: 0.75
 
 locator:
   type: AND
   locators:
     - type: TOP
       range: &range
-        min: 64
+        min: 0
         max: 319
     - type: PATTERN
       range: *range

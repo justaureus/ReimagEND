@@ -3,7 +3,7 @@ type: BIOME
 extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:AMETHYST_END  
-
+  
 palette:
   - AMETHYST_END: 319
 

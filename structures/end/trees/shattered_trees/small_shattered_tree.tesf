@@ -11,11 +11,11 @@ str rootBlockZ = "minecraft:obsidian";
 str altRootBlock = "minecraft:black_concrete";
 
 num sideBranchInterval = 1+randomInt(2);
-num sideBranchMinHeight = 6+randomInt(3);
+num sideBranchMinHeight = 3+randomInt(2);
 num sideBranchLengthMin = 4+randomInt(2);
 num sideBranchLengthVariation = 2;
 num sideBranchVerticalVariation = 1;
-num sideBranchVerticalDirection = 0.8+randomInt(randPrecision)/randPrecision/4;
+num sideBranchVerticalDirection = 0.8+randomInt(randPrecision)/randPrecision/1.5;
 num sideBranchLeafRadiusMin = 5;
 num sideBranchLeafTranslate = 0;
 num sideBranchLeafTopFlatness = 2;
@@ -78,7 +78,6 @@ for (num i = 0; i < trunkHeight; i = i + 1) {
             // Branch direction vector
             num dx = sin(branchAngle);
             num dy = sideBranchVerticalDirection + randomInt(randPrecision)/randPrecision*sideBranchVerticalVariation;
-            if (randomInt(2) == 0) dy = (randomInt(randPrecision)/randPrecision*sideBranchVerticalVariation) - sideBranchVerticalDirection;
             num dz = cos(branchAngle);
             // Normalize vector
             num mag = sqrt(pow(dx,2)+pow(dy,2)+pow(dz,2));
@@ -140,7 +139,6 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     // Branch direction vector
     num dx = sin(branchAngle) * t;
     num dy = topBranchVerticalDirection;
-    if (randomInt(2) == 0) dy = (-1*topBranchVerticalDirection)/2;
     num dz = cos(branchAngle) * t;
     // Normalize vector
     num mag = sqrt(pow(dx,2)+pow(dy,2)+pow(dz,2));

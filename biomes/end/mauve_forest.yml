@@ -1,0 +1,19 @@
+id: MAUVE_FOREST
+type: BIOME
+extends: [ END, EQ_DEFAULT ]
+vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:MAUVE_FOREST
+
+colors:
+  grass: 0x8e3db7
+  foliage: 0x972ad1
+
+palette:
+  - MAUVE_GROUND: 319
+
+features:
+  trees:
+    - PLUMP_TREES
+  flora:
+    - CRIMSON_STEM_BUSHES
+    - GRASS

@@ -16,8 +16,8 @@ locator:
   pattern:
     type: AND
     patterns:
-      - type: MATCH
-        block: minecraft:end_stone
+      - type: MATCH_SET
+        blocks: $features/aether/vegetation/meta.yml:plantable-blocks
         offset: -1
       - type: MATCH_AIR
         offset: 0

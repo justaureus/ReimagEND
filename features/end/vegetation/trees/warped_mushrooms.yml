@@ -2,17 +2,26 @@ id: WARPED_MUSHROOMS
 type: FEATURE
 
 distributor:
-  type: PADDED_GRID
-  width: 18
-  padding: 16
-  salt: 3479
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 15
+      padding: 18
+      salt: 9111
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 1109
+      threshold: 0.4
 
 locator:
   type: AND
   locators:
     - type: TOP
       range: &range
-        min: 64
+        min: 0
         max: 319
     - type: PATTERN
       range: *range

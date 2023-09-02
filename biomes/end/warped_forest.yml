@@ -1,0 +1,19 @@
+id: WARPED_FOREST
+type: BIOME
+extends: [ END, EQ_DEFAULT ]
+vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:WARPED_FOREST
+
+colors:
+  grass: 0x54c0d9
+  foliage: 0x57c9e1
+
+palette:
+  - WARPED_GROUND: 319
+
+features:
+  trees:
+    - TEMPEST_TREES
+  flora:
+    - GRASS
+    - WARPED_STEM_BUSHES

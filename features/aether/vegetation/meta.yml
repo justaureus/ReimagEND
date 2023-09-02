@@ -6,6 +6,15 @@ plantable-blocks:
   - minecraft:coarse_dirt
   - minecraft:moss_block
   - minecraft:rooted_dirt
+  - minecraft:end_stone
+  - minecraft:yellow_concrete
+  - minecraft:yellow_concrete_powder
+  - minecraft:light_blue_concrete_powder
+  - minecraft:cyan_concrete_powder
+  - minecraft:light_blue_terracotta
+  - minecraft:blue_terracotta
+  - minecraft:magenta_concrete_powder
+  - minecraft:purple_concrete_powder
 
 aquatic-plantable-blocks:
   - minecraft:mud
@@ -54,3 +63,6 @@ sculk-plantable-blocks:
   - minecraft:dark_oak_log
   - minecraft:dark_oak_planks
   - minecraft:dark_oak_fence
+  - minecraft:end_stone
+  - minecraft:black_concrete
+  - minecraft:black_concrete_powder

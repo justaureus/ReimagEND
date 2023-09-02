@@ -12,7 +12,7 @@ locator:
   locators:
     - type: TOP
       range: &range
-        min: 100
+        min: 0
         max: 319
     - type: PATTERN
       range: *range
@@ -28,10 +28,15 @@ locator:
           - minecraft:snow
           - minecraft:air
         offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -3
 
 structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - glowberry_tree: 4
-    - big_glowberry_tree: 1
+    - glowberry_tree: 5
+    - great_glowberry_tree: 1

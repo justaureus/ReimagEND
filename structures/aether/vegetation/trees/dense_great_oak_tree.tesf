@@ -6,12 +6,13 @@ str trunkBlock = "minecraft:oak_log";
 
 num trunkRadius = 2+randomInt(2);
 num length = 20+randomInt(10);
+num trunkTranslate = -1;
 
 num topBranches = 4+randomInt(4);
 num topBranchLengthUpwardsMin = 7+randomInt(3);
 num topBranchLengthOutwardsMin = 4+randomInt(3);
 num topBranchVerticalDirection = 1;
-num topBranchLeafRadiusMin = 4;
+num topBranchLeafRadiusMin = 3;
 num topBranchLeafTranslate = 0;
 num topBranchLeafTopFlatness = 1;
 num topBranchLeafBottomFlatness = 2;
@@ -27,7 +28,7 @@ num sideBranchLengthMin = 7+randomInt(4);
 num sideBranchLengthVariation = 2;
 num sideBranchVerticalVariation = 0;
 num sideBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/2;
-num sideBranchLeafRadiusMin = 4;
+num sideBranchLeafRadiusMin = 3;
 num sideBranchLeafTranslate = 0;
 num sideBranchLeafTopFlatness = 1;
 num sideBranchLeafBottomFlatness = 2;
@@ -38,7 +39,7 @@ str sideBranchBlockY = "minecraft:oak_log[axis=y]";
 str sideBranchBlockZ = "minecraft:oak_log[axis=z]";
 
 // tree trunk
-for(num h = 0; h <= length; h = h + 1) {
+for(num h = trunkTranslate; h <= length+trunkTranslate; h = h + 1) {
     // Reduce radius inversely to length
     num r = (trunkRadius/length * -h/2) + trunkRadius;
 

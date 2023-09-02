@@ -44,6 +44,8 @@ num sporeBlossomX = 0;
 num sporeBlossomY = 0;
 num sporeBlossomZ = 0;
 
+if (getBlock(0,trunkHeight,0) != "minecraft:air") fail;
+
 // Generate roots at base of trunk
 num roots = 4+randomInt(2);
 num rootMaxLength = 30;

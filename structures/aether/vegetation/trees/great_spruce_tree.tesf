@@ -37,7 +37,7 @@ str sideBranchBlockX = "minecraft:spruce_log[axis=x]";
 str sideBranchBlockY = "minecraft:spruce_log[axis=y]";
 str sideBranchBlockZ = "minecraft:spruce_log[axis=z]";
 
-num sideCount = 2;
+num sideCount = 1;
 
 // tree trunk
 for(num h = 0; h <= length; h = h + 1) {

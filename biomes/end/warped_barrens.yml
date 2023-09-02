@@ -4,12 +4,17 @@ extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_midlands
 color: $biomes/colors.yml:WARPED_BARRENS
 
+colors:
+  grass: 0x54c0d9
+  foliage: 0x57c9e1
+  
 palette:
-  - BLOCK:minecraft:end_stone: 319
+  - WARPED_GROUND: 319
 
 features:
   flora:
     - WARPED_GRASS
+    - GRASS
   trees:
     - WARPED_MUSHROOMS
     - TWISTING_BEANSTALKS

@@ -6,7 +6,7 @@ vanilla: minecraft:the_end
 
 colors:
   grass: 0x9edbca
-  foliage: 0xc3dbd5
+  foliage: 0x9dc9c9
 
 features:
   slabs:

@@ -16,9 +16,12 @@ stages:
       - END_HIGHLANDS: 1
       - TRIGONAL_END: 1
       - WARPED_BARRENS: 1
+      - WARPED_FOREST: 1
       - WARPED_GROVE: 1
       - CHORUVE_FOREST: 1
+      - MAUVE_FOREST: 1
       - CRAGGY_END: 1
+      - FLAXEN_FOREST: 1
       - DARK_END: 1
       - AMETHYST_END: 1
       - TAINTED_END: 1

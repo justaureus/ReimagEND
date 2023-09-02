@@ -2,17 +2,26 @@ id: TWISTING_BEANSTALKS
 type: FEATURE
 
 distributor:
-  type: PADDED_GRID
-  width: 24
-  padding: 19
-  salt: 6399
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 9
+      padding: 4
+      salt: 1124
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 6667
+      threshold: 0.6
 
 locator:
   type: AND
   locators:
     - type: TOP
       range: &range
-        min: 64
+        min: 0
         max: 319
     - type: PATTERN
       range: *range

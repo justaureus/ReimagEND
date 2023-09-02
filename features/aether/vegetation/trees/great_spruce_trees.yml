@@ -21,7 +21,7 @@ locator:
   locators:
     - type: TOP
       range: &range
-        min: 100
+        min: 0
         max: 319
     - type: PATTERN
       range: *range
@@ -37,11 +37,11 @@ locator:
           - minecraft:snow
           - minecraft:air
         offset: 0
-    - type: ADJACENT_PATTERN
+    - type: PATTERN
       range: *range
       pattern:
         type: MATCH_SOLID
-        offset: -1
+        offset: -3
 
 structures:
   distribution:

@@ -169,5 +169,3 @@ for (num v = 35; v > (trunkHeight - 5); v = v - 1) {
     structure(rx, v, -rz, "glow_berries", "NONE");
     structure(-rx, v, -rz, "glow_berries", "NONE");
 }
-
-block(0, -1, 0, "minecraft:dirt");

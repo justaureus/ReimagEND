@@ -2,13 +2,13 @@ id: END
 type: BIOME
 abstract: true
 
-#colors:
+colors:
 # fog: 0x000000
 # water: 0x62529E
 # water-fog: 0x62529E
 # sky: 0x000000
 # grass: 0x8EB971
-# foliage: 0x71A74D
+ foliage: 0x85947f
 #  
 #climate:
 # precipitation: none

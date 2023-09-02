@@ -5,8 +5,8 @@ distributor:
   type: AND
   distributors:
     - type: PADDED_GRID
-      width: 6
-      padding: 4
+      width: 9
+      padding: 11
       salt: 5633
     - type: SAMPLER
       sampler:
@@ -21,7 +21,7 @@ locator:
   locators:
     - type: TOP
       range: &range
-        min: 100
+        min: 0
         max: 319
     - type: PATTERN
       range: *range
@@ -42,6 +42,11 @@ locator:
       pattern:
         type: MATCH_SOLID
         offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -3
 
 structures:
   distribution:

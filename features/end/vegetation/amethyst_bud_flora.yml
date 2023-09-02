@@ -1,0 +1,33 @@
+id: AMETHYST_BUD_FLORA
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 7544
+  threshold: 0.125
+
+locator:
+  type: AND
+  locators:
+    - type: SURFACE
+      range: &range
+        min: -64
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:magenta_concrete_powder
+          - minecraft:purple_concrete_powder
+          - minecraft:end_stone
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures:
+    - BLOCK:minecraft:small_amethyst_bud: 6
+    - BLOCK:minecraft:medium_amethyst_bud: 1
