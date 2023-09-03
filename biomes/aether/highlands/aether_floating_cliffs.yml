@@ -1,7 +1,7 @@
-id: AETHER_FLOATING_PEAKS
+id: AETHER_FLOATING_CLIFFS
 type: BIOME
 extends: [ AETHER, AETHER_HIGHLANDS ]
-color: $biomes/colors.yml:AETHER_FLOATING_PEAKS
+color: $biomes/colors.yml:AETHER_FLOATING_CLIFFS
 vanilla: minecraft:the_end
 
 terrain:
@@ -68,7 +68,4 @@ features:
     - HANGING_LANTERNS
     - TREE_SNOW
     - CEILING_ICICLES
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES  
-    #- CLOUDS
   

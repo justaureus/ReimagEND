@@ -1,8 +1,6 @@
-id: DEBRI_FIELD
+id: EQ_DEBRI
 type: BIOME
-extends: [ END ]
-vanilla: minecraft:end_highlands
-color: $biomes/colors.yml:DEBRI_FIELD
+abstract: true
 
 terrain:
   sampler:
@@ -48,11 +46,3 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.1 / ${meta.yml:terrain-configuration.island-scale}
-
-palette:
-  - MIX_END: 319
-
-features:
-  trees:
-    - ASTEROIDS
-    - ICY_ASTEROIDS
