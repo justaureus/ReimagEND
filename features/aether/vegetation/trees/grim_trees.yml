@@ -28,6 +28,11 @@ locator:
           - minecraft:snow
           - minecraft:air
         offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -3
 
 structures:
   distribution:

@@ -22,7 +22,7 @@ str topBranchBlockY = "minecraft:stripped_warped_stem[axis=y]";
 str topBranchBlockZ = "minecraft:stripped_warped_stem[axis=z]";
 
 num sideBranchInterval = 1;
-num sideBranchMinHeight = 3+randomInt(3);
+num sideBranchMinHeight = 6+randomInt(3);
 num sideBranchLengthMin = 2;
 num sideBranchLengthVariation = 2;
 num sideBranchVerticalVariation = 0;
