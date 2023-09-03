@@ -5,7 +5,7 @@ distributor:
   type: AND
   distributors:
     - type: PADDED_GRID
-      width: 11
+      width: 6
       padding: 12
       salt: 1320
     - type: SAMPLER
