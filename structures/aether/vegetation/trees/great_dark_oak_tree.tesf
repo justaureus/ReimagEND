@@ -37,6 +37,8 @@ str sideBranchBlockX = "minecraft:dark_oak_log[axis=x]";
 str sideBranchBlockY = "minecraft:dark_oak_log[axis=y]";
 str sideBranchBlockZ = "minecraft:dark_oak_log[axis=z]";
 
+if (getBlock(0,length,0) != "minecraft:air") fail;
+
 // tree trunk
 for(num h = 0; h <= length; h = h + 1) {
     // Reduce radius inversely to length

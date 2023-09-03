@@ -39,6 +39,8 @@ str sideBranchBlockZ = "minecraft:spruce_log[axis=z]";
 
 num sideCount = 1;
 
+if (getBlock(0,length,0) != "minecraft:air") fail;
+
 // tree trunk
 for(num h = 0; h <= length; h = h + 1) {
     // Reduce radius inversely to length
