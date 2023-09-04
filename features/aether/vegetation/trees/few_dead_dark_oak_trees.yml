@@ -5,7 +5,7 @@ distributor:
   type: PADDED_GRID
   width: 9
   padding: 11
-  salt: 1119
+  salt: 1009
 
 locator:
   type: AND
@@ -38,6 +38,11 @@ locator:
       pattern:
         type: MATCH_SOLID
         offset: -3
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -5
 
 structures:
   distribution:
