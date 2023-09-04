@@ -48,8 +48,8 @@ terrain:
             frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
             
 colors:
-  grass: 0xc07bc9
-  foliage: 0xaa55b5
+  grass: 0xFFABFF
+  foliage: 0xFFABFF
 
 palette:
   - AETHER_GRASS: 319
@@ -62,6 +62,7 @@ slant:
 features:
   trees:
     - OAK_BUSH_PATCHES
+    - SPARSE_OAK_TREES
   flora:
     - GRASS
     - LAVENDER_FLOWERS
