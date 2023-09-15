@@ -66,3 +66,7 @@ sculk-plantable-blocks:
   - minecraft:end_stone
   - minecraft:black_concrete
   - minecraft:black_concrete_powder
+  - minecraft:grass_block
+  - minecraft:dirt
+  - minecraft:oak_log
+  - minecraft:oak_leaves

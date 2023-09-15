@@ -1,8 +1,6 @@
 id: BRAMBLES
 type: FEATURE
 
-# Adds 'webs' of sculk blocks
-
 variables: &variables
   wallThickness: 0.08
   webThickness: 1

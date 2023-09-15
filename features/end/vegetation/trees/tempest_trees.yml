@@ -13,7 +13,7 @@ distributor:
         type: PROBABILITY
         sampler:
           type: OPEN_SIMPLEX_2
-          salt: 3316
+          salt: 3319
       threshold: 0.5
 
 locator:

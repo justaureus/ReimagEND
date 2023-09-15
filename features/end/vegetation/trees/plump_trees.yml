@@ -59,4 +59,4 @@ structures:
     type: WHITE_NOISE
   structures: 
     - plump_tree: 1
-    - small_plump_tree: 10
+    - small_plump_tree: 20

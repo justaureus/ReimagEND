@@ -62,9 +62,9 @@ biome-distribution:
   # Controls the scale of the entire end.
   # Default: 250
 
-  end-biome-scale: 150
+  end-biome-scale: 250
   # Controls the scale of end biomes in particular.
-  # Default: 150
+  # Default: 250
   
   aether-scale: 50
   # Controls the scale of the entire aether. 
