@@ -2,79 +2,63 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-num trunkHeight = 12+randomInt(10);
 str trunkBlock = "minecraft:obsidian";
 str altTrunkBlock = "minecraft:black_concrete";
-num trunkWidth = 2;
-str rootBlockX = "minecraft:obsidian";
-str rootBlockZ = "minecraft:obsidian";
-str altRootBlock = "minecraft:black_concrete";
+str setBlock = trunkBlock;
 
-num sideBranchInterval = 2+randomInt(2);
-num sideBranchMinHeight = 3+randomInt(2);
-num sideBranchLengthMin = 5+randomInt(2);
-num sideBranchLengthVariation = 2;
-num sideBranchVerticalVariation = 1;
-num sideBranchVerticalDirection = 0.8+randomInt(randPrecision)/randPrecision/1.5;
-num sideBranchLeafRadiusMin = 5;
-num sideBranchLeafTranslate = 0;
-num sideBranchLeafTopFlatness = 2;
-num sideBranchLeafBottomFlatness = 3;
-num sideBranchLeafDensity = 0.7;
-str sideBranchLeafStructure = "shattered_leaves_clump";
-str sideBranchBlockX = trunkBlock;
-str sideBranchBlockY = trunkBlock;
-str sideBranchBlockZ = trunkBlock;
-str altSideBranchBlock = "minecraft:black_concrete";
+num trunkRadius = 4+randomInt(2);
+num length = 50+randomInt(25);
+num xTranslate = 0;
+num zTranslate = 0;
 
-num topBranches = 3+randomInt(3);
-num topBranchLengthUpwardsMin = 3+randomInt(5);
-num topBranchLengthOutwardsMin = 4+randomInt(2);
+num topBranches = 4+randomInt(4);
+num topBranchLengthUpwardsMin = 7+randomInt(3);
+num topBranchLengthOutwardsMin = 4+randomInt(3);
 num topBranchVerticalDirection = 1;
-num topBranchLeafRadiusMin = 5;
+num topBranchLeafRadiusMin = 4;
 num topBranchLeafTranslate = 0;
-num topBranchLeafTopFlatness = 2;
-num topBranchLeafBottomFlatness = 3;
+num topBranchLeafTopFlatness = 1;
+num topBranchLeafBottomFlatness = 2;
 num topBranchLeafDensity = 0.5;
 str topBranchLeafStructure = "shattered_leaves_clump";
-str topBranchBlockX = trunkBlock;
-str topBranchBlockY = trunkBlock;
-str topBranchBlockZ = trunkBlock;
-str altTopBranchBlock = "minecraft:black_concrete";
 
-// Generate roots at base of trunk
-num roots = 3;
-num rootMaxDepth = 3;
-num rootHeight = 3;
-num rootLength = 4;
-num rootAngle = randomInt(randPrecision)/randPrecision*2*pi;
-for (num r = 0; r < roots; r = r + 1) {
-    num dx = sin(rootAngle);
-    num dz = cos(rootAngle);
-    str rootBlock = rootBlockX;
-    if (abs(dz) > abs(dx)) rootBlock = rootBlockZ;
-    for (num l = 0; l <= (rootLength+randomInt(3)); l = l + 1) {
-        num height = (rootHeight+randomInt(3)) * (1-(l/rootLength));
-        bool bottomedOut = false;
-        str placeRootBlock = rootBlock;
-        for (num h = height; h >= -rootMaxDepth; h = h - 1) {
-            if (check(round(l*dx),round(h),round(l*dz)) != "AIR") {
-                bottomedOut = true;
-                break;
-            }
-                placeRootBlock = rootBlock;
-                if (randomInt(2) == 0) placeRootBlock = altRootBlock;
-                block(l*dx, h, l*dz, placeRootBlock);
-        }
-        if (!bottomedOut) break;
-    }
-    rootAngle = rootAngle + goldenAngle;
-}
+num sideBranchInterval = 2+randomInt(2);
+num sideBranchMinHeight = 2+randomInt(3);
+num sideBranchLengthMin = 8+randomInt(6);
+num sideBranchLengthVariation = 2+randomInt(2);
+num sideBranchVerticalVariation = 0;
+num sideBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/4;
+num sideBranchLeafRadiusMin = 4;
+num sideBranchLeafTranslate = 0;
+num sideBranchLeafTopFlatness = 1;
+num sideBranchLeafBottomFlatness = 2;
+num sideBranchLeafDensity = 0.5;
+str sideBranchLeafStructure = "shattered_leaves_clump";
+
+if (getBlock(0,length,0) != "minecraft:air") fail;
 
 num branchAngle = randomInt(randPrecision)/randPrecision*2*pi;
-for (num i = 0; i < trunkHeight; i = i + 1) {
-    if (i > sideBranchMinHeight) {
-        if (i % sideBranchInterval == 0) {
+
+// tree trunk
+for(num h = 0; h <= length; h = h + 1) {
+    // Reduce radius inversely to length
+    num r = (trunkRadius/length * -h/2) + trunkRadius;
+
+    // Generate sphere at each point
+    for(num x = -r; x <= r; x = x + 1) {
+        for(num y = -r; y <= r; y = y + 1) {
+            for(num z = -r; z <= r; z = z + 1) {
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                    setBlock = trunkBlock;
+                    if (randomInt(2) == 0) setBlock = altTrunkBlock;
+                    block(x + xTranslate, h + y - trunkRadius, z + zTranslate, setBlock, false);                  
+                }
+            }
+        }
+    }
+
+    if (h > sideBranchMinHeight) {
+        if (h % sideBranchInterval == 0) {
             // Branch direction vector
             num dx = sin(branchAngle);
             num dy = sideBranchVerticalDirection + randomInt(randPrecision)/randPrecision*sideBranchVerticalVariation;
@@ -85,25 +69,21 @@ for (num i = 0; i < trunkHeight; i = i + 1) {
             dy = dy/mag;
             dz = dz/mag;
             // Branch origin
-            num ox = 0;
-            num oy = i;
-            num oz = 0;
+            num ox = xTranslate;
+            num oy = h;
+            num oz = zTranslate;
             // Set branch block based on largest unsigned vector component
-            str branchBlock = sideBranchBlockY;
-            if (abs(dx) > max(abs(dy),abs(dz))) branchBlock = sideBranchBlockX;
-            else if (abs(dz) > max(abs(dy),abs(dx))) branchBlock = sideBranchBlockZ;
             num branchLength = sideBranchLengthMin + randomInt(randPrecision)/randPrecision*sideBranchLengthVariation;
             // Generate branch
-            str placeBranchBlock = branchBlock;
             for (num l = 0; l <= branchLength; l = l + 1) {
-                placeBranchBlock = branchBlock;
-                if (randomInt(2) == 0) placeBranchBlock = altSideBranchBlock;
-                block(l*dx+ox, l*dy+oy, l*dz+oz, branchBlock);
+                setBlock = trunkBlock;
+                if (randomInt(2) == 0) setBlock = altTrunkBlock;
+                block(l*dx+ox, l*dy+oy, l*dz+oz, setBlock);
             }
             // Rotate angle of next branch
             branchAngle = branchAngle + goldenAngle;
             // Generate leaf cluster at the end of the branch
-            num radius = sideBranchLeafRadiusMin-randomInt(2);
+            num radius = sideBranchLeafRadiusMin;
             num radiusSquared = pow(radius, 2);
             // Leaf cluster origin (end of branch)
             num lox = ox+branchLength*dx;
@@ -123,16 +103,9 @@ for (num i = 0; i < trunkHeight; i = i + 1) {
             }
         }
     }
-    str placeTrunkBlock = trunkBlock;
-    for (num x = 0; x < trunkWidth; x = x + 1) {
-        for (num z = 0; z < trunkWidth; z = z + 1) {
-            placeTrunkBlock = trunkBlock;
-            if (randomInt(2) == 0) placeTrunkBlock = altTrunkBlock;
-            block(x, i, z, placeTrunkBlock);
-        }
-    }
+    xTranslate = xTranslate+(1-randomInt(3));
+    zTranslate = zTranslate+(1-randomInt(3));
 }
-
 for (num b = 1; b <= topBranches; b = b + 1) {
     num t = b/topBranches;
     num ti = 1-t;
@@ -146,25 +119,21 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     dy = dy/mag;
     dz = dz/mag;
     // Branch origin
-    num ox = 0;
-    num oy = trunkHeight;
-    num oz = 0;
+    num ox = xTranslate;
+    num oy = length-3;
+    num oz = zTranslate;
     // Set branch block based on largest unsigned vector component
-    str branchBlock = topBranchBlockY;
-    if (abs(dx) > max(abs(dy),abs(dz))) branchBlock = topBranchBlockX;
-    else if (abs(dz) > max(abs(dy),abs(dx))) branchBlock = topBranchBlockZ;
     num branchLength = topBranchLengthUpwardsMin*ti + topBranchLengthOutwardsMin*t;
-    // Generate top branch
-    str placeBranchBlock = branchBlock;
+    // Generate branch
     for (num l = 0; l <= branchLength; l = l + 1) {
-        placeBranchBlock = branchBlock;
-        if (randomInt(2) == 0) placeBranchBlock = altTopBranchBlock;
-        block(l*dx+ox, l*dy+oy, l*dz+oz, placeBranchBlock);
+        setBlock = trunkBlock;
+        if (randomInt(2) == 0) setBlock = altTrunkBlock;
+        block(l*dx+ox, l*dy+oy, l*dz+oz, setBlock);
     }
     // Rotate angle of next branch
     branchAngle = branchAngle + goldenAngle;
     // Generate leaf cluster at the end of the branch
-    num radius = topBranchLeafRadiusMin-randomInt(3);
+    num radius = topBranchLeafRadiusMin;
     num radiusSquared = pow(radius, 2);
     // Leaf cluster origin (end of branch)
     num lox = ox+branchLength*dx;
@@ -183,5 +152,3 @@ for (num b = 1; b <= topBranches; b = b + 1) {
         }
     }
 }
-
-block(0, -1, 0, "minecraft:end_stone");
