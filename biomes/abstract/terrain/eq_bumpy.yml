@@ -1,4 +1,4 @@
-id: EQ_BOULDERED_DEBRI
+id: EQ_BUMPY
 type: BIOME
 abstract: true
 
@@ -6,11 +6,11 @@ terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold+
+      -1+threshold+bumps(x,z)/4+
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x*3, y*flatness, z*3)
+            simplex3(x, y*flatness, z)
           ),
           lerp(y, min, 0, min+taper,
             simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
@@ -27,13 +27,13 @@ terrain:
     samplers:
       simplex3:
         dimensions: 3
-        type: DOMAIN_WARP
+        type: PROBABILITY
         sampler:
-          type: OPEN_SIMPLEX_2
-          frequency: 0.001
-        warp:
-          type: OPEN_SIMPLEX_2
-        amplitude: 50
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -44,3 +44,12 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
+      bumps:
+        dimensions: 2
+        type: FBM
+        octaves: 4
+        sampler:
+          type: CELLULAR
+          distance: Euclidean
+          return: Distance3Div
+          freqeucny: 0.015

@@ -16,7 +16,7 @@ stages:
       - AETHER_BUMPY: 1
       - AETHER_FOREST: 1
       - AETHER_LUSH_FOREST: 1
-      - AETHER_AZURE_FOREST: 1
+      - AETHER_AZURE_MEADOWS: 1
       - AETHER_AUREATE_FOREST: 1
       - AETHER_DRIFTLANDS: 1
       - AETHER_LAVENDER_DRIFTLANDS: 1
@@ -26,6 +26,7 @@ stages:
       - AETHER_REDWOOD_FOREST: 1
       - AETHER_DISCUS_AETHER: 1
       - AETHER_CLOUDLANDS: 1
+      - AETHER_TAINTED: 1
     to: 
       aether_highlands:
       - AETHER_HIGHLANDS: 1

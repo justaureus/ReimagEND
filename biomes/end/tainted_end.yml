@@ -10,8 +10,6 @@ features:
     - TAINTED_SPIKES
   flora:
     - SCULK_FLORA
-    - SCULK_PATCHES
     - SCULK_TENDRIL
-#    - SCULK_WEBS
 palette:
   - TAINTED_END: 319

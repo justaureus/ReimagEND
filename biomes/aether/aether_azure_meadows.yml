@@ -1,7 +1,7 @@
-id: AETHER_AZURE_FOREST
+id: AETHER_AZURE_MEADOWS
 type: BIOME
 extends: [ AETHER, AETHER_FOREST, EQ_DEFAULT]
-color: $biomes/colors.yml:AETHER_AZURE_FOREST
+color: $biomes/colors.yml:AETHER_AZURE_MEADOWS
 vanilla: minecraft:the_end
 
 colors:

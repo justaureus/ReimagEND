@@ -1,6 +1,6 @@
 id: AMETHYST_END
 type: BIOME
-extends: [ END, EQ_DISCS ]
+extends: [ END, EQ_FLAT_ISLES ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:AMETHYST_END  
   

@@ -1,4 +1,4 @@
-id: EQ_DISCS
+id: EQ_HARROWING_CLIFFS
 type: BIOME
 abstract: true
 
@@ -6,7 +6,7 @@ terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold+
+      -1+threshold+bumps(x,z)/3+
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
@@ -27,13 +27,13 @@ terrain:
     samplers:
       simplex3:
         dimensions: 3
-        type: DOMAIN_WARP
+        type: PROBABILITY
         sampler:
-          type: OPEN_SIMPLEX_2
-          frequency: 0.005
-        warp:
-          type: OPEN_SIMPLEX_2
-        amplitude: 50
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -44,3 +44,12 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
+      bumps:
+        dimensions: 2
+        type: FBM
+        octaves: 4
+        sampler:
+          type: CELLULAR
+          distance: Euclidean
+          return: NoiseLookup
+          freqeucny: 0.01

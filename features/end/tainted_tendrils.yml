@@ -17,10 +17,8 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SET
-        blocks: 
-          - minecraft:black_concrete
-          - minecraft:sculk
+        type: MATCH
+        block: minecraft:sculk
         offset: -1
     - type: PATTERN
       range: *range
