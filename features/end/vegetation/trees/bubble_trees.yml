@@ -1,0 +1,52 @@
+id: BUBBLE_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 16
+  padding: 12
+  salt: 9925
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 280
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:black_concrete
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 3
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 5
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 8
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 10
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: bubble_tree

@@ -1,4 +1,4 @@
-id: CRYING_ICICLES
+id: CRYING_DRIPS
 type: FEATURE
 
 distributor:
@@ -13,7 +13,7 @@ locator:
   locators:
     - type: PATTERN
       range: &range
-        min: 60
+        min: 0
         max: 255
       pattern:
         type: MATCH_AIR
@@ -28,6 +28,6 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: crying_icicle
+  structures: crying_drip
 
   

@@ -1,60 +1,15 @@
 id: CRYING_END
 type: BIOME
-extends: [ END ]
+extends: [ END, EQ_BUMPY_MOUNTAINS ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:CRYING_END
-
-terrain:
-  sampler:
-    type: EXPRESSION
-    expression: |
-      -1+threshold+
-      lerp(y, max, 0, max-taper,
-        max(
-          lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            ((simplex(x,z)+1)*simplex3(x, y*flatness, z)) * 2
-          ),
-          lerp(y, min, 0, min+taper,
-            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/5, z)
-          )
-        )
-      )
-    variables:
-      threshold: ${meta.yml:terrain-configuration.island-threshold}
-      max: ${meta.yml:terrain-configuration.island-max-height}
-      min: ${meta.yml:terrain-configuration.island-min-height}
-      taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: ${meta.yml:terrain-configuration.island-flatness}
-      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
-    samplers:
-      simplex3:
-        dimensions: 3
-        type: PROBABILITY
-        sampler:
-          type: FBM
-          octaves: 5
-          sampler:
-            type: CELLULAR
-            return: CellValue
-            frequency: 0.01 / ${meta.yml:terrain-configuration.island-scale}
-      undercarriageMask:
-        dimensions: 3
-        type: PROBABILITY
-        sampler:
-          type: RIDGED
-          octaves: 3
-          gain: 1
-          sampler:
-            type: CELLULAR
-            frequency: 0.05 / ${meta.yml:terrain-configuration.island-scale}
 
 palette:
   - CRYING_END: 319
 
 features:
   trees:
-    - PLUMBLE_TREES
-    - TWIRL_WEEDS
+    - BUBBLE_TREES
     - CRYING_TENDRILS
   postprocessors:
-    - CRYING_ICICLES
+    - CRYING_DRIPS
