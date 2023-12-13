@@ -1,4 +1,4 @@
-id: TEMPEST_TREES
+id: WARPED_MESQUITE_TREES
 type: FEATURE
 
 distributor:
@@ -61,7 +61,5 @@ locator:
 
 structures:
   distribution:
-    type: WHITE_NOISE
-  structures: 
-    - tempest_tree: 1
-    - small_tempest_tree: 10
+    type: CONSTANT
+  structures: warped_mesquite_tree_procedural

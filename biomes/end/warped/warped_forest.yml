@@ -13,7 +13,7 @@ palette:
 
 features:
   trees:
-    - TEMPEST_TREES
+    - WARPED_MESQUITE_TREES
   flora:
     - GRASS
     - WARPED_STEM_BUSHES
