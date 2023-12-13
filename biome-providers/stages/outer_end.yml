@@ -42,8 +42,7 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.end-scale} / ${meta.yml:biome-distribution.global-scale}
     default-from: end
     default-to:
-      - void: 2
-      - shattered_end: 1
+      - void: 1
       - end: 2
     to:
       aether:
