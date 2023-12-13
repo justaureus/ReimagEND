@@ -8,7 +8,7 @@ layers:
       - minecraft:smooth_basalt: 2
       - minecraft:obsidian: 6
       - minecraft:crying_obsidian: 3
-      - minecraft:amethyst_block: 3
+      - minecraft:amethyst_block: 5
     layers: 1
 sampler:
   type: DOMAIN_WARP
