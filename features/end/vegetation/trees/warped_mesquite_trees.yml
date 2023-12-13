@@ -2,19 +2,10 @@ id: WARPED_MESQUITE_TREES
 type: FEATURE
 
 distributor:
-  type: AND
-  distributors:
-    - type: PADDED_GRID
-      width: 11
-      padding: 15
-      salt: 3111
-    - type: SAMPLER
-      sampler:
-        type: PROBABILITY
-        sampler:
-          type: OPEN_SIMPLEX_2
-          salt: 3319
-      threshold: 0.5
+  type: PADDED_GRID
+  width: 6
+  padding: 2
+  salt: 1249
 
 locator:
   type: AND
@@ -31,33 +22,12 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_AIR
-        offset: 3
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_AIR
-        offset: 5
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_AIR
-        offset: 7
-    - type: PATTERN
-      range: *range
-      pattern:
         type: MATCH_SET
         blocks:
           - minecraft:light_blue_concrete_powder
           - minecraft:cyan_concrete_powder
           - minecraft:end_stone
         offset: -1
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH
-        block: minecraft:end_stone
-        offset: -5
 
 structures:
   distribution:
