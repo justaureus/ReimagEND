@@ -4,13 +4,13 @@ num pi = 3.14159;
 num twopi = 6.28318530718;
 
 num trunkHeight = 10+randomInt(8);
-num trunkBase = 2+randomInt(5);
+num trunkBase = 14+randomInt(4);
 str trunkBlock = "minecraft:stripped_warped_hyphae";
 str rootBlock = "minecraft:stripped_warped_hyphae";
 str undergroundRootBlock = "minecraft:stripped_warped_hyphae";
 str underwaterRootBlock = "minecraft:stripped_warped_hyphae";
 
-num sideBranchInterval = 1+randomInt(2);
+num sideBranchInterval = 1;
 num sideBranchMinHeight = 2+randomInt(3);
 num sideBranchLengthMin = 3;
 num sideBranchLengthVariation = 6;
@@ -21,7 +21,7 @@ num sideBranchLeafTranslate = 0;
 num sideBranchLeafTopFlatness = 2;
 num sideBranchLeafBottomFlatness = 4;
 num sideBranchLeafDensity = 0.6;
-str sideBranchLeafStructure = "warped_mangrove_leaves_clump";
+str sideBranchLeafStructure = "warped_wart_clump";
 str sideBranchBlockX = "minecraft:stripped_warped_hyphae";
 str sideBranchBlockY = "minecraft:stripped_warped_hyphae";
 str sideBranchBlockZ = "minecraft:stripped_warped_hyphae";
@@ -35,21 +35,17 @@ num topBranchLeafTranslate = 0;
 num topBranchLeafTopFlatness = 1.5;
 num topBranchLeafBottomFlatness = 1;
 num topBranchLeafDensity = 0.6;
-str topBranchLeafStructure = "warped_mangrove_leaves_clump";
+str topBranchLeafStructure = "warped_wart_clump";
 str topBranchBlockX = "minecraft:stripped_warped_hyphae";
 str topBranchBlockY = "minecraft:stripped_warped_hyphae";
 str topBranchBlockZ = "minecraft:stripped_warped_hyphae";
 
-num sporeBlossomX = 0;
-num sporeBlossomY = 0;
-num sporeBlossomZ = 0;
-
 if (getBlock(0,trunkHeight,0) != "minecraft:air") fail;
 
 // Generate roots at base of trunk
-num roots = 4+randomInt(2);
+num roots = 3+randomInt(2);
 num rootMaxLength = 30;
-num rootDroop = 0.06;
+num rootDroop = 0.1;
 num rootVerticalDirection = -0.4-randomInt(randPrecision)/randPrecision*0.3;
 num rootAngle = randomInt(randPrecision)/randPrecision*2*pi;
 for (num r = 0; r < roots; r = r + 1) {
@@ -173,12 +169,6 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     // Generate branch
     for (num l = 0; l <= branchLength; l = l + 1) {
         block(l*dx+ox, l*dy+oy, l*dz+oz, branchBlock);
-
-        if (l == 1) {
-            sporeBlossomX = l*dx+ox;
-            sporeBlossomY = l*dy+oy-1;
-            sporeBlossomZ = l*dz+oz;
-        }
     }
     // Rotate angle of next branch
     branchAngle = branchAngle + goldenAngle;
