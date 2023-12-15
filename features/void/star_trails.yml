@@ -1,4 +1,4 @@
-id: STAR_TRAIL
+id: STAR_TRAILS
 type: FEATURE
 
 # Adds 'webs' of sculk blocks
@@ -54,7 +54,8 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - BLOCK:minecraft:ochre_froglight: 1
-    - BLOCK:minecraft:pearlescent_froglight: 1
-    - BLOCK:minecraft:verdant_froglight: 1
+    - BLOCK:minecraft:pearlescent_froglight: 3
+    - BLOCK:minecraft:black_stained_glass: 25
+    - BLOCK:minecraft:purple_stained_glass: 25
+    - BLOCK:minecraft:magenta_stained_glass: 25
     - blank: 250

@@ -33,6 +33,7 @@ stages:
       - PEARLESCENT_END: 1
     to: 
       void:
-        - VOID: 8
+        - VOID: 4
         - STARFIELD: 1
+        - GALAXY_FIELD: 1
         - ASTEROID_FIELD: 1
