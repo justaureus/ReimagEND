@@ -61,6 +61,3 @@ features:
     - SPARSE_OAK_TREES
   flora:
     - GRASS
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES  
-    #- CLOUDS

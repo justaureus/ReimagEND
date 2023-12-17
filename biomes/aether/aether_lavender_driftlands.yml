@@ -69,4 +69,4 @@ features:
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES  
     - HANGING_BEE_NESTS
-    #- CLOUDS
+    - CLOUDS

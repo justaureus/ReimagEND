@@ -27,4 +27,4 @@ features:
     - SMALL_MOSSY_BOULDER_PATCHES  
     - TAINTED_TENDRILS
     - TAINTED_SPIKES
-    #- CLOUDS
+    - CLOUDS

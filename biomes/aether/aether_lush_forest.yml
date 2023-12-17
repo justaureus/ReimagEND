@@ -19,6 +19,3 @@ features:
     - BIG_DRIPLEAF
   trees:
     - GLOWBERRY_TREES
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES
-    #- CLOUDS

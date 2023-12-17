@@ -67,6 +67,3 @@ features:
     - GRASS
     - FERNS
     - REDWHITE_FLOWERS
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES  
-    #- CLOUDS

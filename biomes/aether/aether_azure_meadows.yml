@@ -17,6 +17,3 @@ features:
     - BLUE_FLOWERS
   trees:
     - AZURE_TREES
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES
-    #- CLOUDS

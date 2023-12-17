@@ -23,4 +23,4 @@ features:
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
     - GRAVES
-    #- CLOUDS
+    - CLOUDS

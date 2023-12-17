@@ -1,4 +1,4 @@
-id: CLOUDS
+id: CLOUD_SEA
 type: FEATURE
 
 distributor:
@@ -14,14 +14,14 @@ distributor:
         sampler:
           type: OPEN_SIMPLEX_2
           salt: 3632
-      threshold: 0.2
+      threshold: 0.95
 
 locator:
   type: AND
   locators:
     - type: RANDOM
       height: &range
-        min: 200
+        min: 0
         max: 230
       amount: 1
       salt: 2913

@@ -13,6 +13,3 @@ features:
   postprocessors:
     - HANGING_LANTERNS
     - CEILING_ICICLES
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES
-    #- CLOUDS

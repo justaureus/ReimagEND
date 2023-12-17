@@ -31,3 +31,6 @@ features:
   structures:
     - SPAWNER_DUNGEONS_NORMAL
     - MINESHAFTS
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES
+    - CLOUDS

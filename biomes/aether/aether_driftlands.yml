@@ -62,6 +62,3 @@ features:
   flora:
     - GRASS
     - MIXED_FLOWER_COVER
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES  
-    #- CLOUDS

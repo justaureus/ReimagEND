@@ -68,6 +68,3 @@ features:
   flora:
     - GRASS
     - FERNS
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES  
-    #- CLOUDS
