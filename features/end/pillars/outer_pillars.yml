@@ -1,4 +1,4 @@
-id: MAIN_PILLARS
+id: OUTER_PILLARS
 type: FEATURE
 
 distributor:
@@ -11,7 +11,6 @@ distributor:
           max(circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1),circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 0.5))
         variables:
           centerRadius: ${meta.yml:biome-distribution.small-pillar-radius}
-          buffer: ${meta.yml:biome-distribution.void-buffer-scale}
         functions:
           circle:    {arguments: [r, x, z, l], expression: "if(x*x+z*z>r*r,-1,l)"}
         samplers:
