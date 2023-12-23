@@ -5,6 +5,7 @@ num yTranslate = -20;
 num radius = 4+randomInt(2);
 str setBlock = "minecraft:obsidian";
 str altBlock = "minecraft:crying_obsidian";
+structure(0,0,0,"obsidian_spike_cluster","NONE");
 
 for(num y = yTranslate; y <= height+yTranslate; y = y + 1) {
     for(num x = -radius; x <= radius; x = x + 1) {

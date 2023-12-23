@@ -1,11 +1,11 @@
 num randPrecision = 100;
 
-num length = 25 + randomInt(randPrecision)/randPrecision*10;
-num radius = 5 + randomInt(randPrecision)/randPrecision*2;
+num length = 10 + randomInt(randPrecision)/randPrecision*40;
+num radius = 1.5 + randomInt(randPrecision)/randPrecision*3;
 // Direction vector
-num dx = (randomInt(randPrecision)/randPrecision-0.5);
-num dy = 0.5;
-num dz = (randomInt(randPrecision)/randPrecision-0.5);
+num dx = (randomInt(randPrecision)/randPrecision-0.5)*1.5;
+num dy = 0.5 + randomInt(randPrecision)/randPrecision;
+num dz = (randomInt(randPrecision)/randPrecision-0.5)*1.5;
 str setBlock = "minecraft:obsidian";
 
 // Normalize vector
@@ -24,9 +24,17 @@ for(num l = 0; l <= length; l = l + 1) {
         for(num y = -r; y <= r; y = y + 1) {
             for(num z = -r; z <= r; z = z + 1) {
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                    if (l/length < 0.1) {
+                        block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:end_stone", false);
+                    }
+                    else if (l/length < 0.5) {
                         setBlock = "minecraft:obsidian";
                         if (randomInt(4) == 0) setBlock = "minecraft:crying_obsidian";
                         block(l*dx + x, l*dy + y - radius, l*dz + z, setBlock, false);
+                    }
+                    else {
+                        block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:purple_concrete", false);
+                    }
                 }
             }
         }
