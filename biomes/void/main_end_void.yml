@@ -47,6 +47,9 @@ terrain:
             type: OPEN_SIMPLEX_2
             frequency: 0.05 / ${meta.yml:terrain-configuration.island-scale}
 
+features:
+  preprocessors:
+    - PURPLE_BITS
 palette:
   - BLOCK:minecraft:end_stone: 319
 

@@ -34,8 +34,7 @@ locator:
         min: 0
         max: 70
       pattern:
-        type: MATCH
-        block: minecraft:end_stone
+        type: MATCH_SOLID
         offset: 0
     - type: PATTERN
       range: *range

@@ -1,0 +1,49 @@
+id: PURPLE_BITS
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: SAMPLER
+      sampler:
+        type: POSITIVE_WHITE_NOISE
+        salt: 1031
+      threshold: 0.1
+    - type: SAMPLER
+      sampler:
+        type: EXPRESSION
+        expression: |
+          circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1)
+        variables:
+          centerRadius: 300
+        functions:
+          circle:    {arguments: [r, x, z, l], expression: "if(x*x+z*z<r*r,-1,l)"}
+        samplers:
+          noise:
+            type: OPEN_SIMPLEX_2
+            dimensions: 2
+            salt: 3912
+            frequency: 0.1
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 50
+        max: 159
+      amount: 1
+      salt: 2111
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - BLOCK:minecraft:purple_stained_glass: 1
+    - BLOCK:minecraft:magenta_stained_glass: 1
+    - BLOCK:minecraft:black_stained_glass: 1
