@@ -1,0 +1,50 @@
+num size = 4+randomInt(5);
+
+num baseHeight = 5;
+num heightVariation = 15;
+
+num roomHeight = 4;
+num yOffset = -3;
+
+if (getBlock(size/2,yOffset,size/2) == "minecraft:air" ||
+getBlock(-size/2,yOffset,size/2) == "minecraft:air" ||
+getBlock(size/2,yOffset,-size/2) == "minecraft:air" ||
+getBlock(-size/2,yOffset,-size/2) == "minecraft:air"
+) fail;
+
+num height = baseHeight + randomInt(heightVariation);
+for (num y = height; y > yOffset; y = y - 1) {
+    for (num x = -size/2; x <= size/2; x = x + 1) {
+        
+        for (num z = -size/2; z <= size/2; z = z + 1) {
+
+            if ( (y <= height) && ((x == size/2) || (x == -size/2) || ((z == size/2) || (z == -size/2)))) {
+                if ((getBlock(x,y,z) == "minecraft:air") || 
+                (getBlock(x,y,z) == "minecraft:grass") || 
+                (getBlock(x,y,z) == "minecraft:fern") || 
+                (getBlock(x,y,z) == "minecraft:tall_grass")) {
+                    structure(x,y,z,"ruin_block","NONE");
+                }
+            }      
+
+            if ((y % 4 == 0) && ((x <= (size-2)/2) && (x >= (-size+2)/2) && ((z <= (size-2)/2) && (z >= (-size+2)/2)))) {
+                if ((getBlock(x,y,z) == "minecraft:air") || 
+                (getBlock(x,y,z) == "minecraft:grass") || 
+                (getBlock(x,y,z) == "minecraft:fern") || 
+                (getBlock(x,y,z) == "minecraft:tall_grass")) {
+                    if (randomInt(4) == 0) {
+                        block(x,y,z,"minecraft:air");
+                    } else block(x,y,z,"minecraft:spruce_planks");
+
+                    if (x == 0 && z == 0 && randomInt(4) == 0) {
+                        block(x,y+1,z,"minecraft:spawner");
+                        state(x,y+1,z,"type=VEX");
+                    }
+                }
+            }   
+        }
+    }   
+}
+
+
+

@@ -1,4 +1,4 @@
-id: CLUSTERED_SMALL_RUINS
+id: RUINS
 type: FEATURE
 
 distributor:
@@ -37,4 +37,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: small_aether_ruin
+  structures: ruin

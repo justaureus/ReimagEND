@@ -56,12 +56,9 @@ slant:
       - MOSS_STONE: 319
       
 features:
-  structures:
+  buildings:
     - ANCIENT_TOWERS
-    - CLUSTERED_SMALL_RUINS
-    - CLUSTERED_SMALL_TALL_RUINS
-    - BIG_PILLAR_RUINS
-    - PILLAR_RUINS
+    - RUINS
   trees:
     - OAK_BUSH_PATCHES
     - SPARSE_OAK_TREES

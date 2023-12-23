@@ -26,6 +26,7 @@ colors:
 features:
   preprocessors:
     - CLOUD_PLANE
+    - SPARSE_RUINS
   postprocessors:
     - HANGING_LANTERNS
   structures:
