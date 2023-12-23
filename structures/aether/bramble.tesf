@@ -1,0 +1,50 @@
+num amount = 3;
+num maxRadius = 5;
+
+num x = 0;
+num y = 0;
+num z = 0;
+num random = 0;
+num length = 0;
+
+str mainBlock = "minecraft:mangrove_roots";
+str altBlock = "minecraft:mangrove_wood";
+str setBlock = "";
+
+for (num i = 0; i < amount; i = i + 1) {
+    length = 10+randomInt(20);
+    
+    for (num h = 0; h < length; h = h + 1) {
+        setBlock = altBlock;
+        if (randomInt(2) == 0) setBlock = mainBlock;
+   
+        block(x, y, z, setBlock);
+
+        random = randomInt(12);
+        if(random == 0) {
+            if (x < maxRadius/2) {
+                x = x + 1;
+            } else x = x - 1;
+        }
+        if(random == 1) {
+            if (x > -maxRadius/2) {
+                x = x - 1;
+            } else x = x + 1;
+        }
+        if(random == 2) {
+            if (z < maxRadius/2) {
+                z = z + 1;
+            } else z = z - 1;
+        }
+        if(random == 3) {
+            if (z > -maxRadius/2) {
+                z = z - 1;
+            } else z = z + 1;
+        }
+
+        if(random >= 4) y = y + 1;
+    }   
+    x = 0;
+    y = 0;
+    z = 0;
+}

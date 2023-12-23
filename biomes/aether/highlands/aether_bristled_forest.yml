@@ -18,8 +18,7 @@ slant:
       
 features:
   trees:
-    - OAK_BUSH_PATCHES
-    - FEW_DEAD_DARK_OAK_TREES
+    - BRAMBLE_VINES
     - BRAMBLES
   flora:
     - GRASS
