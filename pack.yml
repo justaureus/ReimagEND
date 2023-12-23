@@ -43,7 +43,7 @@ stages:
   - id: preprocessors
     type: FEATURE
   
-  - id: structures
+  - id: buildings
     type: FEATURE
 
   # Used for things like boulders and features that act like a part of the terrain.

@@ -29,8 +29,7 @@ features:
     - SPARSE_RUINS
   postprocessors:
     - HANGING_LANTERNS
-  structures:
-    - SPAWNER_DUNGEONS_NORMAL
+  buildings:
     - MINESHAFTS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
