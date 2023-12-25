@@ -58,17 +58,17 @@ biome-distribution:
   # Controls the radius of small pillars at the main end island from the center of the island
   # Default: 80
 
-  end-scale: 50
+  end-scale: 1000
   # Controls the scale of the entire end.
-  # Default: 50
+  # Default: 1000
 
   end-biome-scale: 1000
   # Controls the scale of end biomes in particular.
   # Default: 1000
   
-  aether-scale: 50
+  aether-scale: 1000
   # Controls the scale of the entire aether. 
-  # Default: 50
+  # Default: 1000
 
   aether-biome-scale: 1000
   # Controls the scale of aether biomes in particular. 
