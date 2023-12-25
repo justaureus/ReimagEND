@@ -3,9 +3,9 @@ type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 43
-  padding: 35
-  salt: 6780
+  width: 25
+  padding: 18
+  salt: 6998
 
 locator:
   type: AND
