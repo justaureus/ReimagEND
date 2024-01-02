@@ -13,7 +13,7 @@ distributor:
       sampler:
         type: EXPRESSION
         expression: |
-          circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1)
+          circle(centerRadius+noise(x,z)*10, x+noise(x,z)-1, z+noise(x,z)-1, 1)
         variables:
           centerRadius: 300
         functions:

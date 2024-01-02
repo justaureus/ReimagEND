@@ -50,9 +50,10 @@ terrain:
 features:
   preprocessors:
     - OBSIDIAN_RING
+    - FOUNTAIN_BASE
   trees:
     - MAIN_PILLARS
     - OUTER_PILLARS
- 
+
 palette:
   - BLOCK:minecraft:end_stone: 319
