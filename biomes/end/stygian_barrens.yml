@@ -1,0 +1,16 @@
+id: STYGIAN_BARRENS
+type: BIOME
+extends: [ END, EQ_DEFAULT ]
+vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:STYGIAN_BARRENS
+
+colors:
+  grass: 0x211f24
+  foliage: 0x35343b
+
+palette:
+  - STYGIAN_GROUND: 319
+
+features:
+  flora:
+    - GRASS

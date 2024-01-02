@@ -1,0 +1,18 @@
+id: IVORY_EMPYREAN
+type: BIOME
+extends: [ END, EQ_DEFAULT ]
+vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:IVORY_EMPYREAN
+
+colors:
+  grass: 0xbbbdbb
+  foliage: 0xbbbdbb
+
+palette:
+  - IVORY_GROUND: 319
+
+features:
+  flora:
+    - GRASS
+  trees:
+    - IVORY_TREES

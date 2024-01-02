@@ -31,6 +31,8 @@ stages:
       - CRYING_END: 1
       - CORRUPTED_END: 1
       - PEARLESCENT_END: 1
+      - STYGIAN_BARRENS: 1
+      - IVORY_EMPYREAN: 1
     to: 
       void:
         - VOID: 4
