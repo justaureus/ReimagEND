@@ -4,6 +4,9 @@ author: "Aureus, RogueShade"
 
 generator: NOISE_3D
 
+vanilla: "minecraft:the_end"
+vanilla-generation: "minecraft:end"
+
 addons:
   biome-provider-pipeline: "2.+"
   biome-provider-single: "1.+"
