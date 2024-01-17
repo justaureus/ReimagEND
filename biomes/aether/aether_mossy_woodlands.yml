@@ -1,12 +1,12 @@
-id: AETHER_GRIM_WOODLANDS
+id: AETHER_MOSSY_WOODLANDS
 type: BIOME
 extends: [ AETHER, AETHER_PLAINS, EQ_DEFAULT]
-color: $biomes/colors.yml:AETHER_GRIM_WOODLANDS
+color: $biomes/colors.yml:AETHER_MOSSY_WOODLANDS
 vanilla: minecraft:the_end
 
 colors:
-  grass: 0x242423
-  foliage: 0x333332
+  grass: 0x619961
+  foliage: 0xb6d4bc
 
 palette:
   - AETHER_GRIM_PODZOL: 319
@@ -14,12 +14,12 @@ palette:
 features:
   postprocessors:
     - HANGING_LANTERNS
-    - HANGING_COBWEBS
   flora:
     - GRASS
     - FERNS
+    - SPRUCE_BUSHES
   trees:
-    - GRIM_TREES
+    - MOSSY_TREES
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
     - GRAVES

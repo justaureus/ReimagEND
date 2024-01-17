@@ -1,0 +1,19 @@
+setWaterlog(false);
+
+bool north = structure(0, 0, -1, "is_leaf", "NONE");
+
+bool south = structure(0, 0, 1, "is_leaf", "NONE");
+
+bool east = structure(1, 0, 0, "is_leaf", "NONE");
+
+bool west = structure(-1, 0, 0, "is_leaf", "NONE");
+
+if(!(north || south || east || west)) fail;
+
+str vine = "minecraft:vine[north=" + north + ",south=" + south + ",east=" + east + ",west=" + west + "]";
+
+num length = randomInt(6) + 10;
+for (num i = 0; i < length; i = i + 1) {
+    if (getBlock(0, -i, 0) != "minecraft:air") return;
+    block(0, -i, 0, vine, false);
+}

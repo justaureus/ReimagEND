@@ -1,4 +1,4 @@
-id: GRIM_TREES
+id: MOSSY_TREES
 type: FEATURE
 
 distributor:
@@ -38,5 +38,4 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - grim_tree: 10
-    - great_grim_tree: 1
+    - mossy_tree_procedural: 1

@@ -1,11 +1,12 @@
 num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
+num twopi = 6.28318530718;
 
 str trunkBlock = "minecraft:dark_oak_log";
 
 num trunkRadius = 2;
-num length = 20+randomInt(10);
+num length = 10+randomInt(20);
 num trunkTranslate = 2;
 
 num topBranches = 6+randomInt(4);
@@ -17,7 +18,7 @@ num topBranchLeafTranslate = 0;
 num topBranchLeafTopFlatness = 2;
 num topBranchLeafBottomFlatness = 3;
 num topBranchLeafDensity = 0.5;
-str topBranchLeafStructure = "dark_oak_leaves_clump";
+str topBranchLeafStructure = "spruce_leaves_clump";
 str topBranchBlockX = "minecraft:dark_oak_log[axis=x]";
 str topBranchBlockY = "minecraft:dark_oak_log[axis=y]";
 str topBranchBlockZ = "minecraft:dark_oak_log[axis=z]";
@@ -33,7 +34,7 @@ num sideBranchLeafTranslate = 0;
 num sideBranchLeafTopFlatness = 2;
 num sideBranchLeafBottomFlatness = 3;
 num sideBranchLeafDensity = 0.5;
-str sideBranchLeafStructure = "dark_oak_leaves_clump";
+str sideBranchLeafStructure = "spruce_leaves_clump";
 str sideBranchBlockX = "minecraft:dark_oak_log[axis=x]";
 str sideBranchBlockY = "minecraft:dark_oak_log[axis=y]";
 str sideBranchBlockZ = "minecraft:dark_oak_log[axis=z]";
@@ -155,4 +156,13 @@ for (num b = 1; b <= topBranches; b = b + 1) {
             }
         }
     }
+}
+
+for (num v = 15; v < length+20; v = v + 0.1) {
+    num rx = sin(randomInt(randPrecision)/randPrecision * twopi) * (randomInt(7) + 3);
+    num rz = cos(randomInt(randPrecision)/randPrecision * twopi) * (randomInt(7) + 3);
+    structure(rx, v, rz, "place_vines", "NONE");
+    structure(-rx, v, rz, "place_vines", "NONE");
+    structure(rx, v, -rz, "place_vines", "NONE");
+    structure(-rx, v, -rz, "place_vines", "NONE");
 }
