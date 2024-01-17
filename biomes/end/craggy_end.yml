@@ -54,8 +54,3 @@ slant:
 
 palette:
   - CRAGGY_END: 319
-
-features:
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES
-    - MOSSY_BOULDERS
