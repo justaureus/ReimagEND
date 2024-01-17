@@ -14,3 +14,7 @@ colors:
 # precipitation: none
 # temperature: 0.5
 # downfall: 0.5
+
+features:
+  buildings:
+    - SHULKER_RUINS
