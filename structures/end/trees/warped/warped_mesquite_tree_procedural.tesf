@@ -162,5 +162,3 @@ for (num b = 1; b <= topBranches; b = b + 1) {
         }
     }
 }
-
-block(0, -1, 0, "minecraft:dirt");
