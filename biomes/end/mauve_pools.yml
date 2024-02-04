@@ -1,0 +1,64 @@
+id: MAUVE_POOLS
+type: BIOME
+extends: [ END ]
+vanilla: minecraft:end_barrens
+color: $biomes/colors.yml:MAUVE_POOLS
+
+colors:
+  grass: 0x8e3db7
+  foliage: 0x972ad1
+  water: 0xA020F0
+  water-fog: 0xA020F0
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression: |
+      -1+threshold+
+      lerp(y, max, 0, max-taper,
+        max(
+          lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
+            simplex3(x, y*flatness, z)
+          ),
+          lerp(y, min, 0, min+taper,
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          )
+        )
+      )
+    variables:
+      threshold: ${meta.yml:terrain-configuration.island-threshold}
+      max: ${meta.yml:terrain-configuration.island-max-height}
+      min: ${meta.yml:terrain-configuration.island-min-height}
+      taper: ${meta.yml:terrain-configuration.island-taper}
+      flatness: 2
+      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+    samplers:
+      simplex3:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
+      undercarriageMask:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: RIDGED
+          octaves: 3
+          gain: 1
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
+
+palette:
+  - MAUVE_GROUND: 319
+
+features:
+  preprocessors:
+    - WATER_POOLS
+    - WATER_COLUMNS
+  flora:
+    - GRASS

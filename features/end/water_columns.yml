@@ -1,0 +1,29 @@
+id: WATER_COLUMNS
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 6012
+  threshold: 0.5/8
+
+locator:
+  type: PATTERN
+  range:
+    min: 0
+    max: 280
+  pattern:
+    # Match air on top of lava
+    type: AND
+    patterns:
+      - type: MATCH
+        block: minecraft:water
+        offset: -1
+      - type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: water_column

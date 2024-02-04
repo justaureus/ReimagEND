@@ -1,11 +1,11 @@
-id: MAUVENTITIOUS_TREES
+id: MAUVOR_TREES
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 19
-  padding: 14
-  salt: 9105
+  width: 13
+  padding: 11
+  salt: 7778
 
 locator:
   type: AND
@@ -22,11 +22,6 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_AIR
-        offset: 3
-    - type: PATTERN
-      range: *range
-      pattern:
         type: MATCH_SET
         blocks:
           - minecraft:magenta_concrete_powder
@@ -37,4 +32,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: mauventitious_tree_procedural
+  structures: mauvor_tree_procedural

@@ -1,5 +1,8 @@
 str blockID = getBlock(0, 0, 0);
-if (blockID != "minecraft:stone" &&
+if (blockID != "minecraft:end_stone" &&
+    blockID != "minecraft:purple_concrete_powder" &&
+    blockID != "minecraft:magenta_concrete_powder" &&
+    blockID != "minecraft:stone" &&
     blockID != "minecraft:andesite" &&
     blockID != "minecraft:granite" &&
     blockID != "minecraft:diorite" &&

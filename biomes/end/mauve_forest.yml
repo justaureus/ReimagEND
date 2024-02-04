@@ -7,13 +7,15 @@ color: $biomes/colors.yml:MAUVE_FOREST
 colors:
   grass: 0x8e3db7
   foliage: 0x972ad1
+  water: 0xA020F0
+  water-fog: 0xA020F0
 
 palette:
   - MAUVE_GROUND: 319
 
 features:
   trees:
-    - MAUVENTITIOUS_TREES
+    - MAUVOR_TREES
   flora:
     - CRIMSON_STEM_BUSHES
     - GRASS
