@@ -1,6 +1,6 @@
 id: CRYING_END
 type: BIOME
-extends: [ END, EQ_BUMPY_MOUNTAINS ]
+extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:CRYING_END
 
