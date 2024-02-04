@@ -26,7 +26,11 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SOLID
+        type: MATCH_SET
+        blocks:
+          - minecraft:light_blue_concrete_powder
+          - minecraft:cyan_concrete_powder
+          - minecraft:end_stone
         offset: -1
 
 structures:
