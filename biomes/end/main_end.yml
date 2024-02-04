@@ -49,11 +49,16 @@ terrain:
 
 features:
   preprocessors:
-    - OBSIDIAN_RING
-    - FOUNTAIN_BASE
+    - NEBULA_OBSIDIAN
+    - NEBULA_CONCRETE
+    - NEBULA_GLASS
+    - OBSIDIAN_CIRCLET
+#    - VORTEX
   trees:
+    - FOUNTAIN_SPIKES
     - MAIN_PILLARS
     - OUTER_PILLARS
+  buildings: []
 
 palette:
   - BLOCK:minecraft:end_stone: 319

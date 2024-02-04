@@ -1,0 +1,29 @@
+id: FOUNTAIN_SPIKES
+type: FEATURE
+
+distributor:
+  type: POINTS
+  points:
+    - x: 0
+      z: 0
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 70
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: fountain_spikes

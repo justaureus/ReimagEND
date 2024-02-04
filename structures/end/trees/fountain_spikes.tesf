@@ -1,0 +1,62 @@
+num randPrecision = 100;
+num goldenAngle = 2.39996;
+num pi = 3.14159;
+num twopi = 6.28318530718;
+
+num roots = 6+randomInt(3);
+num rootBase = 0;
+num offset = -10;
+num rootMaxLength = 10;
+num rootDroop = -0.03;
+num rootVerticalDirection = -0.4-randomInt(randPrecision)/randPrecision*0.3;
+num rootAngle = randomInt(randPrecision)/randPrecision*2*pi;
+
+num radius = 4;
+str setBlock = "";
+
+for (num n = 0; n < roots; n = n + 1) {
+    // Branch direction vector
+    num dx = sin(rootAngle);
+    num dy = rootVerticalDirection;
+    num dz = cos(rootAngle);
+    // Normalize vector
+    num mag = sqrt(pow(dx,2)+pow(dy,2)+pow(dz,2));
+    dx = dx/mag;
+    dy = dy/mag;
+    dz = dz/mag;
+
+    for (num i = 0; i <= rootMaxLength-3; i = i + 0.1) {
+        num cx = i*dx;
+        num cy = rootBase+i*dy;
+        num cz = i*dz;
+
+        // Reduce radius inversely to length
+        num r = ((radius/(rootMaxLength)) * -i) + radius;
+
+        // Generate sphere at each point
+        for(num x = -r; x <= r; x = x + 1) {
+            for(num y = -r; y <= r; y = y + 1) {
+                for(num z = -r; z <= r; z = z + 1) {
+                    if (pow(x,2)+pow(y,2)+pow(z,2) <= pow(r,2)) {
+                        if (getBlock(i*cx + x, i*cy + y - radius + offset, i*cz + z) == "minecraft:air") {
+                            setBlock = "minecraft:obsidian";
+                            if (randomInt(5) == 0) setBlock = "minecraft:crying_obsidian";
+
+                           block(i*cx + x, i*cy + y - radius + offset, i*cz + z, setBlock, false);
+                        }
+                    }
+                }
+            }
+        }
+        // Point vector down more
+        dy = dy - rootDroop;
+        // Normalize vector
+        mag = sqrt(pow2(dx)+pow2(dy)+pow2(dz));
+        dx = dx/mag;
+        dy = dy/mag;
+        dz = dz/mag;
+    }
+
+    rootMaxLength = 10;
+    rootAngle = rootAngle + goldenAngle;
+}

@@ -1,4 +1,4 @@
-id: FOUNTAIN_BASE
+id: VORTEX
 type: FEATURE
 
 distributor:
@@ -12,18 +12,13 @@ locator:
   locators:
     - type: PATTERN
       range: &range
-        min: 0
-        max: 70
-      pattern:
-        type: MATCH_SOLID
-        offset: 0
-    - type: PATTERN
-      range: *range
+        min: 124
+        max: 125
       pattern:
         type: MATCH_AIR
-        offset: 1
+        offset: 0
 
 structures:
   distribution:
     type: CONSTANT
-  structures: blank
+  structures: vortex

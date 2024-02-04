@@ -49,7 +49,7 @@ terrain:
 
 features:
   preprocessors:
-    - PURPLE_BITS
+    - NEBULA_GLASS
 palette:
   - BLOCK:minecraft:end_stone: 319
 

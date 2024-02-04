@@ -12,7 +12,7 @@ for(num y = yTranslate; y <= height+yTranslate; y = y + 1) {
         for(num z = -radius; z <= radius; z = z + 1) {
             if (pow(x,2)+pow(z,2) < pow(radius,2)) {
                 
-                if (randomInt(15) == 0) { setBlock = altBlock;
+                if (randomInt(10) == 0) { setBlock = altBlock;
                 } else setBlock = "minecraft:obsidian";
                 block(x, y, z, setBlock, false);
             }   

@@ -1,4 +1,4 @@
-id: PURPLE_BITS
+id: NEBULA_GLASS
 type: FEATURE
 
 distributor:
@@ -13,11 +13,12 @@ distributor:
       sampler:
         type: EXPRESSION
         expression: |
-          circle(centerRadius+noise(x,z)*10, x+noise(x,z)-1, z+noise(x,z)-1, 1)
+          circle(minRadius+noise(x,z)*10, maxRadius+noise(x,z)*10, x+noise(x,z)-1, z+noise(x,z)-1, 1)
         variables:
-          centerRadius: 300
+          minRadius: 100
+          maxRadius: 300
         functions:
-          circle:    {arguments: [r, x, z, l], expression: "if(x*x+z*z<r*r,-1,l)"}
+          circle:    {arguments: [s, b, x, z, l], expression: "if( x*x + z*z > s*s && x*x + z*z < b*b,-1,l)"}
         samplers:
           noise:
             type: OPEN_SIMPLEX_2
@@ -30,8 +31,8 @@ locator:
   locators:
     - type: RANDOM
       height: &range
-        min: 50
-        max: 159
+        min: 174
+        max: 177
       amount: 1
       salt: 2111
     - type: PATTERN
@@ -44,6 +45,7 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - BLOCK:minecraft:purple_stained_glass: 1
-    - BLOCK:minecraft:magenta_stained_glass: 1
-    - BLOCK:minecraft:black_stained_glass: 1
+    - BLOCK:minecraft:purple_stained_glass: 3
+    - BLOCK:minecraft:magenta_stained_glass: 3
+    - BLOCK:minecraft:black_stained_glass: 3
+    - BLOCK:minecraft:pearlescent_froglight: 1

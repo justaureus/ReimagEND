@@ -1,7 +1,7 @@
 num randPrecision = 100;
 
 num length = 25 + randomInt(randPrecision)/randPrecision*10;
-num radius = 5 + randomInt(randPrecision)/randPrecision*2;
+num radius = 4 + randomInt(randPrecision)/randPrecision;
 // Direction vector
 num dx = (randomInt(randPrecision)/randPrecision-0.5);
 num dy = 0.5;
@@ -25,7 +25,7 @@ for(num l = 0; l <= length; l = l + 1) {
             for(num z = -r; z <= r; z = z + 1) {
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
                         setBlock = "minecraft:obsidian";
-                        if (randomInt(4) == 0) setBlock = "minecraft:crying_obsidian";
+                        if (randomInt(6) == 0) setBlock = "minecraft:crying_obsidian";
                         block(l*dx + x, l*dy + y - radius, l*dz + z, setBlock, false);
                 }
             }

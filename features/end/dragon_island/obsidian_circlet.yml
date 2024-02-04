@@ -1,4 +1,4 @@
-id: OBSIDIAN_RING
+id: OBSIDIAN_CIRCLET
 type: FEATURE
 
 distributor:
@@ -10,7 +10,7 @@ distributor:
         expression: |
           circle(minRadius+noise(x,z)*10, maxRadius+noise(x,z)*10, x+noise(x,z)-1, z+noise(x,z)-1, 1)
         variables:
-          minRadius: 50
+          minRadius: 35
           maxRadius: 75
         functions:
           circle:    {arguments: [s, b, x, z, l], expression: "if( x*x + z*z > s*s && x*x + z*z < b*b,-1,l)"}
@@ -22,25 +22,25 @@ distributor:
             frequency: 0.1
     - type: SAMPLER
       sampler:
-          type: DOMAIN_WARP
-          amplitude: 5
-          warp:
-            type: FBM
-            octaves: 2
-            sampler:
-              type: OPEN_SIMPLEX_2
-              frequency: 0.03
+        type: DOMAIN_WARP
+        amplitude: 5
+        warp:
+          type: FBM
+          octaves: 2
           sampler:
-            type: FBM
-            octaves: 2
+            type: OPEN_SIMPLEX_2
+            frequency: 0.03
+        sampler:
+          type: FBM
+          octaves: 2
+          sampler:
+            type: LINEAR
+            min: -1
+            max: -0.2
             sampler:
-              type: LINEAR
-              min: -1
-              max: -0.2
-              sampler:
-                type: CELLULAR
-                return: Distance3Sub
-                frequency: 0.2
+              type: CELLULAR
+              return: Distance3Sub
+              frequency: 0.2
         
 locator:
   type: AND
@@ -64,4 +64,4 @@ structures:
     type: WHITE_NOISE
   structures: 
     - BLOCK:minecraft:obsidian: 5
-    - BLOCK:minecraft:crying_obsidian: 3
+    - BLOCK:minecraft:crying_obsidian: 1
