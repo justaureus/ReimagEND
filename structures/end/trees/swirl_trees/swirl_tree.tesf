@@ -6,7 +6,7 @@ str trunkBlock = "minecraft:stripped_acacia_log";
 
 num trunkRadius = 2;
 num length = 20+randomInt(30);
-num trunkTranslate = 2;
+num trunkTranslate = -2;
 
 num topBranches = 0;
 num topBranchLengthUpwardsMin = 7+randomInt(3);
