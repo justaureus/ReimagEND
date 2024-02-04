@@ -24,7 +24,6 @@ stages:
       - AETHER_MOSSY_WOODLANDS: 1
       - AETHER_REDWOOD_FOREST: 1
       - AETHER_DISCUS_AETHER: 1
-      - AETHER_TAINTED: 1
       - AETHER_CLOUD_SEA: 1
     to: 
       aether_highlands:
