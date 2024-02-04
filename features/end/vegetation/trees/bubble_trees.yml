@@ -18,7 +18,7 @@ locator:
       range: *range
       pattern:
         type: MATCH
-        block: minecraft:black_concrete
+        block: minecraft:purple_concrete
         offset: -1
     - type: PATTERN
       range: *range
