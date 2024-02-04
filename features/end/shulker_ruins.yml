@@ -2,19 +2,10 @@ id: SHULKER_RUINS
 type: FEATURE
 
 distributor:
-  type: AND
-  distributors:
-    - type: PADDED_GRID
-      width: 36
-      padding: 24
-      salt: 1235
-    - type: SAMPLER
-      sampler:
-        type: PROBABILITY
-        sampler:
-          type: OPEN_SIMPLEX_2
-          salt: 5436
-      threshold: 0.2
+  type: PADDED_GRID
+  width: 89
+  padding: 102
+  salt: 1244
 
 locator:
   type: AND
