@@ -16,13 +16,20 @@ biomes:
 
     # Both End and Aether
     source: $biome-providers/sources/reimagEND.yml:source
-
+    
     stages:
-      # Distributes main end island and outer end seperately
-      - << biome-providers/stages/outer_end.yml:stages
 
-      # Distributes outer end biomes
-      - << biome-providers/stages/end_distribution.yml:stages 
+      # Distributes the outer end into different rings
+      - << biome-providers/stages/ring_distribution.yml:stages
+
+      # Distributes aether pockets across certain rings of the outer end
+      - << biome-providers/stages/aether_pockets.yml:stages 
+
+      # Distributes void biomes across the outer end
+      - << biome-providers/stages/void_distribution.yml:stages
+
+      # Distributes outer end biomes across each ring
+      - << biome-providers/stages/end_biome_distribution.yml:stages 
 
       # Distributes aether biomes
       - << biome-providers/stages/aether_distribution.yml:stages 

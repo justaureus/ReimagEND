@@ -1,0 +1,102 @@
+distribution-map: &distribution-map
+  dimensions: 2
+  type: FBM
+  octaves: 2
+  sampler:
+    type: OPEN_SIMPLEX_2
+    salt: 6836
+    frequency: 1 / ${meta.yml:biome-distribution.end-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *distribution-map
+    default-from: ring1
+    default-to:
+      - END_WASTES: 3
+      - END_MIDLANDS: 2
+      - END_HIGHLANDS: 1
+    to: 
+      ring2: 
+        - END_WASTES: 3
+        - END_MIDLANDS: 2
+        - END_HIGHLANDS: 1
+
+        - SHATTERED_END: 6
+        - CRAGGY_END: 6
+        - JAGGED_END: 6
+        - DARK_END: 6
+        - AMETHYST_END: 6
+        - CORRUPTED_END: 6
+
+      ring3: 
+        - END_WASTES: 3
+        - END_MIDLANDS: 2
+        - END_HIGHLANDS: 1
+
+        - SHATTERED_END: 6
+
+        - CRAGGY_END: 6
+        - JAGGED_END: 6
+        - DARK_END: 6
+        - AMETHYST_END: 6
+        - CORRUPTED_END: 6
+
+        
+        - CRYING_END: 8
+        - CORRUPTED_END: 8
+        - PEARLESCENT_END: 8  
+
+      ring4: 
+        - END_WASTES: 3
+        - END_MIDLANDS: 2
+        - END_HIGHLANDS: 1
+
+        - SHATTERED_FOREST: 10
+        - CHORUVE_FOREST: 10
+
+        - SHATTERED_END: 6
+        - CRAGGY_END: 6
+        - STYGIAN_BARRENS: 10
+        - JAGGED_END: 6
+        - DARK_END: 6
+        - AMETHYST_END: 6
+        - CORRUPTED_END: 6
+
+        - CRYING_END: 8
+        - CORRUPTED_END: 8
+        - PEARLESCENT_END: 8  
+      ring5: 
+        - END_WASTES: 3
+        - END_MIDLANDS: 2
+        - END_HIGHLANDS: 1
+
+        - SHATTERED_FOREST: 10
+
+        - MAUVE_POOLS: 12
+        - MAUVE_FOREST: 12
+
+        - CHORUVE_FOREST: 10
+
+        - SHATTERED_END: 6
+        - CRAGGY_END: 6
+
+        - WARPED_BARRENS: 12
+        - WARPED_FOREST: 12
+        - WARPED_GROVE: 12
+        - FLAXEN_FOREST: 12
+
+        - STYGIAN_BARRENS: 10
+        - JAGGED_END: 6
+        - DARK_END: 6
+        - AMETHYST_END: 6
+        - CORRUPTED_END: 6
+
+        - CRYING_END: 8
+        - CORRUPTED_END: 8
+        - PEARLESCENT_END: 8  
+        - IVORY_EMPYREAN: 12     
+      void:
+        - VOID: 4
+        - STARFIELD: 1
+        - GALAXY_FIELD: 1
+        - ASTEROID_FIELD: 1

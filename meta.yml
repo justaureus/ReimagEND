@@ -58,6 +58,19 @@ biome-distribution:
   # Controls the radius of small pillars at the main end island from the center of the island
   # Default: 80
 
+
+
+  ring1-width: 1000
+
+  ring2-width: 1000
+
+  ring3-width: 1000
+
+  ring4-width: 1000
+
+  # Each controls the width of each ring in order from center to outward
+  # Default: 1000
+
   end-scale: 1000
   # Controls the scale of the entire end.
   # Default: 1000

@@ -26,25 +26,8 @@ distribution-map: &distribution-map
 stages:
   - type: REPLACE
     sampler: *distribution-map
-    from: outer_end
+    from: ring5
     to:
-      - aether: 24
-      - STARFIELD: 32
-      - end: 64
-  - type: REPLACE_LIST
-    sampler:
-      dimensions: 2
-      type: FBM
-      octaves: 2
-      sampler:
-        type: OPEN_SIMPLEX_2
-        salt: 1196
-        frequency: 1 / ${meta.yml:biome-distribution.end-scale} / ${meta.yml:biome-distribution.global-scale}
-    default-from: end
-    default-to:
-      - void: 1
-      - end: 2
-    to:
-      aether:
-        - aether: 2
-        - aether_highlands: 1
+      - aether: 32
+      - STARFIELD: 64
+      - ring5: 82

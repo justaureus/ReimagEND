@@ -1,0 +1,29 @@
+distribution-map: &distribution-map
+  dimensions: 2
+  type: FBM
+  octaves: 2
+  sampler:
+    type: OPEN_SIMPLEX_2
+    salt: 1196
+    frequency: 1 / ${meta.yml:biome-distribution.end-scale} / ${meta.yml:biome-distribution.global-scale}
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *distribution-map
+    default-from: ring1
+    default-to:
+      - void: 1
+      - ring1: 2
+    to:
+      ring2:  
+        - void: 1
+        - ring2: 2
+      ring3:  
+        - void: 1
+        - ring3: 2
+      ring4:  
+        - void: 1
+        - ring4: 2
+      ring5:  
+        - void: 1
+        - ring5: 2
