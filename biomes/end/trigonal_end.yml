@@ -1,8 +1,0 @@
-id: TRIGONAL_END
-type: BIOME
-extends: [ END, EQ_DEFAULT ]
-vanilla: minecraft:end_midlands
-color: $biomes/colors.yml:TRIGONAL_END
-
-palette:
-  - TRIGONAL_GROUND: 319

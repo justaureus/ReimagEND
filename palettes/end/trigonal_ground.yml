@@ -9,5 +9,5 @@ layers:
     sampler:
       type: CELLULAR
       return: CellValue
-      frequency: 0.05
+      frequency: 0.01
       salt: 3146

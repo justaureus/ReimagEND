@@ -14,7 +14,6 @@ stages:
     default-to:
       - END_WASTES: 1
       - END_HIGHLANDS: 1
-      - TRIGONAL_END: 1
       - SHATTERED_END: 1
       - SHATTERED_FOREST: 1
       - MAUVE_POOLS: 1
@@ -25,15 +24,14 @@ stages:
       - WARPED_FOREST: 1
       - WARPED_GROVE: 1
       - FLAXEN_FOREST: 1
+      - STYGIAN_BARRENS: 1
       - JAGGED_END: 1
       - DARK_END: 1
       - AMETHYST_END: 1
-      - TAINTED_END: 1
       - CRYING_END: 1
       - CORRUPTED_END: 1
       - PEARLESCENT_END: 1
       - IVORY_EMPYREAN: 1
-      - STYGIAN_BARRENS: 1
     to: 
       void:
         - VOID: 4
