@@ -1,6 +1,6 @@
 id: CORRUPTED_END
 type: BIOME
-extends: [ END, EQ_BUMPY ]
+extends: [ END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:CORRUPTED_END
 
