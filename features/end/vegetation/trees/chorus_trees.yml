@@ -17,7 +17,8 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SOLID
+        type: MATCH
+        block: minecraft:end_stone
         offset: -1
 
 structures:
