@@ -28,6 +28,6 @@ stages:
     sampler: *distribution-map
     from: ring5
     to:
-      - aether: 32
-      - STARFIELD: 64
+      - aether: 48
+      - STARFIELD: 84
       - ring5: 82

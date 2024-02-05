@@ -9,7 +9,7 @@ terrain-configuration:
 
   island-min-height: -40
   # Lowest height of default terrain
-  # Default: 250
+  # Default: -40
 
   island-undercarriage-translate: -10
   # Translate placement of default terrain undercarriage
@@ -26,7 +26,6 @@ terrain-configuration:
   island-threshold: 0.4
   # Threshold or density of default island
   # Default: 0.4
-
 
 biome-distribution:
   # Biome distribution refers to the placement of biomes, this does *NOT*
@@ -58,8 +57,6 @@ biome-distribution:
   # Controls the radius of small pillars at the main end island from the center of the island
   # Default: 80
 
-
-
   ring1-width: 1000
 
   ring2-width: 1000
@@ -71,20 +68,24 @@ biome-distribution:
   # Each controls the width of each ring in order from center to outward
   # Default: 1000
 
-  end-scale: 1000
-  # Controls the scale of the entire end.
-  # Default: 1000
-
-  end-biome-scale: 1000
+  end-biome-scale: 500
   # Controls the scale of end biomes in particular.
-  # Default: 1000
-  
-  aether-scale: 1000
-  # Controls the scale of the entire aether. 
-  # Default: 1000
+  # Default: 500
 
-  aether-biome-scale: 1000
+  end-scale: 1
+  # Controls the scale of the entire end.
+  # Default: 1
+
+  aether-biome-scale: 500
   # Controls the scale of aether biomes in particular. 
+  # Default: 500
+  
+  aether-scale: 1
+  # Controls the scale of the entire aether. 
+  # Default: 1
+
+  void-biome-scale: 1000
+  # Controls the scale of the void biomes.
   # Default: 1000
   
   # \/ MIGHT BE USED IN THE FUTURE \/

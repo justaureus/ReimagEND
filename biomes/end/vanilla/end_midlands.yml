@@ -1,6 +1,6 @@
 id: END_MIDLANDS
 type: BIOME
-extends: [ END, EQ_DEFAULT ]
+extends: [ END, EQ_DEFAULT_MIDLANDS ]
 vanilla: minecraft:end_midlands
 color: $biomes/colors.yml:END_MIDLANDS
 
