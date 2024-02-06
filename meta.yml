@@ -1,32 +1,3 @@
-terrain-configuration:
-  island-scale: 1
-  # Scale of default terrain
-  # Default: 1
-
-  island-max-height: 250
-  # Max height of default terrain
-  # Default: 250
-
-  island-min-height: -40
-  # Lowest height of default terrain
-  # Default: -40
-
-  island-undercarriage-translate: -10
-  # Translate placement of default terrain undercarriage
-  # Default: -10
-
-  island-flatness: 5
-  # Flatness of default terrain
-  # Default: 5
-
-  island-taper: 100
-  # Range for narrowing deafault terrain
-  # Default: 100
-
-  island-threshold: 0.4
-  # Threshold or density of default island
-  # Default: 0.4
-
 biome-distribution:
   # Biome distribution refers to the placement of biomes, this does *NOT*
   # include aspects like terrain height / shape within biomes, or anything
@@ -101,6 +72,35 @@ biome-distribution:
   void-biome-scale: 1000
   # Controls the scale of the void biomes.
   # Default: 1000
+
+terrain-configuration:
+  island-scale: 1
+  # Scale of default terrain
+  # Default: 1
+
+  island-max-height: 250
+  # Max height of default terrain
+  # Default: 250
+
+  island-min-height: -40
+  # Lowest height of default terrain
+  # Default: -40
+
+  island-undercarriage-translate: -10
+  # Translate placement of default terrain undercarriage
+  # Default: -10
+
+  island-flatness: 5
+  # Flatness of default terrain
+  # Default: 5
+
+  island-taper: 100
+  # Range for narrowing deafault terrain
+  # Default: 100
+
+  island-threshold: 0.4
+  # Threshold or density of default island
+  # Default: 0.4
   
   # \/ MIGHT BE USED IN THE FUTURE \/
 
