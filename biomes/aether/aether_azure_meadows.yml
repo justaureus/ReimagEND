@@ -9,7 +9,7 @@ colors:
   foliage: 0x3c79cf
 
 palette:
-  - AETHER_BLUE_GRASS: 319
+  - AETHER_GRAVEL_PATCHES: 319
   
 features:
   flora:

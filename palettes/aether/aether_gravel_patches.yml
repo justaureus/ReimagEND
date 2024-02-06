@@ -1,4 +1,4 @@
-id: AETHER_BLUE_GRASS
+id: AETHER_GRAVEL_PATCHES
 
 type: PALETTE
 
@@ -17,7 +17,7 @@ layers:
         octaves: 2
         sampler:
           type: OPEN_SIMPLEX_2
-          frequency: 0.2
+          frequency: 0.05
           salt: 4246   
   - materials: minecraft:dirt
     layers: 3
