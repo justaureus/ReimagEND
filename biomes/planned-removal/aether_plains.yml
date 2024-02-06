@@ -9,7 +9,7 @@ colors:
   foliage: 0xbdcc60
 
 palette:
-  - AETHER_GRASS: 319
+  - GRASS: 319
 
 features:
   trees:

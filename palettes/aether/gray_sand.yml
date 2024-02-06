@@ -1,16 +1,23 @@
-id: AETHER_GLIDED_SAND
+id: GRAY_SAND
 
 type: PALETTE
 
 layers:
   - materials: 
-    - minecraft:sand: 3
-    - minecraft:yellow_concrete_powder: 2
+    - minecraft:light_gray_concrete_powder: 3
     layers: 2
-  - materials: 
-    - minecraft:sandstone: 3
-    - minecraft:yellow_concrete: 2
-    layers: 2
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 10
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.03
+          salt: 4356   
   - materials: 
     - minecraft:stone: 10
     - minecraft:cobblestone: 5
@@ -26,5 +33,5 @@ sampler:
     octaves: 2
     sampler:
       type: OPEN_SIMPLEX_2
-      frequency: 0.2
+      frequency: 0.05
       salt: 293

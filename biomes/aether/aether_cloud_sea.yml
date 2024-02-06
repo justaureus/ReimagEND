@@ -49,7 +49,7 @@ terrain:
             frequency: 0.05 / ${meta.yml:terrain-configuration.island-scale}
 
 palette:
-  - AETHER_GRASS: 319
+  - GRASS: 319
 
 features:
   landforms:

@@ -9,7 +9,7 @@ colors:
   foliage: 0xc3dbda
 
 palette:
-  - AETHER_PODZOL: 319
+  - PODZOL: 319
 
 features:
   slabs:

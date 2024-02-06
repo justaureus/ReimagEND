@@ -1,6 +1,6 @@
 id: AETHER_AZURE_MEADOWS
 type: BIOME
-extends: [ AETHER, AETHER_FOREST, EQ_DEFAULT]
+extends: [ AETHER, AETHER_FOREST, EQ_AETHER_LOWLANDS]
 color: $biomes/colors.yml:AETHER_AZURE_MEADOWS
 vanilla: minecraft:the_end
 
@@ -9,7 +9,7 @@ colors:
   foliage: 0x3c79cf
 
 palette:
-  - AETHER_GRAVEL_PATCHES: 319
+  - GRASS_GRAVEL_PATCHES: 319
   
 features:
   flora:

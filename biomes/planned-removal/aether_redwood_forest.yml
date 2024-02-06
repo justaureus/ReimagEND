@@ -9,7 +9,7 @@ colors:
   foliage: 0x284027
 
 palette:
-  - AETHER_GRASS: 319
+  - GRASS: 319
 
 features:
   flora:

@@ -1,4 +1,4 @@
-id: AETHER_PODZOL
+id: GRIM_PODZOL
 type: PALETTE
 
 layers:
@@ -6,7 +6,7 @@ layers:
       - minecraft:grass_block: 4
       - minecraft:coarse_dirt: 1
       - minecraft:podzol: 1
-      - minecraft:gravel: 2
+      - minecraft:black_concrete_powder: 2
     layers: 1
     sampler:
       type: DOMAIN_WARP

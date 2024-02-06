@@ -9,7 +9,7 @@ colors:
   foliage: 0x637a28
 
 palette:
-  - AETHER_MOSS_GRASS: 319
+  - MOSS_GRASS: 319
 
 features:
 

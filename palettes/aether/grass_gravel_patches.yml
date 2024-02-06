@@ -1,10 +1,24 @@
-id: AETHER_GRASS
+id: GRASS_GRAVEL_PATCHES
 
 type: PALETTE
 
 layers:
-  - materials: minecraft:grass_block
+  - materials: 
+    - minecraft:grass_block: 5
+    - minecraft:gravel: 2
     layers: 1
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.05
+          salt: 4246   
   - materials: minecraft:dirt
     layers: 3
   - materials: 

@@ -52,7 +52,7 @@ colors:
   foliage: 0xd2de85
 
 palette:
-  - AETHER_PODZOL: 319
+  - PODZOL: 319
 
 slant:
   - threshold: 3.5

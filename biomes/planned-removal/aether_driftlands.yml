@@ -1,7 +1,7 @@
-id: AETHER_LAVENDER_DRIFTLANDS
+id: AETHER_DRIFTLANDS
 type: BIOME
 extends: [ AETHER ]
-color: $biomes/colors.yml:AETHER_LAVENDER_DRIFTLANDS
+color: $biomes/colors.yml:AETHER_DRIFTLANDS
 vanilla: minecraft:the_end
 
 terrain:
@@ -15,7 +15,7 @@ terrain:
             simplex3(x, y*flatness, z)
           ),
           lerp(y, min, 0, min+taper,
-            simplex(x*2,z*2)*simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
           )
         )
       )
@@ -24,7 +24,7 @@ terrain:
       max: ${meta.yml:terrain-configuration.island-max-height}
       min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: ${meta.yml:terrain-configuration.island-flatness}
+      flatness: 2
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -46,13 +46,9 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
-            
-colors:
-  grass: 0xFFABFF
-  foliage: 0xFFABFF
 
 palette:
-  - AETHER_GRASS: 319
+  - GRASS: 319
 
 slant:
   - threshold: 3.5
@@ -65,8 +61,4 @@ features:
     - SPARSE_OAK_TREES
   flora:
     - GRASS
-    - LAVENDER_FLOWERS
-  landforms:
-    - SMALL_MOSSY_BOULDER_PATCHES  
-    - HANGING_BEE_NESTS
-    - CLOUDS
+    - MIXED_FLOWER_COVER

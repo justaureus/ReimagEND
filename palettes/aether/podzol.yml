@@ -1,11 +1,12 @@
-id: AETHER_MOSS_GRASS
-
+id: PODZOL
 type: PALETTE
 
 layers:
-  - materials: 
-    - minecraft:grass_block: 3
-    - minecraft:moss_block: 2
+  - materials:
+      - minecraft:grass_block: 4
+      - minecraft:coarse_dirt: 1
+      - minecraft:podzol: 1
+      - minecraft:gravel: 2
     layers: 1
     sampler:
       type: DOMAIN_WARP
@@ -18,9 +19,10 @@ layers:
         sampler:
           type: OPEN_SIMPLEX_2
           frequency: 0.2
-          salt: 4246   
-  - materials: minecraft:dirt
-    layers: 3
+          salt: 293
+  - materials:
+      - minecraft:dirt: 1
+    layers: 2
   - materials: 
     - minecraft:stone: 10
     - minecraft:cobblestone: 5

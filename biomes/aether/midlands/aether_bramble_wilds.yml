@@ -1,6 +1,6 @@
 id: AETHER_BRAMBLE_WILDS
 type: BIOME
-extends: [ AETHER, EQ_DEFAULT ]
+extends: [ AETHER, EQ_AETHER_MIDLANDS ]
 color: $biomes/colors.yml:AETHER_BRAMBLE_WILDS
 vanilla: minecraft:the_end
 
@@ -9,7 +9,7 @@ colors:
   foliage: 0x705f36
 
 palette:
-  - AETHER_PODZOL: 319
+  - PODZOL: 319
 
 slant:
   - threshold: 3.5

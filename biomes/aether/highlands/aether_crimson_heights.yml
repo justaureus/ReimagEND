@@ -1,7 +1,7 @@
-id: AETHER_ANCIENT_WASTES
+id: AETHER_CRIMSON_HEIGHTS
 type: BIOME
 extends: [ AETHER ]
-color: $biomes/colors.yml:AETHER_ANCIENT_WASTES
+color: $biomes/colors.yml:AETHER_CRIMSON_HEIGHTS
 vanilla: minecraft:the_end
 
 terrain:
@@ -12,19 +12,19 @@ terrain:
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, -y*flatness, z)
+            simplex3(x, y*flatness, z)
           ),
-          lerp(y, min+undercarriageTranslate, 0, min+taper,
-            simplex3(x, (-y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          lerp(y, min, 0, min+taper,
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
           )
         )
       )
     variables:
-      threshold: ${meta.yml:terrain-configuration.island-threshold}
-      max: 250
-      min: 0
+      threshold: 0.6
+      max: 300
+      min: 100
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 9
+      flatness: 2
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -35,7 +35,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -45,7 +45,11 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.0005 / ${meta.yml:terrain-configuration.island-scale}
+
+colors:
+  grass: 0xdb1818
+  foliage: 0xFFFFFF
 
 palette:
   - PODZOL: 319
@@ -56,12 +60,10 @@ slant:
       - MOSS_STONE: 319
       
 features:
-  buildings:
-    - ANCIENT_TOWERS
-    - RUINS
   trees:
     - OAK_BUSH_PATCHES
     - SPARSE_OAK_TREES
   flora:
     - GRASS
     - FERNS
+    - REDWHITE_FLOWERS

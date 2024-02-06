@@ -1,12 +1,3 @@
-distribution-map: &distribution-map
-  dimensions: 2
-  type: FBM
-  octaves: 2
-  sampler:
-    type: OPEN_SIMPLEX_2
-    salt: 6836
-    frequency: 1 / ${meta.yml:biome-distribution.aether-biome-scale} / ${meta.yml:biome-distribution.global-scale}
-
 stages:
   - type: REPLACE
     sampler: 
@@ -16,23 +7,37 @@ stages:
       sampler:
         type: OPEN_SIMPLEX_2
         salt: 6836
-        frequency: 1 / ${meta.yml:biome-distribution.aether-region-scale} / ${meta.yml:biome-distribution.global-scale}
+        frequency: 1 / ${meta.yml:biome-distribution.aether-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: aether
     to:
-      - aether-lowlands: 1
-      - aether-midlands: 1
+      - AETHER_CLOUD_SEA: 1
+      - aether-coasts: 1
+      - aether-lowlands: 2
+      - aether-midlands: 2
       - aether-highlands: 1
+
   - type: REPLACE_LIST
-    sampler: *distribution-map
-    default-from: aether-lowlands
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: OPEN_SIMPLEX_2
+        salt: 6836
+        frequency: 1 / ${meta.yml:biome-distribution.aether-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    default-from: aether-coasts
     default-to:
+      - AETHER_INSIPID_COASTS: 1
+    to: 
+      aether-lowlands:
       - AETHER_AZURE_MEADOWS: 1
       - AETHER_AUREATE_FOREST: 1
       - AETHER_LAVENDER_DRIFTLANDS: 1
-    to: 
+
       aether-midlands:
-      - AETHER_BRAMBLE_WILDS: 1
+      - AETHER_BRAMBLE_WILDS: 2
       - AETHER_FLOATING_CLIFFS: 1
+
       aether-highlands:
       - AETHER_CRIMSON_HEIGHTS: 1
       

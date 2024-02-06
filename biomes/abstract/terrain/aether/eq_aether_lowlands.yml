@@ -1,8 +1,6 @@
-id: AETHER_ANCIENT_WASTES
+id: EQ_AETHER_LOWLANDS
 type: BIOME
-extends: [ AETHER ]
-color: $biomes/colors.yml:AETHER_ANCIENT_WASTES
-vanilla: minecraft:the_end
+abstract: true
 
 terrain:
   sampler:
@@ -12,20 +10,20 @@ terrain:
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, -y*flatness, z)
+            simplex3(x, y*flatness, z)
           ),
-          lerp(y, min+undercarriageTranslate, 0, min+taper,
-            simplex3(x, (-y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          lerp(y, min, 0, min+taper,
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
           )
         )
       )
     variables:
       threshold: ${meta.yml:terrain-configuration.island-threshold}
-      max: 250
-      min: 0
+      max: 200
+      min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 9
-      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+      flatness: 7
+      undercarriageTranslate: -10
     samplers:
       simplex3:
         dimensions: 3
@@ -46,22 +44,3 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
-
-palette:
-  - PODZOL: 319
-
-slant:
-  - threshold: 3.5
-    palette:
-      - MOSS_STONE: 319
-      
-features:
-  buildings:
-    - ANCIENT_TOWERS
-    - RUINS
-  trees:
-    - OAK_BUSH_PATCHES
-    - SPARSE_OAK_TREES
-  flora:
-    - GRASS
-    - FERNS
