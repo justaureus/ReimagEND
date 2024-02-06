@@ -1,43 +1,4 @@
-distribution-map: &distribution-map
-  dimensions: 2
-  type: FBM
-  octaves: 2
-  sampler:
-    type: OPEN_SIMPLEX_2
-    salt: 6836
-    frequency: 1 / ${meta.yml:biome-distribution.end-biome-scale} / ${meta.yml:biome-distribution.global-scale}
-
 stages:
-  - type: REPLACE_LIST
-    sampler: *distribution-map
-    default-from: ring1
-    default-to:
-      - END_BARRENS: 1
-      - END_MIDLANDS: 1
-      - END_HIGHLANDS: 1
-    to: 
-      ring2: 
-        - SHATTERED_END: 4
-        - SHATTERED_FOREST: 2
-        - JAGGED_END: 2
-        - DARK_END: 3
-        - AMETHYST_END: 3
-        - CRYING_END: 3
-        - CORRUPTED_END: 3
-      ring3: 
-        - STYGIAN_BARRENS: 2
-        - CRAGGY_END: 3 
-        - CHORUVE_FOREST: 3
-        - PEARLESCENT_END: 2 
-        - IVORY_EMPYREAN: 2 
-      ring4: 
-        - MAUVE_POOLS: 4
-        - MAUVE_FOREST: 5
-        - WARPED_BARRENS: 1
-        - WARPED_FOREST: 2
-        - WARPED_GROVE: 3
-        - FLAXEN_FOREST: 4  
-      
   - type: REPLACE
     sampler: 
       dimensions: 2
@@ -46,7 +7,76 @@ stages:
       sampler:
         type: OPEN_SIMPLEX_2
         salt: 6836
-        frequency: 0.3 / ${meta.yml:biome-distribution.end-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+        frequency: 1 / ${meta.yml:biome-distribution.ring1-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: ring1
+    to:
+      - END_BARRENS: 1
+      - END_MIDLANDS: 1
+      - END_HIGHLANDS: 1
+
+  - type: REPLACE
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: OPEN_SIMPLEX_2
+        salt: 6836
+        frequency: 1 / ${meta.yml:biome-distribution.ring2-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: ring2
+    to:
+      - SHATTERED_END: 4
+      - SHATTERED_FOREST: 2
+      - JAGGED_END: 2
+      - DARK_END: 5
+      - AMETHYST_END: 3
+      - CRYING_END: 3
+      - CORRUPTED_END: 3
+
+  - type: REPLACE
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: OPEN_SIMPLEX_2
+        salt: 6836
+        frequency: 1 / ${meta.yml:biome-distribution.ring3-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: ring3
+    to:
+      - STYGIAN_BARRENS: 2
+      - CRAGGY_END: 3 
+      - CHORUVE_FOREST: 3
+      - PEARLESCENT_END: 2 
+      - IVORY_EMPYREAN: 2 
+
+  - type: REPLACE
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: OPEN_SIMPLEX_2
+        salt: 6836
+        frequency: 1 / ${meta.yml:biome-distribution.ring4-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: ring4
+    to:
+      - MAUVE_POOLS: 4
+      - MAUVE_FOREST: 5
+      - WARPED_FOREST: 2
+      - WARPED_GROVE: 3
+      - FLAXEN_FOREST: 4  
+      
+  - type: REPLACE
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        salt: 6836
+        frequency: 1 / ${meta.yml:biome-distribution.ring5-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring5
     to:
       - END_BARRENS: 3
@@ -69,7 +99,6 @@ stages:
       - IVORY_EMPYREAN: 2
       - MAUVE_POOLS: 4
       - MAUVE_FOREST: 4
-      - WARPED_BARRENS: 1
       - WARPED_FOREST: 2
       - WARPED_GROVE: 3
       - FLAXEN_FOREST: 4

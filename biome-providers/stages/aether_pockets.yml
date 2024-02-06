@@ -2,8 +2,8 @@ distribution-map: &distribution-map
   type: EXPRESSION
   expression: split((noise(x/spread,z/spread)+1)*4/(radius/spread)-1)
   variables:
-    spread: 1500
-    radius: 350
+    spread: 3000
+    radius: 500
   functions:
     split:
       arguments: [x]
@@ -28,6 +28,7 @@ stages:
     sampler: *distribution-map
     from: ring5
     to:
-      - aether: 48
-      - STARFIELD: 84
-      - ring5: 82
+      - aether: 32
+      - AETHER_CLOUD_SEA: 16
+      - STARFIELD: 32
+      - ring5: 32

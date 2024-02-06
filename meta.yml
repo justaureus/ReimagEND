@@ -58,32 +58,46 @@ biome-distribution:
   # Default: 80
 
   ring1-width: 1000
+  # Default: 1000
+  ring1-biome-scale: 500
+  # Default: 500
 
   ring2-width: 1000
+  # Default: 1000
+  ring2-biome-scale: 1000
+  # Default: 1000
 
   ring3-width: 1000
+  # Default: 1000
+  ring3-biome-scale: 500
+  # Default: 500
 
   ring4-width: 1000
-
-  # Each controls the width of each ring in order from center to outward
   # Default: 1000
+  ring4-biome-scale: 500
+  # Default: 500
+
+  ring5-biome-scale: 500
+  # Default: 500
+
+  # Each controls the width and biome scale of each ring starting from the center
 
   end-biome-scale: 500
   # Controls the scale of end biomes in particular.
   # Default: 500
 
-  end-scale: 1
-  # Controls the scale of the entire end.
-  # Default: 1
-
-  aether-biome-scale: 500
-  # Controls the scale of aether biomes in particular. 
-  # Default: 500
-  
   aether-scale: 1
   # Controls the scale of the entire aether. 
   # Default: 1
 
+  aether-region-scale: 500
+  # Controls the scale of aether biomes in particular. 
+  # Default: 500
+
+  aether-biome-scale: 1000
+  # Controls the scale of aether biomes in particular. 
+  # Default: 1000
+  
   void-biome-scale: 1000
   # Controls the scale of the void biomes.
   # Default: 1000
