@@ -1,4 +1,4 @@
-id: EQ_DEFAULT_HIGHLANDS
+id: EQ_END_MIDLANDS
 type: BIOME
 abstract: true
 
@@ -19,8 +19,8 @@ terrain:
       )
     variables:
       threshold: ${meta.yml:terrain-configuration.island-threshold}
-      max: ${meta.yml:terrain-configuration.island-max-height}
-      min: 25
+      max: 225
+      min: 0
       taper: ${meta.yml:terrain-configuration.island-taper}
       flatness: ${meta.yml:terrain-configuration.island-flatness}
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}

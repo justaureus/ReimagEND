@@ -1,6 +1,6 @@
 id: END_HIGHLANDS
 type: BIOME
-extends: [ END, EQ_DEFAULT_HIGHLANDS ]
+extends: [ END, EQ_END_HIGHLANDS ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:END_HIGHLANDS
 
