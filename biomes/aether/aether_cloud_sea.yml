@@ -1,5 +1,6 @@
 id: AETHER_CLOUD_SEA
 type: BIOME
+extends: [ AETHER ]
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:AETHER_CLOUD_SEA
 vanilla: minecraft:the_end
