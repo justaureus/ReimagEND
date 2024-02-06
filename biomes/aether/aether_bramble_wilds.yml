@@ -1,7 +1,7 @@
-id: AETHER_BRISTLED_FOREST
+id: AETHER_BRAMBLE_WILDS
 type: BIOME
 extends: [ AETHER, EQ_DEFAULT ]
-color: $biomes/colors.yml:AETHER_BRISTLED_FOREST
+color: $biomes/colors.yml:AETHER_BRAMBLE_WILDS
 vanilla: minecraft:the_end
 
 colors:
