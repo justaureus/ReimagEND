@@ -1,0 +1,40 @@
+id: SKY_LAYER_BOTTOM
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: SAMPLER
+      sampler:
+        type: POSITIVE_WHITE_NOISE
+        salt: 1031
+      threshold: 0.4
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: DOMAIN_WARP
+          amplitude: 5
+          warp:
+            type: GAUSSIAN
+          sampler:
+            type: OPEN_SIMPLEX_2
+            salt: 9419
+      threshold: 0.4
+
+locator:
+  type: PATTERN
+  range:
+    min: 250
+    max: 251
+  pattern:
+    type: MATCH_AIR
+    offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - BLOCK:minecraft:light_blue_stained_glass: 3
+    - BLOCK:minecraft:cyan_stained_glass: 2
+    - BLOCK:minecraft:blue_stained_glass: 1
