@@ -38,6 +38,7 @@ stages:
       - AETHER_DRIFTFALLS: 1
 
       aether-midlands:
+      - AETHER_FROSTBITE_WOODS: 1
       - AETHER_BRAMBLE_WILDS: 1
       - AETHER_GOLDEN_FIELDS: 1
 
