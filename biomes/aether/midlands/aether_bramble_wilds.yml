@@ -11,11 +11,6 @@ colors:
 palette:
   - PODZOL: 319
 
-slant:
-  - threshold: 3.5
-    palette:
-      - MOSS_STONE: 319
-      
 features:
   trees:
     - BRAMBLE_VINES
