@@ -20,7 +20,7 @@ terrain:
         )
       )
     variables:
-      threshold: 0.70
+      threshold: 0.7
       max: 70
       min: 0
       taper: ${meta.yml:terrain-configuration.island-taper}
