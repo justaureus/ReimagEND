@@ -15,6 +15,8 @@ plantable-blocks:
   - minecraft:blue_terracotta
   - minecraft:magenta_concrete_powder
   - minecraft:purple_concrete_powder
+  - minecraft:black_concrete_powder
+  - minecraft:black_concrete_powder
 
 aquatic-plantable-blocks:
   - minecraft:mud

@@ -14,3 +14,4 @@ palette:
 features:
   flora:
     - GRASS
+    - TALL_GRASS

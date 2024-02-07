@@ -1,4 +1,4 @@
-id: AMETHYST_CLUMPS
+id: AMETHYST_CRYSTALS
 type: FEATURE
 
 distributor:
@@ -25,4 +25,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: amethyst_clump
+  structures: amethyst_crystals
