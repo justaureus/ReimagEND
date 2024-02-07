@@ -1,33 +1,3 @@
-terrain-configuration:
-  island-scale: 1
-  # Scale of default terrain
-  # Default: 1
-
-  island-max-height: 250
-  # Max height of default terrain
-  # Default: 250
-
-  island-min-height: -40
-  # Lowest height of default terrain
-  # Default: 250
-
-  island-undercarriage-translate: -10
-  # Translate placement of default terrain undercarriage
-  # Default: -10
-
-  island-flatness: 5
-  # Flatness of default terrain
-  # Default: 5
-
-  island-taper: 100
-  # Range for narrowing deafault terrain
-  # Default: 100
-
-  island-threshold: 0.4
-  # Threshold or density of default island
-  # Default: 0.4
-
-
 biome-distribution:
   # Biome distribution refers to the placement of biomes, this does *NOT*
   # include aspects like terrain height / shape within biomes, or anything
@@ -58,21 +28,75 @@ biome-distribution:
   # Controls the radius of small pillars at the main end island from the center of the island
   # Default: 80
 
-  end-scale: 1000
-  # Controls the scale of the entire end.
+  ring1-width: 1000
+  # Default: 1000
+  ring1-biome-scale: 500
+  # Default: 500
+
+  ring2-width: 1000
+  # Default: 1000
+  ring2-biome-scale: 1000
   # Default: 1000
 
-  end-biome-scale: 1000
-  # Controls the scale of end biomes in particular.
+  ring3-width: 1000
   # Default: 1000
-  
-  aether-scale: 1000
+  ring3-biome-scale: 500
+  # Default: 500
+
+  ring4-width: 1000
+  # Default: 1000
+  ring4-biome-scale: 500
+  # Default: 500
+
+  ring5-biome-scale: 500
+  # Default: 500
+
+  # Each controls the width and biome scale of each ring starting from the center
+
+  aether-scale: 1
   # Controls the scale of the entire aether. 
+  # Default: 1
+
+  aether-region-scale: 1000
+  # Controls the scale of aether regions. 
   # Default: 1000
 
-  aether-biome-scale: 1000
-  # Controls the scale of aether biomes in particular. 
+  aether-biome-scale: 500
+  # Controls the scale of aether biomes within regions. 
+  # Default: 500
+  
+  void-biome-scale: 1000
+  # Controls the scale of void biomes.
   # Default: 1000
+
+terrain-configuration:
+  island-scale: 1
+  # Scale of default terrain
+  # Default: 1
+
+  island-max-height: 250
+  # Max height of default terrain
+  # Default: 250
+
+  island-min-height: -40
+  # Lowest height of default terrain
+  # Default: -40
+
+  island-undercarriage-translate: -10
+  # Translate placement of default terrain undercarriage
+  # Default: -10
+
+  island-flatness: 5
+  # Flatness of default terrain
+  # Default: 5
+
+  island-taper: 100
+  # Range for narrowing deafault terrain
+  # Default: 100
+
+  island-threshold: 0.4
+  # Threshold or density of default island
+  # Default: 0.4
   
   # \/ MIGHT BE USED IN THE FUTURE \/
 

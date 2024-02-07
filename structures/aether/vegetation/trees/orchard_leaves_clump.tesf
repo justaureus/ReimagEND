@@ -1,0 +1,11 @@
+block(0, 0, 0, "minecraft:oak_leaves[distance=1,persistent=false]", false);
+
+if (randomInt(6) == 0) {
+    for (num x = 0; x < 2; x = x + 1) {
+        for (num y = 0; y < 2; y = y + 1) {
+            for (num z = 0; z < 2; z = z + 1) { 
+                block(x, y, z, "minecraft:oak_leaves[distance=1,persistent=false]", false);  
+            }
+        }
+    }
+}

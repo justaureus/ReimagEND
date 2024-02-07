@@ -1,0 +1,37 @@
+id: GRAY_SAND
+
+type: PALETTE
+
+layers:
+  - materials: 
+    - minecraft:light_gray_concrete_powder: 3
+    layers: 2
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 10
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.03
+          salt: 4356   
+  - materials: 
+    - minecraft:stone: 10
+    - minecraft:cobblestone: 5
+    - minecraft:mossy_cobblestone: 3
+    layers: 1
+sampler:
+  type: DOMAIN_WARP
+  amplitude: 1
+  warp:
+    type: GAUSSIAN
+  sampler:
+    type: FBM
+    octaves: 2
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.05
+      salt: 293

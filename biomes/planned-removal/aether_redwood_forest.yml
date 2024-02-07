@@ -1,0 +1,20 @@
+id: AETHER_REDWOOD_FOREST
+type: BIOME
+extends: [ AETHER, AETHER_FOREST, EQ_DEFAULT]
+color: $biomes/colors.yml:AETHER_REDWOOD_FOREST
+vanilla: minecraft:the_end
+
+colors:
+  grass: 0x3a5739
+  foliage: 0x284027
+
+palette:
+  - GRASS: 319
+
+features:
+  flora:
+    - GRASS
+    - FERNS
+    - SPRUCE_BUSHES
+  trees:
+    - REDWOOD_TREES

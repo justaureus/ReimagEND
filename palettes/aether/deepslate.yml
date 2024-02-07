@@ -1,0 +1,21 @@
+id: DEEPSLATE
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:deepslate: 10
+      - minecraft:cobbled_deepslate: 5
+      - minecraft:smooth_basalt: 3
+    layers: 1
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.2
+          salt: 293

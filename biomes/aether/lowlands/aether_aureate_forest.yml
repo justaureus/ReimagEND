@@ -1,0 +1,19 @@
+id: AETHER_AUREATE_FOREST
+type: BIOME
+extends: [ AETHER, EQ_AETHER_LOWLANDS]
+color: $biomes/colors.yml:AETHER_AUREATE_FOREST
+vanilla: minecraft:the_end
+
+colors:
+  grass: 0xf5b042
+  foliage: 0xf7be60
+
+palette:
+  - GRASS: 319
+
+features:
+  flora:
+    - GRASS
+  trees:
+    - SPIRAL_TREES
+    - OAK_BUSH_PATCHES

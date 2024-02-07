@@ -1,0 +1,35 @@
+distribution-map: &distribution-map
+  type: EXPRESSION
+  expression: split((noise(x/spread,z/spread)+1)*4/(radius/spread)-1)
+  variables:
+    spread: 3000
+    radius: 500
+  functions:
+    split:
+      arguments: [x]
+      expression: if(x<1,x,1)
+  samplers:
+    noise:
+      dimensions: 2
+      type: DOMAIN_WARP
+      amplitude: 0.01
+      warp:
+        type: OPEN_SIMPLEX_2
+        salt: 3912
+        frequency: 10
+      sampler:
+        type: CELLULAR
+        salt: 5912
+        frequency: 1
+        return: Distance2Div
+
+stages:
+  - type: REPLACE
+    sampler: *distribution-map
+    from: ring5
+    to:
+      - aether: 32
+      - aether-coasts: 16
+      - AETHER_CLOUD_SEA: 16
+      - STARFIELD: 32
+      - ring5: 32

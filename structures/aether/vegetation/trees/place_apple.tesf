@@ -1,0 +1,9 @@
+for (num x = 0; x < 2; x = x + 1) {
+    for (num y = 0; y < 2; y = y + 1) {
+        for (num z = 0; z < 2; z = z + 1) { 
+            if (randomInt(50) == 0 && getBlock(x,y-1,z) == "minecraft:oak_leaves") {
+                block(x, y, z, "minecraft:red_concrete_powder", true);
+            }
+        }
+    }
+}

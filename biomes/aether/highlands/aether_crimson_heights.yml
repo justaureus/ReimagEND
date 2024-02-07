@@ -1,0 +1,63 @@
+id: AETHER_CRIMSON_HEIGHTS
+type: BIOME
+extends: [ AETHER ]
+color: $biomes/colors.yml:AETHER_CRIMSON_HEIGHTS
+vanilla: minecraft:the_end
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression: |
+      -1+threshold+
+      lerp(y, max, 0, max-taper,
+        max(
+          lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
+            simplex3(x, y*flatness, z)
+          ),
+          lerp(y, min, 0, min+taper,
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          )
+        )
+      )
+    variables:
+      threshold: ${meta.yml:terrain-configuration.island-threshold}
+      max: 300
+      min: 50
+      taper: ${meta.yml:terrain-configuration.island-taper}
+      flatness: 2
+      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+    samplers:
+      simplex3:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
+      undercarriageMask:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: RIDGED
+          octaves: 3
+          gain: 1
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.0005 / ${meta.yml:terrain-configuration.island-scale}
+
+colors:
+  grass: 0xdb1818
+  foliage: 0xFFFFFF
+
+palette:
+  - PODZOL: 319
+
+features:
+  trees:
+    - OAK_BUSH_PATCHES
+  flora:
+    - GRASS
+    - FERNS
+    - RED_FLOWERS

@@ -3,25 +3,25 @@ type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 6
-  padding: 2
-  salt: 7639
+  width: 7
+  padding: 4
+  salt: 4355
 
 locator:
   type: AND
   locators:
     - type: TOP
       range: &range
-        min: 64
+        min: 0
         max: 319
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SOLID
+        type: MATCH
+        block: minecraft:end_stone
         offset: -1
 
 structures:
   distribution:
     type: CONSTANT
-  structures: 
-    - chorus_tree: 1
+  structures: chorus_tree

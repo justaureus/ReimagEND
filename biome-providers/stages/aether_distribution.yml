@@ -1,37 +1,51 @@
-distribution-map: &distribution-map
-  dimensions: 2
-  type: FBM
-  octaves: 2
-  sampler:
-    type: OPEN_SIMPLEX_2
-    salt: 6836
-    frequency: 1 / ${meta.yml:biome-distribution.aether-biome-scale} / ${meta.yml:biome-distribution.global-scale}
-
 stages:
+  - type: REPLACE
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        salt: 6836
+        frequency: 1 / ${meta.yml:biome-distribution.aether-region-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: aether
+    to:
+      - AETHER_CLOUD_SEA: 1
+      - aether-coasts: 2
+      - aether-lowlands: 3
+      - aether-midlands: 3
+      - aether-highlands: 2
+      - aether-mountains: 1
+
   - type: REPLACE_LIST
-    sampler: *distribution-map
-    default-from: aether
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        salt: 4567
+        frequency: 1 / ${meta.yml:biome-distribution.aether-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    default-from: aether-coasts
     default-to:
-      - AETHER_PLAINS: 1
-      - AETHER_BUMPY: 1
-      - AETHER_FOREST: 1
-      - AETHER_LUSH_FOREST: 1
+      - AETHER_INSIPID_COASTS: 1
+    to: 
+      aether-lowlands:
       - AETHER_AZURE_MEADOWS: 1
       - AETHER_AUREATE_FOREST: 1
-      - AETHER_DRIFTLANDS: 1
-      - AETHER_LAVENDER_DRIFTLANDS: 1
+      - AETHER_DRIFTFALLS: 1
+
+      aether-midlands:
+      - AETHER_BRAMBLE_WILDS: 1
+      - AETHER_GOLDEN_FIELDS: 1
+
+      aether-highlands:
       - AETHER_CRIMSON_HEIGHTS: 1
-      - AETHER_MOSSY_WOODLANDS: 1
-      - AETHER_REDWOOD_FOREST: 1
-      - AETHER_DISCUS_AETHER: 1
-      - AETHER_CLOUD_SEA: 1
-    to: 
-      aether_highlands:
-      - AETHER_HIGHLANDS: 1
-      - AETHER_HIGHLANDS_FOREST: 1
+      - AETHER_ORCHARD_WOODLANDS: 1
+
+      aether-mountains:
       - AETHER_FLOATING_CLIFFS: 1
-      - AETHER_BRISTLED_FOREST: 1
-      - AETHER_ANCIENT_WASTES: 1
-      - AETHER_FROSTY_WOODS: 1
-      - AETHER_RUGGED_CLIFFS: 1
+      
   

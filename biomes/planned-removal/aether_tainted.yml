@@ -1,0 +1,30 @@
+id: AETHER_TAINTED
+type: BIOME
+extends: [ AETHER, EQ_DEFAULT ]
+color: $biomes/colors.yml:AETHER_TAINTED
+vanilla: minecraft:the_end
+
+colors:
+  grass: 0x0b1114
+  foliage: 0x0b1114
+
+palette:
+  - GRASS: 319
+
+features:
+  trees:
+    - OAK_BUSH_PATCHES
+    - DENSE_TEMPERATE_TREE_PATCHES
+  landforms:
+    - TAINTED_TENDRILS
+    - TAINTED_SPIKES
+  flora:
+    - GRASS
+    - SCULK_FLORA
+    - SCULK_PATCHES
+    - SCULK_TENDRIL
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES  
+    - TAINTED_TENDRILS
+    - TAINTED_SPIKES
+    - CLOUDS

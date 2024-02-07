@@ -10,8 +10,8 @@ colors:
 #  water: 0xbadfe6
 #  water-fog: 0xbadfe6
 #  sky: 0xc8e8e7
-  grass: 0xd2de85
-  foliage: 0xbdcc60
+  grass: 0x3ccfad
+  foliage: 0x3c79cf
 
 # End Atmosphere
 # colors:
@@ -25,12 +25,15 @@ colors:
 
 features:
   preprocessors:
-    - CLOUD_PLANE
+    - SKY_LAYER_TOP
+    - SKY_LAYER_MIDDLE
+    - SKY_LAYER_BOTTOM
+    - CLOUD_LAYER_TOP
+    - CLOUD_LAYER_MIDDLE
+    - CLOUD_LAYER_BOTTOM
     - SPARSE_RUINS
   postprocessors:
     - HANGING_LANTERNS
-  buildings:
-    - MINESHAFTS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
     - CLOUDS

@@ -1,0 +1,25 @@
+id: AETHER_DRIFTFALLS
+type: BIOME
+extends: [ AETHER, EQ_AETHER_DRIFTFALLS ]
+color: $biomes/colors.yml:AETHER_DRIFTFALLS
+vanilla: minecraft:the_end
+
+colors:
+  water: 0x90fcf0
+  water-fog: 0x90fcf0
+  grass: 0xccfff9
+  foliage: 0xccfff9
+
+palette:
+  - GRASS: 319
+      
+features:
+  preprocessors:
+    - WATER_POOLS
+    - WATER_COLUMNS
+    - SKY_WATER_COLUMNS
+  trees:
+    - OAK_BUSH_PATCHES
+  flora:
+    - GRASS
+    - LILY_PADS

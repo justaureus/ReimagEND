@@ -1,0 +1,8 @@
+id: END_MIDLANDS
+type: BIOME
+extends: [ END, EQ_END_MIDLANDS ]
+vanilla: minecraft:end_midlands
+color: $biomes/colors.yml:END_MIDLANDS
+
+palette:
+  - BLOCK:minecraft:end_stone: 319
