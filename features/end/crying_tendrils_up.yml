@@ -1,24 +1,24 @@
-id: BUBBLE_TREES
+id: CRYING_TENDRILS_UP
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 24
-  padding: 18
-  salt: 5465
+  width: 16
+  padding: 12
+  salt: 5467
 
 locator:
   type: AND
   locators:
     - type: TOP
       range: &range
-        min: 64
-        max: 280
+        min: 0
+        max: 319
     - type: PATTERN
       range: *range
       pattern:
         type: MATCH
-        block: minecraft:black_concrete
+        block: minecraft:purple_concrete
         offset: -1
     - type: PATTERN
       range: *range
@@ -29,24 +29,9 @@ locator:
       range: *range
       pattern:
         type: MATCH_AIR
-        offset: 3
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_AIR
-        offset: 5
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_AIR
-        offset: 8
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_AIR
         offset: 10
 
 structures:
   distribution:
     type: CONSTANT
-  structures: bubble_tree
+  structures: crying_tendril_up

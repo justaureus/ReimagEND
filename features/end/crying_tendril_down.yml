@@ -1,4 +1,4 @@
-id: CRYING_TENDRILS
+id: CRYING_TENDRILS_DOWN
 type: FEATURE
 
 distributor:
@@ -10,16 +10,14 @@ distributor:
 locator:
   type: AND
   locators:
-    - type: TOP
-      range: &range
-        min: 64
-        max: 319
     - type: PATTERN
-      range: *range
+      range: &range
+        min: 0
+        max: 319
       pattern:
         type: MATCH
-        block: minecraft:black_concrete
-        offset: -1
+        block: minecraft:purple_concrete
+        offset: 1
     - type: PATTERN
       range: *range
       pattern:
@@ -29,9 +27,9 @@ locator:
       range: *range
       pattern:
         type: MATCH_AIR
-        offset: 10
+        offset: -10
 
 structures:
   distribution:
     type: CONSTANT
-  structures: crying_tendril
+  structures: crying_tendril_down

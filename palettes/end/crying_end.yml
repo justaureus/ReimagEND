@@ -3,7 +3,7 @@ type: PALETTE
 
 layers:
   - materials:
-      - minecraft:black_concrete: 20
+      - minecraft:black_concrete: 10
       - minecraft:obsidian: 1
       - minecraft:crying_obsidian: 1
       - minecraft:purple_concrete: 1
@@ -11,7 +11,7 @@ layers:
       - minecraft:purple_concrete: 1
       - minecraft:crying_obsidian: 1
       - minecraft:obsidian: 1
-      - minecraft:black_concrete: 20
+      - minecraft:black_concrete: 10
     layers: 1
     sampler:
       type: DOMAIN_WARP
