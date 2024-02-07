@@ -1,7 +1,7 @@
-id: AETHER_FLOATING_CLIFFS
+id: AETHER_FRIGID_CLIFFS
 type: BIOME
 extends: [ AETHER, EQ_AETHER_MOUNTAINS ]
-color: $biomes/colors.yml:AETHER_FLOATING_CLIFFS
+color: $biomes/colors.yml:AETHER_FRIGID_CLIFFS
 vanilla: minecraft:the_end
 
 palette:

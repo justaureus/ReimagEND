@@ -47,6 +47,6 @@ stages:
       - AETHER_ORCHARD_WOODLANDS: 1
 
       aether-mountains:
-      - AETHER_FLOATING_CLIFFS: 1
+      - AETHER_FRIGID_CLIFFS: 1
       
   
