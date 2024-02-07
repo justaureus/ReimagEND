@@ -53,24 +53,20 @@ biome-distribution:
 
   # Each controls the width and biome scale of each ring starting from the center
 
-  end-biome-scale: 500
-  # Controls the scale of end biomes in particular.
-  # Default: 500
-
   aether-scale: 1
   # Controls the scale of the entire aether. 
   # Default: 1
 
-  aether-region-scale: 500
-  # Controls the scale of aether biomes in particular. 
-  # Default: 500
-
-  aether-biome-scale: 1000
-  # Controls the scale of aether biomes in particular. 
+  aether-region-scale: 1000
+  # Controls the scale of aether regions. 
   # Default: 1000
+
+  aether-biome-scale: 500
+  # Controls the scale of aether biomes within regions. 
+  # Default: 500
   
   void-biome-scale: 1000
-  # Controls the scale of the void biomes.
+  # Controls the scale of void biomes.
   # Default: 1000
 
 terrain-configuration:

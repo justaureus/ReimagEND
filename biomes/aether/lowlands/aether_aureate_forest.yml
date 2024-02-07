@@ -14,6 +14,6 @@ palette:
 features:
   flora:
     - GRASS
-    - MIXED_FLOWER_COVER
   trees:
-    - DENSE_SPIRAL_TREES
+    - SPIRAL_TREES
+    - OAK_BUSH_PATCHES

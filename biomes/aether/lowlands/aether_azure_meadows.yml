@@ -1,6 +1,6 @@
 id: AETHER_AZURE_MEADOWS
 type: BIOME
-extends: [ AETHER, AETHER_FOREST, EQ_AETHER_LOWLANDS]
+extends: [ AETHER, EQ_AETHER_LOWLANDS]
 color: $biomes/colors.yml:AETHER_AZURE_MEADOWS
 vanilla: minecraft:the_end
 

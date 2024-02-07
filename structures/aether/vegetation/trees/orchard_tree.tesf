@@ -4,10 +4,8 @@ num pi = 3.14159;
 
 str trunkBlock = "minecraft:oak_log";
 
-num trunkRadius = 4+randomInt(2);
-num length = 40+randomInt(15);
-num xTranslate = 0;
-num zTranslate = 0;
+num trunkRadius = 3;
+num length = 10+randomInt(10);
 
 num topBranches = 4+randomInt(4);
 num topBranchLengthUpwardsMin = 7+randomInt(3);
@@ -18,14 +16,14 @@ num topBranchLeafTranslate = 0;
 num topBranchLeafTopFlatness = 1;
 num topBranchLeafBottomFlatness = 2;
 num topBranchLeafDensity = 0.5;
-str topBranchLeafStructure = "oak_leaves_clump";
+str topBranchLeafStructure = "orchard_leaves_clump";
 str topBranchBlockX = "minecraft:oak_log[axis=x]";
 str topBranchBlockY = "minecraft:oak_log[axis=y]";
 str topBranchBlockZ = "minecraft:oak_log[axis=z]";
 
-num sideBranchInterval = 2+randomInt(2);
+num sideBranchInterval = 3;
 num sideBranchMinHeight = 2+randomInt(3);
-num sideBranchLengthMin = 8+randomInt(6);
+num sideBranchLengthMin = 8+randomInt(4);
 num sideBranchLengthVariation = 2+randomInt(2);
 num sideBranchVerticalVariation = 0;
 num sideBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/4;
@@ -34,7 +32,7 @@ num sideBranchLeafTranslate = 0;
 num sideBranchLeafTopFlatness = 1;
 num sideBranchLeafBottomFlatness = 2;
 num sideBranchLeafDensity = 0.5;
-str sideBranchLeafStructure = "oak_leaves_clump";
+str sideBranchLeafStructure = "orchard_leaves_clump";
 str sideBranchBlockX = "minecraft:oak_log[axis=x]";
 str sideBranchBlockY = "minecraft:oak_log[axis=y]";
 str sideBranchBlockZ = "minecraft:oak_log[axis=z]";
@@ -51,7 +49,7 @@ for(num h = 0; h <= length; h = h + 1) {
         for(num y = -r; y <= r; y = y + 1) {
             for(num z = -r; z <= r; z = z + 1) {
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                    block(x + xTranslate, h + y - trunkRadius, z + zTranslate, trunkBlock, false);                  
+                    block(x, h + y - trunkRadius, z, trunkBlock, false);                  
                 }
             }
         }
@@ -69,9 +67,9 @@ for(num h = 0; h <= length; h = h + 1) {
             dy = dy/mag;
             dz = dz/mag;
             // Branch origin
-            num ox = xTranslate;
+            num ox = 0;
             num oy = h;
-            num oz = zTranslate;
+            num oz = 0;
             // Set branch block based on largest unsigned vector component
             str branchBlock = sideBranchBlockY;
             if (abs(dx) > max(abs(dy),abs(dz))) branchBlock = sideBranchBlockX;
@@ -98,14 +96,13 @@ for(num h = 0; h <= length; h = h + 1) {
                         num distanceSquared = pow(cx,2)+pow(cy*squashFactor,2)+pow(cz,2);
                         if (distanceSquared < radiusSquared && randomInt(randPrecision)/randPrecision < sideBranchLeafDensity) {
                             structure(lox+cx, loy+cy, loz+cz, sideBranchLeafStructure, "NONE", "CW_90", "CCW_90", "CW_180");
+                            structure(lox+cx, loy+cy, loz+cz, "place_apple", "NONE", "CW_90", "CCW_90", "CW_180");
                         }
                     }
                 }
             }
         }
     }
-    xTranslate = xTranslate+(1-randomInt(3));
-    zTranslate = zTranslate+(1-randomInt(3));
 }
 for (num b = 1; b <= topBranches; b = b + 1) {
     num t = b/topBranches;
@@ -120,9 +117,9 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     dy = dy/mag;
     dz = dz/mag;
     // Branch origin
-    num ox = xTranslate;
+    num ox = 0;
     num oy = length-3;
-    num oz = zTranslate;
+    num oz = 0;
     // Set branch block based on largest unsigned vector component
     str branchBlock = topBranchBlockY;
     if (abs(dx) > max(abs(dy),abs(dz))) branchBlock = topBranchBlockX;
@@ -149,6 +146,7 @@ for (num b = 1; b <= topBranches; b = b + 1) {
                 num distanceSquared = pow(cx,2)+pow(cy*squashFactor,2)+pow(cz,2);
                 if (distanceSquared < radiusSquared && randomInt(randPrecision)/randPrecision < topBranchLeafDensity) {
                     structure(lox+cx, loy+cy, loz+cz, topBranchLeafStructure, "NONE", "CW_90", "CCW_90", "CW_180");
+                    structure(lox+cx, loy+cy, loz+cz, "place_apple", "NONE", "CW_90", "CCW_90", "CW_180");
                 }
             }
         }

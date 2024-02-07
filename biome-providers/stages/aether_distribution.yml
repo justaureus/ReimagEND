@@ -5,16 +5,18 @@ stages:
       type: FBM
       octaves: 2
       sampler:
-        type: OPEN_SIMPLEX_2
+        type: CELLULAR
+        return: CellValue
         salt: 6836
-        frequency: 1 / ${meta.yml:biome-distribution.aether-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+        frequency: 1 / ${meta.yml:biome-distribution.aether-region-scale} / ${meta.yml:biome-distribution.global-scale}
     from: aether
     to:
       - AETHER_CLOUD_SEA: 1
-      - aether-coasts: 1
-      - aether-lowlands: 2
-      - aether-midlands: 2
-      - aether-highlands: 1
+      - aether-coasts: 2
+      - aether-lowlands: 3
+      - aether-midlands: 3
+      - aether-highlands: 2
+      - aether-mountains: 1
 
   - type: REPLACE_LIST
     sampler: 
@@ -22,8 +24,9 @@ stages:
       type: FBM
       octaves: 2
       sampler:
-        type: OPEN_SIMPLEX_2
-        salt: 6836
+        type: CELLULAR
+        return: CellValue
+        salt: 4567
         frequency: 1 / ${meta.yml:biome-distribution.aether-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     default-from: aether-coasts
     default-to:
@@ -32,13 +35,17 @@ stages:
       aether-lowlands:
       - AETHER_AZURE_MEADOWS: 1
       - AETHER_AUREATE_FOREST: 1
-      - AETHER_LAVENDER_DRIFTLANDS: 1
+      - AETHER_DRIFTFALLS: 1
 
       aether-midlands:
-      - AETHER_BRAMBLE_WILDS: 2
-      - AETHER_FLOATING_CLIFFS: 1
+      - AETHER_BRAMBLE_WILDS: 1
+      - AETHER_GOLDEN_FIELDS: 1
 
       aether-highlands:
       - AETHER_CRIMSON_HEIGHTS: 1
+      - AETHER_ORCHARD_WOODLANDS: 1
+
+      aether-mountains:
+      - AETHER_FLOATING_CLIFFS: 1
       
   

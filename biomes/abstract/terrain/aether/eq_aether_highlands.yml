@@ -1,4 +1,4 @@
-id: EQ_AETHER_MIDLANDS
+id: EQ_AETHER_HIGHLANDS
 type: BIOME
 abstract: true
 
@@ -22,7 +22,7 @@ terrain:
       max: 300
       min: 50
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 7
+      flatness: 2
       undercarriageTranslate: -10
     samplers:
       simplex3:

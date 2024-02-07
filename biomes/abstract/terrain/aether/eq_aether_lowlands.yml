@@ -22,7 +22,7 @@ terrain:
       max: 200
       min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 7
+      flatness: 5
       undercarriageTranslate: -10
     samplers:
       simplex3:

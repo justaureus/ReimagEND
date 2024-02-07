@@ -1,0 +1,21 @@
+num height = 40+randomInt(50);
+bool allow = true;
+
+for (num i = height; i >= 0; i = i - 1) {
+    if (getBlock(0,i,0) != "minecraft:air") allow = false;
+}
+
+if (allow == true) {
+
+    structure(0,height,0,"cloud","NONE");
+
+    // block(1,height,0,"minecraft:white_stained_glass");
+    // block(-1,height,0,"minecraft:white_stained_glass");
+    // block(0,height,1,"minecraft:white_stained_glass");
+    // block(0,height,-1,"minecraft:white_stained_glass");
+    // block(0,height+1,0,"minecraft:white_stained_glass");
+
+    for (num i = height; i >= 0; i = i - 1) {
+        block(0, i, 0, "minecraft:water[level=8]");
+    }
+}

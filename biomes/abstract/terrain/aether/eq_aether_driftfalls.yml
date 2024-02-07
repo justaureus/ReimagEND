@@ -1,8 +1,6 @@
-id: AETHER_DRIFTLANDS
+id: EQ_AETHER_DRIFTFALLS
 type: BIOME
-extends: [ AETHER ]
-color: $biomes/colors.yml:AETHER_DRIFTLANDS
-vanilla: minecraft:the_end
+abstract: true
 
 terrain:
   sampler:
@@ -21,11 +19,11 @@ terrain:
       )
     variables:
       threshold: ${meta.yml:terrain-configuration.island-threshold}
-      max: ${meta.yml:terrain-configuration.island-max-height}
+      max: 200
       min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 2
-      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+      flatness: 5
+      undercarriageTranslate: -10
     samplers:
       simplex3:
         dimensions: 3
@@ -46,19 +44,3 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
-
-palette:
-  - GRASS: 319
-
-slant:
-  - threshold: 3.5
-    palette:
-      - MOSS_STONE: 319
-      
-features:
-  trees:
-    - OAK_BUSH_PATCHES
-    - SPARSE_OAK_TREES
-  flora:
-    - GRASS
-    - MIXED_FLOWER_COVER

@@ -1,4 +1,4 @@
-id: REDWHITE_FLOWERS
+id: RED_FLOWERS
 type: FEATURE
 
 distributor:
@@ -51,9 +51,5 @@ structures:
     - BLOCK:minecraft:red_tulip: 5
     - rose_bush: 1
     - BLOCK:minecraft:poppy: 10
-    - BLOCK:minecraft:azure_bluet: 5
-    - BLOCK:minecraft:oxeye_daisy: 4
-    - BLOCK:minecraft:white_tulip: 5
-    - BLOCK:minecraft:lily_of_the_valley: 3
 
 

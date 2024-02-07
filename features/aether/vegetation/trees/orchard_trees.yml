@@ -1,11 +1,11 @@
-id: DENSE_SPIRAL_TREES
+id: ORCHARD_TREES
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
   width: 7
   padding: 11
-  salt: 3249
+  salt: 5460
 
 locator:
   type: AND
@@ -33,12 +33,13 @@ locator:
       pattern:
         type: MATCH_SOLID
         offset: -3
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -3
 
 structures:
   distribution:
-    type: CELLULAR
-    return: CellValue
-    frequency: 0.03
-  structures:
-    - spiral_tree: 8
-    - great_spiral_tree: 1
+    type: CONSTANT
+  structures: orchard_tree
