@@ -9,7 +9,8 @@ end-plantable-blocks:
   - minecraft:magenta_concrete_powder
   - minecraft:purple_concrete_powder
   - minecraft:black_concrete_powder
-  - minecraft:black_concrete_powder
+  - minecraft:white_concrete_powder
+  - minecraft:white_concrete
 
 plantable-blocks:
   - minecraft:mud
