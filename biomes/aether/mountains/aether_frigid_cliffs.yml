@@ -7,11 +7,6 @@ vanilla: minecraft:the_end
 palette:
   - SNOW: 319
 
-slant:
-  - threshold: 3
-    palette:
-      - MOSSY_COBBLESTONE_STONE: 319
-      
 features:
   slabs:
     - SNOW_LAYERS
