@@ -4,10 +4,10 @@ abstract: true
 
 colors:
 # fog: 0x000000
- water: 0x000000
- water-fog: 0x000000
+ water: 0x62529E
+ water-fog: 0x62529E
 # sky: 0x000000
-# grass: 0x8EB971
+ grass: 0x8EB971
  foliage: 0x85947f
 #  
 #climate:
