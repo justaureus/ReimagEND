@@ -1,15 +1,13 @@
-distribution-map: &distribution-map
-  dimensions: 2
-  type: FBM
-  octaves: 2
-  sampler:
-    type: OPEN_SIMPLEX_2
-    salt: 1196
-    frequency: 1 / ${meta.yml:biome-distribution.void-biome-scale} / ${meta.yml:biome-distribution.global-scale}
-
 stages:
   - type: REPLACE_LIST
-    sampler: *distribution-map
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: OPEN_SIMPLEX_2
+        salt: 1196
+        frequency: 1 / ${meta.yml:biome-distribution.void-scale} / ${meta.yml:biome-distribution.global-scale}
     default-from: ring1
     default-to:
       - VOID: 1
@@ -28,10 +26,19 @@ stages:
         - void: 1
         - ring5: 3
   - type: REPLACE
-    sampler: *distribution-map
+    sampler:
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        salt: 1196
+        frequency: 1 / ${meta.yml:biome-distribution.void-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: void
     to:
-      - VOID: 4
+      - VOID: 3
       - STARFIELD: 1
       - GALAXY_FIELD: 1
       - ASTEROID_FIELD: 1   
+      - VOID_SEA: 1
