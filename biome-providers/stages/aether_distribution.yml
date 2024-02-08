@@ -34,7 +34,7 @@ stages:
     to: 
       aether-lowlands:
       - AETHER_AZURE_MEADOWS: 1
-      - AETHER_AUREATE_FOREST: 1
+      - AETHER_TENEBROUS_THICKET: 1
       - AETHER_DRIFTFALLS: 1
 
       aether-midlands:

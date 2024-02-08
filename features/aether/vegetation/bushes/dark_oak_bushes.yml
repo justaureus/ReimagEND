@@ -1,11 +1,11 @@
-id: SPIRAL_TREES
+id: DARK_OAK_BUSHES
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 12
-  padding: 7
-  salt: 2346
+  width: 7
+  padding: 2
+  salt: 5626
 
 locator:
   type: AND
@@ -13,13 +13,20 @@ locator:
     - type: TOP
       range: &range
         min: 0
-        max: 255
+        max: 319
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SET
-        blocks: $features/aether/vegetation/meta.yml:plantable-blocks
-        offset: -1
+        type: OR
+        patterns:
+          - type: MATCH_SET
+            blocks: $features/aether/vegetation/meta.yml:plantable-blocks
+            offset: -1
+          - type: MATCH_SET
+            blocks:
+              - minecraft:sand
+              - minecraft:red_sand
+            offset: -1
     - type: PATTERN
       range: *range
       pattern:
@@ -28,13 +35,8 @@ locator:
           - minecraft:snow
           - minecraft:air
         offset: 0
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_SOLID
-        offset: -3
 
 structures:
   distribution:
     type: CONSTANT
-  structures: spiral_tree
+  structures: dark_oak_bush
