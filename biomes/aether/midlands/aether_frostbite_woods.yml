@@ -16,7 +16,7 @@ features:
     - SNOW
   trees:
     - FROSTBITE_TREES
-    - OAK_BUSH_PATCHES
+    - OAK_BUSHES
   flora:
     - GRASS
     - FERNS

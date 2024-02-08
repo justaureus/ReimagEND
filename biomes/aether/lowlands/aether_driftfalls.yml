@@ -19,7 +19,7 @@ features:
     - WATER_COLUMNS
     - SKY_WATER_COLUMNS
   trees:
-    - OAK_BUSH_PATCHES
+    - OAK_BUSHES
   flora:
     - GRASS
     - LILY_PADS

@@ -13,7 +13,7 @@ palette:
 
 features:
   trees:
-    - OAK_BUSH_PATCHES
+    - OAK_BUSHES
     - DENSE_TEMPERATE_TREE_PATCHES
   landforms:
     - TAINTED_TENDRILS

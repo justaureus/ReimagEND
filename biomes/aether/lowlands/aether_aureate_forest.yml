@@ -9,11 +9,14 @@ colors:
   foliage: 0xf7be60
 
 palette:
-  - GRASS: 319
+  - GRANITE_POWDER_MIX: 319
 
 features:
   flora:
     - GRASS
+    - DEAD_BUSHES
   trees:
     - SPIRAL_TREES
-    - OAK_BUSH_PATCHES
+    - OAK_BUSHES
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES

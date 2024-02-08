@@ -11,7 +11,7 @@ features:
   slabs:
     - SNOW_LAYERS
   trees:
-    - OAK_BUSH_PATCHES
+    - OAK_BUSHES
     - SPARSE_OAK_TREES
   flora:
     - GRASS
