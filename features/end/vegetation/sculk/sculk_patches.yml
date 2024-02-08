@@ -17,7 +17,7 @@ locator:
         type: AND
         patterns:
           - type: MATCH_SET
-            blocks: $features/aether/vegetation/meta.yml:sculk-plantable-blocks
+            blocks: $features/meta.yml:sculk-plantable-blocks
             offset: 0
           - type: MATCH_AIR
             offset: 1

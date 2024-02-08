@@ -17,7 +17,7 @@ locator:
     type: AND
     patterns:
       - type: MATCH_SET
-        blocks: $features/aether/vegetation/meta.yml:plantable-blocks
+        blocks: $features/meta.yml:end-plantable-blocks
         offset: -1
       - type: MATCH_AIR
         offset: 0

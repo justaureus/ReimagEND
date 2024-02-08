@@ -16,7 +16,7 @@ locator:
         max: 319
       pattern:
         type: MATCH_SET
-        blocks: $features/aether/vegetation/meta.yml:sculk-plantable-blocks
+        blocks: $features/meta.yml:sculk-plantable-blocks
         offset: 0
     # Check if the block is exposed to air
     - type: OR

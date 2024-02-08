@@ -27,7 +27,7 @@ locator:
               - minecraft:water
             offset: 0
           - type: MATCH_SET
-            blocks: $features/aether/vegetation/meta.yml:dripleaf-plantable-blocks
+            blocks: $features/meta.yml:plantable-blocks
             offset: -1
       - type: AND
         patterns:
