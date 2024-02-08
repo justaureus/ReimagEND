@@ -16,4 +16,4 @@ features:
     - SWIRL_TREES
   flora:
     - STRIPPED_ACACIA_BUSHES
-    - GRASS
+    - END_GRASS

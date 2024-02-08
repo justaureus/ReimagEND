@@ -15,5 +15,5 @@ features:
   trees:
     - WARPED_MESQUITE_TREES
   flora:
-    - GRASS
+    - END_GRASS
     - WARPED_STEM_BUSHES

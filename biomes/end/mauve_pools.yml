@@ -61,4 +61,4 @@ features:
     - WATER_POOLS
     - WATER_COLUMNS
   flora:
-    - GRASS
+    - END_GRASS

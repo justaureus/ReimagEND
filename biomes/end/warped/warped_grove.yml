@@ -14,7 +14,7 @@ palette:
 features:
   flora:
     - WARPED_GRASS
-    - GRASS
+    - END_GRASS
   trees:
     - WARPED_MANGROVES
     - TWISTING_BEANSTALKS
