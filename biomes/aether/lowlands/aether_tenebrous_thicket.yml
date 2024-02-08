@@ -1,0 +1,22 @@
+id: AETHER_TENEBROUS_THICKET
+type: BIOME
+extends: [ AETHER, EQ_AETHER_LOWLANDS]
+color: $biomes/colors.yml:AETHER_TENEBROUS_THICKET
+vanilla: minecraft:the_end
+
+colors:
+  grass: 0x292825
+  foliage: 0x292825
+
+palette:
+  - MUD_POWDER_MIX: 319
+
+features:
+  flora:
+    - GRASS
+    - TALL_GRASS
+  trees:
+    - SPIRAL_TREES
+    - DARK_OAK_BUSHES
+  landforms: []
+  
