@@ -2,6 +2,9 @@ id: END
 type: BIOME
 abstract: true
 
+tags:
+  - NOT_VOID_SEA
+  
 colors:
 # fog: 0x000000
  water: 0x62529E

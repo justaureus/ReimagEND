@@ -1,6 +1,6 @@
 id: GALAXY_FIELD
 type: BIOME
-extends: [ VOID, END ]
+extends: [ END, VOID ]
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:GALAXY_FIELD
 

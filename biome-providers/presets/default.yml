@@ -34,6 +34,9 @@ biomes:
       # Distributes aether biomes
       - << biome-providers/stages/aether_distribution.yml:stages 
 
+      # Distributes aether biomes
+      - << biome-providers/stages/add_border_biomes.yml:stages 
+
       # Expanding and smoothing the edges of biomes
       - << biome-providers/stages/expand.yml:stages
       - << biome-providers/stages/expand.yml:stages

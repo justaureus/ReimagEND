@@ -1,6 +1,6 @@
 id: STARFIELD
 type: BIOME
-extends: [ VOID, END ]
+extends: [ END, VOID ]
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:STARFIELD
 

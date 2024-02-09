@@ -14,12 +14,22 @@ locator:
     # Match air underground
     - type: PATTERN
       range: &range
-        min: 10
-        max: 245
+        min: 0
+        max: 255
       pattern:
         type: MATCH_AIR
-        offset: 0
-        
+        offset: 0  
+
+    - type: SAMPLER_3D
+      range: *range
+      sampler:
+        type: EXPRESSION
+        expression: "if( y > (10+(noise(x,z)*5)) && y < (245+(noise(x,z)*5)) , 1, -1)"
+        samplers:
+          noise:
+            dimensions: 2
+            type: OPEN_SIMPLEX_2
+            frequency: 0.05
 
     # Match ridged simplex to create 'walls'
     - type: SAMPLER_3D

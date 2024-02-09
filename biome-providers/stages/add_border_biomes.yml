@@ -1,0 +1,7 @@
+stages:
+  - type: BORDER
+    sampler:
+      type: CONSTANT
+    replace: VOID_SEA
+    from: NOT_VOID_SEA
+    to: VOID_SEA_BORDER
