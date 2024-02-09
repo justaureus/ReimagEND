@@ -1,5 +1,5 @@
 num amount = 3;
-num maxRadius = 5;
+num maxRadius = 2;
 
 num x = 0;
 num y = 0;
@@ -22,22 +22,22 @@ for (num i = 0; i < amount; i = i + 1) {
 
         random = randomInt(12);
         if(random == 0) {
-            if (x < maxRadius/2) {
+            if (x < maxRadius) {
                 x = x + 1;
             } else x = x - 1;
         }
         if(random == 1) {
-            if (x > -maxRadius/2) {
+            if (x > -maxRadius) {
                 x = x - 1;
             } else x = x + 1;
         }
         if(random == 2) {
-            if (z < maxRadius/2) {
+            if (z < maxRadius) {
                 z = z + 1;
             } else z = z - 1;
         }
         if(random == 3) {
-            if (z > -maxRadius/2) {
+            if (z > -maxRadius) {
                 z = z - 1;
             } else z = z + 1;
         }
