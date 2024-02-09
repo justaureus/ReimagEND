@@ -15,7 +15,7 @@ for (num a = 0; a < bodyAmount; a = a + 1) {
             for (num z = -size/2; z < size/2; z = z + 1) {
 
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(size/1.75,2)) {
-                    block(x+xOffset,y+yOffset,z+zOffset,"minecraft:white_concrete",false);
+                    block(x+xOffset,y+yOffset,z+zOffset,"minecraft:white_stained_glass",false);
                 }   
             }
         }
