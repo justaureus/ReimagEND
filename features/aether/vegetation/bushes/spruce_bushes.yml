@@ -19,7 +19,7 @@ locator:
       range: *range
       pattern:
         type: MATCH_SET
-        blocks: $features/aether/vegetation/meta.yml:plantable-blocks
+        blocks: $features/meta.yml:plantable-blocks
         offset: -1
     - type: PATTERN
       range: *range

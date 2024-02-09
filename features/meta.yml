@@ -1,11 +1,4 @@
-plantable-blocks:
-  - minecraft:mud
-  - minecraft:grass_block
-  - minecraft:podzol
-  - minecraft:dirt
-  - minecraft:coarse_dirt
-  - minecraft:moss_block
-  - minecraft:rooted_dirt
+end-plantable-blocks:
   - minecraft:end_stone
   - minecraft:yellow_concrete
   - minecraft:yellow_concrete_powder
@@ -17,6 +10,15 @@ plantable-blocks:
   - minecraft:purple_concrete_powder
   - minecraft:black_concrete_powder
   - minecraft:black_concrete_powder
+
+plantable-blocks:
+  - minecraft:mud
+  - minecraft:grass_block
+  - minecraft:podzol
+  - minecraft:dirt
+  - minecraft:coarse_dirt
+  - minecraft:moss_block
+  - minecraft:rooted_dirt
 
 aquatic-plantable-blocks:
   - minecraft:mud

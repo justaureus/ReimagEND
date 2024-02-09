@@ -64,6 +64,10 @@ biome-distribution:
   aether-biome-scale: 500
   # Controls the scale of aether biomes within regions. 
   # Default: 500
+
+  void-scale: 1500
+  # Controls the scale of void biomes.
+  # Default: 1500
   
   void-biome-scale: 1000
   # Controls the scale of void biomes.

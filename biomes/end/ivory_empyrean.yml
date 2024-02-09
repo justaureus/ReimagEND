@@ -13,6 +13,6 @@ palette:
 
 features:
   flora:
-    - GRASS
+    - END_GRASS
   trees:
     - IVORY_TREES

@@ -1,11 +1,12 @@
-id: GIANT_PUMPKINS
+id: END_GRASS
 type: FEATURE
 
 distributor:
-  type: PADDED_GRID
-  width: 13
-  padding: 7
-  salt: 3245
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 7544
+  threshold: 0.125
 
 locator:
   type: AND
@@ -18,10 +19,12 @@ locator:
       range: *range
       pattern:
         type: MATCH_SET
-        blocks: $features/meta.yml:plantable-blocks
+        blocks: $features/meta.yml:end-plantable-blocks
         offset: -1
-        
+
 structures:
   distribution:
-    type: CONSTANT
-  structures: giant_pumpkin
+    type: WHITE_NOISE
+  structures:
+    - BLOCK:minecraft:grass: 6
+    - tall_grass: 1
