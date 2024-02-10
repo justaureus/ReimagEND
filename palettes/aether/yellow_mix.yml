@@ -4,10 +4,9 @@ type: PALETTE
 layers:
   - materials:
       - minecraft:grass_block: 8
-      - minecraft:yellow_terracotta: 2
-      - minecraft:yellow_concrete: 3
-      - minecraft:honeycomb_block: 1
-      - minecraft:yellow_terracotta: 2
+      - minecraft:yellow_terracotta: 3
+      - minecraft:yellow_concrete: 2
+      - minecraft:yellow_terracotta: 4
     layers: 1
     sampler:
       type: DOMAIN_WARP

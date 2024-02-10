@@ -18,6 +18,13 @@ features:
     - WATER_POOLS
     - WATER_COLUMNS
     - SKY_WATER_COLUMNS
+    - SKY_LAYER_TOP
+    - SKY_LAYER_MIDDLE
+    - SKY_LAYER_BOTTOM
+    - CLOUD_LAYER_TOP
+    - CLOUD_LAYER_MIDDLE
+    - CLOUD_LAYER_BOTTOM
+    - SPARSE_RUINS
   trees:
     - OAK_BUSHES
   flora:

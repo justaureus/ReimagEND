@@ -23,7 +23,7 @@ locator:
       pattern:
         type: MATCH_SET
         blocks:
-          - minecraft:honeycomb_block
+          - minecraft:bee_nest
         offset: 1
 
 structures:

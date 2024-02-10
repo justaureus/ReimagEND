@@ -14,4 +14,4 @@ if (randomDir == 0) {
     direction = "north";
 } 
 
-block(0,0,0,"minecraft:bee_nest[facing="+ direction +",honey_level="+ randomHon +"]");
+block(0,0,0,"minecraft:bee_nest[facing="+ direction +",honey_level="+ randomHon +"]", false);
