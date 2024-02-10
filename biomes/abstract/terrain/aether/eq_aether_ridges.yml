@@ -1,8 +1,6 @@
-id: AETHER_CRIMSON_HEIGHTS
+id: EQ_AETHER_RIDGES
 type: BIOME
-extends: [ AETHER ]
-color: $biomes/colors.yml:AETHER_CRIMSON_HEIGHTS
-vanilla: minecraft:the_end
+abstract: true
 
 terrain:
   sampler:
@@ -12,19 +10,19 @@ terrain:
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, y*flatness, z)
+            simplex3(x, (y/1.5)+ridges(x,z), z) * simplex3(x/1.5, y+ridges(x,z), z/2)
           ),
           lerp(y, min, 0, min+taper,
-            simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+            simplex3(x, (y-undercarriageTranslate+ridges(x,z))*flatness, z) * undercarriageMask(x, (y/2)+ridges(x,z), z) * 1.3
           )
         )
       )
     variables:
-      threshold: ${meta.yml:terrain-configuration.island-threshold}
+      threshold: 0.6
       max: 300
-      min: 50
+      min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 2
+      flatness: 10
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
@@ -35,7 +33,7 @@ terrain:
           octaves: 5
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}
       undercarriageMask:
         dimensions: 3
         type: PROBABILITY
@@ -45,19 +43,13 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.0005 / ${meta.yml:terrain-configuration.island-scale}
-
-colors:
-  grass: 0xdb1818
-  foliage: 0xFFFFFF
-
-palette:
-  - PODZOL: 319
-
-features:
-  trees:
-    - OAK_BUSHES
-  flora:
-    - GRASS
-    - FERNS
-    - RED_FLOWERS
+            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
+      ridges:
+        dimensions: 2
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: VALUE_CUBIC
+            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}

@@ -1,0 +1,69 @@
+id: TERRACOTTA_POWDER_MIX
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:stone: 1
+      - minecraft:white_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:light_gray_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:gray_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:black_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:brown_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:red_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:orange_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:yellow_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:lime_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:green_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:cyan_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:light_blue_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:blue_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:purple_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:magenta_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:pink_terracotta: 2
+      - minecraft:stone: 1
+      - minecraft:red_terracotta: 2
+    layers: 2
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.04
+          salt: 3245
+  - materials: 
+    - minecraft:stone: 10
+    - minecraft:cobblestone: 5
+    - minecraft:mossy_cobblestone: 3
+    layers: 1
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.2
+          salt: 293

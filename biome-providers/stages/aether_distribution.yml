@@ -43,10 +43,11 @@ stages:
       - AETHER_GOLDEN_FIELDS: 1
 
       aether-highlands:
-      - AETHER_CRIMSON_HEIGHTS: 1
+      - AETHER_HONEY_HEIGHTS: 1
       - AETHER_ORCHARD_WOODLANDS: 1
 
       aether-mountains:
       - AETHER_FRIGID_CLIFFS: 1
+      - AETHER_PRISMATIC_RIDGES: 1
       
   

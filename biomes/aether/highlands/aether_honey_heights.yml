@@ -1,0 +1,25 @@
+id: AETHER_HONEY_HEIGHTS
+type: BIOME
+extends: [ AETHER, EQ_AETHER_HIGHLANDS ]
+color: $biomes/colors.yml:AETHER_HONEY_HEIGHTS
+vanilla: minecraft:the_end
+
+colors:
+  grass: 0xEBAF4C
+  foliage: 0xEBAF4C
+  water: 0xEBAF4C
+  water-fog: 0xEBAF4C
+
+palette:
+  - YELLOW_MIX: 319
+
+features:
+  landforms:
+    - GIANT_BEE_NESTS
+  postprocessors:
+    - HONEY_DRIPS
+  preprocessors:
+    - WATER_POOLS
+  flora:
+    - GRASS
+    - MIXED_FLOWER_COVER

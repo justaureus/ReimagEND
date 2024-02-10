@@ -1,0 +1,13 @@
+id: AETHER_PRISMATIC_RIDGES
+type: BIOME
+extends: [ AETHER, EQ_AETHER_RIDGES ]
+color: $biomes/colors.yml:AETHER_PRISMATIC_RIDGES
+vanilla: minecraft:the_end
+
+palette:
+  - TERRACOTTA_POWDER_MIX: 319
+
+features:
+  postprocessors:
+    - HANGING_LANTERNS
+  
