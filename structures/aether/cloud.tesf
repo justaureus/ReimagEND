@@ -1,5 +1,5 @@
 num bodyAmount = 40+randomInt(30);
-num size = 4;
+num radius = 4.5;
 
 num xOffset = 0;
 num yOffset = 0;
@@ -10,11 +10,11 @@ for (num a = 0; a < bodyAmount; a = a + 1) {
     if (randomInt(3) == 0) yOffset = yOffset+2-randomInt(5);
     zOffset = zOffset+(2-randomInt(5));
 
-    for (num x = -size/2; x < size/2; x = x + 1) {
-        for (num y = -size/2; y < size/2; y = y + 1) {
-            for (num z = -size/2; z < size/2; z = z + 1) {
+    for (num x = -radius; x < radius; x = x + 1) {
+        for (num y = -radius; y < radius; y = y + 1) {
+            for (num z = -radius; z < radius; z = z + 1) {
 
-                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(size/1.75,2)) {
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(radius/1.75,2)) {
                     block(x+xOffset,y+yOffset,z+zOffset,"minecraft:white_concrete",false);
                 }   
             }
