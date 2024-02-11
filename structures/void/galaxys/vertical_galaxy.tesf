@@ -2,7 +2,7 @@ num randPrecision = 100;
 
 num length = 10+randomInt(10);
 num direction = randomInt(randPrecision)/randPrecision;
-str setBlock = "minecraft:white_stained_glass";
+str setBlock = "minecraft:white_concrete";
 num random = 0;
 num dir = 1-randomInt(3);
 
@@ -11,10 +11,10 @@ for (num i = 0; i < length; i = i + 0.01) {
 
         random = randomInt(3);
         if (random == 0) {
-            setBlock = "minecraft:purple_stained_glass";
+            setBlock = "minecraft:purple_concrete";
         } else if (random == 1) {
-            setBlock = "minecraft:magenta_stained_glass";
-        } else setBlock = "minecraft:gray_stained_glass";
+            setBlock = "minecraft:magenta_concrete";
+        } else setBlock = "minecraft:gray_concrete";
 
         if ((randomInt(2) == 0) && (i < 5)) { 
             setBlock = "minecraft:pearlescent_froglight";
