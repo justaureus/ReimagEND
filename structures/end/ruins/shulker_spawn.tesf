@@ -3,7 +3,7 @@ str checkBlock = "";
 for (num i = 0; i > -fallCheck; i = i - 1) {
     checkBlock = getBlock(0,i,0);
     if (checkBlock != "minecraft:air" &&
-    checkBlock != "minecraft:grass" &&
+    checkBlock != "minecraft:short_grass" &&
     checkBlock != "minecraft:nether_sprouts" &&
     checkBlock != "minecraft:warped_roots" &&
     checkBlock != "minecraft:dead_horn_coral_fan[waterlogged=false]" &&
