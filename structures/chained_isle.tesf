@@ -1,10 +1,11 @@
 num randPrecision = 100;
-num radius = 5;
+num radius = 25+randomInt(randPrecision)/randPrecision*6;
 num warp = 5;
 num warpFreq = 2;
-num squish = 1;
+num squish = 2+randomInt(randPrecision)/randPrecision;
 num radiusSquared = pow(radius,2);
-num yTranslate = 1;
+num ascendTranslate = 30+randomInt(30);
+num yTranslate = 0;
 
 if (check(radius, -radius/squish, 0) != "LAND" ||
     check(-radius, -radius/squish, 0) != "LAND" ||
@@ -28,26 +29,16 @@ for (num x = -radius-warp; x < radius+warp; x = x + 1) {
                                 warpFreq*(y+originY()+3000),
                                 warpFreq*(z+originZ()));
 			num distanceSquared = pow(x+warpX,2)+pow((y+warpY)*squish,2)+pow(z+warpZ,2);
-			if (distanceSquared < radiusSquared && distanceSquared > radiusSquared-(radius*3)) {
-				structure(x, y+yTranslate+radius, z, "bee_nest_block", "NONE");
-			}
-
-            if (distanceSquared < (radiusSquared-(radius*3)) && y < (0)) {
-				block(x, y+yTranslate+radius, z, "minecraft:honey_block", false);
-			}
-
-            distanceSquared = pow((x+warpX)*1.5,2)+pow((y+warpY)*squish,2)+pow((z+warpZ)*1.5,2);
-            if (distanceSquared < (radiusSquared)) {
-				structure(x, y+yTranslate, z, "bee_nest_block", "NONE");
+            if (distanceSquared < radiusSquared) {
+				block(x, y+ascendTranslate, z, getBlock(x, y-yTranslate, z), true);
+                block(x, y-yTranslate, z, "minecraft:air", true);
 			}
         }
     }
 }
 
+structure(0,ascendTranslate-10,0,"giant_chain","NONE");
 
 
-for (num i = -5; i <= 5; i = i + 10) {
-    if (getBlock(i,0,0) == "minecraft:air") entity(i, 0, 0, "minecraft:bee");
-    if (getBlock(0,0,i) == "minecraft:air") entity(0, 0, i, "minecraft:bee");
-    if (getBlock(i,0,i) == "minecraft:air") entity(i, 0, i, "minecraft:bee");
-}   
+
+

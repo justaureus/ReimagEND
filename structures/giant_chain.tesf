@@ -1,10 +1,11 @@
 num radius = 5;
 num thickness = 3;
 num spacing = 6;
+num maxAmount = 30;
 
 num linkTranslate = 0;
 
-for (num l = 0; l < 10; l = l + 1) {
+for (num l = 0; l < 30; l = l + 1) {
     for (num x = -radius; x <= radius; x = x + 1) {
         for (num y = -radius; y <= radius; y = y + 1) {
             for (num z = -thickness/2; z <= thickness/2; z = z + 1) {
