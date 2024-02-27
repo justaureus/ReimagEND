@@ -1,0 +1,69 @@
+id: PEARLESCENT_LIGHTS
+type: FEATURE
+
+variables: &variables
+  wallThickness: 0.03
+  webThickness: 1
+
+distributor:
+  type: "YES"
+
+locator:
+  type: AND
+  locators:
+    # Match air underground
+    - type: PATTERN
+      range: &range
+        min: -50
+        max: 319
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: OR
+      locators:
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH_AIR
+            offset: 0
+        - type: PATTERN
+          range: *range
+          pattern:
+            type: MATCH_AIR
+            offset: 1
+        
+
+    # Match ridged simplex to create 'walls'
+    - type: SAMPLER_3D
+      range: *range
+      sampler:
+        type: EXPRESSION
+        expression: "|webWalls(x,y,z)|<wallThickness"
+        variables: *variables
+        samplers:
+          webWalls:
+            dimensions: 3
+            type: OPEN_SIMPLEX_2
+            frequency: 0.015
+  
+    # Punch holes into walls using cellular
+    - type: SAMPLER_3D
+      range: *range
+      sampler:
+        type: EXPRESSION
+        expression: webPunchouts(x,y,z)>-webThickness
+        variables: *variables
+        samplers:
+          webPunchouts:
+            dimensions: 3
+            type: CELLULAR
+            distance: Euclidean
+            return: Distance2Div
+            frequency: 0.06
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - BLOCK:minecraft:pearlescent_froglight: 1
+    - BLOCK:minecraft:end_stone: 2

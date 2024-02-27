@@ -12,5 +12,7 @@ palette:
   - PEARLESCENT_GROUND: 319
 
 features:
+  preprocessors:
+    - PEARLESCENT_LIGHTS
   flora:
     - END_GRASS
