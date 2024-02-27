@@ -1,0 +1,28 @@
+id: OBSIDIAN_OBELISKS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 14
+  padding: 11
+  salt: 7115
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 25
+        max: 200
+      amount: 1
+      salt: 2913
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: obsidian_obelisk

@@ -1,13 +1,13 @@
-id: FLAXEN_GROUND
+id: VERDANT_GROUND
 type: PALETTE
 
 layers:
   - materials:
-      - minecraft:yellow_concrete_powder: 3
+      - minecraft:lime_concrete_powder: 4
+      - minecraft:green_concrete_powder: 1
       - minecraft:end_stone: 1
-      - minecraft:yellow_concrete: 2
     layers: 1
-    sampler: 
+    sampler: &transitionSampler
       type: WHITE_NOISE
       salt: 4357
     threshold: 0.5
