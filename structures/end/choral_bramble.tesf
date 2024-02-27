@@ -1,0 +1,52 @@
+num amount = 3;
+num maxRadius = 2;
+
+num x = 0;
+num y = 0;
+num z = 0;
+num random = 0;
+num length = 0;
+
+str setBlock = "";
+
+for (num i = 0; i < amount; i = i + 1) {
+    length = 10+randomInt(20);
+    if (randomInt(5) == 0) length = length+5;
+
+    for (num h = 0; h < length; h = h + 1) {
+        random = randomInt(5);
+        if (random == 0) setBlock = "minecraft:dead_tube_coral_block";
+        if (random == 1) setBlock = "minecraft:dead_brain_coral_block";
+        if (random == 2) setBlock = "minecraft:dead_bubble_coral_block";
+        if (random == 3) setBlock = "minecraft:dead_fire_coral_block";
+        if (random == 4) setBlock = "minecraft:dead_horn_coral_block";
+        block(x, y, z, setBlock);
+
+        random = randomInt(12);
+        if(random == 0) {
+            if (x < maxRadius) {
+                x = x + 1;
+            } else x = x - 1;
+        }
+        if(random == 1) {
+            if (x > -maxRadius) {
+                x = x - 1;
+            } else x = x + 1;
+        }
+        if(random == 2) {
+            if (z < maxRadius) {
+                z = z + 1;
+            } else z = z - 1;
+        }
+        if(random == 3) {
+            if (z > -maxRadius) {
+                z = z - 1;
+            } else z = z + 1;
+        }
+
+        if(random >= 4) y = y + 1;
+    }   
+    x = 0;
+    y = 0;
+    z = 0;
+}

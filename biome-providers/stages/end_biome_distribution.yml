@@ -47,6 +47,7 @@ stages:
       - STYGIAN_BARRENS: 2
       - CRAGGY_END: 3 
       - CHORUVE_FOREST: 3
+      - CHORAL_DEADLANDS: 2
       - PEARLESCENT_END: 2 
       - IVORY_EMPYREAN: 2 
 
@@ -95,6 +96,7 @@ stages:
       - STYGIAN_BARRENS: 2
       - CRAGGY_END: 3 
       - CHORUVE_FOREST: 3
+      - CHORAL_DEADLANDS: 2
       - PEARLESCENT_END: 2 
       - IVORY_EMPYREAN: 2
       - MAUVE_POOLS: 4

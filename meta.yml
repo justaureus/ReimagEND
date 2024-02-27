@@ -40,8 +40,8 @@ biome-distribution:
 
   ring3-width: 1000
   # Default: 1000
-  ring3-biome-scale: 500
-  # Default: 500
+  ring3-biome-scale: 1000
+  # Default: 1000
 
   ring4-width: 1000
   # Default: 1000

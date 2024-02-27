@@ -1,0 +1,18 @@
+id: CHORAL_DEADLANDS
+type: BIOME
+extends: [ END, EQ_END_LOWLANDS ]
+vanilla: minecraft:end_barrens
+color: $biomes/colors.yml:CHORAL_DEADLANDS
+
+colors:
+  grass: 0x808080
+  foliage: 0x808080
+
+palette:
+  - DEAD_CORAL_GROUND: 319
+
+features:
+  flora:
+    - CORAL_GRASS
+  trees:
+    - CHORAL_BRAMBLES

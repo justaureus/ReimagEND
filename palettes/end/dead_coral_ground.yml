@@ -1,0 +1,15 @@
+id: DEAD_CORAL_GROUND
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:dead_tube_coral_block: 1
+      - minecraft:dead_brain_coral_block: 1
+      - minecraft:dead_bubble_coral_block: 1
+      - minecraft:dead_fire_coral_block: 1
+      - minecraft:dead_horn_coral_block: 1
+    layers: 1
+    sampler: 
+      type: WHITE_NOISE
+      salt: 3457
+    threshold: 0.5
