@@ -2,7 +2,7 @@ id: BRAMBLE_VINES
 type: FEATURE
 
 variables: &variables
-  wallThickness: 0.08
+  wallThickness: 0.05
   webThickness: 1
 
 distributor:
@@ -117,7 +117,7 @@ locator:
           webWalls:
             dimensions: 3
             type: OPEN_SIMPLEX_2
-            frequency: 0.015
+            frequency: 0.03
   
     # Punch holes into walls using cellular
     - type: SAMPLER_3D
