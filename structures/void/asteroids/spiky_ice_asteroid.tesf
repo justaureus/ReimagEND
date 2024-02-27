@@ -1,8 +1,7 @@
 num randPrecision = 100;
 
-num spikes = 10+randomInt(5);
-num length = 10 + randomInt(randPrecision)/randPrecision;
-num radius = 2 + randomInt(randPrecision)/randPrecision;
+num spikes = 25;
+
 // Direction vector
 num dx = (randomInt(randPrecision)/randPrecision);
 num dy = randomInt(randPrecision)/randPrecision;
@@ -15,10 +14,12 @@ dx = dx/mag;
 dy = dy/mag;
 dz = dz/mag;
 
+num length = 0;
+num radius = 0;
 for (num i = 0; i < spikes; i = i + 1) {
 
-    length = 10 + randomInt(randPrecision)/randPrecision*2;
-    radius = 2 + randomInt(randPrecision)/randPrecision*2;
+    length = 20;
+    radius = 3;
     dx = dx+1;
     dy = dy+1;
     dz = dz+1;

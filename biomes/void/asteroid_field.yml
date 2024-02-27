@@ -5,7 +5,8 @@ vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:ASTEROID_FIELD
 
 palette:
-  - ASTEROID_GROUND: 319
+  - ICE_GROUND: 315
+  - ASTEROID_GROUND: 125
 
 features:
   trees:

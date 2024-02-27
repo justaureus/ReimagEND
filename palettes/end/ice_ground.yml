@@ -1,0 +1,13 @@
+id: ICE_GROUND
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:ice: 2
+      - minecraft:packed_ice: 3
+      - minecraft:blue_ice: 1
+    layers: 1
+    sampler:
+      type: WHITE_NOISE
+      salt: 4357
+    threshold: 0.5

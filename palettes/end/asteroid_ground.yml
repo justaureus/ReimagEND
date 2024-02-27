@@ -3,7 +3,7 @@ type: PALETTE
 
 layers:
   - materials:
-      - minecraft:tuff: 2
+      - minecraft:basalt: 2
       - minecraft:smooth_basalt: 3
       - minecraft:mud: 1
       - minecraft:deepslate: 4

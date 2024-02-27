@@ -1,5 +1,5 @@
 num blockSelection = randomInt(1000)/1000;
 if (blockSelection <= 0.5) block(0, 0, 0,"minecraft:deepslate");
-else if (blockSelection <= 0.6) block(0, 0, 0,"minecraft:tuff");
+else if (blockSelection <= 0.6) block(0, 0, 0,"minecraft:basalt");
 else if (blockSelection <= 0.9) block(0, 0, 0,"minecraft:smooth_basalt");
 else block(0, 0, 0,"minecraft:mud");
