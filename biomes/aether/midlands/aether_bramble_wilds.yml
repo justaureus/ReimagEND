@@ -17,4 +17,5 @@ features:
     - BRAMBLES
   flora:
     - GRASS
+    - TALL_GRASS
     - FERNS
