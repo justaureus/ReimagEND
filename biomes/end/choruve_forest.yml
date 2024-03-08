@@ -5,8 +5,8 @@ vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:CHORUVE_FOREST
 
 colors:
-  grass: 0x726a7d
-  foliage: 0x726a7d
+  grass: 0x898096
+  foliage: 0x898096
 
 palette:
   - CHORUVE_GROUND: 319
