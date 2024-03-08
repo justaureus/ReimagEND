@@ -6,33 +6,33 @@ str trunkBlock = "minecraft:obsidian";
 str altTrunkBlock = "minecraft:black_concrete";
 str setBlock = trunkBlock;
 
-num trunkRadius = 4+randomInt(2);
+num trunkRadius = 3;
 num length = 50+randomInt(25);
 num xTranslate = 0;
 num zTranslate = 0;
 
-num topBranches = 4+randomInt(4);
+num topBranches = 3+randomInt(2);
 num topBranchLengthUpwardsMin = 7+randomInt(3);
 num topBranchLengthOutwardsMin = 4+randomInt(3);
-num topBranchVerticalDirection = 1;
-num topBranchLeafRadiusMin = 4;
+num topBranchVerticalDirection = 0.8+randomInt(randPrecision)/randPrecision/1.5;
+num topBranchLeafRadiusMin = 7;
 num topBranchLeafTranslate = 0;
 num topBranchLeafTopFlatness = 1;
 num topBranchLeafBottomFlatness = 2;
-num topBranchLeafDensity = 0.5;
+num topBranchLeafDensity = 0.3;
 str topBranchLeafStructure = "shattered_leaves_clump";
 
-num sideBranchInterval = 2+randomInt(2);
-num sideBranchMinHeight = 2+randomInt(3);
-num sideBranchLengthMin = 8+randomInt(6);
-num sideBranchLengthVariation = 2+randomInt(2);
+num sideBranchInterval = 4+randomInt(2);
+num sideBranchMinHeight = 4+randomInt(3);
+num sideBranchLengthMin = 12+randomInt(4);
+num sideBranchLengthVariation = 5+randomInt(2);
 num sideBranchVerticalVariation = 0;
-num sideBranchVerticalDirection = 0.5+randomInt(randPrecision)/randPrecision/4;
-num sideBranchLeafRadiusMin = 4;
+num sideBranchVerticalDirection = 0.8+randomInt(randPrecision)/randPrecision/1.5;
+num sideBranchLeafRadiusMin = 7;
 num sideBranchLeafTranslate = 0;
 num sideBranchLeafTopFlatness = 1;
 num sideBranchLeafBottomFlatness = 2;
-num sideBranchLeafDensity = 0.5;
+num sideBranchLeafDensity = 0.3;
 str sideBranchLeafStructure = "shattered_leaves_clump";
 
 if (getBlock(0,length,0) != "minecraft:air") fail;
@@ -79,6 +79,10 @@ for(num h = 0; h <= length; h = h + 1) {
                 setBlock = trunkBlock;
                 if (randomInt(2) == 0) setBlock = altTrunkBlock;
                 block(l*dx+ox, l*dy+oy, l*dz+oz, setBlock);
+                block(l*dx+ox+1, l*dy+oy, l*dz+oz, setBlock);
+                block(l*dx+ox-1, l*dy+oy, l*dz+oz, setBlock);
+                block(l*dx+ox, l*dy+oy, l*dz+oz+1, setBlock);
+                block(l*dx+ox, l*dy+oy, l*dz+oz-1, setBlock);
             }
             // Rotate angle of next branch
             branchAngle = branchAngle + goldenAngle;
@@ -129,6 +133,10 @@ for (num b = 1; b <= topBranches; b = b + 1) {
         setBlock = trunkBlock;
         if (randomInt(2) == 0) setBlock = altTrunkBlock;
         block(l*dx+ox, l*dy+oy, l*dz+oz, setBlock);
+        block(l*dx+ox+1, l*dy+oy, l*dz+oz, setBlock);
+        block(l*dx+ox-1, l*dy+oy, l*dz+oz, setBlock);
+        block(l*dx+ox, l*dy+oy, l*dz+oz+1, setBlock);
+        block(l*dx+ox, l*dy+oy, l*dz+oz-1, setBlock);
     }
     // Rotate angle of next branch
     branchAngle = branchAngle + goldenAngle;

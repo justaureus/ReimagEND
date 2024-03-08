@@ -17,12 +17,13 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SOLID
+        type: MATCH
+        block: minecraft:end_stone
         offset: -1
 
 structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - small_shattered_tree: 3
+    - small_shattered_tree: 5
     - large_shattered_tree: 1
