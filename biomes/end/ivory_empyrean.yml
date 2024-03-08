@@ -16,5 +16,3 @@ features:
     - END_GRASS
   trees:
     - IVORY_TREES
-  preprocessors:
-    - PEARLESCENT_LIGHTS

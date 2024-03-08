@@ -6,14 +6,14 @@ distributor:
   distributors:
     - type: PADDED_GRID
       width: 8
-      padding: 12
-      salt: 1220
+      padding: 13
+      salt: 3456
     - type: SAMPLER
       sampler:
         type: PROBABILITY
         sampler:
           type: OPEN_SIMPLEX_2
-          salt: 1110
+          salt: 5468
       threshold: 0.75
 
 locator:
@@ -36,5 +36,7 @@ locator:
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: ivory_tree
+    type: WHITE_NOISE
+  structures: 
+    - small_ivory_tree: 6
+    - large_ivory_tree: 1
