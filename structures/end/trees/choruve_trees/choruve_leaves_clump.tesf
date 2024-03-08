@@ -1,12 +1,54 @@
-str leafBlock = "minecraft:magenta_terracotta";
-str altLeafBlock = "minecraft:purple_terracotta";
-str placeBlock = leafBlock;
-for (num x = 0; x <= 1; x = x + 1) {
-  for (num y = 0; y <= 1; y = y + 1) {
-    for (num z = 0; z <= 1; z = z + 1) {
-        placeBlock = leafBlock;
-        if (randomInt(2) == 0) placeBlock = altLeafBlock;
-        block(x, y, z, placeBlock, false);
+num randPrecision = 100;
+
+num spikes = 1;
+
+// Direction vector
+num dx = (randomInt(randPrecision)/randPrecision);
+num dy = randomInt(randPrecision)/randPrecision;
+num dz = (randomInt(randPrecision)/randPrecision);
+
+
+// Normalize vector
+num mag = sqrt(pow(dx,2)+pow(dy,2)+pow(dz,2));
+dx = dx/mag;
+dy = dy/mag;
+dz = dz/mag;
+
+num length = 0;
+num radius = 0;
+str setBlock = "";
+for (num i = 0; i < spikes; i = i + 1) {
+
+    length = 8+randomInt(3);
+    radius = 1.5;
+    dx = dx+1;
+    dy = dy+1;
+    dz = dz+1;
+
+    mag = sqrt(pow(dx,2)+pow(dy,2)+pow(dz,2));
+    dx = dx/mag;
+    if (randomInt(2) == 0) dx = dx*-1;
+    dy = dy/mag;
+    if (randomInt(2) == 0) dy = dy*-1;
+    dz = dz/mag;
+    if (randomInt(2) == 0) dz = dz*-1;
+
+    for(num l = 0; l <= length; l = l + 1) {
+
+        // Reduce radius inversely to length
+        num r = (radius/length * -l) + radius;
+
+        // Generate sphere at each point
+        for(num x = -r; x <= r; x = x + 1) {
+            for(num y = -r; y <= r; y = y + 1) {
+                for(num z = -r; z <= r; z = z + 1) {
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                      setBlock = "magenta_terracotta";
+                      if (randomInt(2) == 0) setBlock = "purple_terracotta";
+                      block(l*dx + x, l*dy + y - radius, l*dz + z, setBlock, false);
+                    }
+                }
+            }
         }
-    }  
-}
+    }
+}    

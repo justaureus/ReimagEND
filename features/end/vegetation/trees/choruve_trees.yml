@@ -35,6 +35,5 @@ locator:
 
 structures:
   distribution:
-    type: WHITE_NOISE
-  structures: 
-    - small_choruve_tree: 3
+    type: CONSTANT
+  structures: choruve_tree

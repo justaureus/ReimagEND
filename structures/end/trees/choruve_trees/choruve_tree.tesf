@@ -2,7 +2,7 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-num trunkHeight = 7+randomInt(6);
+num trunkHeight = 7+randomInt(25);
 str trunkBlock = "minecraft:blue_terracotta";
 str altTrunkBlock = "minecraft:light_blue_terracotta";
 num trunkWidth = 1;
@@ -10,13 +10,13 @@ str rootBlockX = trunkBlock;
 str rootBlockZ = trunkBlock;
 str altRootBlock = altTrunkBlock;
 
-num sideBranchInterval = 2+randomInt(3);
-num sideBranchMinHeight = 1+randomInt(3);
+num sideBranchInterval = 1+randomInt(2);
+num sideBranchMinHeight = 3+randomInt(3);
 num sideBranchLengthMin = 10+randomInt(4);
-num sideBranchLengthVariation = 2;
+num sideBranchLengthVariation = 3;
 num sideBranchVerticalVariation = 1;
 num sideBranchVerticalDirection = 0.8+randomInt(randPrecision)/randPrecision/1.5;
-num sideBranchLeafRadiusMin = 4;
+num sideBranchLeafRadiusMin = 2;
 num sideBranchLeafTranslate = 0;
 num sideBranchLeafTopFlatness = 1;
 num sideBranchLeafBottomFlatness = 3;
@@ -27,7 +27,7 @@ str sideBranchBlockY = trunkBlock;
 str sideBranchBlockZ = trunkBlock;
 str altSideBranchBlock = altTrunkBlock;
 
-num topBranches = 0;
+num topBranches = 3+randomInt(2);
 num topBranchLengthUpwardsMin = 2+randomInt(4);
 num topBranchLengthOutwardsMin = 3+randomInt(3);
 num topBranchVerticalDirection = 1;
