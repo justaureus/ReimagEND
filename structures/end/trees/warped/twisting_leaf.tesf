@@ -1,0 +1,64 @@
+num randPrecision = 100;
+
+num length = 5;
+num stemRadius = 1.1;
+num droop = 0.1;
+
+str setBlock = "";
+
+num h = 0;
+num random = 0;
+for (num l = 0; l <= length/2; l = l + 0.5) {
+
+    for (num x = -stemRadius; x <= stemRadius; x = x + 1) {
+        for (num y = -stemRadius; y <= stemRadius; y = y + 1) {
+            for (num z = -stemRadius; z <= stemRadius; z = z + 1) {
+
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(stemRadius,2)) {
+
+                setBlock = "minecraft:warped_wart_block";
+                if (randomInt(3) == 0) setBlock = "minecraft:stripped_warped_hyphae";
+                block(x+l, y+h, z, setBlock, false);
+
+                }
+            }   
+        }
+    }
+
+    setBlock = "minecraft:warped_wart_block";
+    if (randomInt(3) == 0) setBlock = "minecraft:stripped_warped_hyphae";
+    block(l, h, 0, setBlock, true);
+
+    h = h+(l*droop);
+}
+
+num radius = 3;
+num warp = 1;
+num warpFreq = 1;
+num squish = 3;
+num radiusSquared = pow(radius,2);
+
+for (num x = -radius-warp; x < radius+warp; x = x + 1) {
+    for (num y = (-radius-warp)/squish; y < (radius+warp)/squish; y = y + 1) {
+        for (num z = -radius-warp; z < radius+warp; z = z + 1) {
+            num warpX = warp * sampler("simplex3",
+                                warpFreq*(x+originX()),
+                                warpFreq*(y+originY()+1000),
+                                warpFreq*(z+originZ()));
+            num warpY = warp * sampler("simplex3",
+                                warpFreq*(x+originX()),
+                                warpFreq*(y+originY()+2000),
+                                warpFreq*(z+originZ()));
+            num warpZ = warp * sampler("simplex3",
+                                warpFreq*(x+originX()),
+                                warpFreq*(y+originY()+3000),
+                                warpFreq*(z+originZ()));
+			num distanceSquared = (pow(x+warpX,2)/1.5)+pow((y+warpY)*squish,2)+pow(z+warpZ,2);
+            if (distanceSquared < radiusSquared) {
+                setBlock = "minecraft:warped_wart_block";
+                if (randomInt(3) == 0) setBlock = "minecraft:stripped_warped_hyphae";
+                block(x+length, y+((length*droop)*length/3), z, setBlock, true);
+			}
+        }
+    }
+}

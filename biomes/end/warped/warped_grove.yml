@@ -15,6 +15,7 @@ features:
   flora:
     - WARPED_GRASS
     - END_GRASS
+    - WARPED_STEM_BUSHES
   trees:
     - WARPED_MANGROVES
     - TWISTING_BEANSTALKS

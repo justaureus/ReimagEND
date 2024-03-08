@@ -4,7 +4,7 @@ num pi = 3.14159;
 num twopi = 6.28318530718;
 
 num trunkHeight = 10+randomInt(8);
-num trunkBase = 14+randomInt(4);
+num trunkBase = 7+randomInt(4);
 str trunkBlock = "minecraft:stripped_warped_hyphae";
 str rootBlock = "minecraft:stripped_warped_hyphae";
 str undergroundRootBlock = "minecraft:stripped_warped_hyphae";
@@ -12,11 +12,11 @@ str underwaterRootBlock = "minecraft:stripped_warped_hyphae";
 
 num sideBranchInterval = 1;
 num sideBranchMinHeight = 2+randomInt(3);
-num sideBranchLengthMin = 3;
+num sideBranchLengthMin = 10;
 num sideBranchLengthVariation = 6;
 num sideBranchVerticalVariation = 0;
-num sideBranchVerticalDirection = 1+randomInt(randPrecision)/randPrecision/2;
-num sideBranchLeafRadiusMin = 2;
+num sideBranchVerticalDirection = -0.1+randomInt(randPrecision)/randPrecision;
+num sideBranchLeafRadiusMin = 4;
 num sideBranchLeafTranslate = 0;
 num sideBranchLeafTopFlatness = 2;
 num sideBranchLeafBottomFlatness = 4;
@@ -27,10 +27,10 @@ str sideBranchBlockY = "minecraft:stripped_warped_hyphae";
 str sideBranchBlockZ = "minecraft:stripped_warped_hyphae";
 
 num topBranches = 10+randomInt(3);
-num topBranchLengthUpwardsMin = 7+randomInt(3);
-num topBranchLengthOutwardsMin = 8+randomInt(3);
+num topBranchLengthUpwardsMin = 11+randomInt(3);
+num topBranchLengthOutwardsMin = 12+randomInt(3);
 num topBranchVerticalDirection = 0.4;
-num topBranchLeafRadiusMin = 2;
+num topBranchLeafRadiusMin = 4;
 num topBranchLeafTranslate = 0;
 num topBranchLeafTopFlatness = 1.5;
 num topBranchLeafBottomFlatness = 1;
@@ -41,12 +41,17 @@ str topBranchBlockY = "minecraft:stripped_warped_hyphae";
 str topBranchBlockZ = "minecraft:stripped_warped_hyphae";
 
 if (getBlock(0,trunkHeight,0) != "minecraft:air") fail;
+if (getBlock(0,-5,0) == "minecraft:air") fail;
+if (getBlock(5,-5,0) == "minecraft:air") fail;
+if (getBlock(-5,-5,0) == "minecraft:air") fail;
+if (getBlock(0,-5,5) == "minecraft:air") fail;
+if (getBlock(0,-5,-5) == "minecraft:air") fail;
 
 // Generate roots at base of trunk
-num roots = 3+randomInt(2);
+num roots = 5+randomInt(2);
 num rootMaxLength = 30;
-num rootDroop = 0.1;
-num rootVerticalDirection = -0.4-randomInt(randPrecision)/randPrecision*0.3;
+num rootDroop = 0.06;
+num rootVerticalDirection = 0.4-randomInt(randPrecision)/randPrecision*0.3;
 num rootAngle = randomInt(randPrecision)/randPrecision*2*pi;
 for (num r = 0; r < roots; r = r + 1) {
     // Branch direction vector
@@ -70,6 +75,9 @@ for (num r = 0; r < roots; r = r + 1) {
             break;
         } else {
             block(cx, cy, cz, rootBlock);
+            block(cx+1, cy, cz+1, rootBlock);
+            block(cx+1, cy, cz, rootBlock);
+            block(cx, cy, cz+1, rootBlock);
         }
 
         // Place warped fungus on root block
@@ -115,6 +123,9 @@ for (num i = 0; i < trunkHeight; i = i + 1) {
             // Generate branch
             for (num l = 1; l <= branchLength; l = l + 1) {
                 block(l*dx+ox, l*dy+oy, l*dz+oz, branchBlock);
+                block(l*dx+ox+1, l*dy+oy, l*dz+oz+1, branchBlock);
+                block(l*dx+ox+1, l*dy+oy, l*dz+oz, branchBlock);
+                block(l*dx+ox, l*dy+oy, l*dz+oz+1, branchBlock);
             }
             // Rotate angle of next branch
             branchAngle = branchAngle + goldenAngle;
@@ -169,6 +180,9 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     // Generate branch
     for (num l = 0; l <= branchLength; l = l + 1) {
         block(l*dx+ox, l*dy+oy, l*dz+oz, branchBlock);
+        block(l*dx+ox+1, l*dy+oy, l*dz+oz+1, branchBlock);
+        block(l*dx+ox+1, l*dy+oy, l*dz+oz, branchBlock);
+        block(l*dx+ox, l*dy+oy, l*dz+oz+1, branchBlock);
     }
     // Rotate angle of next branch
     branchAngle = branchAngle + goldenAngle;
@@ -193,9 +207,9 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     }
 }
 
-for (num x = -10; x < 10; x = x + 1) {
-  for (num y = 15; y < 40; y = y + 1) {
-    for (num z = -10; z < 10; z = z + 1) {
+for (num x = -20; x < 20; x = x + 1) {
+  for (num y = 0; y < trunkHeight+30; y = y + 1) {
+    for (num z = -20; z < 20; z = z + 1) {
       structure(x,y,z,"warped_buds", "NONE");
     }
   }  
