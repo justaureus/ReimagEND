@@ -3,9 +3,9 @@ type: FEATURE
 
 distributor:
   type: PADDED_GRID
-  width: 7
-  padding: 11
-  salt: 5460
+  width: 3
+  padding: 6
+  salt: 4357
 
 locator:
   type: AND
@@ -42,4 +42,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: orchard_tree
+  structures: small_orchard_tree

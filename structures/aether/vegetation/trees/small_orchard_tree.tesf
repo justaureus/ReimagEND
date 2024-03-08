@@ -4,12 +4,12 @@ num pi = 3.14159;
 
 str trunkBlock = "minecraft:oak_log";
 
-num trunkRadius = 3;
-num length = 10+randomInt(10);
+num trunkRadius = 2.5;
+num length = 15+randomInt(5);
 
-num topBranches = 4+randomInt(4);
+num topBranches = 4+randomInt(3);
 num topBranchLengthUpwardsMin = 7+randomInt(3);
-num topBranchLengthOutwardsMin = 4+randomInt(3);
+num topBranchLengthOutwardsMin = 9+randomInt(3);
 num topBranchVerticalDirection = 1;
 num topBranchLeafRadiusMin = 4;
 num topBranchLeafTranslate = 0;
@@ -22,7 +22,7 @@ str topBranchBlockY = "minecraft:oak_log[axis=y]";
 str topBranchBlockZ = "minecraft:oak_log[axis=z]";
 
 num sideBranchInterval = 3;
-num sideBranchMinHeight = 2+randomInt(3);
+num sideBranchMinHeight = 3+randomInt(3);
 num sideBranchLengthMin = 8+randomInt(4);
 num sideBranchLengthVariation = 2+randomInt(2);
 num sideBranchVerticalVariation = 0;
