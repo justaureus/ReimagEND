@@ -4,8 +4,8 @@ type: PALETTE
 layers:
   - materials:
       - minecraft:grass_block: 6
-      - minecraft:black_concrete_powder: 3
-      - minecraft:mud: 3
+      - minecraft:black_concrete_powder: 2
+      - minecraft:mud: 2
     layers: 1
     sampler:
       type: DOMAIN_WARP
