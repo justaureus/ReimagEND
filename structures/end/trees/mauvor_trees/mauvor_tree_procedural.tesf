@@ -7,8 +7,8 @@ num trunkHeight = 2+randomInt(5);
 str trunkBlock = "minecraft:stripped_crimson_hyphae";
 
 num topBranches = 3+randomInt(3);
-num topBranchLengthUpwardsMin = 9+randomInt(3);
-num topBranchLengthOutwardsMin = 11+randomInt(3);
+num topBranchLengthUpwardsMin = 5+randomInt(3);
+num topBranchLengthOutwardsMin = 6+randomInt(3);
 num topBranchVerticalDirection = 0.4;
 num topBranchLeafRadiusMin = 4;
 num topBranchLeafTranslate = 0;
