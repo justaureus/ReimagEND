@@ -10,11 +10,11 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring1-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring1
     to:
-      - END_BARRENS: 3
+      - END_BARRENS: 2
       - END_MIDLANDS: 2
-      - END_HIGHLANDS: 1
+      - END_HIGHLANDS: 2
       - END_MIDLANDS: 2
-      - END_BARRENS: 3
+      - END_BARRENS: 2
       - END_PLANES: 2
       - END_SPIRES: 2
 
