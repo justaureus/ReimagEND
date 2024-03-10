@@ -1,0 +1,8 @@
+id: END_SPIRES
+type: BIOME
+extends: [ END, EQ_SPIRES ]
+vanilla: minecraft:end_barrens
+color: $biomes/colors.yml:END_SPIRES
+
+palette:
+  - BLOCK:minecraft:end_stone: 319
