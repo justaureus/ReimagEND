@@ -25,4 +25,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: amethyst_crystals
+  structures: amethyst_crystal
