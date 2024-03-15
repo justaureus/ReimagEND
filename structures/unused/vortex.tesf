@@ -1,6 +1,6 @@
 num randPrecision = 100;
 
-num length = 15;
+num length = 25;
 num direction = randomInt(randPrecision)/randPrecision;
 num startRadius = 10;
 str setBlock = "minecraft:obsidian";
@@ -16,17 +16,17 @@ for (num i = startRadius; i < startRadius+length; i = i + 0.05) {
     setBlock = "minecraft:obsidian";
     if (randomInt(4) == 0) setBlock = "minecraft:crying_obsidian";
 
-//    if (i > 20) {
-//        setBlock = "minecraft:obsidian";
-//        if (randomInt(4) == 0) setBlock = "minecraft:crying_obsidian";
-//    } else if (i > 10) {
-//        random = randomInt(4);
-//        if (random == 0) setBlock = "minecraft:obsidian";
-//        if (random == 1) setBlock = "minecraft:crying_obsidian";
-//        if (random == 2) setBlock = "minecraft:purple_concrete";
-//        if (random == 3) setBlock = "minecraft:black_concrete";
-//    }
-//
+    if (i < 10) {
+        setBlock = "minecraft:obsidian";
+        if (randomInt(4) == 0) setBlock = "minecraft:crying_obsidian";
+    } else if (i < 30) {
+        random = randomInt(4);
+        if (random == 0) setBlock = "minecraft:obsidian";
+        if (random == 1) setBlock = "minecraft:crying_obsidian";
+        if (random == 2) setBlock = "minecraft:purple_concrete";
+        if (random == 3) setBlock = "minecraft:black_concrete";
+    }
+
     xOffset = 1-randomInt(3);
     yOffset = 1-randomInt(3);
     zOffset = 1-randomInt(3);

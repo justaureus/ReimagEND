@@ -1,0 +1,31 @@
+id: DRAGON_NEST
+type: FEATURE
+
+distributor:
+  type: POINTS
+  points:
+    - x: 0
+      z: 0
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 40
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: dragon_nest

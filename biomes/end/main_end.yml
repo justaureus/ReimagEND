@@ -57,7 +57,9 @@ features:
   trees:
     - FOUNTAIN_SPIKES
     - MAIN_PILLARS
+    - DRAGON_CHAINS
     - OUTER_PILLARS
+    - DRAGON_NEST
   buildings: []
 
 palette:
