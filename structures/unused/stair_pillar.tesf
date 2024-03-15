@@ -1,0 +1,28 @@
+num randPrecision = 100;
+
+num height = 15;
+num yTranslate = -5;
+num radius = 5;
+
+num dir = 0;
+str setBlock = "";
+for(num h = yTranslate; h <= height+yTranslate; h = h + 1) {
+    for(num x = -radius; x <= radius; x = x + 1) {
+        for(num z = -radius; z <= radius; z = z + 1) {
+            if (pow(x,2)+pow(z,2) < pow(radius,2)) {
+                setBlock = "minecraft:obsidian";
+                if (randomInt(8) == 0) setBlock = "minecraft:crying_obsidian";
+                block(x, h, z, setBlock, false);
+            }    
+        }
+    }
+}    
+
+for(num h = yTranslate; h <= height+yTranslate; h = h + 0.1) {
+    for (num a = radius; a < 8; a = a + 1) {
+        setBlock = "minecraft:obsidian";
+        if (randomInt(8) == 0) setBlock = "minecraft:crying_obsidian";
+        block(cos(dir)*a, h, sin(dir)*a, setBlock, false);
+    }
+    dir = dir + 0.1;
+}
