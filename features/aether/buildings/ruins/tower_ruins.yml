@@ -1,4 +1,4 @@
-id: SPARSE_RUINS
+id: TOWER_RUINS
 type: FEATURE
 
 distributor:
@@ -21,8 +21,8 @@ locator:
   locators:
     - type: TOP
       range: &range
-        min: 75
-        max: 255
+        min: 0
+        max: 200
     - type: PATTERN
       range: *range
       pattern:
@@ -31,10 +31,17 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SOLID
+        type: MATCH_SET
+        blocks: $features/meta.yml:plantable-blocks
+        offset: -1
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/meta.yml:plantable-blocks
         offset: -1
 
 structures:
   distribution:
     type: CONSTANT
-  structures: ruin
+  structures: tower_ruin

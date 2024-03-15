@@ -1,0 +1,32 @@
+num randPrecision = 100;
+
+
+num segments = 5+randomInt(6);
+num radius = 4;
+num underhang = -3;
+
+num height = 8*segments;
+str setBlock = "";
+for(num y = underhang; y <= height; y = y + 1) {
+    for(num x = -radius; x <= radius; x = x + 1) {
+        for(num z = -radius; z <= radius; z = z + 1) {
+            if (pow(x,2)+pow(z,2) > pow(radius-2,2) && pow(x,2)+pow(z,2) < pow(radius-1,2)) {
+                structure(x, y, z, "ruin_block", "NONE");
+            }   
+            
+            if (pow(x,2)+pow(z,2) < pow(radius+2,2) && (y % 8 == 0)) {
+                structure(x, y, z, "ruin_block", "NONE");
+            }
+
+            if (pow(x,2)+pow(z,2) < pow(radius+2,2) && y < 0 && y > underhang) {
+                structure(x, y, z, "ruin_block", "NONE");
+            }
+
+            setBlock = "minecraft:stone_bricks";
+            structure(radius-1, y, radius-1, "ruin_block", "NONE");
+            structure(-radius+1, y, radius-1, "ruin_block", "NONE");
+            structure(radius-1, y, -radius+1, "ruin_block", "NONE");
+            structure(-radius+1, y, -radius+1, "ruin_block", "NONE");
+        }
+    }
+}    

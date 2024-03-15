@@ -34,7 +34,7 @@ features:
     - CLOUD_LAYER_TOP
     - CLOUD_LAYER_MIDDLE
     - CLOUD_LAYER_BOTTOM
-    - SPARSE_RUINS
+    - TOWER_RUINS
   postprocessors:
     - HANGING_LANTERNS
   landforms:

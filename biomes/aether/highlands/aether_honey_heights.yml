@@ -25,7 +25,6 @@ features:
     - CLOUD_LAYER_TOP
     - CLOUD_LAYER_MIDDLE
     - CLOUD_LAYER_BOTTOM
-    - SPARSE_RUINS
   flora:
     - GRASS
     - MIXED_FLOWER_COVER
