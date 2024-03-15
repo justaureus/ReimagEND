@@ -3,9 +3,9 @@ num leafRadius = 3 + randomInt(4);
 num trunkHeight = 10 + randomInt(18);
 num leafTopHeight = trunkHeight * 1.3;
 num leafBottomHeight = 1 + randomInt(2);
-str trunkBlockX = "minecraft:oak_log[axis=x]";
-str trunkBlockY = "minecraft:oak_log[axis=y]";
-str trunkBlockZ = "minecraft:oak_log[axis=z]";
+str trunkBlockX = "minecraft:stripped_birch_log[axis=x]";
+str trunkBlockY = "minecraft:stripped_birch_log[axis=y]";
+str trunkBlockZ = "minecraft:stripped_birch_log[axis=z]";
 str leafBlock   = "minecraft:oak_leaves[distance=1,persistent=false]";
 
 // Tree gen logic

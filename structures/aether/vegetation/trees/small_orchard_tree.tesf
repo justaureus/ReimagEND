@@ -2,7 +2,7 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-str trunkBlock = "minecraft:oak_log";
+str trunkBlock = "minecraft:stripped_jungle_log";
 
 num trunkRadius = 2.5;
 num length = 15+randomInt(5);
@@ -17,9 +17,9 @@ num topBranchLeafTopFlatness = 1;
 num topBranchLeafBottomFlatness = 2;
 num topBranchLeafDensity = 0.5;
 str topBranchLeafStructure = "orchard_leaves_clump";
-str topBranchBlockX = "minecraft:oak_log[axis=x]";
-str topBranchBlockY = "minecraft:oak_log[axis=y]";
-str topBranchBlockZ = "minecraft:oak_log[axis=z]";
+str topBranchBlockX = "minecraft:stripped_jungle_log[axis=x]";
+str topBranchBlockY = "minecraft:stripped_jungle_log[axis=y]";
+str topBranchBlockZ = "minecraft:stripped_jungle_log[axis=z]";
 
 num sideBranchInterval = 3;
 num sideBranchMinHeight = 3+randomInt(3);
@@ -33,9 +33,9 @@ num sideBranchLeafTopFlatness = 1;
 num sideBranchLeafBottomFlatness = 2;
 num sideBranchLeafDensity = 0.5;
 str sideBranchLeafStructure = "orchard_leaves_clump";
-str sideBranchBlockX = "minecraft:oak_log[axis=x]";
-str sideBranchBlockY = "minecraft:oak_log[axis=y]";
-str sideBranchBlockZ = "minecraft:oak_log[axis=z]";
+str sideBranchBlockX = "minecraft:stripped_jungle_log[axis=x]";
+str sideBranchBlockY = "minecraft:stripped_jungle_log[axis=y]";
+str sideBranchBlockZ = "minecraft:stripped_jungle_log[axis=z]";
 
 num branchAngle = randomInt(randPrecision)/randPrecision*2*pi;
 
