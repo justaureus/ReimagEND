@@ -31,5 +31,7 @@ locator:
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: giant_bee_nest
+    type: WHITE_NOISE
+  structures: 
+    - giant_bee_nest: 5
+    - gigantic_bee_nest: 1
