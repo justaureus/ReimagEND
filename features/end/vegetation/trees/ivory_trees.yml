@@ -38,5 +38,5 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - small_ivory_tree: 6
+    - small_ivory_tree: 10
     - large_ivory_tree: 1

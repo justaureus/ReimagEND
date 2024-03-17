@@ -14,5 +14,6 @@ palette:
 features:
   flora:
     - END_GRASS
+    - PEARLESCENT_BUSHES
   trees:
     - IVORY_TREES

@@ -9,22 +9,22 @@ str setBlock = "";
 num random = 0;
 
 num trunkRadius = 3;
-num length = 40+randomInt(30);
+num length = 35+randomInt(25);
 num trunkTranslate = -2;
 
-num topBranches = 4+randomInt(4);
+num topBranches = 12+randomInt(4);
 num topBranchLengthUpwardsMin = 7+randomInt(3);
-num topBranchLengthOutwardsMin = 4+randomInt(3);
+num topBranchLengthOutwardsMin = 25+randomInt(3);
 num topBranchVerticalDirection = 1;
-num topBranchLeafRadiusMin = 5;
+num topBranchLeafRadiusMin = 8;
 num topBranchLeafTranslate = 0;
-num topBranchLeafTopFlatness = 1;
-num topBranchLeafBottomFlatness = 2;
+num topBranchLeafTopFlatness = 2;
+num topBranchLeafBottomFlatness = 3;
 num topBranchLeafDensity = 0.5;
 str topBranchLeafStructure = "ivory_clump";
 
 num sideBranchInterval = 3+randomInt(2);
-num sideBranchMinHeight = 3+randomInt(2);
+num sideBranchMinHeight = 20;
 num sideBranchLengthMin = 7+randomInt(4);
 num sideBranchLengthVariation = 2;
 num sideBranchVerticalVariation = 0;
@@ -163,4 +163,14 @@ for (num b = 1; b <= topBranches; b = b + 1) {
             }
         }
     }
+}
+
+num twopi = pi*2;
+for (num v = 15; v < length+20; v = v + 0.5) {
+    num rx = sin(randomInt(randPrecision)/randPrecision * twopi) * (randomInt(7) + 10);
+    num rz = cos(randomInt(randPrecision)/randPrecision * twopi) * (randomInt(7) + 10);
+    structure(rx, v, rz, "ivory_vine", "NONE");
+    structure(-rx, v, rz, "ivory_vine", "NONE");
+    structure(rx, v, -rz, "ivory_vine", "NONE");
+    structure(-rx, v, -rz, "ivory_vine", "NONE");
 }
