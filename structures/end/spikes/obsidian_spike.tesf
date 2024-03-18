@@ -4,7 +4,7 @@ num length = 25 + randomInt(randPrecision)/randPrecision*10;
 num radius = 4 + randomInt(randPrecision)/randPrecision;
 // Direction vector
 num dx = (randomInt(randPrecision)/randPrecision-0.5);
-num dy = 0.5;
+num dy = 0.35;
 num dz = (randomInt(randPrecision)/randPrecision-0.5);
 str setBlock = "minecraft:obsidian";
 

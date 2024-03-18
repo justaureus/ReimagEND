@@ -1,6 +1,6 @@
 // obsidian spike cluster for jagged_end
 
-num spikes = 5;
+num spikes = 8;
 for (num i = 0; i < spikes; i = i + 1) {
     structure(0,0,0,"obsidian_spike","NONE");
 }

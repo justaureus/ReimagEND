@@ -1,28 +1,24 @@
 num randPrecision = 100;
 
-num height = 50+randomInt(20);
-num yTranslate = -15;
-num radius = 6+randomInt(3);
-
+num height = 50 + randomInt(20);
+num yTranslate = -20;
+num radius = 4+randomInt(2);
+str setBlock = "minecraft:obsidian";
 str altBlock = "minecraft:crying_obsidian";
-
 structure(0,0,0,"obsidian_spike_cluster","NONE");
 
-num dir = 0;
-str setBlock = "";
-for(num h = yTranslate; h <= height+yTranslate; h = h + 1) {
+for(num y = yTranslate; y <= height+yTranslate; y = y + 1) {
     for(num x = -radius; x <= radius; x = x + 1) {
         for(num z = -radius; z <= radius; z = z + 1) {
             if (pow(x,2)+pow(z,2) < pow(radius,2)) {
-                setBlock = "minecraft:obsidian";
-                if (randomInt(8) == 0) setBlock = "minecraft:crying_obsidian";
-                block(x, h, z, setBlock, false);
-            }    
+                
+                if (randomInt(10) == 0) { setBlock = altBlock;
+                } else setBlock = "minecraft:obsidian";
+                block(x, y, z, setBlock, false);
+            }   
         }
     }
-    if (h > 0 && h % 15 == 0) radius = radius - 1;
-}    
-
+}
 
 for(num y = yTranslate+height-5; y <= height+yTranslate+4; y = y + 1) {
     if (randomInt(15) == 0) { setBlock = altBlock;
