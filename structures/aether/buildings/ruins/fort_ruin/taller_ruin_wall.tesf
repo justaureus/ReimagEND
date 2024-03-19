@@ -1,0 +1,19 @@
+num height = 18+randomInt(5);
+
+num yTranslate = 0;
+bool pass = false;
+for(num h = 0; h < 50; h = h + 1) {
+    if(getBlock(0, -h, 0) != "minecraft:grass" &&
+    getBlock(0, -h, 0) != "minecraft:air" &&
+    getBlock(0, -h, 0) != "minecraft:oak_leaves") {
+        yTranslate = -h;
+        pass = true;
+        break;
+    }
+}
+
+if (!pass) fail;
+
+for(num y = 0; y < height; y = y + 1) {
+    structure(0,y+yTranslate,0,"ruin_block","NONE");
+}

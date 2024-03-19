@@ -1,0 +1,31 @@
+num randPrecision = 100;
+num radius = 20+randomInt(randPrecision)/randPrecision*6;
+num warp = 5;
+num warpFreq = 2;
+num squish = 1+randomInt(randPrecision)/randPrecision;
+num radiusSquared = pow(radius,2);
+num yTranslate = 10;
+for (num x = -radius-warp; x < radius+warp; x = x + 1) {
+    for (num y = 0; y < 1; y = y + 1) {
+        for (num z = -radius-warp; z < radius+warp; z = z + 1) {
+            num warpX = warp * sampler("simplex3",
+                                warpFreq*(x+originX()),
+                                warpFreq*(y+originY()+1000),
+                                warpFreq*(z+originZ()));
+            num warpZ = warp * sampler("simplex3",
+                                warpFreq*(x+originX()),
+                                warpFreq*(y+originY()+3000),
+                                warpFreq*(z+originZ()));
+			num distanceSquared = pow(x+warpX,2)+pow(y,2)+pow(z+warpZ,2);
+            if (distanceSquared < radiusSquared && distanceSquared > radiusSquared-100) {
+				structure(x, y+yTranslate, z, "ruin_wall", "NONE");
+            }
+
+            if (randomInt(3) == 0 && 
+            distanceSquared < (radiusSquared-500) && 
+            distanceSquared > radiusSquared-600) {
+				structure(x, y+yTranslate, z, "taller_ruin_wall", "NONE");
+            }
+        }
+    }
+}
