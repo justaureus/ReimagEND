@@ -61,6 +61,7 @@ features:
     - OUTER_PILLARS
     - DRAGON_NEST
   buildings: []
+  global-preprocessors: []
 
 palette:
   - BLOCK:minecraft:end_stone: 319

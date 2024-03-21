@@ -57,6 +57,7 @@ features:
     - DEBRI_CIRCLET_MIDDLE
     - DEBRI_CIRCLET_OUTER
   buildings: []
+  global-preprocessors: []
 
 
 

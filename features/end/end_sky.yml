@@ -1,0 +1,43 @@
+id: END_SKY
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: SAMPLER
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        frequency: 0.5
+        salt: 3425
+      threshold: -0.4
+    - type: SAMPLER
+      sampler:
+        type: POSITIVE_WHITE_NOISE
+        salt: 4568
+      threshold: 0.1
+
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 252
+        max: 255
+      amount: 1
+      salt: 6858
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - BLOCK:minecraft:purple_stained_glass: 3
+    - BLOCK:minecraft:magenta_stained_glass: 3
+    - BLOCK:minecraft:black_stained_glass: 3
+    - BLOCK:minecraft:pearlescent_froglight: 1

@@ -19,5 +19,7 @@ colors:
 # downfall: 0.5
 
 features:
+  global-preprocessors:
+    - END_SKY
   buildings:
     - SHULKER_RUINS
