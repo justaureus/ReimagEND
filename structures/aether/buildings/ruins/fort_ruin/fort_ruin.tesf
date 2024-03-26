@@ -23,7 +23,7 @@ for (num x = -radius-warp; x < radius+warp; x = x + 1) {
 
             if (randomInt(3) == 0 && 
             distanceSquared < (radiusSquared-500) && 
-            distanceSquared > radiusSquared-600) {
+            distanceSquared > radiusSquared-550) {
 				structure(x, y+yTranslate, z, "taller_ruin_wall", "NONE");
             }
         }
