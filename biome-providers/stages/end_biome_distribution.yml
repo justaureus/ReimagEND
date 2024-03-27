@@ -15,8 +15,6 @@ stages:
       - END_HIGHLANDS: 2
       - END_MIDLANDS: 2
       - END_BARRENS: 2
-      - END_PLANES: 2
-      - END_SPIRES: 2
 
   - type: REPLACE
     sampler: 
@@ -28,6 +26,21 @@ stages:
         salt: 6836
         frequency: 1 / ${meta.yml:biome-distribution.ring2-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring2
+    to:
+      - END_PLANES: 3
+      - END_SPIRES: 2
+      - CHERUS_GROWTH: 2
+
+  - type: REPLACE
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: OPEN_SIMPLEX_2
+        salt: 6836
+        frequency: 1 / ${meta.yml:biome-distribution.ring3-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: ring3
     to:
       - SHATTERED_END: 4
       - SHATTERED_FOREST: 2
@@ -45,8 +58,8 @@ stages:
       sampler:
         type: OPEN_SIMPLEX_2
         salt: 6836
-        frequency: 1 / ${meta.yml:biome-distribution.ring3-biome-scale} / ${meta.yml:biome-distribution.global-scale}
-    from: ring3
+        frequency: 1 / ${meta.yml:biome-distribution.ring4-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: ring4
     to:
       - STYGIAN_BARRENS: 2
       - CRAGGY_END: 3 
@@ -63,8 +76,8 @@ stages:
       sampler:
         type: OPEN_SIMPLEX_2
         salt: 6836
-        frequency: 1 / ${meta.yml:biome-distribution.ring4-biome-scale} / ${meta.yml:biome-distribution.global-scale}
-    from: ring4
+        frequency: 1 / ${meta.yml:biome-distribution.ring5-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: ring5
     to:
       - MAUVE_POOLS: 4
       - MAUVE_FOREST: 5
@@ -81,8 +94,8 @@ stages:
         type: CELLULAR
         return: CellValue
         salt: 6836
-        frequency: 1 / ${meta.yml:biome-distribution.ring5-biome-scale} / ${meta.yml:biome-distribution.global-scale}
-    from: ring5
+        frequency: 1 / ${meta.yml:biome-distribution.ring6-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: ring6
     to:
       - END_BARRENS: 3
       - END_MIDLANDS: 2
@@ -90,8 +103,9 @@ stages:
       - END_MIDLANDS: 2
       - END_BARRENS: 3
 
-      - END_PLANES: 2
+      - END_PLANES: 3
       - END_SPIRES: 2
+      - CHERUS_GROWTH: 1
 
       - SHATTERED_END: 4
       - SHATTERED_FOREST: 2

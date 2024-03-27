@@ -1,0 +1,68 @@
+num radius = 4;
+num sideLength = 10;
+str setBlock = "minecraft:cherry_wood";
+
+num r = radius;
+for (num x = -r; x < r; x = x + 1) {
+    for (num y = -r; y < r; y = y + 1) {
+        for (num z = -r; z < r; z = z + 1) {
+            if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                block(x, y, z, setBlock, false);       
+            }
+
+            if ((y == -1 || y == 1) &&
+            (x == -3 || x == 3) &&
+            z == 0) {
+                block(x, y, z, "minecraft:stripped_cherry_wood", true);   
+            }
+
+            if ((y == -1 || y == 1) &&
+            (z == -3 || z == 3) &&
+            x == 0) {
+                block(x, y, z, "minecraft:stripped_cherry_wood", true);   
+            }
+
+            if (y == 0 &&
+            (z == -3 || z == 3) &&
+            (x == -1 || x == 1)) {
+                block(x, y, z, "minecraft:stripped_cherry_wood", true);   
+            }
+
+            if (y == 0 &&
+            (x == -3 || x == 3) &&
+            (z == -1 || z == 1)) {
+                block(x, y, z, "minecraft:stripped_cherry_wood", true);   
+            }
+
+            if ((y == 3 || y == -3) &&
+            x == 0 &&
+            (z == -1 || z == 1)) {
+                block(x, y, z, "minecraft:stripped_cherry_wood", true);   
+            }
+
+            if ((y == 3 || y == -3) &&
+            z == 0 &&
+            (x == -1 || x == 1)) {
+                block(x, y, z, "minecraft:stripped_cherry_wood", true);   
+            }
+
+            if ((y == 3 || y == -3) &&
+            z == 0 &&
+            x == 0) {
+                block(x, y, z, "minecraft:black_concrete_powder", true);   
+            }
+
+            if (y == 0 &&
+            (x == -3 || x == 3) &&
+            z == 0) {
+                block(x, y, z, "minecraft:black_concrete_powder", true);   
+            }
+
+            if (y == 0 &&
+            (z == -3 || z == 3) &&
+            x == 0) {
+                block(x, y, z, "minecraft:black_concrete_powder", true);   
+            }
+        }
+    }
+}

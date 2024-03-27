@@ -1,0 +1,14 @@
+id: CHERUS_GROWTH
+type: BIOME
+extends: [ END, EQ_END_MIDLANDS ]
+vanilla: minecraft:end_midlands
+color: $biomes/colors.yml:CHERUS_GROWTH
+
+palette:
+  - CHERRY_GROUND: 319
+
+features:
+  trees:
+    - CHERUS_TREES
+  preprocessors:
+    - CHERUS_VINES

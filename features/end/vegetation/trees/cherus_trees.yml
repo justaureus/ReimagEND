@@ -1,0 +1,38 @@
+id: CHERUS_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 14
+  padding: 17
+  salt: 4357
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 0
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:end_stone
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: cherus_tree

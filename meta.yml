@@ -50,6 +50,11 @@ biome-distribution:
 
   ring5-biome-scale: 500
   # Default: 500
+  ring5-width: 1000
+  # Default: 1000
+
+  ring6-biome-scale: 500
+  # Default: 500
 
   # Each controls the width and biome scale of each ring starting from the center
 

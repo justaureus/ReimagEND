@@ -1,0 +1,95 @@
+num height = 10+((1+randomInt(3))*5);
+num radius = 2;
+num sideLength = 10;
+num yTranslate = -3;
+
+str setBlock = "minecraft:cherry_wood";
+for (num h = 0; h < height; h = h + 1) {
+    num r = radius;
+    
+    for (num x = -r; x < r; x = x + 1) {
+        for (num y = -r; y < r; y = y + 1) {
+            for (num z = -r; z < r; z = z + 1) {
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                    block(x, h + y+yTranslate, z, setBlock, false);       
+                }
+            }
+        }
+    }
+    structure(0, height-1+yTranslate, 0,"cherus_tree_bulb", "NONE");
+}
+
+
+if (randomInt(2) == 0 && getBlock(sideLength-1, height+3, 0) == "minecraft:air") {
+    for (num h = 0; h < sideLength; h = h + 1) {
+    num r = radius;
+    
+        for (num x = -r; x < r; x = x + 1) {
+            for (num y = -r; y < r; y = y + 1) {
+                for (num z = -r; z < r; z = z + 1) {
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                        block(x + h, y+yTranslate + (height-1), z, setBlock, false);       
+                    }
+                }
+            }
+        }
+    }
+    structure(sideLength-1, height-1+yTranslate, 0,"cherus_tree_bulb", "NONE");
+    structure(sideLength-1, height-1+yTranslate, 0,"cherus_tree_branch", "NONE");
+}
+
+if (randomInt(2) == 0 && getBlock(-sideLength+1, height+3, 0) == "minecraft:air") {
+    for (num h = 0; h < sideLength; h = h + 1) {
+    num r = radius;
+    
+        for (num x = -r; x < r; x = x + 1) {
+            for (num y = -r; y < r; y = y + 1) {
+                for (num z = -r; z < r; z = z + 1) {
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                        block(x - h, y+yTranslate + (height-1), z, setBlock, false);       
+                    }
+                }
+            }
+        }
+    }
+    structure(-sideLength+1, height-1+yTranslate, 0,"cherus_tree_bulb", "NONE");
+    structure(-sideLength+1, height-1+yTranslate, 0,"cherus_tree_branch", "NONE");
+}
+
+if (randomInt(2) == 0  && getBlock(0, height+3, sideLength-1) == "minecraft:air") {
+    for (num h = 0; h < sideLength; h = h + 1) {
+    num r = radius;
+    
+        for (num x = -r; x < r; x = x + 1) {
+            for (num y = -r; y < r; y = y + 1) {
+                for (num z = -r; z < r; z = z + 1) {
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                        block(x, y+yTranslate + (height-1), z + h, setBlock, false);       
+                    }
+                }
+            }
+        }
+    }
+
+    structure(0, height-1+yTranslate, sideLength-1,"cherus_tree_bulb", "NONE");
+    structure(0, height-1+yTranslate, sideLength-1,"cherus_tree_branch", "NONE");
+}
+
+if (randomInt(2) == 0 && getBlock(0, height+3, -sideLength+1) == "minecraft:air") {
+    for (num h = 0; h < sideLength; h = h + 1) {
+    num r = radius;
+    
+        for (num x = -r; x < r; x = x + 1) {
+            for (num y = -r; y < r; y = y + 1) {
+                for (num z = -r; z < r; z = z + 1) {
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                        block(x, y+yTranslate + (height-1), z - h, setBlock, false);       
+                    }
+                }
+            }
+        }
+    }
+
+    structure(0, height-1+yTranslate, -sideLength+1,"cherus_tree_bulb", "NONE");
+    structure(0, height-1+yTranslate, -sideLength+1,"cherus_tree_branch", "NONE");
+}
