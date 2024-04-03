@@ -8,20 +8,18 @@ biomes:
       type: GAUSSIAN
   pipeline:
 
-    # End Only 
-    #source: $biome-providers/sources/end.yml:source
-
-    # Aether Only
-    #source: $biome-providers/sources/aether.yml:source
-
-    # Both End and Aether
+    # Dragon Island with Outer End
     source: $biome-providers/sources/reimagEND.yml:source
+
+    # All Aether Dimension
+    #source: $biome-providers/sources/aether.yml:source
     
     stages:
 
       # Distributes the outer end into different rings
       - << biome-providers/stages/ring_distribution.yml:stages
 
+      # AETHER POCKET STAGE - COMMENT OUT TO REMOVE THEIR GENERATION
       # Distributes aether pockets across certain rings of the outer end
       - << biome-providers/stages/aether_pockets.yml:stages 
 

@@ -1,9 +1,12 @@
 source:
   type: SAMPLER
   biomes:
-    - void: 3
-    - aether: 4
-    - aether_highlands: 1
+    - AETHER_CLOUD_SEA: 1
+    - aether-coasts: 2
+    - aether-lowlands: 3
+    - aether-midlands: 3
+    - aether-highlands: 2
+    - aether-mountains: 1
   sampler:
     dimensions: 2
     type: LINEAR
