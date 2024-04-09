@@ -8,7 +8,7 @@ biomes:
       type: GAUSSIAN
   pipeline:
 
-    # Dragon Island with Outer End
+    # Dragon Island with Outer End Rings
     source: $biome-providers/sources/reimagEND.yml:source
 
     # All Aether Dimension

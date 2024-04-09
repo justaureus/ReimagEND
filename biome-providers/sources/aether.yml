@@ -8,15 +8,7 @@ source:
     - aether-highlands: 2
     - aether-mountains: 1
   sampler:
-    dimensions: 2
-    type: LINEAR
-    min: -1
-    max: -0.65
-    sampler:
-      type: FBM
-      lacunarity: 3
-      gain: 0.4
-      octaves: 4
-      sampler:
-        type: CELLULAR
-        frequency: 1 / ${meta.yml:biome-distribution.aether-scale} / ${meta.yml:biome-distribution.global-scale}
+    type: CELLULAR
+    return: CellValue
+    frequency: 1 / ${meta.yml:biome-distribution.aether-region-scale} / ${meta.yml:biome-distribution.global-scale}
+    salt: 6579
