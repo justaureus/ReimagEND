@@ -5,7 +5,7 @@ if (getBlock(0,1,0) == "minecraft:air") fail;
 str setBlock = "";
 for (num i = 0; i < length; i = i + 1) {
     if (getBlock(0, -i, 0) != "minecraft:air") return;
-    setBlock = "minecraft:white_stained_glass";
+    setBlock = "minecraft:white_stained_glass_pane";
     
     block(0, -i, 0, setBlock, false);
 
