@@ -4,12 +4,13 @@ type: PALETTE
 
 layers:
   - materials: 
-    - minecraft:end_stone: 3
-    - minecraft:cherry_wood: 2
-    layers: 3
+    - minecraft:end_stone: 2
+    - minecraft:cherry_wood: 1
+    - minecraft:end_stone: 2
+    layers: 2
     sampler:
       type: DOMAIN_WARP
-      amplitude: 10
+      amplitude: 1
       warp:
         type: GAUSSIAN
       sampler:
@@ -17,8 +18,5 @@ layers:
         octaves: 2
         sampler:
           type: OPEN_SIMPLEX_2
-          frequency: 0.5
-          salt: 4356   
-  - materials: 
-    - minecraft:end_stone: 1
-    layers: 1
+          frequency: 0.04
+          salt: 3245

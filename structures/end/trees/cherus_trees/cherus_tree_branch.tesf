@@ -8,8 +8,8 @@ for (num h = 0; h < height; h = h + 1) {
     for (num x = -r; x < r; x = x + 1) {
         for (num y = -r; y < r; y = y + 1) {
             for (num z = -r; z < r; z = z + 1) {
-                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                    block(x, h + y, z, setBlock, false);       
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < height-3) {
+                    structure(x, h + y, z, "cherus_tree_spikes", "NONE");      
                 }
             }
         }
@@ -24,8 +24,8 @@ if (randomInt(2) == 0) {
         for (num x = -r; x < r; x = x + 1) {
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
-                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        block(x + h, y + (height-1), z, setBlock, false);       
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < sideLength-3) {
+                        structure(x + h, y + (height-1), z, "cherus_tree_spikes", "NONE");      
                     }
                 }
             }
@@ -41,7 +41,7 @@ if (randomInt(2) == 0) {
     //        for (num y = -r; y < r; y = y + 1) {
     //            for (num z = -r; z < r; z = z + 1) {
     //                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-    //                    block(x + (sideLength-1), h + y + height, z, setBlock, false);       
+    //                    structure(x + (sideLength-1), h + y + height, z, "cherus_tree_spikes", "NONE");      
     //                }
     //            }
     //        }
@@ -63,8 +63,8 @@ if (randomInt(2) == 0) {
         for (num x = -r; x < r; x = x + 1) {
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
-                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        block(x - h, y + (height-1), z, setBlock, false);       
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < sideLength-3) {
+                        structure(x - h, y + (height-1), z, "cherus_tree_spikes", "NONE");      
                     }
                 }
             }
@@ -79,7 +79,7 @@ if (randomInt(2) == 0) {
     //        for (num y = -r; y < r; y = y + 1) {
     //            for (num z = -r; z < r; z = z + 1) {
     //                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-    //                    block(x - (sideLength-1), h + y + height, z, setBlock, false);       
+    //                    structure(x - (sideLength-1), h + y + height, z, "cherus_tree_spikes", "NONE");      
     //                }
     //            }
     //        }
@@ -101,8 +101,8 @@ if (randomInt(2) == 0) {
         for (num x = -r; x < r; x = x + 1) {
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
-                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        block(x, y + (height-1), z + h, setBlock, false);       
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < sideLength-3) {
+                        structure(x, y + (height-1), z + h, "cherus_tree_spikes", "NONE");      
                     }
                 }
             }
@@ -118,7 +118,7 @@ if (randomInt(2) == 0) {
     //        for (num y = -r; y < r; y = y + 1) {
     //            for (num z = -r; z < r; z = z + 1) {
     //                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-    //                    block(x , h + y + height, z + (sideLength-1), setBlock, false);       
+    //                    structure(x , h + y + height, z + (sideLength-1), "cherus_tree_spikes", "NONE");      
     //                }
     //            }
     //        }
@@ -140,8 +140,8 @@ if (randomInt(2) == 0) {
         for (num x = -r; x < r; x = x + 1) {
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
-                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        block(x, y + (height-1), z - h, setBlock, false);       
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < sideLength-3) {
+                        structure(x, y + (height-1), z - h, "cherus_tree_spikes", "NONE");      
                     }
                 }
             }
@@ -157,7 +157,7 @@ if (randomInt(2) == 0) {
     //        for (num y = -r; y < r; y = y + 1) {
     //            for (num z = -r; z < r; z = z + 1) {
     //                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-    //                    block(x , h + y + height, z - (sideLength-1), setBlock, false);       
+    //                    structure(x , h + y + height, z - (sideLength-1), "cherus_tree_spikes", "NONE");      
     //                }
     //            }
     //        }

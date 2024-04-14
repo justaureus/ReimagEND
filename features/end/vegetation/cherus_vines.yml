@@ -1,4 +1,4 @@
-id: CHERUS_VINES
+id: CHERUS_VINE_SPIKES
 type: FEATURE
 
 variables: &variables
@@ -74,4 +74,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: BLOCK:minecraft:cherry_wood
+  structures: cherus_vine_spikes

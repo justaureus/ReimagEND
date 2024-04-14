@@ -11,4 +11,4 @@ features:
   trees:
     - CHERUS_TREES
   preprocessors:
-    - CHERUS_VINES
+    - CHERUS_VINE_SPIKES
