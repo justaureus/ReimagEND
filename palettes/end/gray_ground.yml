@@ -1,0 +1,28 @@
+id: GRAY_GROUND
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:end_stone: 35
+      - minecraft:gray_concrete: 4
+      - minecraft:cyan_terracotta: 2
+      - minecraft:pearlescent_froglight: 1
+      - minecraft:cyan_terracotta: 2
+      - minecraft:gray_concrete: 4
+      - minecraft:end_stone: 35
+    layers: 1
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.01
+          salt: 6579
+      
+  
+

@@ -5,8 +5,4 @@ vanilla: minecraft:end_barrens
 color: $biomes/colors.yml:END_SPIRES
 
 palette:
-  - BLOCK:minecraft:end_stone: 319
-
-features:
-  preprocessors:
-    - PEARLESCENT_CRACKS
+  - GRAY_GROUND: 319
