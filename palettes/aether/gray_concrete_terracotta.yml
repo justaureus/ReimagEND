@@ -1,0 +1,37 @@
+id: GRAY_CONCRETE_TERRACOTTA
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:cyan_terracotta: 3
+      - minecraft:gray_concrete: 2
+    layers: 8
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.04
+          salt: 5467
+  - materials: 
+    - minecraft:stone: 10
+    - minecraft:cobblestone: 5
+    - minecraft:mossy_cobblestone: 3
+    layers: 1
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: GAUSSIAN
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.2
+          salt: 293

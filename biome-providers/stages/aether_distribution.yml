@@ -36,6 +36,7 @@ stages:
       - AETHER_AZURE_MEADOWS: 1
       - AETHER_TENEBROUS_THICKET: 1
       - AETHER_DRIFTFALLS: 1
+      - AETHER_CRIMSIC_LANDSCAPES: 1
 
       aether-midlands:
       - AETHER_FROSTBITE_WOODS: 1
@@ -45,7 +46,7 @@ stages:
       aether-highlands:
       - AETHER_HONEY_HEIGHTS: 1
       - AETHER_ORCHARD_WOODLANDS: 1
-
+      
       aether-mountains:
       - AETHER_FRIGID_CLIFFS: 1
       - AETHER_PRISMATIC_RIDGES: 1
