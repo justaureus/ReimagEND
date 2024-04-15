@@ -30,6 +30,8 @@ stages:
       - END_PLANES: 3
       - END_SPIRES: 2
       - CHERUS_GROWTH: 2
+      - SHATTERED_END: 4
+      - SHATTERED_FOREST: 2
 
   - type: REPLACE
     sampler: 
@@ -42,8 +44,6 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring3-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring3
     to:
-      - SHATTERED_END: 4
-      - SHATTERED_FOREST: 2
       - JAGGED_END: 2
       - DARK_END: 5
       - AMETHYST_END: 3
