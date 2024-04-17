@@ -31,6 +31,7 @@ stages:
     default-from: aether-coasts
     default-to:
       - AETHER_INSIPID_COASTS: 1
+      - AETHER_MARBLE_COASTS: 1
     to: 
       aether-lowlands:
       - AETHER_AZURE_MEADOWS: 1
