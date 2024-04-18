@@ -39,6 +39,7 @@ stages:
     to:
       - VOID: 3
       - STARFIELD: 1
+      - VOID_AURORA: 1
       - GALAXY_FIELD: 1
       - ASTEROID_FIELD: 1   
       - VOID_SEA: 1

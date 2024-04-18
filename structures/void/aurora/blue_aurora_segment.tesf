@@ -1,0 +1,24 @@
+num length = 15;
+num radius = 2;
+
+str setBlock = "minecraft:yellow_stained_glass";
+
+
+
+for(num l = length; l > 3; l = l - 1) {
+
+    num r = radius;
+
+    for(num x = -r; x <= r; x = x + 1) {
+        for(num y = -r; y <= r; y = y + 1) {
+            for(num z = -r; z <= r; z = z + 1) {
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r/2,2)) {
+                    block(x, -l + y - radius, z, setBlock, true);
+                }
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                    block(x, -l + y - radius, z, "minecraft:light[level="+l+"]", false);
+                }
+            }
+        }
+    }
+}
