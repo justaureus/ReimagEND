@@ -1,0 +1,30 @@
+num length = 20;
+num width = 8;
+num wallWidth = 2;
+
+str setBlock = "ruin_block";
+
+num random = randomInt(4);
+for (num y = -19; y < length; y = y + 1) {
+    for (num x = -width-wallWidth; x <= width+wallWidth; x = x + 1) {
+        for (num z = -width-wallWidth; z <= width+wallWidth; z = z + 1) {
+            if (y < 1) block(x, y, z, "minecraft:air", true);
+            
+            if ((x > -3 && x < 3) ||
+            (z > -3 && z < 3) && y == 0) structure(x, y, z, setBlock, "NONE");
+
+            if ((x > 2 && x < 6) &&
+            (z > 2 && z < 6)) {
+                structure(x, y, z, "ruin_block", "NONE");
+                structure(-x, y, z, "ruin_block", "NONE");
+                structure(x, y, -z, "ruin_block", "NONE");
+                structure(-x, y, -z, "ruin_block", "NONE");
+            }
+
+            // next floor
+            if (y == 0) structure(x, length, z, setBlock, "NONE");    
+        }
+    }
+}
+
+structure(0, 1, 0, "place_random_object", "NONE");

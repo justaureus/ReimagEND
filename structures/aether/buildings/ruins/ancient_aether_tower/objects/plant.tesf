@@ -1,0 +1,22 @@
+num length = 2+randomInt(3);
+ 
+block(0, 0, 0, "minecraft:moss_block", false);
+block(0, 1, 0, "minecraft:azalea", false);
+
+for (num y = 2; y < length; y = y + 1) {
+    if (y < length) {
+        block(0, y, 0, "minecraft:moss_block", false);
+    }
+}  
+
+structure(1, 0, 0, "ruin_block", "NONE");
+structure(-1, 0, 0, "ruin_block", "NONE");
+structure(1, 0, 1, "ruin_block", "NONE");
+structure(0, 0, -1, "ruin_block", "NONE");
+
+structure(1, 0, 1, "ruin_block", "NONE");
+structure(-1, 0, 1, "ruin_block", "NONE");
+structure(1, 0, -1, "ruin_block", "NONE");
+structure(-1, 0, -1, "ruin_block", "NONE");
+
+    

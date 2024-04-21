@@ -1,0 +1,141 @@
+num length = 18;
+num width = 3;
+num height = 5;
+
+num maxLength = length;
+
+num bridgeHeight = 1;
+
+num supportLength = length;
+
+if (randomInt(6) == 0) {
+    length = 1+randomInt(length);
+    supportLength = 5+randomInt(length);
+}
+
+// east
+if (getBlock(1,0,0) == "minecraft:infested_mossy_stone_bricks") {
+    for (num x = 0; x < maxLength; x = x + 1) {
+        for (num y = -bridgeHeight; y < height; y = y + 1) {
+            for (num z = -width/2; z < width/2; z = z + 1) {
+                if (y < bridgeHeight && x < length) {
+                    structure(x, y, z, "ruin_block", "NONE");
+                }
+                
+                if (x < 5 && y > 0) {
+                    block(x, y, z, "minecraft:air", true);
+                }
+
+                if (x > 5 && x < 18 && y > 0) {
+                    block(x, y, z, "minecraft:air", true);
+                }
+
+                if (x < 9 && x < supportLength) {
+                    structure(x, x-9, z, "ruin_block", "NONE");
+                    structure(x, x-10, z, "ruin_block", "NONE");
+                }
+
+                //if ((x > 11 && x < supportLength)) {
+                //    structure(x, -x+9, z, "ruin_block", "NONE");
+                //    structure(x, -x+10, z, "ruin_block", "NONE");
+                //}
+            }
+        }
+    }
+}
+
+
+// west
+if (getBlock(-1,0,0) == "minecraft:infested_mossy_stone_bricks") {
+    for (num x = 0; x < maxLength; x = x + 1) {
+        for (num y = -bridgeHeight; y < height; y = y + 1) {
+            for (num z = -width/2; z < width/2; z = z + 1) {
+                if (y < bridgeHeight && x < length) {
+                    structure(-x, y, z, "ruin_block", "NONE");
+                }
+                
+                if (x < 5 && y > 0) {
+                    block(-x, y, z, "minecraft:air", true);
+                }
+
+                if (x > 5 && x < 18 && y > 0) {
+                    block(-x, y, z, "minecraft:air", true);
+                }
+
+                if (x < 9 && x < supportLength) {
+                    structure(-x, x-9, z, "ruin_block", "NONE");
+                    structure(-x, x-10, z, "ruin_block", "NONE");
+                }
+
+                //if ((x > 9 && x < length)) {
+                //    structure(-x, -x+9, z, "ruin_block", "NONE");
+                //    structure(-x, -x+8, z, "ruin_block", "NONE");
+                //}
+            }
+        }
+    }
+}
+
+//north
+if (getBlock(0,0,-1) == "minecraft:infested_mossy_stone_bricks") {
+    for (num z = 0; z < maxLength; z = z + 1) {
+        for (num y = -bridgeHeight; y < height; y = y + 1) {
+            for (num x = -width/2; x < width/2; x = x + 1) {
+                if (y < bridgeHeight && z < length) {
+                    structure(x, y, -z, "ruin_block", "NONE");
+                }
+                
+                if (z < 5 && y > 0) {
+                    block(x, y, -z, "minecraft:air", true);
+                }
+
+                if (z > 5 && z < 18 && y > 0) {
+                    block(x, y, -z, "minecraft:air", true);
+                }
+
+                if (z < 9 && x < supportLength) {
+                    structure(x, z-9, -z, "ruin_block", "NONE");
+                    structure(x, z-10, -z, "ruin_block", "NONE");
+                }
+
+                //if ((z > 9 && z < length)) {
+                //    structure(x, -z+9, -z, "ruin_block", "NONE");
+                //    structure(x, -z+8, -z, "ruin_block", "NONE");
+                //}
+            }
+        }
+    }
+}
+
+//south
+if (getBlock(0,0,1) == "minecraft:infested_mossy_stone_bricks") {
+    for (num z = 0; z < maxLength; z = z + 1) {
+        for (num y = -bridgeHeight; y < height; y = y + 1) {
+            for (num x = -width/2; x < width/2; x = x + 1) {
+                if (y < bridgeHeight && z < length) {
+                    structure(x, y, z, "ruin_block", "NONE");
+                }
+                
+                if (z < 5 && y > 0) {
+                    block(x, y, z, "minecraft:air", true);
+                }
+
+                if (z > 5 && z < 18 && y > 0) {
+                    block(x, y, z, "minecraft:air", true);
+                }
+
+                if (z < 9 && x < supportLength) {
+                    structure(x, z-9, z, "ruin_block", "NONE");
+                    structure(x, z-10, z, "ruin_block", "NONE");
+                }
+
+                //if ((z > 9 && z < length)) {
+                //    structure(x, -z+9, z, "ruin_block", "NONE");
+                //    structure(x, -z+8, z, "ruin_block", "NONE");
+                //}
+            }
+        }
+    }
+}
+
+

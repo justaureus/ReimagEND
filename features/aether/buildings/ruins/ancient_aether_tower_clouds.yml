@@ -1,0 +1,22 @@
+id: ANCIENT_AETHER_TOWER_CLOUDS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 3
+  padding: 4
+  salt: 6578
+
+locator:
+  type: RANDOM
+  height:
+    min: 20
+    max: 25
+  amount: 2
+        
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - cloud: 1
+    - translucent_cloud: 1

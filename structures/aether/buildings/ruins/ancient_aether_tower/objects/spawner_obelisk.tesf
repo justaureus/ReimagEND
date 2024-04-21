@@ -1,0 +1,36 @@
+num length = 5+randomInt(3);
+
+for (num y = 0; y < length; y = y + 1) {
+    if (y < length-1) {
+        structure(0, y, 0, "ruin_block", "NONE");
+        structure(1, y, 0, "ruin_block", "NONE");
+        structure(0, y, 1, "ruin_block", "NONE");
+        structure(-1, y, 0, "ruin_block", "NONE");
+        structure(0, y, -1, "ruin_block", "NONE");
+    }
+    
+
+    block(1, y, 1, "minecraft:iron_bars[north=true,west=true]", false);
+    block(1, y, -1, "minecraft:iron_bars[west=true,south= true]", false);
+    block(-1, y, 1, "minecraft:iron_bars[north=true,east= true]", false);
+    block(-1, y, -1, "minecraft:iron_bars[east=true,south= true]", false);
+}   
+
+block(0, length-1, 0, "minecraft:spawner", false);
+if (randomInt(5) == 0) {
+    state(0, length-1, 0, "type=SILVERFISH");
+} else { state(0, length-1, 0, "type=VEX"); }
+
+
+block(1, length-1, 0, "minecraft:iron_bars[north=true,south= true]", false);
+block(0, length-1, 1, "minecraft:iron_bars[east=true,west= true]", false);
+block(-1, length-1, 0, "minecraft:iron_bars[north=true,south= true]", false);
+block(0, length-1, -1, "minecraft:iron_bars[east=true,west= true]", false);
+
+for (num x = -1; x < 2; x = x + 1) {
+    structure(x, length, 0, "ruin_block", "NONE");
+    structure(x, length, 1, "ruin_block", "NONE");
+    structure(x, length, -1, "ruin_block", "NONE");
+}
+    
+    

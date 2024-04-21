@@ -1,0 +1,20 @@
+id: ANCIENT_AETHER_TOWERS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 1
+  padding: 40
+  salt: 6577
+
+locator:
+  type: RANDOM
+  height: &range
+    min: 20
+    max: 21
+  amount: 1
+        
+structures:
+  distribution:
+    type: CONSTANT
+  structures: ancient_aether_tower

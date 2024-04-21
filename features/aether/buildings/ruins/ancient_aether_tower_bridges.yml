@@ -1,0 +1,28 @@
+id: ANCIENT_AETHER_TOWER_BRIDGES
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 255
+      pattern:
+        type: MATCH
+        block: minecraft:infested_stone_bricks
+        offset: 0
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:infested_mossy_stone_bricks
+        offset: 0
+        
+structures:
+  distribution:
+    type: CONSTANT
+  structures: ancient_aether_tower_bridge

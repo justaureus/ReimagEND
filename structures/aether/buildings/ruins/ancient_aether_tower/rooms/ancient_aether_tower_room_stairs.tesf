@@ -1,0 +1,49 @@
+num length = 20;
+num width = 8;
+num wallWidth = 2;
+
+str setBlock = "ruin_block";
+
+for (num y = 0; y < length; y = y + 1) {
+    for (num x = -width-wallWidth; x <= width+wallWidth; x = x + 1) {
+        for (num z = -width-wallWidth; z <= width+wallWidth; z = z + 1) {
+            if ((x > 2 && x < 6) &&
+            (z > 2 && z < 6)) {
+                structure(x, y, z, "ruin_block", "NONE");
+                structure(-x, y, z, "ruin_block", "NONE");
+                structure(x, y, -z, "ruin_block", "NONE");
+                structure(-x, y, -z, "ruin_block", "NONE");
+            }        
+
+            // second floor
+            if (y == 9 && 
+            z > 5) structure(x, y, z, setBlock, "NONE");
+
+            // 1st floor east stairs
+            if (y > 0 && y < 6 && x > 5
+            && z < 10 && z > -1) structure(x, z, z-5, setBlock, "NONE");
+
+            // 1st floor east stairs floor
+            if (y == 9 && 
+            x > 5 && z > 4) structure(x, y, z, setBlock, "NONE");
+
+            // 1st floor west stairs
+            if (y > 0 && y < 6 && x > 5
+            && z < 10 && z > -1) structure(-x, z, z-5, setBlock, "NONE");
+
+            // 1st floor east stairs floor
+            if (y == 9 && 
+            x > 5 && z > 4) structure(-x, y, z, setBlock, "NONE");
+
+            // 2nd floor middle stairs
+            if (y > 0 && y < 6 && x > -3 && x < 3
+            && z < 10 && z > -1) structure(x, z+10, -z+5, setBlock, "NONE");
+
+            // next floor
+            if (!(x > -3 && x < 3 &&
+            z < 3 && z > -5) && y == 0) structure(x, length, z, setBlock, "NONE");
+        }
+    }
+}
+
+structure(0, 1, 0, "place_random_object", "NONE");

@@ -1,0 +1,20 @@
+id: AETHER_ANCIENT_AETHER
+type: BIOME
+extends: [ AETHER, VOID ]
+color: $biomes/colors.yml:AETHER_ANCIENT_AETHER
+vanilla: minecraft:the_end
+
+tags:
+  - ANCIENT_AETHER
+
+palette:
+  - GRASS: 319
+ 
+features:
+  buildings:
+    - ANCIENT_AETHER_TOWERS
+  landforms:
+    - ANCIENT_AETHER_TOWER_CLOUDS
+  postprocessors:
+    - ANCIENT_AETHER_TOWER_BRIDGES
+

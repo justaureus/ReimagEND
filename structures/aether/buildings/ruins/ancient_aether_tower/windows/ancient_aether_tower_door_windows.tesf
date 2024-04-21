@@ -1,0 +1,59 @@
+num length = 12;
+num width = 10;
+num wallWidth = 3;
+
+str setBlock = "ruin_block";
+
+for (num y = 0; y < length; y = y + 1) {
+    for (num x = -width-wallWidth; x <= width+wallWidth; x = x + 1) {
+        for (num z = -width-wallWidth; z <= width+wallWidth; z = z + 1) {
+
+                //south
+                if (y > 5 && y < length &&
+                z > 10 && x < 2 && x > -2) {
+                    block(x, y, z, "minecraft:air", true);
+                }
+
+                if (y > 5 && y < (length-1) &&
+                z > 10 && (x == 2 || x == -2)) {
+                    block(x, y, z, "minecraft:air", true);
+                }
+                
+                //north
+                if (y > 5 && y < length &&
+                z > 10 && x < 2 && x > -2) {
+                    block(x, y, -z, "minecraft:air", true);
+                }
+
+                if (y > 5 && y < (length-1) &&
+                z > 10 && (x == 2 || x == -2)) {
+                    block(x, y, -z, "minecraft:air", true);
+                }
+                
+
+
+                //east
+                if (y > 5 && y < length &&
+                x > 10 && z < 2 && z > -2) {
+                    block(x, y, z, "minecraft:air", true);
+                }
+
+                if (y > 5 && y < (length-1) &&
+                x > 10 && (z == 2 || z == -2)) {
+                    block(x, y, z, "minecraft:air", true);
+                }
+                
+                //west
+                if (y > 5 && y < length &&
+                x > 10 && z < 2 && z > -2) {
+                    block(-x, y, z, "minecraft:air", true);
+                }
+
+                if (y > 5 && y < (length-1) &&
+                x > 10 && (z == 2 || z == -2)) {
+                    block(-x, y, z, "minecraft:air", true);
+            }
+        }
+    }
+}
+

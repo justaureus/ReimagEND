@@ -1,0 +1,46 @@
+num length = 20;
+num width = 8;
+num wallWidth = 2;
+
+str setBlock = "ruin_block";
+
+num random = randomInt(4);
+for (num y = 0; y < length; y = y + 1) {
+    for (num x = -width-wallWidth; x <= width+wallWidth; x = x + 1) {
+        for (num z = -width-wallWidth; z <= width+wallWidth; z = z + 1) {
+            if ((x > 2 && x < 6) &&
+            (z > 2 && z < 6)) {
+                structure(x, y, z, "ruin_block", "NONE");
+                structure(-x, y, z, "ruin_block", "NONE");
+                structure(x, y, -z, "ruin_block", "NONE");
+                structure(-x, y, -z, "ruin_block", "NONE");
+            }    
+
+            // next floor
+            if (y == 0) structure(x, length, z, setBlock, "NONE");    
+
+            
+            
+            if (random == 1) {
+                // hole in center
+                if (!(x > -3 && x < 3 &&
+                z < 3 && z > -3)) structure(x, 9, z, setBlock, "NONE");
+            } else if (random == 2) {
+                // only center
+                if (x > -6 && x < 6 &&
+                z < 6 && z > -6) structure(x, 9, z, setBlock, "NONE");
+
+                if (y == 10 && x == 0 && z == 0) structure(x, y, z, "place_random_object", "NONE");
+            } else if (random == 3) {
+                // crossbeams
+                if ((x > -6 && x < -2) ||
+                (x < 6 && x > 2) ||
+                (z > -6 && z < -2) ||
+                (z < 6 && z > 2)) structure(x, 9, z, setBlock, "NONE");
+            }
+        }
+    }
+}
+
+structure(0, 1, 0, "place_random_object", "NONE");
+if (randomInt(5) == 0) structure(0, 0, 0, "ancient_aether_tower_door_windows", "NONE");

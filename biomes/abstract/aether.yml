@@ -6,6 +6,7 @@ vanilla: minecraft:windswept_hills
 
 tags:
   - NOT_VOID_SEA
+  - AETHER
 
 # Overworld Atmosphere
 colors:

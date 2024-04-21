@@ -5,3 +5,9 @@ stages:
     replace: VOID_SEA
     from: NOT_VOID_SEA
     to: VOID_SEA_BORDER
+  - type: BORDER
+    sampler:
+      type: CONSTANT
+    replace: ANCIENT_AETHER
+    from: AETHER
+    to: AETHER_CLOUD_SEA

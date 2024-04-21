@@ -1,0 +1,79 @@
+num length = 140+randomInt(80);
+
+num width = 10;
+num wallWidth = 2;
+num spacing = 20;
+
+num bridgeChance = 3;
+num roomPool = 6;
+
+str setBlock = "ruin_block";
+
+num random = 0;
+for (num y = 0; y < length; y = y + 1) {
+    for (num x = -width-wallWidth; x <= width+wallWidth; x = x + 1) {
+        for (num z = -width-wallWidth; z <= width+wallWidth; z = z + 1) {
+            if ((z > width || z < -width) ||
+            (x > width || x < -width)) {
+                structure(x, y, z, setBlock, "NONE");
+            }
+
+            // floor
+            if (y == spacing) structure(x, y, z, setBlock, "NONE");
+
+            random = randomInt(roomPool);
+
+            if (y < (spacing*2) && (random == 3 || random == 5)) random = 0;
+            
+            // room placement
+            if (y % spacing == 0 && x == 0 && z == 0 && y < length-spacing) {
+
+                if (random == 0) structure(x, y, z, "ancient_aether_tower_room_pillars", "NONE", "CW_90", "CCW_90", "CW_180");
+                if (random == 1) structure(x, y, z, "ancient_aether_tower_room_stairs", "NONE", "CW_90", "CCW_90", "CW_180");
+                if (random == 2) structure(x, y, z, "ancient_aether_tower_room_tall_halls", "NONE", "CW_90", "CCW_90", "CW_180");
+
+                if (random == 3) structure(x, y, z, "ancient_aether_tower_room_walkways", "NONE", "CW_90", "CCW_90", "CW_180");
+                if (random == 4) structure(x, y, z, "ancient_aether_tower_room_pillars_2", "NONE", "CW_90", "CCW_90", "CW_180");
+                if (random == 5) structure(x, y, z, "ancient_aether_tower_room_walkways_2", "NONE", "CW_90", "CCW_90", "CW_180");
+            }
+
+            
+            if (x == 0 && z == 0 && y % spacing == 0 && y < (length-spacing) && y > spacing) {
+                structure(x, y-spacing, x, "ancient_aether_tower_door_windows", "NONE");
+            }
+            
+        }
+    }
+
+    if (y % spacing == 0) {
+
+        //south
+        if (randomInt(bridgeChance) == 0) {
+            block(width+1, y, 0, "minecraft:infested_stone_bricks", true);
+            block(width+2, y, 0, "minecraft:infested_mossy_stone_bricks", true);
+        }
+        
+        //north
+        if (randomInt(bridgeChance) == 0) {
+        block(-width-1, y, 0, "minecraft:infested_stone_bricks", true);
+        block(-width-2, y, 0, "minecraft:infested_mossy_stone_bricks", true);
+        }
+
+        //east
+        if (randomInt(bridgeChance) == 0) {
+            block(0, y, width+1, "minecraft:infested_stone_bricks", true);
+            block(0, y, width+2, "minecraft:infested_mossy_stone_bricks", true);
+        }
+
+        //west
+        if (randomInt(bridgeChance) == 0) {
+            block(0, y, -width-1, "minecraft:infested_stone_bricks", true);
+            block(0, y, -width-2, "minecraft:infested_mossy_stone_bricks", true);
+        }
+    }
+    
+    wallWidth = 2;
+    wallWidth = (1+wallWidth) - randomInt(3);
+}
+
+

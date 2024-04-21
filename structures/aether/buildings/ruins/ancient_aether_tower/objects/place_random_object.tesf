@@ -1,0 +1,7 @@
+num random = randomInt(5);
+
+if (getBlock(0,-1,0) == "minecraft:air") fail;
+if (random == 3) structure(0,0,0,"spawner_obelisk","NONE");
+if (random == 4) structure(0,0,0,"plant","NONE");
+    
+    

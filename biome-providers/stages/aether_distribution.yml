@@ -7,6 +7,21 @@ stages:
       sampler:
         type: CELLULAR
         return: CellValue
+        salt: 5468
+        frequency: 1 / ${meta.yml:biome-distribution.aether-region-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: aether
+    to:
+      - aether: 10
+      - AETHER_ANCIENT_AETHER: 1
+
+  - type: REPLACE
+    sampler: 
+      dimensions: 2
+      type: FBM
+      octaves: 2
+      sampler:
+        type: CELLULAR
+        return: CellValue
         salt: 6836
         frequency: 1 / ${meta.yml:biome-distribution.aether-region-scale} / ${meta.yml:biome-distribution.global-scale}
     from: aether
