@@ -28,13 +28,13 @@ for (num y = 0; y < length; y = y + 1) {
             // room placement
             if (y % spacing == 0 && x == 0 && z == 0 && y < length-spacing) {
 
-                if (random == 0) structure(x, y, z, "ancient_aether_tower_room_pillars", "NONE", "CW_90", "CCW_90", "CW_180");
+                if (random == 0) structure(x, y, z, "ancient_aether_tower_room_pillars", "NONE");
                 if (random == 1) structure(x, y, z, "ancient_aether_tower_room_stairs", "NONE", "CW_90", "CCW_90", "CW_180");
-                if (random == 2) structure(x, y, z, "ancient_aether_tower_room_tall_halls", "NONE", "CW_90", "CCW_90", "CW_180");
+                if (random == 2) structure(x, y, z, "ancient_aether_tower_room_tall_halls", "NONE");
 
-                if (random == 3) structure(x, y, z, "ancient_aether_tower_room_walkways", "NONE", "CW_90", "CCW_90", "CW_180");
-                if (random == 4) structure(x, y, z, "ancient_aether_tower_room_pillars_2", "NONE", "CW_90", "CCW_90", "CW_180");
-                if (random == 5) structure(x, y, z, "ancient_aether_tower_room_walkways_2", "NONE", "CW_90", "CCW_90", "CW_180");
+                if (random == 3) structure(x, y, z, "ancient_aether_tower_room_walkways", "NONE");
+                if (random == 4) structure(x, y, z, "ancient_aether_tower_room_pillars_2", "NONE");
+                if (random == 5) structure(x, y, z, "ancient_aether_tower_room_walkways_2", "NONE");
             }
 
             
