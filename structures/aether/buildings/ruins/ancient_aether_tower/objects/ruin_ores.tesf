@@ -1,0 +1,23 @@
+
+num diamondWeight = 5;
+num emeraldWeight = 10;
+num redstoneWeight = 15;
+num goldWeight = 20;
+num ironWeight = 30;
+num coalWeight = 40;
+
+num random = randomInt(diamondWeight+emeraldWeight+redstoneWeight+goldWeight+ironWeight+coalWeight);
+
+if (random < diamondWeight) {
+    block(0,0,0,"minecraft:diamond_ore");
+} else if (random < emeraldWeight) {
+    block(0,0,0,"minecraft:emerald_ore");
+} else if (random <= redstoneWeight) {
+    block(0,0,0,"minecraft:redstone_ore");
+} else if (random <= goldWeight) {
+    block(0,0,0,"minecraft:gold_ore");
+} else if (random <= ironWeight) {
+    block(0,0,0,"minecraft:iron_ore");
+} else {
+    block(0,0,0,"minecraft:coal_ore");
+}
