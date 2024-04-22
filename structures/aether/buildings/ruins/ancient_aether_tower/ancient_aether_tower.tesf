@@ -39,7 +39,9 @@ for (num y = 0; y < length; y = y + 1) {
 
             
             if (x == 0 && z == 0 && y % spacing == 0 && y < (length-spacing) && y > spacing) {
+                if (randomInt(5) == 0) {
                 structure(x, y-spacing, x, "ancient_aether_tower_door_windows", "NONE");
+                }
             }
             
         }
