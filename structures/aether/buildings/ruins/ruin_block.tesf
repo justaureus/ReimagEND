@@ -1,19 +1,60 @@
-num random = randomInt(5);
+num blockRandom = randomInt(9);
 
-str setBlock = " ";
+str face = "north";
+str half = "bottom";
+str shape = "straight";
+
+num random = randomInt(4);
 if (random == 0) {
-    setBlock = "minecraft:stone_bricks";
+    face = "north";
 } else if (random == 1) {
-    setBlock = "minecraft:mossy_stone_bricks";
+    face = "east";
 } else if (random == 2) {
-    setBlock = "minecraft:cracked_stone_bricks";
+    face = "south";
 } else if (random == 3) {
-    setBlock = "minecraft:chiseled_stone_bricks";
+    face = "west";
+}
+
+if (randomInt(2) == 0) {
+    half = "bottom";
+} else { half = "top"; }
+
+if (randomInt(2) == 0) {
+    half = "bottom";
+} else { half = "top"; }
+
+random = randomInt(5);
+if (random == 0) {
+    shape = "straight";
+} else if (random == 1) {
+    shape = "inner_left";
+} else if (random == 2) {
+    shape = "inner_right";
+} else if (random == 3) {
+    shape = "outer_left";
 } else if (random == 4) {
+    shape = "outer_right";
+}
+
+str setBlock = "minecraft:stone_bricks";
+if (blockRandom == 0) {
+    setBlock = "minecraft:stone_bricks";
+} else if (blockRandom == 1) {
+    setBlock = "minecraft:mossy_stone_bricks";
+} else if (blockRandom == 2) {
+    setBlock = "minecraft:cracked_stone_bricks";
+} else if (blockRandom == 3) {
+    setBlock = "minecraft:chiseled_stone_bricks";
+} else if (blockRandom == 4) {
+    setBlock = "minecraft:stone_brick_stairs[facing="+face+",half="+half+",shape="+shape+"]";
+} else if (blockRandom == 5) {
+    setBlock = "minecraft:mossy_stone_brick_stairs[facing="+face+",half="+half+",shape="+shape+"]";
+} else if (blockRandom == 6) {
+    setBlock = "minecraft:stone_brick_slab[type="+half+"]";
+} else if (blockRandom == 7) {
+    setBlock = "minecraft:mossy_stone_brick_slab[type="+half+"]";
+} else if (blockRandom == 8) {
     setBlock = "minecraft:air";
 }
 
 block(0,0,0,setBlock);
-
-
-
