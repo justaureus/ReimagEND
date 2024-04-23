@@ -32,4 +32,4 @@ stages:
       - aether-coasts: 16
       - AETHER_CLOUD_SEA: 16
       - STARFIELD: 32
-      - ring5: 32
+      - ring6: 32
