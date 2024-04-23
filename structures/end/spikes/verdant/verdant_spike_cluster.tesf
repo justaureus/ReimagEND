@@ -1,0 +1,6 @@
+// obsidian spike cluster for jagged_end
+
+num spikes = 3+randomInt(10);
+for (num i = 0; i < spikes; i = i + 1) {
+    structure(0,0,0,"verdant_spike","NONE");
+}

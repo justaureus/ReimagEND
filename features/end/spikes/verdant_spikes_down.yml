@@ -1,0 +1,46 @@
+id: VERDANT_SPIKES_DOWN
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 13
+  padding: 17
+  salt: 6579
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 319
+      pattern:
+        type: MATCH_SET
+        blocks: $features/meta.yml:end-plantable-blocks
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: -5
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/meta.yml:end-plantable-blocks
+        offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures:
+    - verdant_spike_down: 4
+    - verdant_spike_cluster_down: 1
+  

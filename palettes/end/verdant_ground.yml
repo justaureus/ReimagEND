@@ -5,7 +5,7 @@ layers:
   - materials:
       - minecraft:lime_concrete_powder: 4
       - minecraft:green_concrete_powder: 1
-      - minecraft:end_stone: 1
+      - minecraft:end_stone: 2
     layers: 1
     sampler: &transitionSampler
       type: WHITE_NOISE
