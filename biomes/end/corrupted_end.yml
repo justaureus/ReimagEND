@@ -1,6 +1,6 @@
 id: CORRUPTED_END
 type: BIOME
-extends: [ END, EQ_CRACKS ]
+extends: [ END, EQ_ROCKY ]
 vanilla: minecraft:end_barrens
 color: $biomes/colors.yml:CORRUPTED_END
 
