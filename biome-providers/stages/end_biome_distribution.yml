@@ -10,11 +10,14 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring1-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring1
     to:
-      - END_BARRENS: 2
-      - END_MIDLANDS: 2
-      - END_HIGHLANDS: 2
-      - END_MIDLANDS: 2
-      - END_BARRENS: 2
+      - END_BARRENS: 3
+      - END_MIDLANDS: 3
+      - END_HIGHLANDS: 3
+      - END_MIDLANDS: 3
+      - END_BARRENS: 3
+      - END_PLANES: 2
+      - END_WEBS: 2
+      - END_NOODLES: 2
 
   - type: REPLACE
     sampler: 
@@ -27,11 +30,11 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring2-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring2
     to:
-      - END_PLANES: 3
       - END_SPIRES: 2
-      - CHERUS_GROWTH: 2
-      - SHATTERED_END: 4
+      - CRAGGY_END: 3 
+      - SHATTERED_END: 3
       - SHATTERED_FOREST: 2
+      
 
   - type: REPLACE
     sampler: 
@@ -62,9 +65,8 @@ stages:
     from: ring4
     to:
       - STYGIAN_BARRENS: 2
-      - CRAGGY_END: 3 
+      - CHERUS_GROWTH: 2
       - CHORUVE_FOREST: 3
-      - CHORAL_DEADLANDS: 2
       - PEARLESCENT_END: 2 
       - IVORY_EMPYREAN: 2 
 
@@ -84,6 +86,7 @@ stages:
       - WARPED_FOREST: 2
       - WARPED_GROVE: 3
       - FLAXEN_FOREST: 4  
+      - CHORAL_DEADLANDS: 2
       
   - type: REPLACE
     sampler: 
