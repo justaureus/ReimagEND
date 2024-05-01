@@ -26,10 +26,10 @@ distribution-map: &distribution-map
 stages:
   - type: REPLACE
     sampler: *distribution-map
-    from: ring6
+    from: frontier
     to:
       - aether: 32
       - aether-coasts: 16
       - AETHER_CLOUD_SEA: 16
       - STARFIELD: 32
-      - ring6: 32
+      - frontier: 32

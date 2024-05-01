@@ -94,8 +94,8 @@ stages:
         type: CELLULAR
         return: CellValue
         salt: 6836
-        frequency: 1 / ${meta.yml:biome-distribution.ring6-biome-scale} / ${meta.yml:biome-distribution.global-scale}
-    from: ring6
+        frequency: 1 / ${meta.yml:biome-distribution.frontier-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+    from: frontier
     to:
       - END_BARRENS: 3
       - END_MIDLANDS: 2
@@ -127,3 +127,5 @@ stages:
       - FLAXEN_FOREST: 4
 
       - VERDANT_END: 4
+      - END_WEBS: 4
+      - END_NOODLES: 4

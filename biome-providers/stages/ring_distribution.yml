@@ -116,7 +116,7 @@ stages:
           frequency: 0.1
     from: ring5
     to:
-      - ring6: 1
+      - frontier: 1
       - ring5: 1
 
   

@@ -1,0 +1,8 @@
+id: END_WEBS
+type: BIOME
+extends: [ END, EQ_WEBS ]
+vanilla: minecraft:end_barrens
+color: $biomes/colors.yml:END_WEBS
+
+palette:
+  - BLOCK:minecraft:end_stone: 319
