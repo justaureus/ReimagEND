@@ -13,7 +13,7 @@ locator:
     - type: TOP
       range: &range
         min: 75
-        max: 230
+        max: 175
     - type: PATTERN
       range: *range
       pattern:
