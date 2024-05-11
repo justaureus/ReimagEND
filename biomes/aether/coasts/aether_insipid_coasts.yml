@@ -10,7 +10,6 @@ palette:
 features:
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
-    - CLOUDS
     - CLOUD_SEA
   trees:
     - OAK_BUSHES

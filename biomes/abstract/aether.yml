@@ -35,11 +35,12 @@ features:
     - CLOUD_LAYER_TOP
     - CLOUD_LAYER_MIDDLE
     - CLOUD_LAYER_BOTTOM
+    - CLOUDS
+    - CLOUD_RIVER
   postprocessors:
     - HANGING_LANTERNS
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
-    - CLOUDS
   buildings:
     - TOWER_RUINS
     - FORT_RUINS

@@ -1,0 +1,15 @@
+num bodyAmount = 1;
+num radius = 2.5;
+
+for (num a = 0; a < bodyAmount; a = a + 1) {
+    for (num x = -radius; x < radius; x = x + 1) {
+        for (num y = -radius; y < radius; y = y + 1) {
+            for (num z = -radius; z < radius; z = z + 1) {
+
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(radius,2) && getBlock(x,y,z) == "minecraft:air") {
+                    block(x,y,z,"minecraft:white_concrete",false);
+                }   
+            }
+        }
+    }
+}

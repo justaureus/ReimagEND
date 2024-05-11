@@ -19,5 +19,6 @@ features:
     - FERNS
   postprocessors:
     - HANGING_LANTERNS
-  landforms: []
+  landforms:
+    - CLOUD_SEA
   

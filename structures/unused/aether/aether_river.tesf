@@ -1,0 +1,27 @@
+str mainBlock = "minecraft:water";
+str placeBlock = mainBlock;
+
+num radius = 3;
+
+for (num x = -radius; x < radius; x = x + 1) {
+  for (num y = -radius; y < radius+1; y = y + 1) {
+    for (num z = -radius; z < radius; z = z + 1) {
+        // First if statement determines the outside border of buble
+        // Second if statement determines the inside border of buble
+
+      if ((pow(x,2)+pow(y,2)+pow(z,2) < pow(radius,2))) {
+          
+        if ((pow(x,2)+pow(y,2)+pow(z,2) > (pow(radius,2)+1)/3) && y < 0) {
+          if (getBlock(x, y, z) == "minecraft:air") block(x, y, z, placeBlock, false);
+          structure(x, y, z, "river_cloud", "NONE");
+        }
+        
+        if (pow(x,2)+pow(y,2)+pow(z,2) < (pow(radius,2)-8)) {
+          placeBlock = mainBlock;
+          block(x, y, z, placeBlock, true);
+        }
+
+      }
+    }   
+  }  
+}
