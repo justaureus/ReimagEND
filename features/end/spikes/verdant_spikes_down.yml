@@ -36,6 +36,12 @@ locator:
         type: MATCH_SET
         blocks: $features/meta.yml:end-plantable-blocks
         offset: 0
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/meta.yml:end-plantable-blocks
+        offset: 1
 
 structures:
   distribution:
