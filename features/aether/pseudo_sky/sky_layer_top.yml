@@ -19,7 +19,7 @@ distributor:
             type: GAUSSIAN
           sampler:
             type: OPEN_SIMPLEX_2
-            salt: 2346
+            salt: 4567
       threshold: 0.6
 
 locator:
