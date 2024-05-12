@@ -10,7 +10,7 @@ num random = 0;
 
 num trunkRadius = 3;
 num length = 35+randomInt(25);
-num trunkTranslate = -2;
+num trunkTranslate = 3;
 
 num topBranches = 12+randomInt(4);
 num topBranchLengthUpwardsMin = 7+randomInt(3);
@@ -37,6 +37,11 @@ num sideBranchLeafDensity = 0.5;
 str sideBranchLeafStructure = "ivory_clump";
 
 if (getBlock(0,length,0) != "minecraft:air") fail;
+
+if (getBlock(3,-2,0) == "minecraft:air") fail;
+if (getBlock(-3,-2,0) == "minecraft:air") fail;
+if (getBlock(0,-2,3) == "minecraft:air") fail;
+if (getBlock(0,-2,-3) == "minecraft:air") fail;
 
 // tree trunk
 for(num h = trunkTranslate; h <= trunkTranslate+length; h = h + 1) {

@@ -22,17 +22,31 @@ locator:
     - type: TOP
       range: &range
         min: 64
-        max: 300
+        max: 200
     - type: PATTERN
       range: *range
       pattern:
         type: MATCH_SET
-        blocks:
-          - minecraft:end_stone
-          - minecraft:snow_block
-          - minecraft:white_concrete
-          - minecraft:white_concrete_powder
+        blocks: $features/meta.yml:end-plantable-blocks
         offset: -1
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/meta.yml:end-plantable-blocks
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/meta.yml:end-plantable-blocks
+        offset: -3
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/meta.yml:end-plantable-blocks
+        offset: -3
 
 structures:
   distribution:
