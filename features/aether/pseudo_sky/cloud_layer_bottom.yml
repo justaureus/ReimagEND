@@ -25,8 +25,8 @@ distributor:
 locator:
   type: PATTERN
   range:
-    min: 244
-    max: 245
+    min: 249
+    max: 250
   pattern:
     type: MATCH_AIR
     offset: 0
