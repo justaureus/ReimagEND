@@ -6,8 +6,7 @@ terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold+
-      if(y < 200+test(x,z)*50,test(x,z)*2,0)+
+      -1+threshold+(((simplex(x, z)/5) * height))+
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
@@ -25,6 +24,7 @@ terrain:
       taper: ${meta.yml:terrain-configuration.island-taper}
       flatness: ${meta.yml:terrain-configuration.island-flatness}
       undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+      height: 2
     samplers:
       simplex3:
         dimensions: 3
@@ -45,7 +45,7 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
-      test:
+      simplex:
         dimensions: 2
-        type: VALUE
-        frequency: 0.05 / ${meta.yml:terrain-configuration.island-scale}
+        type: OPEN_SIMPLEX_2
+        frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
