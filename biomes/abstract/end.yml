@@ -25,3 +25,5 @@ features:
     - SHULKER_RUINS
     - ENDSHIPS
     - CRASHED_ENDSHIPS
+    #- END_HOUSES
+    #- END_TOWERS

@@ -1,0 +1,23 @@
+if (getBlock(0,-3,4) == "minecraft:air" || 
+getBlock(0,-3,-4) == "minecraft:air" ||
+getBlock(-4,-3,0) == "minecraft:air" ||
+getBlock(4,-3,0) == "minecraft:air" 
+) fail;
+
+num random = randomInt(4);
+if (random == 0) structure(0,0,0,"end_tower_sc_north","NONE");
+if (random == 1) structure(0,0,0,"end_tower_sc_south","NONE");
+if (random == 2) structure(0,0,0,"end_tower_sc_east","NONE");
+if (random == 3) structure(0,0,0,"end_tower_sc_west","NONE");
+
+num radius = 5;
+
+if (randomInt(2) == 0) {
+      for(num x = -radius; x < radius; x = x + 1) {
+            for(num y = -radius; y < radius; y = y + 1) {
+                  for(num z = -radius; z < radius; z = z + 1) {
+                        if (getBlock(x,y,z) == "minecraft:tnt") block(x,y,z,"minecraft:air", true);
+                  }
+            }  
+      }
+}

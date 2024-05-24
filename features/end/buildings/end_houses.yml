@@ -1,0 +1,31 @@
+id: END_HOUSES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 199
+  padding: 136
+  salt: 4666
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 75
+        max: 245
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: end_house
