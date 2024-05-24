@@ -1,21 +1,19 @@
-id: ENDSHIPS
+id: CRASHED_ENDSHIPS
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
   width: 500
   padding: 400
-  salt: 4356
+  salt: 6578
 
 locator:
   type: AND
   locators:
-    - type: RANDOM
-      height: &range
-        min: 185
-        max: 210
-      amount: 1
-      salt: 3678
+    - type: TOP
+      range: &range
+        min: 60
+        max: 200
     - type: PATTERN
       range: *range
       pattern:
@@ -24,16 +22,11 @@ locator:
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_AIR
-        offset: 0
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_AIR
+        type: MATCH_SOLID
         offset: -3
 
 structures:
   distribution:
     type: CONSTANT
   structures: 
-    - endship: 1
+    - crashed_endship: 1

@@ -23,3 +23,5 @@ features:
     - END_SKY
   buildings:
     - SHULKER_RUINS
+    - ENDSHIPS
+    - CRASHED_ENDSHIPS
