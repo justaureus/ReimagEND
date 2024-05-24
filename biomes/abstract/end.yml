@@ -23,7 +23,7 @@ features:
     - END_SKY
   buildings:
     - SHULKER_RUINS
-    - ENDSHIPS
-    - CRASHED_ENDSHIPS
+    #- ENDSHIPS
+    #- CRASHED_ENDSHIPS
     #- END_HOUSES
     #- END_TOWERS
