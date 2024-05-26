@@ -20,10 +20,10 @@ distributor:
       sampler:
         type: EXPRESSION
         expression: |
-          max(circle(centerRadius+buffer, x+noise(x,z)-1, z+noise(x,z)-1, 1),circle(centerRadius+buffer, x+noise(x,z)-1, z+noise(x,z)-1, 0.5))
+          max(circle(centerRadius+endSkyBuffer, x+noise(x,z)-1, z+noise(x,z)-1, 1),circle(centerRadius+endSkyBuffer, x+noise(x,z)-1, z+noise(x,z)-1, 0.5))
         variables:
           centerRadius: ${meta.yml:biome-distribution.main-end-scale}+${meta.yml:biome-distribution.void-buffer-scale}
-          buffer: 150
+          endSkyBuffer: 160
         functions:
           circle:    {arguments: [r, x, z, l], expression: "if(x*x+z*z>r*r,-1,l)"}
         samplers:
