@@ -1,6 +1,6 @@
 id: MAIN_END_VOID
 type: BIOME
-extends: [ END ]
+extends: [ VOID ]
 vanilla: minecraft:the_end
 color: $biomes/colors.yml:MAIN_END_VOID
 
@@ -56,7 +56,6 @@ features:
     - DEBRI_CIRCLET_INNER
     - DEBRI_CIRCLET_MIDDLE
     - DEBRI_CIRCLET_OUTER
-  buildings: []
   global-preprocessors: []
 
 

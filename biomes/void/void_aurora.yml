@@ -1,6 +1,6 @@
 id: VOID_AURORA
 type: BIOME
-extends: [ END, VOID ]
+extends: [ VOID ]
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:VOID_AURORA
 

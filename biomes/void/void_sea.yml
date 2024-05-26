@@ -1,11 +1,12 @@
 id: VOID_SEA
 type: BIOME
-extends: [ END, EQ_VOID ]
+extends: [ VOID ]
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:VOID_SEA
 
 tags:
   - VOID_SEA
+
 colors:
   water: 0x000000
   water-fog: 0x000000

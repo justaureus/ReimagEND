@@ -1,6 +1,6 @@
 id: VOID_SEA_BORDER
 type: BIOME
-extends: [ END, VOID_SEA ]
+extends: [ VOID_SEA ]
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:VOID_SEA_BORDER
 

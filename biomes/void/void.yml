@@ -1,6 +1,6 @@
 id: VOID
 type: BIOME
-extends: [ END, EQ_VOID ]
+extends: [ VOID_BASE, EQ_VOID ]
 vanilla: minecraft:the_void
 color: $biomes/colors.yml:VOID
 
