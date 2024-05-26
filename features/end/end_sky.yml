@@ -39,8 +39,8 @@ locator:
   locators:
     - type: RANDOM
       height: &range
-        min: 252
-        max: 255
+        min: 253
+        max: 256
       amount: 1
       salt: 6858
     - type: PATTERN
