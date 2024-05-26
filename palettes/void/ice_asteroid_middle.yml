@@ -1,0 +1,17 @@
+id: ICE_ASTEROID_MIDDLE
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:ice: 4
+      - minecraft:packed_ice: 5
+      - minecraft:blue_ice: 3
+      - minecraft:basalt: 7
+      - minecraft:smooth_basalt: 10
+      - minecraft:mud: 4
+      - minecraft:deepslate: 13
+    layers: 1
+    sampler: 
+      type: WHITE_NOISE
+      salt: 4357
+    threshold: 0.5

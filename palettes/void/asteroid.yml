@@ -1,0 +1,14 @@
+id: ASTEROID
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:basalt: 2
+      - minecraft:smooth_basalt: 3
+      - minecraft:mud: 1
+      - minecraft:deepslate: 4
+    layers: 1
+    sampler: 
+      type: WHITE_NOISE
+      salt: 4357
+    threshold: 0.5

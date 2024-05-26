@@ -1,4 +1,4 @@
-id: ICE_GROUND
+id: ICE_ASTEROID_BOTTOM
 type: PALETTE
 
 layers:
@@ -6,8 +6,12 @@ layers:
       - minecraft:ice: 2
       - minecraft:packed_ice: 3
       - minecraft:blue_ice: 1
+      - minecraft:basalt: 14
+      - minecraft:smooth_basalt: 11
+      - minecraft:mud: 8
+      - minecraft:deepslate: 17
     layers: 1
-    sampler:
+    sampler: 
       type: WHITE_NOISE
       salt: 4357
     threshold: 0.5

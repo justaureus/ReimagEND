@@ -43,7 +43,7 @@ for (num i = 0; i < spikes; i = i + 1) {
                 for(num z = -r; z <= r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
                         if (l/length < 0.3) {
-                            block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:packed_ice", false);
+                            structure(l*dx + x, l*dy + y - radius, l*dz + z, "icy_asteroid_palette", "NONE");
                         }
                         else {
                             block(l*dx + x, l*dy + y - radius, l*dz + z, "minecraft:ice", false);
