@@ -132,3 +132,5 @@ stages:
       - VERDANT_END: 4
       - END_WEBS: 4
       - END_NOODLES: 4
+
+      - CRIM_DESOLATE: 4

@@ -20,6 +20,8 @@ end-plantable-blocks:
   - minecraft:green_concrete
   - minecraft:pink_concrete_powder
   - minecraft:pink_concrete
+  - minecraft:purple_terracotta
+  - minecraft:magenta_terracotta
   - minecraft:dead_tube_coral_block
   - minecraft:dead_brain_coral_block
   - minecraft:dead_bubble_coral_block
