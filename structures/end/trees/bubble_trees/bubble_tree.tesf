@@ -80,6 +80,9 @@ for(num h = 0; h <= length; h = h + 1) {
             // Generate branch
             for (num l = 0; l <= branchLength; l = l + 1) {
                 block(l*dx+ox, l*dy+oy, l*dz+oz, setBlock);
+                block(l*dx+ox+1, l*dy+oy, l*dz+oz, setBlock);
+                block(l*dx+ox+1, l*dy+oy, l*dz+oz+1, setBlock);
+                block(l*dx+ox, l*dy+oy, l*dz+oz+1, setBlock);
             }
             // Rotate angle of next branch
             branchAngle = branchAngle + goldenAngle;

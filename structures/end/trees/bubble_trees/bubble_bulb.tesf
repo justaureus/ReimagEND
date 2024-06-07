@@ -5,6 +5,8 @@ str placeBlock = leafBlock;
 num radius = 3+randomInt(2);
 num yTranslate = radius;
 
+structure(0,0,0,"bubble_stems","NONE");
+
 for (num x = -radius; x < radius; x = x + 1) {
   for (num y = -radius; y < radius+1; y = y + 1) {
     for (num z = -radius; z < radius; z = z + 1) {
@@ -29,21 +31,4 @@ for (num x = -radius; x < radius; x = x + 1) {
   }  
 }
 
-for (num x = -3; x <= 3; x = x + 6) {
-  for (num z = -3; z <= 3; z = z + 6) {
-    block(x, 2, z, "minecraft:black_concrete", false);
-  }
-}
-
-for (num x = -2; x <= 2; x = x + 4) {
-  for (num z = -2; z <= 2; z = z + 4) {
-    block(x, 1, z, "minecraft:black_concrete", false);
-  }
-}
-
-for (num x = -1; x <= 1; x = x + 2) {
-  for (num z = -1; z <= 1; z = z + 2) {
-    block(x, 0, z, "minecraft:black_concrete", false);
-  }
-}
 
