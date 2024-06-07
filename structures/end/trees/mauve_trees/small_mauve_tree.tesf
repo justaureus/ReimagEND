@@ -178,6 +178,27 @@ for (num b = 1; b <= topBranches; b = b + 1) {
             if (random == 1) setBlock = blockB;
             if (random == 2) setBlock = blockC;
                 block(l*dx+ox, l*dy+oy, l*dz+oz-1, setBlock);
+
+                random = randomInt(2);
+            if (random == 0) setBlock = blockA;
+            if (random == 1) setBlock = blockB;
+                block(l*dx+ox, l*dy+oy-1, l*dz+oz, setBlock);
+                random = randomInt(2);
+            if (random == 0) setBlock = blockA;
+            if (random == 1) setBlock = blockB;
+                block(l*dx+ox+1, l*dy+oy-1, l*dz+oz, setBlock);
+                random = randomInt(2);
+            if (random == 0) setBlock = blockA;
+            if (random == 1) setBlock = blockB;
+                block(l*dx+ox-1, l*dy+oy-1, l*dz+oz, setBlock);
+                random = randomInt(2);
+            if (random == 0) setBlock = blockA;
+            if (random == 1) setBlock = blockB;
+                block(l*dx+ox, l*dy+oy-1, l*dz+oz+1, setBlock);
+                random = randomInt(2);
+            if (random == 0) setBlock = blockA;
+            if (random == 1) setBlock = blockB;
+                block(l*dx+ox, l*dy+oy-1, l*dz+oz-1, setBlock);
             }
     // Rotate angle of next branch
     branchAngle = branchAngle + goldenAngle;
