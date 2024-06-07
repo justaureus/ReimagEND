@@ -1,0 +1,19 @@
+id: VERMILION_WILDS
+type: BIOME
+extends: [ END, EQ_DEFAULT ]
+vanilla: minecraft:end_highlands
+color: $biomes/colors.yml:VERMILION_WILDS
+
+colors:
+  grass: 0xb33c35
+  foliage: 0xb33c35
+
+palette:
+  - RED_POWDER_END: 319
+
+features:
+  trees:
+    - DROOPING_TREES
+  flora:
+    - MANGROVE_BUSHES
+    - END_GRASS
