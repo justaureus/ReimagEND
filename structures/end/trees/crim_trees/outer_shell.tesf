@@ -42,8 +42,9 @@ for (num a = 0; a < amount; a = a + 1) {
                 for(num z = -r; z <= r; z = z + 1) {
                     setBlock = mainBlock;
                     if (randomInt(2) == 0) setBlock = altBlock;
+                        
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                    block(cx, cy, cz, setBlock, false);                  
+                        block(cx + x, cy + y, cz + z, setBlock, false); 
                     }
                 }  
             }
