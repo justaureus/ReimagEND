@@ -20,6 +20,12 @@ locator:
         type: MATCH
         block: minecraft:end_stone
         offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -3
 
 structures:
   distribution:
