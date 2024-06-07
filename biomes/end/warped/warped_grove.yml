@@ -9,7 +9,7 @@ colors:
   foliage: 0x57c9e1
   
 palette:
-  - WARPED_GROUND: 319
+  - CYAN_POWDER_END: 319
 
 features:
   flora:
