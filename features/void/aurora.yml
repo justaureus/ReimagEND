@@ -52,5 +52,10 @@ locator:
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: purple_aurora_segment
+    type: CELLULAR
+    return: CellValue
+    frequency: 0.005
+  structures: 
+    - purple_aurora_segment: 1
+    - blue_aurora_segment: 1
+    - green_aurora_segment: 1
