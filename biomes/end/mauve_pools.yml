@@ -5,17 +5,20 @@ vanilla: minecraft:end_barrens
 color: $biomes/colors.yml:MAUVE_POOLS
 
 colors:
-  grass: 0x8e3db7
-  foliage: 0x972ad1
-  water: 0xA020F0
-  water-fog: 0xA020F0
+  grass: 0xd3658e
+  foliage: 0xd3658e
+  water: 0xd3658e
+  water-fog: 0xd3658e
 
 palette:
-  - MAUVE_GROUND: 319
+  - PINK_POWDER_END: 319
 
 features:
   preprocessors:
     - WATER_POOLS
     - WATER_COLUMNS
   flora:
+    - CRIMSON_STEM_BUSHES
     - END_GRASS
+  trees:
+    - ROSETTE_BULB_TREES

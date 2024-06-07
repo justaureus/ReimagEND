@@ -11,11 +11,12 @@ colors:
   water-fog: 0xA020F0
 
 palette:
-  - MAUVE_GROUND: 319
+  - PURPLE_POWDER_END: 319
 
 features:
   trees:
-    - MAUVOR_TREES
+    - MAUVE_TREES
   flora:
     - CRIMSON_STEM_BUSHES
     - END_GRASS
+    - END_TALL_GRASS

@@ -68,5 +68,5 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     num loy = oy+branchLength*dy + topBranchLeafTranslate;
     num loz = oz+branchLength*dz;
 
-    structure(lox, loy, loz, "mauvor_tree_branch", "NONE", "CW_90", "CCW_90", "CW_180");
+    structure(lox, loy, loz, "rosette_bulb_branch", "NONE", "CW_90", "CCW_90", "CW_180");
 }

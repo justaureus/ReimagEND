@@ -1,10 +1,10 @@
-id: MAUVE_GROUND
+id: PURPLE_TERRACOTTA_END
 type: PALETTE
 
 layers:
   - materials:
-      - minecraft:purple_concrete_powder: 4
-      - minecraft:magenta_concrete_powder: 1
+      - minecraft:purple_terracotta: 3
+      - minecraft:magenta_terracotta: 2
       - minecraft:end_stone: 1
     layers: 1
     sampler: &transitionSampler

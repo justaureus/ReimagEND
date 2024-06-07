@@ -44,7 +44,7 @@ for (num h = 0; h < length; h = h + 1) {
 
     } else y = y + 1;
 
-    if (h == (length-1) ) structure(x,y+3,z,"mauvor_leaves_clump","NONE");
+    if (h == (length-1) ) structure(x,y+3,z,"rosette_bulb","NONE");
 }   
 
 
