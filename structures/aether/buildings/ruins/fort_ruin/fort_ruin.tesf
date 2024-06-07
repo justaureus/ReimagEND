@@ -21,10 +21,9 @@ for (num x = -radius-warp; x < radius+warp; x = x + 1) {
 				structure(x, y+yTranslate, z, "ruin_wall", "NONE");
             }
 
-            if (randomInt(3) == 0 && 
-            distanceSquared < (radiusSquared-500) && 
+            if (distanceSquared < (radiusSquared-500) && 
             distanceSquared > radiusSquared-550) {
-				structure(x, y+yTranslate, z, "taller_ruin_wall", "NONE");
+                    structure(x, y+yTranslate, z, "taller_ruin_wall", "NONE");
             }
         }
     }
