@@ -7,6 +7,7 @@ num squish = 0.5;
 num radiusSquared = pow(baseRadius,2);
 num yTranslate = 0;
 
+str setBlock = "";
 for (num x = -baseRadius-warp; x < baseRadius+warp; x = x + 1) {
     for (num y = (-baseRadius-warp)/squish; y < (baseRadius+warp)/squish; y = y + 1) {
         for (num z = -baseRadius-warp; z < baseRadius+warp; z = z + 1) {
@@ -28,8 +29,9 @@ for (num x = -baseRadius-warp; x < baseRadius+warp; x = x + 1) {
 			      }
 
             if (distanceSquared < (radiusSquared-12)) {
-				      block(x, y+yTranslate, z, "minecraft:shroomlight", true);
-			      }
+                setBlock = "minecraft:shroomlight";
+				block(x, y+yTranslate, z, setBlock, true);
+			}
         }
     }
 }
