@@ -9,7 +9,7 @@ colors:
   foliage: 0x7bb92a
 
 palette:
-  - VERDANT_GROUND: 319
+  - LIME_POWDER_END: 319
 
 features:
   trees:
