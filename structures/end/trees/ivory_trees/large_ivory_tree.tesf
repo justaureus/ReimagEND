@@ -82,17 +82,33 @@ for (num i = 0; i < length; i = i + 1) {
             num oy = i;
             num oz = 0;
             // Set branch block based on largest unsigned vector component
-            random = randomInt(3);
-            if (random == 0) setBlock = blockA;
-            if (random == 1) setBlock = blockB;
-            if (random == 2) setBlock = blockC;
             num branchLength = sideBranchLengthMin + randomInt(randPrecision)/randPrecision*sideBranchLengthVariation;
             // Generate branch
             for (num l = 0; l <= branchLength; l = l + 1) {
+                random = randomInt(3);
+    if (random == 0) setBlock = blockA;
+    if (random == 1) setBlock = blockB;
+    if (random == 2) setBlock = blockC;
                 block(l*dx+ox, l*dy+oy, l*dz+oz, setBlock);
+                random = randomInt(3);
+    if (random == 0) setBlock = blockA;
+    if (random == 1) setBlock = blockB;
+    if (random == 2) setBlock = blockC;
                 block(l*dx+ox+1, l*dy+oy, l*dz+oz, setBlock);
+                random = randomInt(3);
+    if (random == 0) setBlock = blockA;
+    if (random == 1) setBlock = blockB;
+    if (random == 2) setBlock = blockC;
                 block(l*dx+ox-1, l*dy+oy, l*dz+oz, setBlock);
+                random = randomInt(3);
+    if (random == 0) setBlock = blockA;
+    if (random == 1) setBlock = blockB;
+    if (random == 2) setBlock = blockC;
                 block(l*dx+ox, l*dy+oy, l*dz+oz+1, setBlock);
+                random = randomInt(3);
+    if (random == 0) setBlock = blockA;
+    if (random == 1) setBlock = blockB;
+    if (random == 2) setBlock = blockC;
                 block(l*dx+ox, l*dy+oy, l*dz+oz-1, setBlock);
             }
             // Rotate angle of next branch
@@ -145,6 +161,10 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     num branchLength = topBranchLengthUpwardsMin*ti + topBranchLengthOutwardsMin*t;
     // Generate branch
     for (num l = 0; l <= branchLength; l = l + 1) {
+        random = randomInt(3);
+    if (random == 0) setBlock = blockA;
+    if (random == 1) setBlock = blockB;
+    if (random == 2) setBlock = blockC;
         block(l*dx+ox, l*dy+oy, l*dz+oz, setBlock);
     }
     // Rotate angle of next branch
