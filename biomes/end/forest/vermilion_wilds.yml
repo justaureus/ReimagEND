@@ -15,5 +15,5 @@ features:
   trees:
     - DROOPING_TREES
   flora:
-    - MANGROVE_BUSHES
+    - STRIPPED_MANGROVE_BUSHES
     - END_GRASS

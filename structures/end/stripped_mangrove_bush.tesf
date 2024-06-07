@@ -3,7 +3,7 @@ num radius = randomInt(randPrecision)/randPrecision*3 + 1;
 num radiusCeil = ceil(radius);
 num radiusSquared = pow(radius, 2);
 
-block(0, 0, 0, "minecraft:mangrove_log");
+block(0, 0, 0, "minecraft:stripped_mangrove_log");
 
 for(num x = -radiusCeil; x <= radiusCeil; x = x + 1) {
     for(num y = 0; y <= radiusCeil; y = y + 1) {

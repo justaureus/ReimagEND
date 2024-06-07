@@ -1,4 +1,4 @@
-id: MANGROVE_BUSHES
+id: STRIPPED_MANGROVE_BUSHES
 type: FEATURE
 
 distributor:
@@ -45,4 +45,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: mangrove_bush
+  structures: stripped_mangrove_bush
