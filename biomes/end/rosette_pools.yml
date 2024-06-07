@@ -1,8 +1,8 @@
-id: MAUVE_POOLS
+id: ROSETTE_POOLS
 type: BIOME
 extends: [ END, EQ_DRIFTFALLS ]
 vanilla: minecraft:end_barrens
-color: $biomes/colors.yml:MAUVE_POOLS
+color: $biomes/colors.yml:ROSETTE_POOLS
 
 colors:
   grass: 0xd3658e

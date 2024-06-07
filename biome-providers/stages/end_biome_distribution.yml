@@ -81,7 +81,7 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring5-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring5
     to:
-      - MAUVE_POOLS: 4
+      - ROSETTE_POOLS: 4
       - MAUVE_FOREST: 5
       - WARPED_FOREST: 2
       - WARPED_GROVE: 3
@@ -123,7 +123,7 @@ stages:
       - CHORAL_DEADLANDS: 2
       - PEARLESCENT_END: 2 
       - IVORY_EMPYREAN: 2
-      - MAUVE_POOLS: 4
+      - ROSETTE_POOLS: 4
       - MAUVE_FOREST: 4
       - WARPED_FOREST: 2
       - WARPED_GROVE: 3
