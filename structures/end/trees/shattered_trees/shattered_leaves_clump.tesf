@@ -6,6 +6,7 @@ for (num x = 0; x < 1; x = x + 1) {
     for (num z = 0; z < 1; z = z + 1) {
         placeBlock = leafBlock;
         if (randomInt(2) == 0) placeBlock = altLeafBlock;
+        if (randomInt(10) == 0) placeBlock = "minecraft:light[level=15]";
         block(x, y, z, placeBlock, false);
         }
     }  
