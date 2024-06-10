@@ -53,3 +53,5 @@ palette:
 features:
   trees:
     - TIPPED_OBSIDIAN_SPIKES
+  postprocessors:
+    - CRYING_END_GLOWS
