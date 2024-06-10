@@ -23,3 +23,17 @@ for (num s = 0; s < shulkerAmount; s = s + 1) {
     } else num zDir = -1;
     structure(xDir*rx, 10, zDir*rz, "shulker_spawn", "NONE");
 }
+
+num radius = 16;
+bool chest = false;
+
+for(num x = -radius; x < radius; x = x + 1) {
+      for(num y = -radius; y < radius; y = y + 1) {
+            for(num z = -radius; z < radius; z = z + 1) {
+                  if (chest == false) {
+                        if (getBlock(x,y,z) == "minecraft:chest" ||
+                        getBlock(x,y,z) == "minecraft:trapped_chest") block(x,y,z,"minecraft:air", true);
+                  }
+            }
+      }  
+}

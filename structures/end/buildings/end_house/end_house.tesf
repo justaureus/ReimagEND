@@ -10,14 +10,23 @@ if (random == 1) structure(0,0,0,"end_house_sc_south","NONE");
 if (random == 2) structure(0,0,0,"end_house_sc_east","NONE");
 if (random == 3) structure(0,0,0,"end_house_sc_west","NONE");
 
-num radius = 5;
+num radius = 10;
+bool tnt = true;
+bool chest = false;
 
-if (randomInt(2) == 0) {
-      for(num x = -radius; x < radius; x = x + 1) {
-            for(num y = -radius; y < radius; y = y + 1) {
-                  for(num z = -radius; z < radius; z = z + 1) {
+if (randomInt(2) == 0) tnt = false;
+
+for(num x = -radius; x < radius; x = x + 1) {
+      for(num y = -radius; y < radius; y = y + 1) {
+            for(num z = -radius; z < radius; z = z + 1) {
+                  if (tnt == false) {
                         if (getBlock(x,y,z) == "minecraft:tnt") block(x,y,z,"minecraft:air", true);
                   }
-            }  
-      }
+                  if (chest == false) {
+                        if (getBlock(x,y,z) == "minecraft:chest" ||
+                        getBlock(x,y,z) == "minecraft:trapped_chest") block(x,y,z,"minecraft:air", true);
+                  }
+            }
+      }  
 }
+
