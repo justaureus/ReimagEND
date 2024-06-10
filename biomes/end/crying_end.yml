@@ -15,3 +15,4 @@ features:
     - CRYING_TENDRILS_SIDE
   postprocessors:
     - CRYING_DRIPS
+    - CRYING_END_GLOWS
