@@ -9,7 +9,7 @@ colors:
   foliage: 0xffffff
 
 palette:
-  - IVORY_GROUND: 319
+  - WHITE_POWDER_END: 319
 
 features:
   flora:

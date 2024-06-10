@@ -1,13 +1,13 @@
-id: STYGIAN_GROUND
+id: YELLOW_POWDER_END
 type: PALETTE
 
 layers:
   - materials:
-      - minecraft:black_concrete_powder: 3
+      - minecraft:yellow_concrete_powder: 3
       - minecraft:end_stone: 1
-      - minecraft:black_concrete: 2
+      - minecraft:yellow_concrete: 2
     layers: 1
-    sampler: &transitionSampler
+    sampler: 
       type: WHITE_NOISE
       salt: 4357
     threshold: 0.5

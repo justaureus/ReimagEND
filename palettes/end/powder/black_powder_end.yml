@@ -1,11 +1,11 @@
-id: IVORY_GROUND
+id: BLACK_POWDER_END
 type: PALETTE
 
 layers:
   - materials:
-      - minecraft:white_concrete: 3
+      - minecraft:black_concrete_powder: 3
       - minecraft:end_stone: 1
-      - minecraft:white_concrete_powder: 2
+      - minecraft:black_concrete: 2
     layers: 1
     sampler: &transitionSampler
       type: WHITE_NOISE

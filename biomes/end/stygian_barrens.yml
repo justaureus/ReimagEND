@@ -9,7 +9,7 @@ colors:
   foliage: 0x35343b
 
 palette:
-  - STYGIAN_GROUND: 319
+  - BLACK_POWDER_END: 319
 
 features:
   flora:

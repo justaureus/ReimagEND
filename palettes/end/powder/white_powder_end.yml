@@ -1,13 +1,13 @@
-id: FLAXEN_GROUND
+id: WHITE_POWDER_END
 type: PALETTE
 
 layers:
   - materials:
-      - minecraft:yellow_concrete_powder: 3
+      - minecraft:white_concrete: 3
       - minecraft:end_stone: 1
-      - minecraft:yellow_concrete: 2
+      - minecraft:white_concrete_powder: 2
     layers: 1
-    sampler: 
+    sampler: &transitionSampler
       type: WHITE_NOISE
       salt: 4357
     threshold: 0.5
