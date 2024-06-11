@@ -1,0 +1,53 @@
+id: CRAGGY_ROCKS
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: SAMPLER
+      sampler:
+        type: CELLULAR
+        return: CellValue
+        frequency: 0.05
+        salt: 6579
+      threshold: -0.4
+    - type: SAMPLER
+      sampler:
+        type: POSITIVE_WHITE_NOISE
+        salt: 4567
+      threshold: 0.05
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 50
+        max: 235
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: 
+          - minecraft:end_stone
+          - minecraft:deepslate
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -5
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: craggy_rock
