@@ -35,6 +35,7 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - BLOCK:minecraft:light_blue_stained_glass: 1
-    - BLOCK:minecraft:cyan_stained_glass: 2
-    - BLOCK:minecraft:blue_stained_glass: 3
+    - BLOCK:minecraft:light[level=15]: 1
+    - BLOCK:minecraft:light_blue_stained_glass: 6
+    - BLOCK:minecraft:cyan_stained_glass: 7
+    - BLOCK:minecraft:blue_stained_glass: 8
