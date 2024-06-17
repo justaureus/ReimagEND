@@ -4,7 +4,7 @@ num pi = 3.14159;
 
 str trunkBlock = "minecraft:stripped_jungle_log";
 
-num trunkRadius = 2.5;
+num trunkRadius = 2+(randomInt(10)/10);
 num length = 15+randomInt(5);
 
 num topBranches = 4+randomInt(3);
@@ -42,7 +42,7 @@ num branchAngle = randomInt(randPrecision)/randPrecision*2*pi;
 // tree trunk
 for(num h = 0; h <= length; h = h + 1) {
     // Reduce radius inversely to length
-    num r = (trunkRadius/length * -h/2) + trunkRadius;
+    num r = (trunkRadius/length * (-h/2)) + trunkRadius;
 
     // Generate sphere at each point
     for(num x = -r; x <= r; x = x + 1) {
