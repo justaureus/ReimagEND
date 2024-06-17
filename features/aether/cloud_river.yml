@@ -77,3 +77,4 @@ structures:
   structures: 
     - cloud: 1
     - translucent_cloud: 1
+    - blank: 10
