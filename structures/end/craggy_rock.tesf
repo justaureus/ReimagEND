@@ -5,14 +5,13 @@ getBlock(4,-3,0) == "minecraft:air"
 ) fail;
 
 num randPrecision = 100;
-num radius = 3;
-num warp = 10;
-num warpFreq = 2;
+num radius = 4;
+num warp = 2;
+num warpFreq = 5;
 num radiusSquared = pow(radius,2);
 num yTranslate = -5;
 
 str mainBlock = "minecraft:deepslate";
-str altBlock = "minecraft:crying_obsidian";
 
 str setBlock = "";
 for (num x = -radius-warp; x < radius+warp; x = x + 1) {
