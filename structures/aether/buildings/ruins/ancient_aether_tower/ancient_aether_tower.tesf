@@ -47,7 +47,7 @@ for (num y = 0; y < length; y = y + 1) {
         }
     }
 
-    if (y % spacing == 0) {
+    if (y % spacing == 0 && y > 5) {
 
         //south
         if (randomInt(bridgeChance) == 0) {
