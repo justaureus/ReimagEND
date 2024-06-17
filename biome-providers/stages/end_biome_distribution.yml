@@ -65,7 +65,7 @@ stages:
     from: ring4
     to:
       - STYGIAN_BARRENS: 2
-      - CHERUS_GROWTH: 2
+      - ARGIL_GROWTH: 2
       - CHORUVE_FOREST: 3
       - PEARLESCENT_END: 2 
       - IVORY_EMPYREAN: 2 
@@ -108,7 +108,7 @@ stages:
 
       - END_PLANES: 3
       - END_SPIRES: 2
-      - CHERUS_GROWTH: 1
+      - ARGIL_GROWTH: 1
 
       - SHATTERED_END: 4
       - SHATTERED_FOREST: 2

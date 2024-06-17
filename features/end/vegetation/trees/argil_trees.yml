@@ -1,4 +1,4 @@
-id: CHERUS_TREES
+id: ARGIL_TREES
 type: FEATURE
 
 distributor:
@@ -35,4 +35,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: cherus_tree
+  structures: argil_tree

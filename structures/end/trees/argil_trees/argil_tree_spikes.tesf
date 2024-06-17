@@ -19,8 +19,8 @@ num radius = 0;
 str setBlock = "";
 for (num i = 0; i < spikes; i = i + 1) {
 
-    length = 15+randomInt(5);
-    radius = 2;
+    length = 4+randomInt(5);
+    radius = 1.1;
     dx = dx+1;
     dy = dy+1;
     dz = dz+1;
@@ -43,7 +43,8 @@ for (num i = 0; i < spikes; i = i + 1) {
             for(num y = -r; y <= r; y = y + 1) {
                 for(num z = -r; z <= r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                      setBlock = "minecraft:cherry_wood";
+                      setBlock = "minecraft:gray_terracotta";
+                      if (randomInt(2) == 0) setBlock = "minecraft:black_terracotta";
                       block(l*dx + x, l*dy + y - radius, l*dz + z, setBlock, false);
                     }
                 }

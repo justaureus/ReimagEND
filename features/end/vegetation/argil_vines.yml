@@ -1,8 +1,8 @@
-id: CHERUS_VINE_SPIKES
+id: ARGIL_VINE_SPIKES
 type: FEATURE
 
 variables: &variables
-  wallThickness: 0.05
+  wallThickness: 0.1
   webThickness: 1
 
 distributor:
@@ -39,6 +39,18 @@ locator:
             type: MATCH
             block: minecraft:end_stone
             offset: 0
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH
+            block: minecraft:end_stone
+            offset: 1
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH
+            block: minecraft:end_stone
+            offset: -1
         
 
     # Match ridged simplex to create 'walls'
@@ -73,5 +85,8 @@ locator:
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: cherus_vine_spikes
+    type: WHITE_NOISE
+  structures: 
+    - argil_vine_spikes: 1
+    - BLOCK:minecraft:gray_terracotta: 5
+    - BLOCK:minecraft:black_terracotta: 5

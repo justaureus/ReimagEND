@@ -1,14 +1,14 @@
-id: CHERUS_GROWTH
+id: ARGIL_GROWTH
 type: BIOME
 extends: [ END, EQ_END_MIDLANDS ]
 vanilla: minecraft:end_midlands
-color: $biomes/colors.yml:CHERUS_GROWTH
+color: $biomes/colors.yml:ARGIL_GROWTH
 
 palette:
-  - CHERRY_GROUND: 319
+  - BLACK_GRAY_TERRACOTTA: 319
 
 features:
   trees:
-    - CHERUS_TREES
+    - ARGIL_TREES
   preprocessors:
-    - CHERUS_VINE_SPIKES
+    - ARGIL_VINE_SPIKES
