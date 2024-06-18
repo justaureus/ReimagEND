@@ -18,8 +18,13 @@ for (num y = 0; y < length; y = y + 1) {
                 structure(x, y, z, setBlock, "NONE");
             }
 
+            
+
             // floor
             if (y == spacing) structure(x, y, z, setBlock, "NONE");
+
+            // Bottom floor
+            if (y == 0) structure(x, y, z, setBlock, "NONE");
 
             random = randomInt(roomPool);
 
