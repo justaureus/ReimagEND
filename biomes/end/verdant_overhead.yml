@@ -1,8 +1,8 @@
-id: VERDANT_END
+id: VERDANT_OVERHEAD
 type: BIOME
 extends: [ END, EQ_OVERHANGS ]
 vanilla: minecraft:end_barrens
-color: $biomes/colors.yml:VERDANT_END
+color: $biomes/colors.yml:VERDANT_OVERHEAD
 
 colors:
   grass: 0x7bb92a
