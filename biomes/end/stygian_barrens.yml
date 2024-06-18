@@ -15,3 +15,5 @@ features:
   flora:
     - END_GRASS
     - END_TALL_GRASS
+  trees:
+    - LEGGED_LANTERNS

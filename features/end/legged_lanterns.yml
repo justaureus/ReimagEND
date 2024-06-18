@@ -1,0 +1,38 @@
+id: LEGGED_LANTERNS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 34
+  padding: 25
+  salt: 5467
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 50
+        max: 235
+      amount: 1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -5
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 10
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: legged_lantern
