@@ -58,6 +58,34 @@ locator:
               - minecraft:cobblestone
               - minecraft:mossy_cobblestone
             offset: 0
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH_SET
+            blocks: 
+              - minecraft:grass_block
+              - minecraft:gravel
+              - minecraft:coarse_dirt
+              - minecraft:podzol
+              - minecraft:stone
+              - minecraft:dirt
+              - minecraft:cobblestone
+              - minecraft:mossy_cobblestone
+            offset: 1
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH_SET
+            blocks: 
+              - minecraft:grass_block
+              - minecraft:gravel
+              - minecraft:coarse_dirt
+              - minecraft:podzol
+              - minecraft:stone
+              - minecraft:dirt
+              - minecraft:cobblestone
+              - minecraft:mossy_cobblestone
+            offset: -1
         
 
     # Match ridged simplex to create 'walls'
