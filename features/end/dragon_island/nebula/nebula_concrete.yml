@@ -56,8 +56,10 @@ structures:
     type: WHITE_NOISE
   structures: 
     - BLOCK:minecraft:purple_concrete: 5
+    - BLOCK:minecraft:pearlescent_froglight: 3
     - BLOCK:minecraft:black_concrete: 10
     - BLOCK:minecraft:magenta_stained_glass: 3
     - BLOCK:minecraft:purple_stained_glass: 3
+    - BLOCK:minecraft:black_stained_glass: 3
     - BLOCK:minecraft:obsidian: 5
     - BLOCK:minecraft:crying_obsidian: 1
