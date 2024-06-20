@@ -1,0 +1,10 @@
+id: VOID_WEBS
+type: BIOME
+extends: [ VOID ]
+vanilla: minecraft:the_void
+color: $biomes/colors.yml:VOID_WEBS
+
+features:
+  preprocessors:
+    - VOID_WEBS
+

@@ -46,5 +46,6 @@ stages:
       - GALAXY_FIELD: 1
       - ASTEROID_FIELD: 1   
       - VOID_SEA: 1
+      - VOID_WEBS: 1
 
   
