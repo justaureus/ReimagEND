@@ -1,0 +1,4 @@
+num amount = 2+randomInt(3);
+for (num i = 0; i < amount; i = i + 1) {
+    structure(0,0,0,"blue_mushroom","NONE");
+}

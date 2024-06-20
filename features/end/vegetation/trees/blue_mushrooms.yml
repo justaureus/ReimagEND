@@ -1,0 +1,77 @@
+id: BLUE_MUSHROOMS
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 8
+      padding: 11
+      salt: 5468
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 6789
+      threshold: 0.75
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 0
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 3
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 5
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 7
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:blue_concrete
+          - minecraft:blue_concrete_powder
+          - minecraft:end_stone
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:blue_concrete
+          - minecraft:blue_concrete_powder
+          - minecraft:end_stone
+        offset: -5
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+    
+    
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - blue_mushroom: 3
+    - blue_mushroom_cluster: 1
