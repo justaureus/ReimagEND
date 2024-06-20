@@ -1,6 +1,8 @@
 id: VORTEX
 type: FEATURE
 
+# disabled by default
+
 distributor:
   type: POINTS
   points:

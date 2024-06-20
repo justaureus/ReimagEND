@@ -1,6 +1,8 @@
 id: OBSIDIAN_CIRCLET
 type: FEATURE
 
+# Obsidian crack-like ground between fountain and dragon pillars
+
 distributor:
   type: AND
   distributors:

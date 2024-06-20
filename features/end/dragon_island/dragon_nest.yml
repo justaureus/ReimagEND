@@ -1,6 +1,8 @@
 id: DRAGON_NEST
 type: FEATURE
 
+# Mound of endstone that end fountain spawns on top of
+
 distributor:
   type: POINTS
   points:

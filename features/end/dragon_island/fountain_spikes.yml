@@ -1,6 +1,8 @@
 id: FOUNTAIN_SPIKES
 type: FEATURE
 
+# Rib cage like spikes surrounding fountain
+
 distributor:
   type: POINTS
   points:

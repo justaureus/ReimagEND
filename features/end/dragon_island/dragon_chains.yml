@@ -1,6 +1,8 @@
 id: DRAGON_CHAINS
 type: FEATURE
 
+# Giant chains on the 4 corners of the dragon island. Disabled by default
+
 distributor:
   type: POINTS
   points:
