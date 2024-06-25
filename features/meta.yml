@@ -24,6 +24,8 @@ end-plantable-blocks:
   - minecraft:red_concrete
   - minecraft:blue_concrete_powder
   - minecraft:blue_concrete
+  - minecraft:orange_concrete_powder
+  - minecraft:orange_concrete
   - minecraft:purple_terracotta
   - minecraft:magenta_terracotta
   - minecraft:dead_tube_coral_block
