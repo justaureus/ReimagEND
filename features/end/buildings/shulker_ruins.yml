@@ -24,6 +24,11 @@ locator:
       pattern:
         type: MATCH_SOLID
         offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -3
 
 structures:
   distribution:
