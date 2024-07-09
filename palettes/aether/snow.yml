@@ -1,16 +1,9 @@
 id: SNOW
 type: PALETTE
 
-id: SNOW
-type: PALETTE
-
 layers:
   - materials:
-      - minecraft:stone: 6
-      - minecraft:white_concrete_powder: 3
-      - minecraft:snow_block: 2
-      - minecraft:calcite: 2
-      - minecraft:gravel: 2
+      - minecraft:snow_block: 3
     layers: 2
     sampler:
       type: DOMAIN_WARP

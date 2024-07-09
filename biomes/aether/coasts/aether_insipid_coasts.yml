@@ -5,11 +5,11 @@ color: $biomes/colors.yml:AETHER_INSIPID_COASTS
 vanilla: minecraft:the_end
 
 palette:
-  - GRAY_SAND: 319
+  - LIGHT_GRAY_POWDER: 319
 
 features:
   landforms:
     - SMALL_MOSSY_BOULDER_PATCHES
-    - CLOUD_SEA
   trees:
     - OAK_BUSHES
+  buildings: []

@@ -11,7 +11,7 @@ carving:
       carvingThreshold: 0.55 # Higher = less carving
       carvingMinHeight: -63
       carvingMinTaper: 8
-      carvingMaxHeight: 140
+      carvingMaxHeight: 240
       carvingMaxTaper: 20
       carvingCap: 1 # Caps the amount of base carving
 

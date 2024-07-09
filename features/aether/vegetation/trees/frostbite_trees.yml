@@ -28,6 +28,14 @@ locator:
           - minecraft:snow
           - minecraft:air
         offset: 0
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
     - type: PATTERN
       range: *range
       pattern:

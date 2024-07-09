@@ -33,5 +33,5 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - giant_bee_nest: 5
+    - giant_bee_nest: 10
     - gigantic_bee_nest: 1

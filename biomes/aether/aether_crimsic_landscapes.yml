@@ -1,6 +1,6 @@
 id: AETHER_CRIMSIC_LANDSCAPES
 type: BIOME
-extends: [ AETHER, EQ_AETHER_BUMPY_LOWLANDS ]
+extends: [ AETHER, EQ_AETHER_CLIFFS ]
 color: $biomes/colors.yml:AETHER_CRIMSIC_LANDSCAPES
 vanilla: minecraft:the_end
 
@@ -9,7 +9,7 @@ colors:
   foliage: 0xDC143C
 
 palette:
-  - CRIMSIC_GROUND: 319
+  - GRASS_GRAY_TERRACOTTA: 319
 
 slant:
   - threshold: 0.4

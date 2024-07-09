@@ -28,8 +28,8 @@ stages:
     sampler: *distribution-map
     from: frontier
     to:
-      - aether: 32
+      - aether: 48
       - aether-coasts: 16
-      - AETHER_CLOUD_SEA: 16
-      - STARFIELD: 32
+      - AETHER_CLOUD_SEA: 8
+      - STARFIELD: 96
       - frontier: 32

@@ -10,7 +10,7 @@ terrain:
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, y/1.5, z) * simplex3(x/1.5, y, z/2)
+            simplex3(x, y*flatness, z)
           ),
           lerp(y, min, 0, min+taper,
             simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
@@ -18,12 +18,12 @@ terrain:
         )
       )
     variables:
-      threshold: 0.6
-      max: 300
-      min: ${meta.yml:terrain-configuration.island-min-height}
+      threshold: 0.7
+      max: 250
+      min: -20
       taper: ${meta.yml:terrain-configuration.island-taper}
-      flatness: 10
-      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+      flatness: 4
+      undercarriageTranslate: 0
     samplers:
       simplex3:
         dimensions: 3

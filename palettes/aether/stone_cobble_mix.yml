@@ -1,11 +1,7 @@
-id: GRASS
+id: STONE_COBBLE_MIX
 type: PALETTE
 
 layers:
-  - materials: minecraft:grass_block
-    layers: 1
-  - materials: minecraft:dirt
-    layers: 3
   - materials: 
     - minecraft:stone: 10
     - minecraft:cobblestone: 5

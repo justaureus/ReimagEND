@@ -50,7 +50,3 @@ terrain:
 
 palette:
   - GRASS: 319
-
-features:
-  landforms:
-    - CLOUD_SEA

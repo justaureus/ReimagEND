@@ -1,6 +1,6 @@
 id: AETHER_DRIFTFALLS
 type: BIOME
-extends: [ AETHER, EQ_DRIFTFALLS ]
+extends: [ AETHER, EQ_AETHER_DRIFTFALLS ]
 color: $biomes/colors.yml:AETHER_DRIFTFALLS
 vanilla: minecraft:the_end
 

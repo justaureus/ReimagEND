@@ -9,7 +9,7 @@ colors:
   foliage: 0xe3e0cd
 
 palette:
-  - MARBLE_MIX: 319
+  - CALCITE_STONE_MIX: 319
 
 features:
   trees:
@@ -19,6 +19,5 @@ features:
     - FERNS
   postprocessors:
     - HANGING_LANTERNS
-  landforms:
-    - CLOUD_SEA
+  buildings: []
   

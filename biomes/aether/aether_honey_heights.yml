@@ -1,6 +1,6 @@
 id: AETHER_HONEY_HEIGHTS
 type: BIOME
-extends: [ AETHER, EQ_AETHER_HIGHLANDS ]
+extends: [ AETHER, EQ_AETHER_DEFAULT ]
 color: $biomes/colors.yml:AETHER_HONEY_HEIGHTS
 vanilla: minecraft:the_end
 
@@ -11,7 +11,7 @@ colors:
   water-fog: 0xEBAF4C
 
 palette:
-  - YELLOW_MIX: 319
+  - YELLOW_CONCRETE_TERRACOTTA: 319
 
 features:
   landforms:

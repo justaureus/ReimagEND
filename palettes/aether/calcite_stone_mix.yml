@@ -1,12 +1,12 @@
-id: CRIMSIC_GROUND
+id: CALCITE_STONE_MIX
 type: PALETTE
 
 layers:
   - materials:
-      - minecraft:grass_block: 6
-      - minecraft:cyan_terracotta: 3
-      - minecraft:gray_concrete: 2
-    layers: 1
+      - minecraft:white_concrete: 3
+      - minecraft:white_concrete_powder: 4
+      - minecraft:calcite: 2
+    layers: 2
     sampler:
       type: DOMAIN_WARP
       amplitude: 1
@@ -18,14 +18,13 @@ layers:
         sampler:
           type: OPEN_SIMPLEX_2
           frequency: 0.04
-          salt: 5467
-  - materials:
-      - minecraft:dirt: 1
-    layers: 2
+          salt: 7688
   - materials: 
-    - minecraft:stone: 10
-    - minecraft:cobblestone: 5
-    - minecraft:mossy_cobblestone: 3
+    - minecraft:stone: 15
+    - minecraft:white_concrete: 4
+    - minecraft:cobblestone: 13
+    - minecraft:calcite: 5
+    - minecraft:mossy_cobblestone: 11
     layers: 1
     sampler:
       type: DOMAIN_WARP
@@ -38,4 +37,4 @@ layers:
         sampler:
           type: OPEN_SIMPLEX_2
           frequency: 0.2
-          salt: 293
+          salt: 7688

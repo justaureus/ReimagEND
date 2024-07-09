@@ -1,4 +1,4 @@
-id: EQ_AETHER_MOUNTAIN_PEAKS
+id: EQ_AETHER_HIGHLANDS
 type: BIOME
 abstract: true
 
@@ -18,12 +18,12 @@ terrain:
         )
       )
     variables:
-      threshold: 0.8
-      max: 300
-      min: ${meta.yml:terrain-configuration.island-min-height}
+      threshold: ${meta.yml:terrain-configuration.island-threshold}
+      max: 250
+      min: 0
       taper: ${meta.yml:terrain-configuration.island-taper}
       flatness: 7
-      undercarriageTranslate: 0
+      undercarriageTranslate: -10
     samplers:
       simplex3:
         dimensions: 3
@@ -43,4 +43,4 @@ terrain:
           gain: 1
           sampler:
             type: OPEN_SIMPLEX_2
-            frequency: 0.00005 / ${meta.yml:terrain-configuration.island-scale}
+            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}

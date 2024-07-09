@@ -1,6 +1,6 @@
 id: AETHER_BRAMBLE_WILDS
 type: BIOME
-extends: [ AETHER, EQ_AETHER_MIDLANDS ]
+extends: [ AETHER, EQ_AETHER_DEFAULT ]
 color: $biomes/colors.yml:AETHER_BRAMBLE_WILDS
 vanilla: minecraft:the_end
 

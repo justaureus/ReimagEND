@@ -28,6 +28,8 @@ biome-distribution:
   # Controls the radius of small pillars at the main end island from the center of the island
   # Default: 80
 
+  # Each controls the width and biome scale of each ring starting from the center
+
   ring1-width: 1000
   # Default: 1000
   ring1-biome-scale: 500
@@ -56,8 +58,6 @@ biome-distribution:
   frontier-biome-scale: 1000
   # Default: 1000
 
-  # Each controls the width and biome scale of each ring starting from the center
-
   aether-scale: 1
   # Controls the scale of the entire aether. 
   # Default: 1
@@ -66,9 +66,17 @@ biome-distribution:
   # Controls the scale of aether regions. 
   # Default: 1000
 
-  aether-biome-scale: 500
+  aether-biome-scale: 1000
+  # Controls the scale of aether biomes within regions. 
+  # Default: 1000
+
+  aether-cloud-sea-scale: 500
   # Controls the scale of aether biomes within regions. 
   # Default: 500
+
+  aether-ancient-scale: 1000
+  # Controls the scale of aether biomes within regions. 
+  # Default: 1000
 
   void-scale: 1500
   # Controls the scale of void biomes.

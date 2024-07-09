@@ -35,6 +35,7 @@ features:
     - CLOUD_LAYER_TOP
     - CLOUD_LAYER_MIDDLE
     - CLOUD_LAYER_BOTTOM
+    - SKY_CLOUDS
     - CLOUDS
     - CLOUD_RIVER
   postprocessors:
