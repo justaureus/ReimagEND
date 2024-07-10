@@ -129,7 +129,6 @@ stages:
       - WARPED_GROVE: 3
       - FLAXEN_FOREST: 4
 
-      - VERDANT_OVERHEAD: 4
       - END_WEBS: 4
       - END_NOODLES: 4
 
