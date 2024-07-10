@@ -35,6 +35,12 @@ locator:
           - minecraft:snow
           - minecraft:air
         offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -2
 
 structures:
   distribution:
