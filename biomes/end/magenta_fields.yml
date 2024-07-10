@@ -17,3 +17,5 @@ features:
   flora:
     - END_GRASS
     - CRIMSON_STEM_BUSHES
+  trees:
+    - TRAP_TREES

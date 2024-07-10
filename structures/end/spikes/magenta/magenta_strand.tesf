@@ -44,10 +44,12 @@ for(num f = 0; f <= 2; f = f + 1) {
                                 setBlock = "minecraft:magenta_concrete_powder";
                                 block(l*dx + x, l*dy + y - radius + yTranslate - 1, l*dz + z, "minecraft:magenta_concrete", false); 
                             }
+                            if (randomInt(4) == 0) setBlock = "minecraft:blue_terracotta";
                             replace = true;
                         } else if (f == 1) {
                             replace = false;
-                            setBlock = "minecraft:light[level=15]";
+                            setBlock = "minecraft:air";
+                            if (randomInt(25) == 0) setBlock = "minecraft:light[level=15]";
                         }
 
                         block(l*dx + x, l*dy + y - radius + yTranslate, l*dz + z, setBlock, replace);  
