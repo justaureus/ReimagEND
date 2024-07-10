@@ -1,13 +1,11 @@
-id: PEARLESCENT_GROUND
+id: LIGHT_GRAY_POWDER_END
 type: PALETTE
 
 layers:
   - materials:
-      - minecraft:end_stone: 10
-      - minecraft:white_concrete: 5
-      - minecraft:white_concrete_powder: 5
-      - minecraft:calcite: 5
-      - minecraft:snow_block: 5
+      - minecraft:light_gray_concrete_powder: 3
+      - minecraft:light_gray_concrete: 2
+      - minecraft:end_stone: 5
     layers: 1
 sampler:
   type: WHITE_NOISE
@@ -23,6 +21,3 @@ sampler:
       return: "CellValue"
       frequency: 0.5
       salt: 9345
-      
-  
-

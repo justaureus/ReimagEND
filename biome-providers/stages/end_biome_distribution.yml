@@ -67,7 +67,7 @@ stages:
       - STYGIAN_BARRENS: 2
       - ARGIL_GROWTH: 2
       - CHORUVE_FOREST: 3
-      - PEARLESCENT_END: 2 
+      - CRYSTAL_OVERHEAD: 2 
       - IVORY_EMPYREAN: 2 
 
   - type: REPLACE
@@ -121,7 +121,7 @@ stages:
       - CRAGGY_END: 3 
       - CHORUVE_FOREST: 3
       - CHORAL_DEADLANDS: 2
-      - PEARLESCENT_END: 2 
+      - CRYSTAL_OVERHEAD: 2 
       - IVORY_EMPYREAN: 2
       - ROSETTE_POOLS: 4
       - MAUVE_FOREST: 4

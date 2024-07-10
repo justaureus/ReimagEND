@@ -1,0 +1,27 @@
+id: CALCITE_CONCRETE_MIX_END
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:end_stone: 10
+      - minecraft:white_concrete: 5
+      - minecraft:white_concrete_powder: 5
+      - minecraft:calcite: 5
+    layers: 1
+sampler:
+  type: WHITE_NOISE
+  amplitude: 1
+  warp:
+    type: "OPEN_SIMPLEX_2"
+    frequency: 0.9
+  sampler:
+    type: FBM
+    octaves: 2
+    sampler:
+      type: "CELLULAR"
+      return: "CellValue"
+      frequency: 0.5
+      salt: 9345
+      
+  
+

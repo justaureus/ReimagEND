@@ -1,0 +1,61 @@
+if (getBlock(0,3,3) == "minecraft:air" || 
+getBlock(0,3,-3) == "minecraft:air" ||
+getBlock(-3,3,0) == "minecraft:air" ||
+getBlock(3,3,0) == "minecraft:air" 
+) fail;
+
+num randPrecision = 100;
+
+num length = 20 + randomInt(randPrecision)/randPrecision*7;
+num radius = 2 + randomInt(randPrecision)/randPrecision;
+// Direction vector
+num dx = (randomInt(randPrecision)/randPrecision-0.5);
+num dy = (randomInt(randPrecision)/randPrecision)-1.5;
+num dz = (randomInt(randPrecision)/randPrecision-0.5);
+
+// Normalize vector
+num mag = sqrt(pow(dx,2)+pow(dy,2)+pow(dz,2));
+dx = dx/mag;
+dy = dy/mag;
+dz = dz/mag;
+
+if (getBlock(length*dx, length*dy, length*dz) != "minecraft:air") fail;
+
+num yTranslate = 5;
+str setBlock = "";
+bool replace = false;
+for(num f = 0; f <= 3; f = f + 1) {
+
+    if (f == 1) {
+        radius = radius+3;
+        length = length+1;
+    }
+
+    for(num l = 0; l <= length; l = l + 1) {  
+        // Reduce radius inversely to length
+        num r = (radius/length * -l/2) + radius;
+        // Generate sphere at each point
+        for(num x = -r; x <= r; x = x + 1) {
+            for(num y = -r; y <= r; y = y + 1) {
+                for(num z = -r; z <= r; z = z + 1) {
+                    if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                        if (f == 0) {
+                            setBlock = "minecraft:light_gray_stained_glass";
+                            if (randomInt(5) == 0) setBlock = "minecraft:light_gray_concrete";
+                            replace = true;
+                        } else if (f == 1) {
+                            replace = false;
+                            setBlock = "minecraft:air";
+                            if (randomInt(10) == 0) setBlock = "minecraft:light[level=15]";
+                        }
+
+                        block(l*dx + x, l*dy + y - radius + yTranslate, l*dz + z, setBlock, replace);  
+                                           
+                    }
+                        
+                }
+            }
+        }
+    }
+}
+
