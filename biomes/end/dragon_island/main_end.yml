@@ -53,12 +53,10 @@ features:
     - NEBULA_CONCRETE
     - NEBULA_GLASS
     - OBSIDIAN_CIRCLET
-#    - VORTEX
   trees:
     - FOUNTAIN_SPIKES
     - MAIN_PILLARS
     - OUTER_PILLARS
-    #- DRAGON_CHAINS
   landforms:
     - FOUNTAIN_HILL
   postprocessors:
