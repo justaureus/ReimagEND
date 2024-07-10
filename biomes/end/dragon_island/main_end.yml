@@ -53,6 +53,7 @@ features:
     - NEBULA_CONCRETE
     - NEBULA_GLASS
     - OBSIDIAN_CIRCLET
+    - PILLAR_CIRCLET
   trees:
     - FOUNTAIN_SPIKES
     - MAIN_PILLARS
