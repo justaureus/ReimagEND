@@ -1,4 +1,4 @@
-id: DRAGON_NEST
+id: FOUNTAIN_HILL
 type: FEATURE
 
 # Mound of endstone that end fountain spawns on top of
@@ -30,4 +30,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: dragon_nest
+  structures: fountain_hill

@@ -58,8 +58,11 @@ features:
     - FOUNTAIN_SPIKES
     - MAIN_PILLARS
     - OUTER_PILLARS
-    - DRAGON_NEST
     #- DRAGON_CHAINS
+  landforms:
+    - FOUNTAIN_HILL
+  postprocessors:
+    - UPGRADED_FOUNTAIN
   buildings: []
   global-preprocessors: []
 
