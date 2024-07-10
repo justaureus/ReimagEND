@@ -6,8 +6,8 @@ num amount = 1;
 
 num radius = 1;
 
-str mainBlock = "minecraft:red_concrete";
-str altBlock = "minecraft:red_concrete_powder";
+str mainBlock = "minecraft:white_concrete";
+str altBlock = "minecraft:white_concrete_powder";
 
 str setBlock = "";
 for (num a = 0; a < amount; a = a + 1) {
@@ -41,9 +41,9 @@ for (num a = 0; a < amount; a = a + 1) {
                 for(num z = -r; z <= r; z = z + 1) {
 
                     if (randomInt(2) == 0) {
-                        block(cx + x, cy + y, cz + z, "minecraft:light_gray_concrete_powder", true);      
-                        block(cx + x, cy + y - 1, cz + z, "minecraft:light_gray_concrete", true);
-                    } else block(cx + x, cy + y, cz + z, "minecraft:light_gray_concrete", true);
+                        block(cx + x, cy + y, cz + z, altBlock, true);      
+                        block(cx + x, cy + y - 1, cz + z, mainBlock, true);
+                    } else block(cx + x, cy + y, cz + z, mainBlock, true);
                 }  
             }
         }

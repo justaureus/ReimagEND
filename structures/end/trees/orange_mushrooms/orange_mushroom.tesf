@@ -7,8 +7,8 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-str trunkBlock = "minecraft:light_gray_concrete";
-str altTrunkBlock = "minecraft:light_gray_concrete_powder";
+str trunkBlock = "minecraft:white_concrete";
+str altTrunkBlock = "minecraft:white_concrete_powder";
 str setBlock = trunkBlock;
 
 num trunkRadius = 3;

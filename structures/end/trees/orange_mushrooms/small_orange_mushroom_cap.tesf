@@ -66,9 +66,9 @@ for (num a = 0; a < amount; a = a + 1) {
         num r = radius;
 
         if (randomInt(2) == 0) {
-            block(cx, cy+yTranslate, cz, "minecraft:light_gray_concrete_powder", true);      
-            block(cx, cy+yTranslate - 1, cz, "minecraft:light_gray_concrete", true);
-        } else block(cx, cy+yTranslate, cz, "minecraft:light_gray_concrete", true);             
+            block(cx, cy+yTranslate, cz, "minecraft:white_concrete_powder", true);      
+            block(cx, cy+yTranslate - 1, cz, "minecraft:white_concrete", true);
+        } else block(cx, cy+yTranslate, cz, "minecraft:white_concrete", true);             
                 
         // Point vector down more
         dy = dy - droop;
