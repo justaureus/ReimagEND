@@ -56,6 +56,20 @@ features:
     - DEBRI_CIRCLET_INNER
     - DEBRI_CIRCLET_MIDDLE
     - DEBRI_CIRCLET_OUTER
+    - NEBULA_OBSIDIAN
+    - NEBULA_CONCRETE
+    - NEBULA_GLASS
+    - FOUNTAIN_ISLAND
+  trees:
+    - FOUNTAIN_SPIKES
+    - MAIN_PILLARS
+    - OUTER_PILLARS
+  landforms:
+    - FOUNTAIN_HILL
+  postprocessors:
+    - UPGRADED_FOUNTAIN
+    - OBSIDIAN_CIRCLET
+    - PILLAR_CIRCLET
   global-preprocessors: []
 
 

@@ -1,9 +1,13 @@
-id: MAIN_PILLARS
+id: FOUNTAIN_ISLAND
 type: FEATURE
+
+# Mound of endstone that end fountain spawns on top of
 
 distributor:
   type: POINTS
   points:
+    - x: 0
+      z: 0
     - x: 62
       z: 0
     - x: 53
@@ -25,24 +29,21 @@ distributor:
     - x: 53
       z: -44
 
-
 locator:
   type: AND
   locators:
-    - type: TOP
-      range: &range
-        min: 0
-        max: 70
-      pattern:
-        type: MATCH_AIR
-        offset: 0
+    - type: RANDOM
+      height: &range
+        min: 55
+        max: 65
+      amount: 1
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SOLID
-        offset: -1
+        type: MATCH_AIR
+        offset: 0
 
 structures:
   distribution:
     type: CONSTANT
-  structures: dragon_pillar
+  structures: fountain_island

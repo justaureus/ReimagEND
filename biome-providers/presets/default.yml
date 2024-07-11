@@ -19,6 +19,10 @@ biomes:
       # Distributes the outer end into different rings
       - << biome-providers/stages/base-distribution/ring_distribution.yml:stages
 
+      # Puts a pit in the center of the dragon island with the dragon fountain on a floating island for extra difficulty
+      # Disabled by default due to inconsistent setup. May have to regenerate end till you get suitable dragon pit.
+      #- << biome-providers/stages/dragon_pit.yml:stages 
+
       # AETHER POCKET STAGE - COMMENT OUT TO REMOVE THEIR GENERATION
       # Distributes aether pockets across certain rings of the outer end
       - << biome-providers/stages/aether_pockets.yml:stages 

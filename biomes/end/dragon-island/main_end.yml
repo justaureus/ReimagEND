@@ -47,13 +47,14 @@ terrain:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
 
+tags:
+  - MAIN_END
+
 features:
   preprocessors:
     - NEBULA_OBSIDIAN
     - NEBULA_CONCRETE
     - NEBULA_GLASS
-    - OBSIDIAN_CIRCLET
-    - PILLAR_CIRCLET
   trees:
     - FOUNTAIN_SPIKES
     - MAIN_PILLARS
@@ -62,6 +63,8 @@ features:
     - FOUNTAIN_HILL
   postprocessors:
     - UPGRADED_FOUNTAIN
+    - OBSIDIAN_CIRCLET
+    - PILLAR_CIRCLET
   buildings: []
   global-preprocessors: []
 

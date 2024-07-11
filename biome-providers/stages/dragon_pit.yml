@@ -1,0 +1,24 @@
+distribution-map: &distribution-map
+  type: EXPRESSION
+  expression: |
+    circle(centerRadius, x, z, 1)
+  variables:
+    centerRadius: 32.0000001
+  functions:
+    circle:    {arguments: [r, x, z, l], expression: "if(x*x+z*z<r*r,-1,l)"}
+  samplers:
+    noise:
+      type: OPEN_SIMPLEX_2
+      dimensions: 2
+      salt: 3912
+      frequency: 0.9
+
+stages:
+  - type: REPLACE
+    sampler: *distribution-map
+    from: MAIN_END
+    to: 
+      - MAIN_END_VOID: 1
+      - MAIN_END: 1
+      
+      
