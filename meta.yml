@@ -91,6 +91,10 @@ terrain-configuration:
   # Scale of default terrain
   # Default: 1
 
+  island-threshold: 0.3
+  # Threshold or density of default island
+  # Default: 0.3
+
   island-max-height: 250
   # Max height of default terrain
   # Default: 250
@@ -99,21 +103,17 @@ terrain-configuration:
   # Lowest height of default terrain
   # Default: -40
 
-  island-undercarriage-translate: -10
-  # Translate placement of default terrain undercarriage
-  # Default: -10
+  island-taper: 100
+  # Range for narrowing deafault terrain
+  # Default: 100
 
   island-flatness: 5
   # Flatness of default terrain
   # Default: 5
 
-  island-taper: 100
-  # Range for narrowing deafault terrain
-  # Default: 100
-
-  island-threshold: 0.3
-  # Threshold or density of default island
-  # Default: 0.3
+  island-undercarriage-translate: -10
+  # Translate placement of default terrain undercarriage
+  # Default: -10
   
   # \/ MIGHT BE USED IN THE FUTURE \/
 

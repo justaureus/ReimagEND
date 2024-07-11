@@ -1,6 +1,6 @@
 id: ARGIL_GROWTH
 type: BIOME
-extends: [ BASE_END, EQ_DEFAULT ]
+extends: [ BASE_END, EQ_WEBS ]
 vanilla: minecraft:end_midlands
 color: $biomes/colors.yml:ARGIL_GROWTH
 

@@ -6,11 +6,11 @@ terrain:
   sampler:
     type: EXPRESSION
     expression: |
-      -1+threshold+(((simplex(x, z)/5) * height))+
+      -1+threshold+
       lerp(y, max, 0, max-taper,
         max(
           lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
-            simplex3(x, y*flatness, z)
+            simplex3(x, y*flatness, z)+((spires(x, y/100, z) * spireStrength))
           ),
           lerp(y, min, 0, min+taper,
             simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
@@ -18,13 +18,13 @@ terrain:
         )
       )
     variables:
-      threshold: 0.4
-      max: 250
-      min: -40
-      taper: 100
-      flatness: 5
-      undercarriageTranslate: -10
-      height: 2
+      spireStrength: 5
+      threshold: ${meta.yml:terrain-configuration.island-threshold}
+      max: ${meta.yml:terrain-configuration.island-max-height}
+      min: ${meta.yml:terrain-configuration.island-min-height}
+      taper: ${meta.yml:terrain-configuration.island-taper}
+      flatness: ${meta.yml:terrain-configuration.island-flatness}
+      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
         dimensions: 3
@@ -45,7 +45,11 @@ terrain:
           sampler:
             type: OPEN_SIMPLEX_2
             frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
-      simplex:
-        dimensions: 2
-        type: OPEN_SIMPLEX_2
-        frequency: 0.02 / ${meta.yml:terrain-configuration.island-scale}
+      spires:
+        dimensions: 3
+        type: FBM
+        octaves: 3
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.01
+          salt: 5468

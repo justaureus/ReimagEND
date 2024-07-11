@@ -1,4 +1,4 @@
-id: EQ_NOODLES
+id: EQ_DEFAULT_NOODLES
 type: BIOME
 abstract: true
 
@@ -30,11 +30,11 @@ terrain:
       )
     variables:
       threshold: 0.6
-      max: 250
-      min: -40
-      taper: 100
-      flatness: 5
-      undercarriageTranslate: -10
+      max: ${meta.yml:terrain-configuration.island-max-height}
+      min: ${meta.yml:terrain-configuration.island-min-height}
+      taper: ${meta.yml:terrain-configuration.island-taper}
+      flatness: ${meta.yml:terrain-configuration.island-flatness}
+      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
     samplers:
       simplex3:
         dimensions: 3

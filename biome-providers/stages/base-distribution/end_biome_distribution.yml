@@ -13,12 +13,12 @@ stages:
       - END_BARRENS: 3
       - END_MIDLANDS: 3
       - END_HIGHLANDS: 3
+      - SHATTERED_END: 3
+      - CRAGGY_END: 3 
+      - END_SPIRES: 2
       - END_MIDLANDS: 3
       - END_BARRENS: 3
-      - END_PLANES: 2
-      - END_WEBS: 2
-      - END_NOODLES: 2
-
+      
   - type: REPLACE
     sampler: 
       dimensions: 2
@@ -30,12 +30,10 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring2-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring2
     to:
-      - END_SPIRES: 2
-      - CRAGGY_END: 3 
-      - SHATTERED_END: 3
+      - JAGGED_END: 2
+      - DARK_END: 5
       - SHATTERED_FOREST: 2
       
-
   - type: REPLACE
     sampler: 
       dimensions: 2
@@ -47,8 +45,7 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring3-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring3
     to:
-      - JAGGED_END: 2
-      - DARK_END: 5
+      - STYGIAN_BARRENS: 2
       - AMETHYST_END: 3
       - CRYING_END: 3
       - CORRUPTED_END: 3
@@ -64,7 +61,6 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring4-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring4
     to:
-      - STYGIAN_BARRENS: 2
       - ARGIL_GROWTH: 2
       - CHORUVE_FOREST: 3
       - CRYSTAL_OVERHEAD: 2 
@@ -106,7 +102,6 @@ stages:
       - END_MIDLANDS: 2
       - END_BARRENS: 3
 
-      - END_PLANES: 3
       - END_SPIRES: 2
       - ARGIL_GROWTH: 1
 
@@ -128,9 +123,6 @@ stages:
       - WARPED_FOREST: 2
       - WARPED_GROVE: 3
       - FLAXEN_FOREST: 4
-
-      - END_WEBS: 4
-      - END_NOODLES: 4
 
       - CRIM_DESOLATE: 4
       - VERMILION_WILDS: 4
