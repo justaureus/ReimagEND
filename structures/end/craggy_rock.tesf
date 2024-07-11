@@ -6,8 +6,8 @@ getBlock(4,-3,0) == "minecraft:air"
 
 num randPrecision = 100;
 num radius = 4;
-num warp = 2;
-num warpFreq = 5;
+num warp = 5;
+num warpFreq = 10;
 num radiusSquared = pow(radius,2);
 num yTranslate = -5;
 
