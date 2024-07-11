@@ -4,9 +4,12 @@ num xTranslate = 0;
 num yTranslate = 0;
 num zTranslate = 0;
 str setBlock = "minecraft:purple_concrete";
-if (getBlock(1,0,0) == "minecraft:air" &&
-    getBlock(5,0,0) == "minecraft:air" &&
-    getBlock(10,0,0) == "minecraft:air") {
+if (getBlock(5,0,0) == "minecraft:air" &&
+    getBlock(10,0,0) == "minecraft:air" &&
+    getBlock(-2,2,2) != "minecraft:air" &&
+    getBlock(-2,2,-2) != "minecraft:air" &&
+    getBlock(-2,-2,2) != "minecraft:air" &&
+    getBlock(-2,-2,-2) != "minecraft:air") {
     for(num l = 0; l <= length; l = l + 1) {
 
     // Reduce radius inversely to length
@@ -27,9 +30,12 @@ if (getBlock(1,0,0) == "minecraft:air" &&
         yTranslate = zTranslate+(1-randomInt(3));
         zTranslate = zTranslate+(1-randomInt(3));
     }
-} else if (getBlock(-1,0,0) == "minecraft:air" &&
-    getBlock(-5,0,0) == "minecraft:air" &&
-    getBlock(-10,0,0) == "minecraft:air") {
+} else if (getBlock(-5,0,0) == "minecraft:air" &&
+    getBlock(-10,0,0) == "minecraft:air" &&
+    getBlock(2,2,2) != "minecraft:air" &&
+    getBlock(2,2,-2) != "minecraft:air" &&
+    getBlock(2,-2,2) != "minecraft:air" &&
+    getBlock(2,-2,-2) != "minecraft:air") {
 
     for(num l = 0; l <= length; l = l + 1) {
 
@@ -51,9 +57,12 @@ if (getBlock(1,0,0) == "minecraft:air" &&
         yTranslate = zTranslate+(1-randomInt(3));
         zTranslate = zTranslate+(1-randomInt(3));
     }
-} else if (getBlock(0,0,1) == "minecraft:air" &&
-    getBlock(0,0,5) == "minecraft:air" &&
-    getBlock(0,0,10) == "minecraft:air") {
+} else if (getBlock(0,0,5) == "minecraft:air" &&
+    getBlock(0,0,10) == "minecraft:air" &&
+    getBlock(-2,2,-2) != "minecraft:air" &&
+    getBlock(2,2,-2) != "minecraft:air" &&
+    getBlock(2,-2,-2) != "minecraft:air" &&
+    getBlock(-2,-2,-2) != "minecraft:air") {
     for(num l = 0; l <= length; l = l + 1) {
 
     // Reduce radius inversely to length
@@ -74,9 +83,12 @@ if (getBlock(1,0,0) == "minecraft:air" &&
         yTranslate = zTranslate+(1-randomInt(3));
         xTranslate = xTranslate+(1-randomInt(3));
     }
-} else if (getBlock(0,0,-1) == "minecraft:air" &&
-    getBlock(0,0,-5) == "minecraft:air" &&
-    getBlock(0,0,-10) == "minecraft:air") {
+} else if (getBlock(0,0,-5) == "minecraft:air" &&
+    getBlock(0,0,-10) == "minecraft:air" &&
+    getBlock(-2,2,2) != "minecraft:air" &&
+    getBlock(2,2,2) != "minecraft:air" &&
+    getBlock(-2,-2,2) != "minecraft:air" &&
+    getBlock(2,-2,2) != "minecraft:air") {
     for(num l = 0; l <= length; l = l + 1) {
 
     // Reduce radius inversely to length

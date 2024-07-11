@@ -1,4 +1,4 @@
-id: CRYING_TENDRILS_UP
+id: PURPLE_TENDRILS_UP
 type: FEATURE
 
 distributor:
@@ -34,4 +34,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: crying_tendril_up
+  structures: purple_tendril_up

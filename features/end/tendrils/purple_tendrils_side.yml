@@ -1,4 +1,4 @@
-id: CRYING_TENDRILS_SIDE
+id: PURPLE_TENDRILS_SIDE
 type: FEATURE
 
 distributor:
@@ -23,8 +23,18 @@ locator:
       pattern:
         type: MATCH_AIR
         offset: 0
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 2
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: -2
 
 structures:
   distribution:
     type: CONSTANT
-  structures: crying_tendril_side
+  structures: purple_tendril_side

@@ -1,6 +1,6 @@
 id: CRYING_END
 type: BIOME
-extends: [ BASE_END, EQ_MULTI_TERRACED_LAND ]
+extends: [ BASE_END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:CRYING_END
 
@@ -10,9 +10,9 @@ palette:
 features:
   trees:
     - BUBBLE_TREES
-    - CRYING_TENDRILS_UP
-    - CRYING_TENDRILS_DOWN
-    - CRYING_TENDRILS_SIDE
+    - PURPLE_TENDRILS_UP
+    - PURPLE_TENDRILS_DOWN
+    - PURPLE_TENDRILS_SIDE
   postprocessors:
     - CRYING_DRIPS
     - CRYING_END_GLOWS
