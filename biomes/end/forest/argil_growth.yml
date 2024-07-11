@@ -1,0 +1,14 @@
+id: ARGIL_GROWTH
+type: BIOME
+extends: [ BASE_END, EQ_DEFAULT ]
+vanilla: minecraft:end_midlands
+color: $biomes/colors.yml:ARGIL_GROWTH
+
+palette:
+  - BLACK_GRAY_TERRACOTTA: 319
+
+features:
+  trees:
+    - ARGIL_TREES
+  preprocessors:
+    - ARGIL_VINE_SPIKES

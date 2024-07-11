@@ -1,0 +1,69 @@
+id: MAIN_END
+type: BIOME
+extends: [ BASE_END ]
+vanilla: minecraft:the_end
+color: $biomes/colors.yml:MAIN_END
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression: |
+      -1+threshold+
+      lerp(y, max, 0, max-taper,
+        max(
+          lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
+            simplex3(x, y*flatness, z)
+          ),
+          lerp(y, min, 0, min+taper,
+            simplex3(x, (y-undercarriageTranslate)*flatness, z) * 10
+          )
+        )
+      )
+    variables:
+      threshold: 0.7
+      max: 70
+      min: 0
+      taper: ${meta.yml:terrain-configuration.island-taper}
+      flatness: 0.5
+      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+    samplers:
+      simplex3:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.002 / ${meta.yml:terrain-configuration.island-scale}
+      undercarriageMask:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: RIDGED
+          octaves: 3
+          gain: 1
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.005 / ${meta.yml:terrain-configuration.island-scale}
+
+features:
+  preprocessors:
+    - NEBULA_OBSIDIAN
+    - NEBULA_CONCRETE
+    - NEBULA_GLASS
+    - OBSIDIAN_CIRCLET
+    - PILLAR_CIRCLET
+  trees:
+    - FOUNTAIN_SPIKES
+    - MAIN_PILLARS
+    - OUTER_PILLARS
+  landforms:
+    - FOUNTAIN_HILL
+  postprocessors:
+    - UPGRADED_FOUNTAIN
+  buildings: []
+  global-preprocessors: []
+
+palette:
+  - BLOCK:minecraft:end_stone: 319

@@ -1,6 +1,6 @@
 id: FLAXEN_FOREST
 type: BIOME
-extends: [ END, EQ_DEFAULT ]
+extends: [ BASE_END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:FLAXEN_FOREST
 
@@ -13,7 +13,7 @@ palette:
 
 features:
   trees:
-    - SWIRL_TREES
+    - CORKSCREW_TREES
   flora:
     - STRIPPED_ACACIA_BUSHES
     - END_GRASS

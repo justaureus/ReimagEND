@@ -1,6 +1,6 @@
 id: END_SPIRES
 type: BIOME
-extends: [ END, EQ_SPIRES ]
+extends: [ BASE_END, EQ_SPIRES ]
 vanilla: minecraft:end_barrens
 color: $biomes/colors.yml:END_SPIRES
 

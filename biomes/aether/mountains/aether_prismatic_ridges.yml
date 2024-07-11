@@ -1,6 +1,6 @@
 id: AETHER_PRISMATIC_RIDGES
 type: BIOME
-extends: [ AETHER, EQ_AETHER_MOUNTAINS ]
+extends: [ BASE_AETHER, EQ_AETHER_MOUNTAINS ]
 color: $biomes/colors.yml:AETHER_PRISMATIC_RIDGES
 vanilla: minecraft:the_end
 

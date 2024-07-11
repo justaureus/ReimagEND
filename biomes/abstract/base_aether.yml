@@ -1,0 +1,46 @@
+id: BASE_AETHER
+type: BIOME
+abstract: true
+extends: [ ORES_DEFAULT, DEPOSITS_DEFAULT, CARVING_LAND ]
+
+tags:
+  - NOT_VOID_SEA
+  - AETHER
+
+# Overworld Atmosphere
+colors:
+#  fog: 0xc8e8e7
+#  water: 0xbadfe6
+#  water-fog: 0xbadfe6
+#  sky: 0xc8e8e7
+  grass: 0x8496b0
+  foliage: 0x8496b0
+
+# End Atmosphere
+# colors:
+#  fog: 0x000000
+#  sky: 0x000000
+
+# climate:
+#  precipitation: none
+#  temperature: 0.5
+#  downfall: 0.5
+
+features:
+  preprocessors:
+    - SKY_LAYER_TOP
+    - SKY_LAYER_MIDDLE
+    - SKY_LAYER_BOTTOM
+    - CLOUD_LAYER_TOP
+    - CLOUD_LAYER_MIDDLE
+    - CLOUD_LAYER_BOTTOM
+    - SKY_CLOUDS
+    - CLOUDS
+    - CLOUD_RIVER
+  postprocessors:
+    - HANGING_LANTERNS
+  landforms:
+    - SMALL_MOSSY_BOULDER_PATCHES
+  buildings:
+    - TOWER_RUINS
+    - FORT_RUINS

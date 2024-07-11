@@ -1,6 +1,6 @@
 id: CRAGGY_END
 type: BIOME
-extends: [ END, EQ_DEFAULT ]
+extends: [ BASE_END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:CRAGGY_END
 

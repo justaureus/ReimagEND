@@ -1,6 +1,6 @@
 id: CHORAL_DEADLANDS
 type: BIOME
-extends: [ END, EQ_OVERHANGS ]
+extends: [ BASE_END, EQ_OVERHANGS ]
 vanilla: minecraft:end_barrens
 color: $biomes/colors.yml:CHORAL_DEADLANDS
 

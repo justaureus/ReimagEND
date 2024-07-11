@@ -1,0 +1,8 @@
+id: END_PLANES
+type: BIOME
+extends: [ BASE_END, EQ_HORIZONTAL_LANDSCAPES ]
+vanilla: minecraft:end_barrens
+color: $biomes/colors.yml:END_PLANES
+
+palette:
+  - BLOCK:minecraft:end_stone: 319

@@ -48,6 +48,6 @@ structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - shattered_pillar: 150
-    - end_pillar: 2
-    - leaning_end_pillar: 1
+    - shattered_pillar_procedural: 150
+    - giant_obsidian_pillar: 2
+    - tilted_giant_obsidian_pillar: 1

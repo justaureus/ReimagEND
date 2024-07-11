@@ -1,0 +1,53 @@
+id: CRYSTAL_SPIKES_DOWN
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 17
+  padding: 11
+  salt: 4568
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 319
+      pattern:
+        type: MATCH_SET
+        blocks: 
+          - minecraft:end_stone
+          - minecraft:light_gray_concrete
+          - minecraft:light_gray_concrete_powder
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: -5
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: 1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures:
+    - crystal_spike_down: 4
+    - crystal_spike_cluster_down: 1
+  

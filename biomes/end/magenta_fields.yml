@@ -1,6 +1,6 @@
 id: MAGENTA_FIELDS
 type: BIOME
-extends: [ END, EQ_DEFAULT ]
+extends: [ BASE_END, EQ_DEFAULT ]
 vanilla: minecraft:end_barrens
 color: $biomes/colors.yml:MAGENTA_FIELDS
 

@@ -1,2 +1,0 @@
-block(0,-2,0, "minecraft:spawner");
-state(0,-2,0, "type=VEX");    

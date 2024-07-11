@@ -21,9 +21,10 @@ terrain:
       threshold: 0.7
       max: 250
       min: -20
-      taper: ${meta.yml:terrain-configuration.island-taper}
+      taper: 100
       flatness: 4
       undercarriageTranslate: 0
+
     samplers:
       simplex3:
         dimensions: 3

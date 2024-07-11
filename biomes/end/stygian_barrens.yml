@@ -1,6 +1,6 @@
 id: STYGIAN_BARRENS
 type: BIOME
-extends: [ END, EQ_BUMPY ]
+extends: [ BASE_END, EQ_BUMPY ]
 vanilla: minecraft:end_highlands
 color: $biomes/colors.yml:STYGIAN_BARRENS
 

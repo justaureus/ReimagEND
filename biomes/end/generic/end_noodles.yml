@@ -1,0 +1,8 @@
+id: END_NOODLES
+type: BIOME
+extends: [ BASE_END, EQ_NOODLES ]
+vanilla: minecraft:end_barrens
+color: $biomes/colors.yml:END_NOODLES
+
+palette:
+  - BLOCK:minecraft:end_stone: 319

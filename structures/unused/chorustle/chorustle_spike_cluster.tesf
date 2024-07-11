@@ -1,4 +1,0 @@
-num spikes = 1+randomInt(3);
-for (num i = 0; i < spikes; i = i + 1) {
-    structure(0,0,0,"chorustle_spike","NONE");
-}

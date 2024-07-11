@@ -31,12 +31,12 @@ vars: &variables
   platformMaskNone: 0
   platformMaskFull: 0.1
   
-  threshold: ${meta.yml:terrain-configuration.island-threshold}
-  max: ${meta.yml:terrain-configuration.island-max-height}
-  min: ${meta.yml:terrain-configuration.island-min-height}
-  taper: ${meta.yml:terrain-configuration.island-taper}
-  flatness: ${meta.yml:terrain-configuration.island-flatness}
-  undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+  threshold: 0.4
+  max: 250
+  min: -40
+  taper: 100
+  flatness: 5
+  undercarriageTranslate: -10
 
 terrain:
   sampler:

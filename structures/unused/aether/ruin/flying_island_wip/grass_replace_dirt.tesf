@@ -1,4 +1,0 @@
-if (getBlock(0,0,0) == "minecraft:dirt" && getBlock(0,1,0) == "minecraft:air") {
-    block(0,0,0,"minecraft:grass_block");
-}
-

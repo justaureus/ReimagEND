@@ -1,6 +1,6 @@
 id: AETHER_FROSTBITE_WOODS
 type: BIOME
-extends: [ AETHER, EQ_AETHER_DEFAULT ]
+extends: [ BASE_AETHER, EQ_AETHER_DEFAULT ]
 color: $biomes/colors.yml:AETHER_FROSTBITE_WOODS
 vanilla: minecraft:the_end
 

@@ -1,0 +1,12 @@
+id: BASE_VOID
+type: BIOME
+abstract: true
+
+tags:
+  - NOT_VOID_SEA
+
+features:
+  global-preprocessors:
+    - END_SKY
+  buildings:
+    #- ENDSHIPS

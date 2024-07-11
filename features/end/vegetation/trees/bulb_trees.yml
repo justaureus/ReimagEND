@@ -1,0 +1,35 @@
+id: BULB_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 27
+  padding: 18
+  salt: 5468
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 0
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:light_gray_concrete
+          - minecraft:light_gray_concrete_powder
+          - minecraft:end_stone
+        offset: -1
+    
+structures:
+  distribution:
+    type: CONSTANT
+  structures: bulb_tree

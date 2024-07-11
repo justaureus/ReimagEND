@@ -1,6 +1,6 @@
 id: AETHER_MARBLE_COASTS
 type: BIOME
-extends: [ AETHER, EQ_AETHER_COAST_ISLES ]
+extends: [ BASE_AETHER, EQ_AETHER_COAST_ISLES ]
 color: $biomes/colors.yml:AETHER_MARBLE_COASTS
 vanilla: minecraft:the_end
 

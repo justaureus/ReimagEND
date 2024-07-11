@@ -18,12 +18,12 @@ terrain:
         )
       )
     variables:
-      threshold: ${meta.yml:terrain-configuration.island-threshold}
+      threshold: 0.4
       max: 175
       min: -20
-      taper: ${meta.yml:terrain-configuration.island-taper}
+      taper: 100
       flatness: 10
-      undercarriageTranslate: ${meta.yml:terrain-configuration.island-undercarriage-translate}
+      undercarriageTranslate: -10
     samplers:
       simplex3:
         dimensions: 3

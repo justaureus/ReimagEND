@@ -1,0 +1,54 @@
+id: CRYSTAL_SPIKES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 15
+  padding: 9
+  salt: 6573
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 319
+      pattern:
+        type: MATCH_SET
+        blocks: 
+          - minecraft:end_stone
+          - minecraft:light_gray_concrete
+          - minecraft:light_gray_concrete_powder
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: 1
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -2
+
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures:
+    - crystal_spike: 4
+    - crystal_spike_cluster: 1
+  

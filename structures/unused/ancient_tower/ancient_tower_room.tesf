@@ -1,8 +1,0 @@
-num random = randomInt(4);
-if (random == 0) structure(5,0,5,"empty_room","NONE");
-if (random == 1) {
-    structure(5,0,5,"vex_spawner_room","NONE");
-    state(5,5,5,"type=VEX"); 
-}
-if (random == 2) structure(5,0,5,"library_room","NONE");
-if (random == 3) structure(5,0,5,"end_gateway_room","NONE");

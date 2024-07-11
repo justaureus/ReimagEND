@@ -1,0 +1,29 @@
+id: BASE_END
+type: BIOME
+abstract: true
+
+tags:
+  - NOT_VOID_SEA
+  
+colors:
+# fog: 0x000000
+ water: 0x62529E
+ water-fog: 0x62529E
+# sky: 0x000000
+ grass: 0x8EB971
+ foliage: 0x85947f
+  
+#climate:
+# precipitation: none
+# temperature: 0.5
+# downfall: 0.5
+
+features:
+  global-preprocessors:
+    - END_SKY
+  buildings:
+    - SHULKER_RUINS
+    - ENDSHIPS
+    - CRASHED_ENDSHIPS
+    - END_HOUSES
+    - END_TOWERS

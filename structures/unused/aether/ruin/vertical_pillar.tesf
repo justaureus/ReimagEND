@@ -1,6 +1,0 @@
-num length = 10+randomInt(10);
-str setBlock = "ruin_block";
-
-for (num x = -length/2; x < length/2; x = x + 1) {
-    structure(0,x,0,setBlock,"NONE");
-}
