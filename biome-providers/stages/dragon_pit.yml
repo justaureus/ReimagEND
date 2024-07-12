@@ -1,9 +1,9 @@
 distribution-map: &distribution-map
   type: EXPRESSION
   expression: |
-    circle(centerRadius, x-1, z-1, 1)
+    circle(radius, x-1, z-1, 1)
   variables:
-    centerRadius: 32.1
+    radius: ${meta.yml:biome-distribution.dragon-pit-radius}
   functions:
     circle:    {arguments: [r, x, z, l], expression: "if(x*x+z*z<r*r,-1,l)"}
   samplers:

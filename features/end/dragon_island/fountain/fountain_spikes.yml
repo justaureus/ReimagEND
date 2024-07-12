@@ -12,18 +12,13 @@ distributor:
 locator:
   type: AND
   locators:
-    - type: PATTERN
+    - type: TOP
       range: &range
         min: 0
-        max: 70
+        max: 80
       pattern:
         type: MATCH_SOLID
-        offset: 0
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_AIR
-        offset: 1
+        offset: -1
 
 structures:
   distribution:

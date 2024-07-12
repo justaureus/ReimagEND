@@ -8,6 +8,10 @@ biome-distribution:
   # You can find these configs in the biome-providers directory, most of which contain
   # additional more specific parameters. 
 
+  dragon-pit-radius: 0
+  # Adds a pit around the dragon fountain that now floats on a center island. Disabled by default at 0. 
+  # Enable the dragon pit by setting the radius to the recommended 28 or any other digit.
+
   global-scale: 1
   # Modifies the scale of everything, you can use this parameter to if you
   # want just about every biome to be larger or smaller.
