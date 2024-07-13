@@ -8,10 +8,10 @@ biome-distribution:
   # You can find these configs in the biome-providers directory, most of which contain
   # additional more specific parameters. 
 
-
-
+  # ---
   # Dragon Island Configuration
   # Controls various features of the dragon island
+  # ---
 
   dragon-pit-radius: 0
   # Adds a pit around the dragon fountain that is now on a small floating center island. Disabled by default at 0. 
@@ -33,11 +33,11 @@ biome-distribution:
   # Controls the radius of small pillars at the main end island from the center of the island
   # Default: 80
 
-
-
+  # ---
   # Rings of Life Distribution
   # Each controls the width and biome scale of each ring starting from the center
-
+  # ---
+  
   ring1-width: 1000
   # Default: 1000
   ring1-biome-scale: 500
@@ -66,10 +66,10 @@ biome-distribution:
   frontier-biome-scale: 1000
   # Default: 1000
 
-
-
+  # ---
   # Void Distribution
   # Controls the distribution of void biomes
+  # ---
 
   void-scale: 1500
   # Controls the scale of void biomes.
@@ -79,11 +79,11 @@ biome-distribution:
   # Controls the scale of void biomes.
   # Default: 1000
 
-
-
+  # ---
   # Aether Distribution
   # Controls the distribution of Aether biomes
-
+  # ---
+  
   aether-biome-scale: 1000
   # Controls the scale of aether biomes within regions. 
   # Default: 1000
@@ -100,7 +100,7 @@ biome-distribution:
   # Controls the scale of ancient aether zones. 
   # Default: 1000
 
-
+  # ---
 
   global-scale: 1
   # Modifies the scale of everything, you can use this parameter to if you
@@ -112,8 +112,11 @@ biome-distribution:
 
 terrain-configuration:
 
+  # ---
+  # End Terrain Configuration
   # Controls the terrain generation of default end terrain (Effects vary across biomes)
-
+  # ---
+  
   island-scale: 1
   # Scale of default terrain
   # Default: 1
