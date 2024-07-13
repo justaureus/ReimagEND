@@ -1,14 +1,9 @@
 source:
   type: SAMPLER
   biomes:
-    - AETHER_CLOUD_SEA: 1
-    - aether-coasts: 2
-    - aether-lowlands: 3
-    - aether-midlands: 3
-    - aether-highlands: 2
-    - aether-mountains: 1
+    - aether: 1
   sampler:
     type: CELLULAR
     return: CellValue
-    frequency: 1 / ${meta.yml:biome-distribution.aether-region-scale} / ${meta.yml:biome-distribution.global-scale}
+    frequency: 1 / ${meta.yml:biome-distribution.aether-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     salt: 6579
