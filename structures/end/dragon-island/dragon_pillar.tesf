@@ -3,11 +3,11 @@ num goldenAngle = 2.39996;
 num pi = 3.14159;
 num twopi = 6.28318530718;
 
-num height = 50+randomInt(20);
-num yTranslate = -15;
+num height = 100+randomInt(20);
+num yTranslate = -65;
 num radius = 6+randomInt(2);
 
-structure(0,0,0,"obsidian_spike_cluster","NONE");
+structure(0,-2,0,"obsidian_spike_cluster","NONE");
 
 str altBlock = "minecraft:crying_obsidian";
 
