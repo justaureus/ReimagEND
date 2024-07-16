@@ -20,7 +20,7 @@ distributor:
         expression: |
           if (toggle > 0, -1, 1)
         variables:
-          toggle: ${meta.yml:biome-distribution.dragon-chains-toggle}
+          toggle: ${meta.yml:dragon-island.dragon-chains-toggle}
 
 
 locator:

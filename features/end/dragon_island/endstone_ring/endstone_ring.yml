@@ -1,4 +1,4 @@
-id: DEBRI_CIRCLET_INNER
+id: ENDSTONE_RING
 type: FEATURE
 
 distributor:
@@ -10,10 +10,10 @@ distributor:
         expression: |
           circle(minRadius+noise(x,z)*10, maxRadius+noise(x,z)*10, x+noise(x,z)-1, z+noise(x,z)-1, 1)
         variables:
-          minRadius: ${meta.yml:biome-distribution.small-pillar-radius}+90
-          maxRadius: ${meta.yml:biome-distribution.small-pillar-radius}+120
+          minRadius: ${meta.yml:dragon-island.endstone-ring-min}
+          maxRadius: ${meta.yml:dragon-island.endstone-ring-max}
         functions:
-          circle:    {arguments: [s, b, x, z, l], expression: "if( x*x + z*z > s*s && x*x + z*z < b*b,-1,l)"}
+          circle:    {arguments: [s, b, x, z, l], expression: "if( x*x + z*z > s*s && x*x + z*z < b*b, -1, l)"}
         samplers:
           noise:
             type: OPEN_SIMPLEX_2
@@ -45,17 +45,28 @@ distributor:
 locator:
   type: AND
   locators:
-    - type: RANDOM
-      height: &range
-        min: 104
-        max: 105
-      amount: 1
-      salt: 1245
     - type: PATTERN
-      range: *range
+      range: &range
+        min: 0
+        max: 319
       pattern:
         type: MATCH_AIR
-        offset: 0
+        offset: 0  
+
+    - type: SAMPLER_3D
+      sampler:
+        type: EXPRESSION
+        expression: |
+          if( y = round(height+noise(x,z)), 1, -1)
+        variables:
+          height: ${meta.yml:dragon-island.endstone-ring-height}
+        functions:
+        samplers:
+          noise:
+            type: OPEN_SIMPLEX_2
+            dimensions: 2
+            salt: 3912
+            frequency: 0.1
 
 structures:
   distribution:

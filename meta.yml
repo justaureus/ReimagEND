@@ -1,3 +1,27 @@
+dragon-island:
+  # Dragon Island Configuration
+  # Controls various features of the dragon island
+
+  dragon-pit-radius: 0
+  # Adds a pit around the dragon fountain that is now on a small floating center island. Disabled by default at 0. 
+  # Enable the dragon pit by setting the radius to the recommended 28 or any other digit.
+
+  dragon-chains-toggle: 0
+  # Adds giant obsidian chains at the corners of the dragon island. Disabled by default at 0. 
+  # Enable the dragon island chains by setting the value to 1.
+
+  # Controls various aspects of the endstone debri ring around the dragon island
+  endstone-ring-min: 170
+  # Minimum radius from 0,0
+  endstone-ring-max: 240
+  # Maxium radius from 0,0
+  endstone-ring-height: 104
+  # Y-level of endstone debri ring
+
+  small-pillar-min: 80
+  # Controls the min radius of small pillars at the main end island from the center of the island
+  # Default: 80
+
 biome-distribution:
   # Biome distribution refers to the placement of biomes, this does *NOT*
   # include aspects like terrain height / shape within biomes, or anything
@@ -8,19 +32,6 @@ biome-distribution:
   # You can find these configs in the biome-providers directory, most of which contain
   # additional more specific parameters. 
 
-  # ---
-  # Dragon Island Configuration
-  # Controls various features of the dragon island
-  # ---
-
-  dragon-pit-radius: 0
-  # Adds a pit around the dragon fountain that is now on a small floating center island. Disabled by default at 0. 
-  # Enable the dragon pit by setting the radius to the recommended 28 or any other digit.
-
-  dragon-chains-toggle: 0
-  # Adds giant obsidian chains at the corners of the dragon island. Disabled by default at 0. 
-  # Enable the dragon island chains by setting the value to 1.
-
   main-end-scale: 150
   # Controls general size of the main end island.  Larger scale = larger main end island.
   # Default: 150
@@ -28,10 +39,6 @@ biome-distribution:
   void-buffer-scale: 1000
   # Controls size of void "buffer" zone between main and outer end areas.  Larger scale = larger main end island.
   # Default: 1000
-
-  small-pillar-radius: 80
-  # Controls the radius of small pillars at the main end island from the center of the island
-  # Default: 80
 
   # ---
   # Rings of Life Distribution

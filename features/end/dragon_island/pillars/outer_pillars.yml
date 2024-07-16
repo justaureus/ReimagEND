@@ -10,7 +10,7 @@ distributor:
         expression: |
           max(circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 1),circle(centerRadius, x+noise(x,z)-1, z+noise(x,z)-1, 0.5))
         variables:
-          centerRadius: ${meta.yml:biome-distribution.small-pillar-radius}
+          centerRadius: ${meta.yml:dragon-island.small-pillar-min}
         functions:
           circle:    {arguments: [r, x, z, l], expression: "if(x*x+z*z>r*r,-1,l)"}
         samplers:
@@ -38,6 +38,12 @@ locator:
         type: MATCH
         block: minecraft:end_stone
         offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -3
     - type: PATTERN
       range: *range
       pattern:

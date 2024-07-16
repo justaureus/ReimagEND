@@ -52,18 +52,28 @@ tags:
 
 features:
   preprocessors:
+    # Sky Features
     - NEBULA_OBSIDIAN
     - NEBULA_CONCRETE
     - NEBULA_GLASS
+
+    - ENDSTONE_RING
+    
   trees:
-    - DRAGON_CHAINS
-    - FOUNTAIN_SPIKES
+    # Pillars
     - MAIN_PILLARS
     - OUTER_PILLARS
+
+    - DRAGON_CHAINS
+    - FOUNTAIN_SPIKES
+
   landforms:
     - FOUNTAIN_HILL
+
   postprocessors:
     - UPGRADED_FOUNTAIN
+
+    # Obsidian Scattered Across Ground
     - OBSIDIAN_CIRCLET
     - PILLAR_CIRCLET
   buildings: []
