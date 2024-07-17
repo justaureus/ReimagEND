@@ -110,12 +110,12 @@ biome-distribution:
   # Can be disabled by setting to 0
 
   aether-pocket-spread: 3000
-  # Adds aether pockets throughout the outer end frontier. 
-  # Can be disabled by setting to 0
+  # Controls the spread between each aether pocket.
+  # Default: 3000
 
   aether-pocket-radius: 500
-  # Adds aether pockets throughout the outer end frontier. 
-  # Can be disabled by setting to 0
+  # Controls the radius of aether pockets 
+  # Default: 500
 
   # Aether Biome Distribution
 
