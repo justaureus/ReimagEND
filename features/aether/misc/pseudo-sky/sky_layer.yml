@@ -1,4 +1,4 @@
-id: SKY_LAYER_TOP
+id: SKY_LAYER
 type: FEATURE
 
 distributor:
@@ -23,13 +23,30 @@ distributor:
       threshold: 0.6
 
 locator:
-  type: PATTERN
-  range: &range
-    min: 255
-    max: 256
-  pattern:
-    type: MATCH_AIR
-    offset: 0
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 319
+      pattern:
+        type: MATCH_AIR
+        offset: 0  
+
+    - type: SAMPLER_3D
+      sampler:
+        type: EXPRESSION
+        expression: |
+          if( height != 0, if( y = round(height+noise(x,z)), 1, -1), -1)
+        variables:
+          height: ${meta.yml:biome-distribution.aether-sky-height}
+        functions:
+        samplers:
+          noise:
+            type: OPEN_SIMPLEX_2
+            dimensions: 2
+            salt: 3912
+            frequency: 0.1
 
 structures:
   distribution:

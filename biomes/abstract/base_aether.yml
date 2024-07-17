@@ -28,12 +28,8 @@ colors:
 
 features:
   preprocessors:
-    - SKY_LAYER_TOP
-    - SKY_LAYER_MIDDLE
-    - SKY_LAYER_BOTTOM
-    - CLOUD_LAYER_TOP
-    - CLOUD_LAYER_MIDDLE
-    - CLOUD_LAYER_BOTTOM
+    - SKY_LAYER
+    - CLOUD_LAYER
     - SKY_CLOUDS
     - CLOUDS
     - CLOUD_RIVER
