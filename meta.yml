@@ -6,8 +6,12 @@ dragon-island:
   # Adds a pit around the dragon fountain that is now on a small floating center island. Disabled by default at 0. 
   # Enable the dragon pit by setting the radius to the recommended 28 or any other digit.
 
+  fountain-vex-toggle: 0
+  # Toggles vex spawners under the fountain. Disabled by default at 0. 
+  # Enable the vex spawners by setting the value to 1.
+
   dragon-chains-toggle: 0
-  # Adds giant obsidian chains at the corners of the dragon island. Disabled by default at 0. 
+  # Toggles giant obsidian chains at the corners of the dragon island. Disabled by default at 0. 
   # Enable the dragon island chains by setting the value to 1.
 
   # Controls various aspects of the endstone debri ring around the dragon island
