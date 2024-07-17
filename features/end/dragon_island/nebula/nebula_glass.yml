@@ -29,17 +29,28 @@ distributor:
 locator:
   type: AND
   locators:
-    - type: RANDOM
-      height: &range
-        min: 174
-        max: 177
-      amount: 1
-      salt: 2111
     - type: PATTERN
-      range: *range
+      range: &range
+        min: 0
+        max: 319
       pattern:
         type: MATCH_AIR
-        offset: 0
+        offset: 0  
+
+    - type: SAMPLER_3D
+      sampler:
+        type: EXPRESSION
+        expression: |
+          if( y = round(height+noise(x,z)), 1, -1)
+        variables:
+          height: ${meta.yml:dragon-island.nebula-glass-height}
+        functions:
+        samplers:
+          noise:
+            type: OPEN_SIMPLEX_2
+            dimensions: 2
+            salt: 3912
+            frequency: 0.1
 
 structures:
   distribution:

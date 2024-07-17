@@ -43,13 +43,30 @@ distributor:
               frequency: 0.2
         
 locator:
-  type: PATTERN
-  range: &range
-    min: 149
-    max: 150
-  pattern:
-    type: MATCH_AIR
-    offset: 0
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 319
+      pattern:
+        type: MATCH_AIR
+        offset: 0  
+
+    - type: SAMPLER_3D
+      sampler:
+        type: EXPRESSION
+        expression: |
+          if( y = round(height+noise(x,z)), 1, -1)
+        variables:
+          height: ${meta.yml:dragon-island.nebula-obsidian-height}
+        functions:
+        samplers:
+          noise:
+            type: OPEN_SIMPLEX_2
+            dimensions: 2
+            salt: 3912
+            frequency: 0.1
 
 structures:
   distribution:

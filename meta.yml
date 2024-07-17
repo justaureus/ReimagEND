@@ -11,12 +11,20 @@ dragon-island:
   # Enable the dragon island chains by setting the value to 1.
 
   # Controls various aspects of the endstone debri ring around the dragon island
-  endstone-ring-min: 170
-  # Minimum radius from 0,0
-  endstone-ring-max: 240
-  # Maxium radius from 0,0
   endstone-ring-height: 104
-  # Y-level of endstone debri ring
+  # Default: 104
+  endstone-ring-min: 170
+  # Default: 170
+  endstone-ring-max: 240
+  # Default: 240
+  
+  # Controls the sky nebulas above the dragon island
+  nebula-glass-height: 170
+  # Default: 170
+  nebula-concrete-height: 160
+  # Default: 160
+  nebula-obsidian-height: 150
+  # Default: 150
 
   small-pillar-min: 80
   # Controls the min radius of small pillars at the main end island from the center of the island

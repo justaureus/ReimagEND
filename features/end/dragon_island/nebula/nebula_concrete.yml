@@ -43,19 +43,35 @@ distributor:
               frequency: 0.2
         
 locator:
-  type: PATTERN
-  range: &range
-    min: 159
-    max: 160
-  pattern:
-    type: MATCH_AIR
-    offset: 0
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 319
+      pattern:
+        type: MATCH_AIR
+        offset: 0  
+
+    - type: SAMPLER_3D
+      sampler:
+        type: EXPRESSION
+        expression: |
+          if( y = round(height+noise(x,z)), 1, -1)
+        variables:
+          height: ${meta.yml:dragon-island.nebula-concrete-height}
+        functions:
+        samplers:
+          noise:
+            type: OPEN_SIMPLEX_2
+            dimensions: 2
+            salt: 3912
+            frequency: 0.1
 
 structures:
   distribution:
     type: WHITE_NOISE
   structures: 
-    - BLOCK:minecraft:purple_concrete: 5
     - BLOCK:minecraft:pearlescent_froglight: 3
     - BLOCK:minecraft:black_concrete: 10
     - BLOCK:minecraft:magenta_stained_glass: 3
@@ -63,3 +79,4 @@ structures:
     - BLOCK:minecraft:black_stained_glass: 3
     - BLOCK:minecraft:obsidian: 5
     - BLOCK:minecraft:crying_obsidian: 1
+    - BLOCK:minecraft:air: 5
