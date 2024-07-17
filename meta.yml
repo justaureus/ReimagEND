@@ -52,33 +52,25 @@ biome-distribution:
   # Rings of Life Distribution
   # Each controls the width and biome scale of each ring starting from the center
   # ---
-  
+
   ring1-width: 1000
-  # Default: 1000
-  ring1-biome-scale: 500
-  # Default: 500
-
   ring2-width: 1000
-  # Default: 1000
-  ring2-biome-scale: 1000
-  # Default: 1000
-
   ring3-width: 1000
-  # Default: 1000
-  ring3-biome-scale: 1000
-  # Default: 1000
-
   ring4-width: 1000
-  # Default: 1000
-  ring4-biome-scale: 500
-  # Default: 500
-
-  ring5-biome-scale: 500
-  # Default: 500
   ring5-width: 1000
+  # Width of each individual ring
   # Default: 1000
 
+  ring1-biome-scale: 1000
+  ring2-biome-scale: 1000
+  ring3-biome-scale: 1000
+  ring4-biome-scale: 1000
+  ring5-biome-scale: 1000
+  # Scale of biomes within each individual ring
+  # Default: 1000
+  
   frontier-biome-scale: 1000
+  # Scale of end biomes in the outer end frontier after ring distribution
   # Default: 1000
 
   # ---
