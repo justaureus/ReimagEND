@@ -60,9 +60,9 @@ structures:
     #- yellow_aurora_segment: 1 
     - lime_aurora_segment: 1 
     #- green_aurora_segment: 1 
-    - cyan_aurora_segment: 1
+    #- cyan_aurora_segment: 1
     - light_blue_aurora_segment: 1
     #- blue_aurora_segment: 1
-    - purple_aurora_segment: 1 
+    #- purple_aurora_segment: 1 
     - magenta_aurora_segment: 1 
     #- pink_aurora_segment: 1 
