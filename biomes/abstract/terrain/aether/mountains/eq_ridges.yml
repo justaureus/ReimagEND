@@ -29,12 +29,12 @@ terrain:
         )
       )
     variables:
-      threshold: 0.6
-      max: 175
-      min: -20
-      taper: 100
-      flatness: 10
-      undercarriageTranslate: -10
+      threshold: ${meta.yml:terrain-configuration.aether-island-threshold}*2
+      max: ${meta.yml:terrain-configuration.aether-island-max-height}
+      min: ${meta.yml:terrain-configuration.aether-island-min-height}
+      taper: ${meta.yml:terrain-configuration.aether-island-taper}
+      flatness: ${meta.yml:terrain-configuration.aether-island-flatness}*2
+      undercarriageTranslate: ${meta.yml:terrain-configuration.aether-island-undercarriage-translate}
     samplers:
       simplex3:
         dimensions: 3
