@@ -34,10 +34,10 @@ biomes:
       # Distributes aether biomes
       - << biome-providers/stages/base-distribution/aether_distribution.yml:stages 
 
-      # Distributes aether biomes
+      # Distributes border biomes
       - << biome-providers/stages/add_border_biomes.yml:stages 
 
-      # Distributes the outer end into different rings
+      # Distributes a vanilla-like outer end
       - << biome-providers/stages/base-distribution/optional/vanilla_distribution.yml:stages
 
       # Expanding and smoothing the edges of biomes
