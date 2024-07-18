@@ -10,14 +10,12 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring1-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring1
     to:
-      - END_BARRENS: 1
-      - END_MIDLANDS: 1
       - END_HIGHLANDS: 1
+      - END_MIDLANDS: 1
+      - END_BARRENS: 1
       - SHATTERED_END: 1
       - CRAGGY_END: 1 
       - END_SPIRES: 1
-      - END_MIDLANDS: 1
-      - END_BARRENS: 1
       
   - type: REPLACE
     sampler: 
