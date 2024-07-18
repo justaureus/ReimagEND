@@ -84,6 +84,10 @@ biome-distribution:
   # Scale of end biomes in the outer end frontier after ring distribution
   # Default: 1000
 
+  end-sky-height: 254
+  # Controls the height of the end sky feature. Disabled when set to 0.
+  # Default: 254
+
   # ---
   # Void Distribution
   # Controls the distribution of void biomes
