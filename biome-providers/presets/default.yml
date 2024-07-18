@@ -11,6 +11,9 @@ biomes:
     # Dragon Island with Outer End Rings
     source: $biome-providers/sources/reimagEND.yml:source
 
+    # Dragon Island with Vanilla-like Outer End
+    #source: $biome-providers/sources/vanilla.yml:source
+
     # All Aether Dimension
     #source: $biome-providers/sources/aether.yml:source
     
@@ -19,7 +22,6 @@ biomes:
       # Distributes the outer end into different rings
       - << biome-providers/stages/base-distribution/ring_distribution.yml:stages
 
-      # AETHER POCKET STAGE - COMMENT OUT TO REMOVE THEIR GENERATION
       # Distributes aether pockets across certain rings of the outer end
       - << biome-providers/stages/aether_pockets.yml:stages 
 
@@ -34,6 +36,9 @@ biomes:
 
       # Distributes aether biomes
       - << biome-providers/stages/add_border_biomes.yml:stages 
+
+      # Distributes the outer end into different rings
+      - << biome-providers/stages/base-distribution/optional/vanilla_distribution.yml:stages
 
       # Expanding and smoothing the edges of biomes
       - << biome-providers/stages/expand.yml:stages
