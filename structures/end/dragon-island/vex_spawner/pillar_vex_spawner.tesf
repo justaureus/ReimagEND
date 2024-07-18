@@ -1,5 +1,5 @@
 num radius = 4;
-num yTranslate = -8;
+num yTranslate = -12;
 
 structure(0,yTranslate,0, "fountain_vex_spawner_sc", "NONE");
 

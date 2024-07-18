@@ -73,7 +73,9 @@ features:
   postprocessors:
     - UPGRADED_FOUNTAIN
     - FOUNTAIN_VEX_SPAWNER
-    - PILLAR_VEX_SPAWNER
+
+    - PILLAR_VEX_SPAWNER_TOP
+    - PILLAR_VEX_SPAWNER_BOTTOM
 
     # Obsidian Scattered Across Ground
     - OBSIDIAN_CIRCLET

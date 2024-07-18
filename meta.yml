@@ -1,6 +1,8 @@
 dragon-island:
   # Dragon Island Configuration
   # Controls various features of the dragon island
+  
+  # Be warned that certain features when enabled will make the dragon fight more challeneging.
 
   dragon-pit-radius: 0
   # Adds a pit around the dragon fountain that is now on a small floating center island. Disabled by default at 0. 
@@ -10,8 +12,9 @@ dragon-island:
   # Toggles vex spawners under the fountain. Disabled by default at 0. 
   # Enable the vex spawners by setting the value to 1.
 
-  pillar-vex-toggle: 0
-  # Toggles vex spawners under the pillars. Disabled by default at 0. 
+  pillar-vex-top-toggle: 0
+  pillar-vex-bottom-toggle: 0
+  # Toggles vex spawners inside the pillar under the top or under the bottom. Disabled by default at 0. 
   # Enable the vex spawners by setting the value to 1.
 
   dragon-chains-toggle: 0

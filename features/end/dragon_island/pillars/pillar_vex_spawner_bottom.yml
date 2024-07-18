@@ -1,4 +1,4 @@
-id: PILLAR_VEX_SPAWNER
+id: PILLAR_VEX_SPAWNER_BOTTOM
 type: FEATURE
 
 # Rib cage like spikes surrounding fountain
@@ -34,21 +34,16 @@ distributor:
         expression: |
           if (toggle > 0, -1, 1)
         variables:
-          toggle: ${meta.yml:dragon-island.pillar-vex-toggle}
+          toggle: ${meta.yml:dragon-island.pillar-vex-bottom-toggle}
 
 locator:
   type: AND
   locators:
     - type: RANDOM
       height: &range
-        min: 64
-        max: 65
+        min: 74
+        max: 75
       amount: 1
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_SOLID
-        offset: 1
     - type: PATTERN
       range: *range
       pattern:
@@ -63,4 +58,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: fountain_vex_spawner
+  structures: pillar_vex_spawner
