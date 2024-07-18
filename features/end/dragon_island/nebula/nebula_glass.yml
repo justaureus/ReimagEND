@@ -15,7 +15,7 @@ distributor:
         expression: |
           circle(minRadius+noise(x,z)*10, maxRadius+noise(x,z)*10, x+noise(x,z)-1, z+noise(x,z)-1, 1)
         variables:
-          minRadius: 110
+          minRadius: 120
           maxRadius: 300
         functions:
           circle:    {arguments: [s, b, x, z, l], expression: "if( x*x + z*z > s*s && x*x + z*z < b*b,-1,l)"}
