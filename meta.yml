@@ -2,7 +2,7 @@ dragon-island:
   # Dragon Island Configuration
   # Controls various features of the dragon island
   
-  # Be warned that certain features when enabled will make the dragon fight more challeneging.
+  # Be warned that certain features when enabled will make the dragon fight more challenging.
 
   dragon-pit-radius: 0
   # Adds a pit around the dragon fountain that is now on a small floating center island. Disabled by default at 0. 
