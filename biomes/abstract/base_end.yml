@@ -27,3 +27,4 @@ features:
     - CRASHED_ENDSHIPS
     - END_HOUSES
     - END_TOWERS
+    - END_GATEWAYS

@@ -59,6 +59,10 @@ biome-distribution:
   # Controls size of void "buffer" zone between main and outer end areas.  Larger scale = larger main end island.
   # Default: 1000
 
+  end-gateway-min: 5000
+  # Controls the min radius of end gateway spawns throughout the outer end
+  # Default: 5000
+
   # ---
   # Rings of Life Distribution
   # Each controls the width and biome scale of each ring starting from the center

@@ -49,6 +49,21 @@ locator:
       pattern:
         type: MATCH_AIR
         offset: 0
+    
+    - type: SAMPLER_3D
+      sampler:
+        type: EXPRESSION
+        expression: |
+          if( toggle = 0, -1, 1)
+        variables:
+          toggle: ${meta.yml:dragon-island.small-pillar-min}
+        functions:
+        samplers:
+          noise:
+            type: OPEN_SIMPLEX_2
+            dimensions: 2
+            salt: 3912
+            frequency: 0.1
 
 structures:
   distribution:

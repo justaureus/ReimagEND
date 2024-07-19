@@ -68,3 +68,4 @@ structures:
     - BLOCK:minecraft:magenta_stained_glass: 3
     - BLOCK:minecraft:black_stained_glass: 3
     - BLOCK:minecraft:pearlescent_froglight: 1
+    - blank: 5
