@@ -21,6 +21,9 @@ locator:
         offset: -1
       - type: MATCH_AIR
         offset: 0
+      - type: MATCH
+        block: minecraft:end_stone
+        offset: -2 
 
 
 structures:
