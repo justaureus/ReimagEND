@@ -1,3 +1,9 @@
+if (getBlock(0,-3,4) == "minecraft:air" || 
+getBlock(0,-3,-4) == "minecraft:air" ||
+getBlock(-4,-3,0) == "minecraft:air" ||
+getBlock(4,-3,0) == "minecraft:air" 
+) fail;
+
 num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
