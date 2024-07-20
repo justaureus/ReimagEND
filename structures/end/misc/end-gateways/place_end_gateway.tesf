@@ -34,6 +34,6 @@ for (num y = checkStart; y < checkMax; y = y + 1) {
 
 if (valid) fail;
 
-print("x: " + originX() + " y: " + originY() + " z: " + originZ());
+// print("x: " + originX() + " y: " + originY() + " z: " + originZ());
 
 structure(0, -h, 0, "end_gateway", "NONE");
