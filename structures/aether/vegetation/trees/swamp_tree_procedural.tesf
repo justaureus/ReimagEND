@@ -73,7 +73,13 @@ for (num r = 0; r < roots; r = r + 1) {
 
         // Place root block
         str currentBlock = getBlock(cx, cy, cz);
-        if (currentBlock == "minecraft:stone") {
+        if (currentBlock == "minecraft:stone" ||
+        currentBlock == "minecraft:cobblestone" ||
+        currentBlock == "minecraft:mossy_cobblestone" ||
+        currentBlock == "minecraft:dirt" ||
+        currentBlock == "minecraft:grass_block" ||
+        currentBlock == "minecraft:black_concrete_powder" ||
+        currentBlock == "minecraft:mud") {
             break;
         } else {
             block(cx, cy, cz, rootBlock);
