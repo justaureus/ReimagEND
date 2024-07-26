@@ -1,0 +1,42 @@
+num checkLength = 30;
+
+num length = 0;
+bool chainValid = false;
+bool logValid = false;
+
+for (num l = 0; l < checkLength; l = l + 1) {
+    if (getBlock(0, l, 0) != "minecraft:air" && 
+    getBlock(0, l, 0) != "minecraft:cobweb") {
+        length = l;
+        chainValid = true;
+        break;
+    }
+    chainValid = false;
+}
+
+if (chainValid) {
+    block(0,0,0,"minecraft:oak_fence");
+    for (num y = 1; y < length; y = y + 1) {
+        block(0,y,0,"minecraft:chain");
+    }      
+} 
+
+for (num l = 0; l < checkLength; l = l + 1) {
+    if (getBlock(0, -l, 0) != "minecraft:air" && 
+    getBlock(0, -l, 0) != "minecraft:cobweb" &&
+    getBlock(0, -l, 0) != "minecraft:snow") {
+    length = l;
+    logValid = true;
+    break;
+}
+    logValid = false;
+}   
+
+if (logValid) {
+    for (num y = 2; y < length; y = y + 1) {
+        block(0, -y, 0, "minecraft:oak_log", true);
+    }    
+}
+
+
+

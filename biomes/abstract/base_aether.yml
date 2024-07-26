@@ -40,3 +40,4 @@ features:
   buildings:
     - TOWER_RUINS
     - FORT_RUINS
+    - MINESHAFTS

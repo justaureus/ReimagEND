@@ -1,0 +1,54 @@
+id: MINESHAFTS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 15
+  padding: 25
+  salt: 4357
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      height: &range
+        min: 0
+        max: 319
+      amount: 1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: 5
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -5
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: 5
+    - type: ADJACENT_PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -5
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures: 
+    - place_mineshaft: 10
+    - place_big_mineshaft: 1

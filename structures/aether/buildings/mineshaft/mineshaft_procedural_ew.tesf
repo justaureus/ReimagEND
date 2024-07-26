@@ -1,0 +1,46 @@
+num length = 15+randomInt(35);
+num height = 3;
+num width = 2;
+num cobwebChance = 40; 
+num railChance = 2; 
+num yTranslate = -1;
+
+//if (getBlock(length/1.5, 0, 0) == "minecraft:air") fail;
+
+for(num x = 0; x < length; x = x + 1) {
+    for(num y = height; y >= 0; y = y - 1) {
+        for(num z = -width/2; z <= width/2; z = z + 1) {
+            
+            if (y > 0) {
+                if (randomInt(cobwebChance) == 0) {
+                     if (getBlock(x, height+1, z) != "minecraft:air" &&
+                     x % 5 != 0) block(x, y, z, "minecraft:cobweb", true);
+                } else block(x, y, z, "minecraft:air", true);
+            }
+
+            if (y == 0 &&
+            getBlock(x, y, z) == "minecraft:air") block(x, y, z, "minecraft:oak_planks", true);
+
+            if (y == 1 && 
+            z == 0 &&
+            randomInt(railChance) == 0) block(x, y, z, "minecraft:rail[shape=east_west]", true);
+
+            // posts
+            if (getBlock(x, height+1, z) != "minecraft:air") {
+                if (y > 0 && y < height &&
+                x % 5 == 0 &&
+                (z == (-width/2) ||
+                z == width/2)) block(x, y, z, "minecraft:oak_fence", false);
+
+                if (y == height && 
+                x % 5 == 0) block(x, y, z, "minecraft:oak_planks", false);
+            } else {
+                if (y == 1 && 
+                x % 5 == 0 &&
+                (z == (-width/2) ||
+                z == width/2)) structure(x, y, z, "mineshaft_chain", "NONE");
+            }
+
+        }
+    }
+}
