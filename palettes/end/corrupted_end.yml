@@ -23,6 +23,135 @@ layers:
           return: "CellValue"
           frequency: 0.5
           salt: 9345
+  - materials:
+      - minecraft:black_concrete_powder: 15
+      - minecraft:black_concrete: 10
+      - minecraft:obsidian: 5
+      - minecraft:crying_obsidian: 3
+      - minecraft:purple_concrete: 1
+    layers: 1
+    sampler:
+      type: WHITE_NOISE
+      amplitude: 1
+      warp:
+        type: "OPEN_SIMPLEX_2"
+        frequency: 0.9
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: "CELLULAR"
+          return: "CellValue"
+          frequency: 0.5
+          salt: 9345
+  - materials:
+      - minecraft:black_concrete_powder: 15
+      - minecraft:black_concrete: 10
+      - minecraft:obsidian: 5
+      - minecraft:crying_obsidian: 3
+      - minecraft:purple_concrete: 1
+    layers: 1
+    sampler:
+      type: WHITE_NOISE
+      amplitude: 1
+      warp:
+        type: "OPEN_SIMPLEX_2"
+        frequency: 0.9
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: "CELLULAR"
+          return: "CellValue"
+          frequency: 0.5
+          salt: 9345
+  - materials:
+      - minecraft:black_concrete_powder: 15
+      - minecraft:black_concrete: 10
+      - minecraft:obsidian: 5
+      - minecraft:crying_obsidian: 3
+      - minecraft:purple_concrete: 1
+    layers: 1
+    sampler:
+      type: WHITE_NOISE
+      amplitude: 1
+      warp:
+        type: "OPEN_SIMPLEX_2"
+        frequency: 0.9
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: "CELLULAR"
+          return: "CellValue"
+          frequency: 0.5
+          salt: 9345
+  - materials:
+      - minecraft:black_concrete_powder: 15
+      - minecraft:black_concrete: 10
+      - minecraft:obsidian: 5
+      - minecraft:crying_obsidian: 3
+      - minecraft:purple_concrete: 1
+      - minecraft:air: 5
+    layers: 1
+    sampler:
+      type: WHITE_NOISE
+      amplitude: 1
+      warp:
+        type: "OPEN_SIMPLEX_2"
+        frequency: 0.9
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: "CELLULAR"
+          return: "CellValue"
+          frequency: 0.5
+          salt: 9345
+  - materials:
+      - minecraft:black_concrete_powder: 15
+      - minecraft:black_concrete: 10
+      - minecraft:obsidian: 5
+      - minecraft:crying_obsidian: 3
+      - minecraft:purple_concrete: 1
+      - minecraft:air: 10
+    layers: 1
+    sampler:
+      type: WHITE_NOISE
+      amplitude: 1
+      warp:
+        type: "OPEN_SIMPLEX_2"
+        frequency: 0.9
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: "CELLULAR"
+          return: "CellValue"
+          frequency: 0.5
+          salt: 9345
+  - materials:
+      - minecraft:black_concrete_powder: 15
+      - minecraft:black_concrete: 10
+      - minecraft:obsidian: 5
+      - minecraft:crying_obsidian: 3
+      - minecraft:purple_concrete: 1
+      - minecraft:air: 15
+    layers: 1
+    sampler:
+      type: WHITE_NOISE
+      amplitude: 1
+      warp:
+        type: "OPEN_SIMPLEX_2"
+        frequency: 0.9
+      sampler:
+        type: FBM
+        octaves: 2
+        sampler:
+          type: "CELLULAR"
+          return: "CellValue"
+          frequency: 0.5
+          salt: 9345
           
 
 

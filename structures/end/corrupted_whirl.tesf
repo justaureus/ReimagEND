@@ -1,0 +1,43 @@
+num radius = 1.5;
+num length = 10+randomInt(35);
+num lenInt = 0.05;
+
+num dir = 0;
+num dirInt = 0.05;
+
+num wid = 2;
+num widInt = 0.05;
+
+str setBlock = "minecraft:gray_concrete";
+
+for(num l = 0; l <= length; l = l + lenInt) {
+
+    // Reduce radius inversely to length
+    num r = (radius/length * -l) + radius;
+
+    // Generate sphere at each point
+    for(num x = -r; x <= r; x = x + 1) {
+        for(num y = -r; y <= r; y = y + 1) {
+            for(num z = -r; z <= r; z = z + 1) {
+                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
+                    setBlock =  "minecraft:smooth_basalt";
+                    num random = randomInt(5);
+                    if (random == 0) setBlock = "minecraft:black_concrete";
+                    if (random == 1) setBlock = "minecraft:black_concrete_powder";
+                    if (random == 2) setBlock = "minecraft:obsidian";
+                    if (random == 3) setBlock = "minecraft:crying_obsidian";
+                    if (random == 4) setBlock = "minecraft:purple_concrete";
+                    block(wid*cos(dir) + x, l + y, wid*sin(dir) + z, setBlock, false);                  
+                }
+            }
+        }
+    }
+
+    dir = dir + dirInt;
+    if (l < length/3) {
+        wid = wid + widInt;
+    } else wid = wid - widInt;
+    
+
+}
+

@@ -6,3 +6,7 @@ color: $biomes/colors.yml:CORRUPTED_END
 
 palette:
   - CORRUPTED_END: 319
+
+features:
+  trees:
+    - CORRUPTED_WHIRLS

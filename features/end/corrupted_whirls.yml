@@ -1,0 +1,32 @@
+id: CORRUPTED_WHIRLS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 21
+  padding: 15
+  salt: 5466
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 0
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        blocks:
+        offset: -1
+    
+structures:
+  distribution:
+    type: CONSTANT
+  structures: corrupted_whirl
