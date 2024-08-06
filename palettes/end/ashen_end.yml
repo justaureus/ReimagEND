@@ -1,0 +1,19 @@
+id: ASHEN_END
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:gray_concrete_powder: 1
+    layers: 2
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.1
+        return: CellValue
+  - materials:
+      - minecraft:smooth_basalt: 1
+    layers: 1
