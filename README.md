@@ -36,10 +36,20 @@ worlds:
 ## How to Disable Biomes
 Dislike a particular biome? 
 Well, you can customize everything in ReimagEnd to your liking and that includes disabling any biomes!
-##### Go to the corresponding distribution stage for that biome type (end, aether, & void), which can be found in `biome-providers\stages`
+
+Go to the corresponding distribution stage for that biome type (end, aether, & void), which can be found in `biome-providers\stages`
 ###### Place a # in front of the weighted item representing the biome in the list to comment out the biome and disable it
 
 ## Overworld-Like Aether Pockets
-ReimagEnd by default includes overworld-like Aether pockets throughout the frontier of the outer end. 
-##### Aether pocket generation can be disabled by commenting out the biome-providers/stages/aether_pockets.yml:stages in the default.yml 
+By default, overworld-like Aether pockets generate throughout the frontier of the outer end. 
+
+Aether pocket generation can be disabled by going to the `meta.yml` and toggling the `toggle-aether-pockets` value
 ###### Place a # in front of the stage to comment out the stage
+
+## Dragon Island Difficulty Tweaks
+ReimagEnd has optional dragon island difficulty tweaks that can be enabled to make the dragon fight a bit more challenging, which are listed below.
+- Pitfall into the void around the dragon fountain that now resides on a small floating island in the center.
+- Vex spawners under the dragon fountain that make approaching the fountain a bit more challenging.
+- Vex spawners within the top and bottom sections of the dragon pillars that give the end crystals a bit more protection against those who seek to destroy them.
+
+Go to the `meta.yml` to enable and configure these features
