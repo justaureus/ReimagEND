@@ -1,4 +1,5 @@
-# ReimagEND
+![ReimagEND](https://github.com/user-attachments/assets/c407dcf6-ae98-4a7b-8db8-36b41d3ee7d3)
+
 ## A Terra pack designed to reimagine the End with new biomes, features, and terrain to explore
 
 Part of this pack uses resources from Astrash's Aeropelago pack, found [here](https://github.com/Astrashh/Aeropelago).
