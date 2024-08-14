@@ -1,8 +1,8 @@
-id: WARPED_GROVE
+id: TWISTED_GROVE
 type: BIOME
 extends: [ BASE_END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
-color: $biomes/colors.yml:WARPED_GROVE
+color: $biomes/colors.yml:TWISTED_GROVE
 
 colors:
   grass: 0x54c0d9

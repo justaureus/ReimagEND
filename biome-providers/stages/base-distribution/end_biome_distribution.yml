@@ -15,7 +15,7 @@ stages:
       - END_BARRENS: 1
       - SHATTERED_END: 1
       - CRAGGY_END: 1 
-      - END_SPIRES: 1
+      - GLIMMERING_SPIRES: 1
       
   - type: REPLACE
     sampler: 
@@ -28,7 +28,7 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.ring2-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: ring2
     to:
-      - JAGGED_END: 1
+      - SKEWERED_CLIFFS: 1
       - DARK_END: 1
       - SHATTERED_FOREST: 1
       
@@ -45,8 +45,8 @@ stages:
     to:
       - STYGIAN_BARRENS: 1
       - AMETHYST_END: 1
-      - CRYING_END: 1
-      - CORRUPTED_END: 1
+      - CRYING_CURRENTS: 1
+      - CORRUPTED_WASTES: 1
 
   - type: REPLACE
     sampler: 
@@ -60,7 +60,7 @@ stages:
     from: ring4
     to:
       - ARGIL_GROWTH: 1
-      - CHORUVE_FOREST: 1
+      - CHORUVE_WOODS: 1
       - CRYSTAL_OVERHEAD: 1 
       - IVORY_EMPYREAN: 1
 
@@ -76,9 +76,9 @@ stages:
     from: ring5
     to:
       - ROSETTE_POOLS: 1
-      - MAUVE_FOREST: 1
-      - WARPED_FOREST: 1
-      - WARPED_GROVE: 1
+      - MAUVE_JUNGLE: 1
+      - WARPED_WOODLANDS: 1
+      - TWISTED_GROVE: 1
       - FLAXEN_FOREST: 1
       - CHORAL_DEADLANDS: 1
       
@@ -100,31 +100,31 @@ stages:
       - END_MIDLANDS: 1
       - END_BARRENS: 1
 
-      - END_SPIRES: 1
+      - GLIMMERING_SPIRES: 1
       - ARGIL_GROWTH: 1
 
       - SHATTERED_END: 1
       - SHATTERED_FOREST: 1
-      - JAGGED_END: 1
+      - SKEWERED_CLIFFS: 1
       - DARK_END: 1
       - AMETHYST_END: 1
-      - CRYING_END: 1
-      - CORRUPTED_END: 1
+      - CRYING_CURRENTS: 1
+      - CORRUPTED_WASTES: 1
       - STYGIAN_BARRENS: 1
       - CRAGGY_END: 1
-      - CHORUVE_FOREST: 1
+      - CHORUVE_WOODS: 1
       - CHORAL_DEADLANDS: 1
       - CRYSTAL_OVERHEAD: 1
       - IVORY_EMPYREAN: 1
       - ROSETTE_POOLS: 1
-      - MAUVE_FOREST: 1
-      - WARPED_FOREST: 1
-      - WARPED_GROVE: 1
+      - MAUVE_JUNGLE: 1
+      - WARPED_WOODLANDS: 1
+      - TWISTED_GROVE: 1
       - FLAXEN_FOREST: 1
 
       - CRIM_DESOLATE: 1
       - VERMILION_WILDS: 1
-      - MAGENTA_FIELDS: 1
+      - CERISE_CORRAL: 1
       - CERULEAN_EXPANSE: 1
       - APRICOT_FUNGAL_FOREST: 1
       - ASHEN_END: 1

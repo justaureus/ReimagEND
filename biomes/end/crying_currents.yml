@@ -1,11 +1,11 @@
-id: CRYING_END
+id: CRYING_CURRENTS
 type: BIOME
 extends: [ BASE_END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
-color: $biomes/colors.yml:CRYING_END
+color: $biomes/colors.yml:CRYING_CURRENTS
 
 palette:
-  - CRYING_END: 319
+  - CRYING_CURRENTS: 319
 
 features:
   trees:
@@ -15,4 +15,4 @@ features:
     - PURPLE_TENDRILS_SIDE
   postprocessors:
     - CRYING_DRIPS
-    - CRYING_END_GLOWS
+    - CRYING_CURRENTS_GLOWS

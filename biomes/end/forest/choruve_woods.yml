@@ -1,15 +1,15 @@
-id: CHORUVE_FOREST
+id: CHORUVE_WOODS
 type: BIOME
 extends: [ BASE_END, EQ_DEFAULT ]
 vanilla: minecraft:end_highlands
-color: $biomes/colors.yml:CHORUVE_FOREST
+color: $biomes/colors.yml:CHORUVE_WOODS
 
 colors:
   grass: 0x898096
   foliage: 0x898096
 
 palette:
-  - CHORUVE_GROUND: 319
+  - BLUE_LIGHT_TERRACOTTA: 319
 
 features:
   flora:

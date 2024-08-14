@@ -43,7 +43,7 @@ stages:
       - VOID: 1
       - STARFIELD: 1
       - VOID: 1
-      - VOID_AURORA: 1
+      - AURORA_FIELD: 1
       - VOID: 1
       - GALAXY_FIELD: 1
       - VOID: 1
@@ -51,6 +51,6 @@ stages:
       - VOID: 1
       - VOID_SEA: 1
       - VOID: 1
-      - VOID_WEBS: 1
+      - WEBBED_VOID: 1
 
   
