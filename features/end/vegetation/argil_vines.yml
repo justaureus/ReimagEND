@@ -14,7 +14,7 @@ locator:
     # Match air underground
     - type: PATTERN
       range: &range
-        min: -50
+        min: 0
         max: 319
       pattern:
         type: MATCH_AIR
