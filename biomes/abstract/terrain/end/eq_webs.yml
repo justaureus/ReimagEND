@@ -18,7 +18,7 @@ terrain:
         )
       )
     variables:
-      threshold: ${meta.yml:terrain-configuration.island-threshold}*3
+      threshold: ${meta.yml:terrain-configuration.island-threshold}*2.5
       max: ${meta.yml:terrain-configuration.island-max-height}
       min: ${meta.yml:terrain-configuration.island-min-height}
       taper: ${meta.yml:terrain-configuration.island-taper}

@@ -167,20 +167,20 @@ terrain-configuration:
   # Scale of default terrain
   # Default: 1
 
-  island-threshold: 0.3
+  island-threshold: 0.4
   # Threshold or density of default island
-  # Default: 0.3
+  # Default: 0.4
 
-  island-max-height: 250
+  island-max-height: 200
   # Max height of default terrain
   # Default: 250
 
-  island-min-height: -40
+  island-min-height: -70
   # Lowest height of default terrain
-  # Default: -40
+  # Default: -80
 
   island-taper: 100
-  # Range for narrowing deafault terrain
+  # Range for narrowing default terrain
   # Default: 100
 
   island-flatness: 5
@@ -200,21 +200,21 @@ terrain-configuration:
   # Scale of default terrain
   # Default: 1
 
-  aether-island-threshold: 0.3
+  aether-island-threshold: 0.4
   # Threshold or density of default island
-  # Default: 0.3
+  # Default: 0.4
 
-  aether-island-max-height: 250
+  aether-island-max-height: 200
   # Max height of default terrain
-  # Default: 250
+  # Default: 150
 
-  aether-island-min-height: -20
+  aether-island-min-height: -70
   # Lowest height of default terrain
-  # Default: -20
+  # Default: 0
 
   aether-island-taper: 100
-  # Range for narrowing deafault terrain
-  # Default: 100
+  # Range for narrowing default terrain
+  # Default: 50
 
   aether-island-flatness: 5
   # Flatness of default terrain
