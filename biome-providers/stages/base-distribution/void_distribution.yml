@@ -40,12 +40,17 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.void-biome-scale} / ${meta.yml:biome-distribution.global-scale}
     from: void
     to:
-      - VOID: 3
+      - VOID: 1
       - STARFIELD: 1
+      - VOID: 1
       - VOID_AURORA: 1
+      - VOID: 1
       - GALAXY_FIELD: 1
-      - ASTEROID_FIELD: 1   
+      - VOID: 1
+      - ASTEROID_FIELD: 1
+      - VOID: 1
       - VOID_SEA: 1
+      - VOID: 1
       - VOID_WEBS: 1
 
   
