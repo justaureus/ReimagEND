@@ -26,7 +26,7 @@ stages:
         frequency: 1 / ${meta.yml:biome-distribution.aether-cloud-sea-scale} / ${meta.yml:biome-distribution.global-scale}
     from: aether
     to:
-      - aether: 5
+      - aether: 8
       - AETHER_CLOUD_SEA: 1
 
   - type: REPLACE
@@ -62,6 +62,7 @@ stages:
     to: 
       aether-lands:
       - AETHER_AZURE_MEADOWS: 1
+      - AETHER_ORCHARD_WOODLANDS: 1
       - AETHER_TENEBROUS_THICKET: 1
       - AETHER_DRIFTFALLS: 1
       - AETHER_CRIMSIC_LANDSCAPES: 1
@@ -69,8 +70,7 @@ stages:
       - AETHER_BRAMBLE_WILDS: 1
       - AETHER_GOLDEN_FIELDS: 1
       - AETHER_HONEY_HEIGHTS: 1
-      - AETHER_ORCHARD_WOODLANDS: 1
-      
+
       aether-mountains:
       - AETHER_FRIGID_BLUFFS: 1
       - AETHER_PRISMATIC_RIDGES: 1
