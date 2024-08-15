@@ -3,7 +3,6 @@ num radius = 2;
 num sideLength = 10;
 num yTranslate = -3;
 
-str setBlock = "minecraft:cherry_wood";
 for (num h = 0; h < height; h = h + 1) {
     num r = radius;
     
@@ -11,12 +10,12 @@ for (num h = 0; h < height; h = h + 1) {
         for (num y = -r; y < r; y = y + 1) {
             for (num z = -r; z < r; z = z + 1) {
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                    structure(x, h + y+yTranslate, z, "argil_tree_spikes", "NONE");     
+                    structure(x, h + y+yTranslate, z, "aprichorus_tree_spikes", "NONE");     
                 }
             }
         }
     }
-    structure(0, height-1+yTranslate, 0,"argil_tree_bulb", "NONE");
+    structure(0, height-1+yTranslate, 0,"aprichorus_tree_bulb", "NONE");
 }
 
 
@@ -28,14 +27,14 @@ if (randomInt(2) == 0 && getBlock(sideLength-1, height+3, 0) == "minecraft:air")
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        structure(x + h, y+yTranslate + (height-1), z, "argil_tree_spikes", "NONE");        
+                        structure(x + h, y+yTranslate + (height-1), z, "aprichorus_tree_spikes", "NONE");        
                     }
                 }
             }
         }
     }
-    structure(sideLength-1, height-1+yTranslate, 0,"argil_tree_bulb", "NONE");
-    structure(sideLength-1, height-1+yTranslate, 0,"argil_tree_branch", "NONE");
+    structure(sideLength-1, height-1+yTranslate, 0,"aprichorus_tree_bulb", "NONE");
+    structure(sideLength-1, height-1+yTranslate, 0,"aprichorus_tree_branch", "NONE");
 }
 
 if (randomInt(2) == 0 && getBlock(-sideLength+1, height+3, 0) == "minecraft:air") {
@@ -46,14 +45,14 @@ if (randomInt(2) == 0 && getBlock(-sideLength+1, height+3, 0) == "minecraft:air"
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        structure(x - h, y+yTranslate + (height-1), z, "argil_tree_spikes", "NONE");        
+                        structure(x - h, y+yTranslate + (height-1), z, "aprichorus_tree_spikes", "NONE");        
                     }
                 }
             }
         }
     }
-    structure(-sideLength+1, height-1+yTranslate, 0,"argil_tree_bulb", "NONE");
-    structure(-sideLength+1, height-1+yTranslate, 0,"argil_tree_branch", "NONE");
+    structure(-sideLength+1, height-1+yTranslate, 0,"aprichorus_tree_bulb", "NONE");
+    structure(-sideLength+1, height-1+yTranslate, 0,"aprichorus_tree_branch", "NONE");
 }
 
 if (randomInt(2) == 0  && getBlock(0, height+3, sideLength-1) == "minecraft:air") {
@@ -64,15 +63,15 @@ if (randomInt(2) == 0  && getBlock(0, height+3, sideLength-1) == "minecraft:air"
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        structure(x, y+yTranslate + (height-1), z + h, "argil_tree_spikes", "NONE");        
+                        structure(x, y+yTranslate + (height-1), z + h, "aprichorus_tree_spikes", "NONE");        
                     }
                 }
             }
         }
     }
 
-    structure(0, height-1+yTranslate, sideLength-1,"argil_tree_bulb", "NONE");
-    structure(0, height-1+yTranslate, sideLength-1,"argil_tree_branch", "NONE");
+    structure(0, height-1+yTranslate, sideLength-1,"aprichorus_tree_bulb", "NONE");
+    structure(0, height-1+yTranslate, sideLength-1,"aprichorus_tree_branch", "NONE");
 }
 
 if (randomInt(2) == 0 && getBlock(0, height+3, -sideLength+1) == "minecraft:air") {
@@ -83,13 +82,13 @@ if (randomInt(2) == 0 && getBlock(0, height+3, -sideLength+1) == "minecraft:air"
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                        structure(x, y+yTranslate + (height-1), z - h, "argil_tree_spikes", "NONE");        
+                        structure(x, y+yTranslate + (height-1), z - h, "aprichorus_tree_spikes", "NONE");        
                     }
                 }
             }
         }
     }
 
-    structure(0, height-1+yTranslate, -sideLength+1,"argil_tree_bulb", "NONE");
-    structure(0, height-1+yTranslate, -sideLength+1,"argil_tree_branch", "NONE");
+    structure(0, height-1+yTranslate, -sideLength+1,"aprichorus_tree_bulb", "NONE");
+    structure(0, height-1+yTranslate, -sideLength+1,"aprichorus_tree_branch", "NONE");
 }

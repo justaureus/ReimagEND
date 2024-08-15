@@ -1,10 +1,10 @@
-id: ARGIL_TREES
+id: APRICHORUS_TREES
 type: FEATURE
 
 distributor:
   type: PADDED_GRID
   width: 14
-  padding: 17
+  padding: 7
   salt: 4357
 
 locator:
@@ -35,4 +35,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: argil_tree
+  structures: aprichorus_tree

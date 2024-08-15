@@ -8,7 +8,5 @@ palette:
   - BLACK_GRAY_TERRACOTTA: 319
 
 features:
-  trees:
-    - ARGIL_TREES
   preprocessors:
     - ARGIL_VINE_SPIKES

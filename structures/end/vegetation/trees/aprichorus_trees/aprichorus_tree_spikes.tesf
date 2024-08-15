@@ -2,6 +2,9 @@ num randPrecision = 100;
 
 num spikes = 2;
 
+str mainBlock = "orange_concrete";
+str altBlock = "orange_concrete_powder";
+
 // Direction vector
 num dx = (randomInt(randPrecision)/randPrecision);
 num dy = randomInt(randPrecision)/randPrecision;
@@ -43,9 +46,10 @@ for (num i = 0; i < spikes; i = i + 1) {
             for(num y = -r; y <= r; y = y + 1) {
                 for(num z = -r; z <= r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                      setBlock = "minecraft:gray_terracotta";
-                      if (randomInt(2) == 0) setBlock = "minecraft:black_terracotta";
-                      block(l*dx + x, l*dy + y - radius, l*dz + z, setBlock, false);
+                        if (randomInt(3) == 0) {
+                            block(l*dx + x, l*dy + y - radius, l*dz + z, altBlock, false);
+                            block(l*dx + x, l*dy + y - radius - 1, l*dz + z, mainBlock, false);
+                        } else block(l*dx + x, l*dy + y - radius, l*dz + z, mainBlock, false);
                     }
                 }
             }

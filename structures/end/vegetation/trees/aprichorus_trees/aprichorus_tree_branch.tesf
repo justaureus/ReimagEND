@@ -1,7 +1,7 @@
 num height = 10+((1+randomInt(3))*5);
 num radius = 2;
 num sideLength = 10;
-str setBlock = "minecraft:cherry_wood";
+
 for (num h = 0; h < height; h = h + 1) {
     num r = radius;
     if (h == height-1) r = 4;
@@ -9,12 +9,12 @@ for (num h = 0; h < height; h = h + 1) {
         for (num y = -r; y < r; y = y + 1) {
             for (num z = -r; z < r; z = z + 1) {
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < height-3) {
-                    structure(x, h + y, z, "argil_tree_spikes", "NONE");      
+                    structure(x, h + y, z, "aprichorus_tree_spikes", "NONE");      
                 }
             }
         }
     }
-    structure(0, height-1, 0, "argil_tree_bulb", "NONE"); 
+    structure(0, height-1, 0, "aprichorus_tree_bulb", "NONE"); 
 }
 
 if (randomInt(2) == 0) {
@@ -25,14 +25,14 @@ if (randomInt(2) == 0) {
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < sideLength-3) {
-                        structure(x + h, y + (height-1), z, "argil_tree_spikes", "NONE");      
+                        structure(x + h, y + (height-1), z, "aprichorus_tree_spikes", "NONE");      
                     }
                 }
             }
         }
     }
 
-    structure(sideLength-1, height-1, 0, "argil_tree_bulb", "NONE"); 
+    structure(sideLength-1, height-1, 0, "aprichorus_tree_bulb", "NONE"); 
 
     //for (num h = 0; h < height; h = h + 1) {
     //    num r = radius;
@@ -41,7 +41,7 @@ if (randomInt(2) == 0) {
     //        for (num y = -r; y < r; y = y + 1) {
     //            for (num z = -r; z < r; z = z + 1) {
     //                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-    //                    structure(x + (sideLength-1), h + y + height, z, "argil_tree_spikes", "NONE");      
+    //                    structure(x + (sideLength-1), h + y + height, z, "aprichorus_tree_spikes", "NONE");      
     //                }
     //            }
     //        }
@@ -64,13 +64,13 @@ if (randomInt(2) == 0) {
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < sideLength-3) {
-                        structure(x - h, y + (height-1), z, "argil_tree_spikes", "NONE");      
+                        structure(x - h, y + (height-1), z, "aprichorus_tree_spikes", "NONE");      
                     }
                 }
             }
         }
     }
-    structure(-sideLength+1, height-1, 0, "argil_tree_bulb", "NONE"); 
+    structure(-sideLength+1, height-1, 0, "aprichorus_tree_bulb", "NONE"); 
 
     //for (num h = 0; h < height; h = h + 1) {
     //    num r = radius;
@@ -79,7 +79,7 @@ if (randomInt(2) == 0) {
     //        for (num y = -r; y < r; y = y + 1) {
     //            for (num z = -r; z < r; z = z + 1) {
     //                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-    //                    structure(x - (sideLength-1), h + y + height, z, "argil_tree_spikes", "NONE");      
+    //                    structure(x - (sideLength-1), h + y + height, z, "aprichorus_tree_spikes", "NONE");      
     //                }
     //            }
     //        }
@@ -102,14 +102,14 @@ if (randomInt(2) == 0) {
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < sideLength-3) {
-                        structure(x, y + (height-1), z + h, "argil_tree_spikes", "NONE");      
+                        structure(x, y + (height-1), z + h, "aprichorus_tree_spikes", "NONE");      
                     }
                 }
             }
         }
     }
 
-    structure(0, height-1, sideLength-1, "argil_tree_bulb", "NONE"); 
+    structure(0, height-1, sideLength-1, "aprichorus_tree_bulb", "NONE"); 
 
     //for (num h = 0; h < height; h = h + 1) {
     //    num r = radius;
@@ -118,7 +118,7 @@ if (randomInt(2) == 0) {
     //        for (num y = -r; y < r; y = y + 1) {
     //            for (num z = -r; z < r; z = z + 1) {
     //                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-    //                    structure(x , h + y + height, z + (sideLength-1), "argil_tree_spikes", "NONE");      
+    //                    structure(x , h + y + height, z + (sideLength-1), "aprichorus_tree_spikes", "NONE");      
     //                }
     //            }
     //        }
@@ -141,14 +141,14 @@ if (randomInt(2) == 0) {
             for (num y = -r; y < r; y = y + 1) {
                 for (num z = -r; z < r; z = z + 1) {
                     if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2) && h < sideLength-3) {
-                        structure(x, y + (height-1), z - h, "argil_tree_spikes", "NONE");      
+                        structure(x, y + (height-1), z - h, "aprichorus_tree_spikes", "NONE");      
                     }
                 }
             }
         }
     }
 
-    structure(0, height-1, -sideLength+1, "argil_tree_bulb", "NONE"); 
+    structure(0, height-1, -sideLength+1, "aprichorus_tree_bulb", "NONE"); 
 
     //for (num h = 0; h < height; h = h + 1) {
     //    num r = radius;
@@ -157,7 +157,7 @@ if (randomInt(2) == 0) {
     //        for (num y = -r; y < r; y = y + 1) {
     //            for (num z = -r; z < r; z = z + 1) {
     //                if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-    //                    structure(x , h + y + height, z - (sideLength-1), "argil_tree_spikes", "NONE");      
+    //                    structure(x , h + y + height, z - (sideLength-1), "aprichorus_tree_spikes", "NONE");      
     //                }
     //            }
     //        }

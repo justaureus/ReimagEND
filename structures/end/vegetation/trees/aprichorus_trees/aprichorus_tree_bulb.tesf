@@ -1,15 +1,18 @@
 num radius = 4;
 num sideLength = 10;
-str setBlock = "";
+
+str mainBlock = "orange_concrete";
+str altBlock = "orange_concrete_powder";
 
 num r = radius;
 for (num x = -r; x <= r; x = x + 1) {
     for (num y = -r; y <= r; y = y + 1) {
         for (num z = -r; z <= r; z = z + 1) {
             if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
-                setBlock = "minecraft:gray_terracotta";
-                if (randomInt(2) == 0) setBlock = "minecraft:black_terracotta";
-                block(x, y, z, setBlock, false);       
+                if (randomInt(3) == 0) {
+                block(x, y, z, altBlock, false);
+                block(x, y-1, z, mainBlock, false);
+                } else block(x, y, z, mainBlock, false);
             }
 
             if ((y == -1 || y == 1) &&
