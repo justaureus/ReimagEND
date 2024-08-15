@@ -21,7 +21,7 @@ locator:
   locators:
     - type: RANDOM
       height: &range
-        min: 0
+        min: 10
         max: 180
       amount: 1
       salt: 7689
