@@ -9,7 +9,7 @@ palette:
 
 features:
   trees:
-    - BUBBLE_TREES
+    - BURBLE_TREES
     - PURPLE_TENDRILS_UP
     - PURPLE_TENDRILS_DOWN
     - PURPLE_TENDRILS_SIDE
