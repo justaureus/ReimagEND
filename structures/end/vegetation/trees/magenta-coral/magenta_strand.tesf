@@ -44,7 +44,7 @@ for(num f = 0; f <= 2; f = f + 1) {
                                 setBlock = "minecraft:magenta_concrete_powder";
                                 block(l*dx + x, l*dy + y - radius + yTranslate - 1, l*dz + z, "minecraft:magenta_concrete", false); 
                             }
-                            if (randomInt(4) == 0) setBlock = "minecraft:blue_terracotta";
+                            if (randomInt(4) == 0) setBlock = "minecraft:magenta_stained_glass";
                             replace = true;
                         } else if (f == 1) {
                             replace = false;

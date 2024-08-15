@@ -57,7 +57,7 @@ for(num h = 0; h <= length; h = h + 1) {
                 if (pow(x,2)+pow(y,2)+pow(z,2) < pow(r,2)) {
                     setBlock = trunkBlock;
                     if (randomInt(2) == 0) setBlock = altTrunkBlock;
-                    if (randomInt(4) == 0) setBlock = "minecraft:blue_terracotta";
+                    if (randomInt(4) == 0) setBlock = "minecraft:magenta_stained_glass";
                     block(x + xTranslate, h + y - trunkRadius, z + zTranslate, setBlock, false);                  
                 }
             }
@@ -111,7 +111,7 @@ for (num b = 1; b <= topBranches; b = b + 1) {
     for (num l = 0; l <= branchLength; l = l + 1) {
         setBlock = trunkBlock;
         if (randomInt(2) == 0) setBlock = altTrunkBlock;
-        if (randomInt(4) == 0) setBlock = "minecraft:blue_terracotta";
+        if (randomInt(4) == 0) setBlock = "minecraft:magenta_stained_glass";
         block(l*dx+ox, l*dy+oy, l*dz+oz, setBlock);
         block(l*dx+ox+1, l*dy+oy, l*dz+oz, setBlock);
         block(l*dx+ox-1, l*dy+oy, l*dz+oz, setBlock);

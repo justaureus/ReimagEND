@@ -49,7 +49,7 @@ for (num a = 0; a < amount; a = a + 1) {
                             block(cx + x, cy + y -1 , cz + z, mainBlock, true); 
                         } else {
                             if (randomInt(4) == 0) {
-                                setBlock = "minecraft:blue_terracotta";
+                                setBlock = "minecraft:magenta_stained_glass";
                             } else block(cx + x, cy + y, cz + z, mainBlock, true); 
                         }
                     }

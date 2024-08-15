@@ -48,7 +48,7 @@ for (num a = 0; a < amount; a = a + 1) {
                             block(cx + x, cy + y, cz + z, altBlock, true); 
                             block(cx + x, cy + y -1 , cz + z, mainBlock, true); 
                         } else if (randomInt(6) == 0) {
-                            block(cx + x, cy + y, cz + z, "minecraft:blue_terracotta", true); 
+                            block(cx + x, cy + y, cz + z, "minecraft:magenta_stained_glass", true); 
                         } else {
                            block(cx + x, cy + y, cz + z, mainBlock, true); 
                         }
@@ -118,7 +118,7 @@ for (num a = 0; a < amount; a = a + 1) {
                                 block(cx + tx + x, cy + ty + y, cz + tz + z, mainBlock, true); 
                             } 
                         } else block(cx + tx + x, cy + ty + y, cz + tz + z, "minecraft:purple_concrete", true); 
-                        if (randomInt(4) == 0) block(cx + tx + x, cy + ty + y, cz + tz + z, "minecraft:blue_terracotta", true); 
+                        if (randomInt(4) == 0) block(cx + tx + x, cy + ty + y, cz + tz + z, "minecraft:magenta_stained_glass", true); 
                     } else if (pow(x,2)+pow(y,2)+pow(z,2)<pow(r,2) + 1) { 
                         if (randomInt(50) == 0) block(cx + tx + x, cy + ty + y, cz + tz + z, "minecraft:light[level=15]", false);
                     }
