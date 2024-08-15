@@ -49,4 +49,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: bubble_tree
+  structures: burble_tree
