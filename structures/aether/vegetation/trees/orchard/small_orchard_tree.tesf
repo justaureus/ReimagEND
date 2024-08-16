@@ -37,6 +37,11 @@ str sideBranchBlockX = "minecraft:stripped_jungle_log[axis=x]";
 str sideBranchBlockY = "minecraft:stripped_jungle_log[axis=y]";
 str sideBranchBlockZ = "minecraft:stripped_jungle_log[axis=z]";
 
+if (getBlock(3,-2,0) == "minecraft:air") fail;
+if (getBlock(-3,-2,0) == "minecraft:air") fail;
+if (getBlock(0,-2,3) == "minecraft:air") fail;
+if (getBlock(0,-2,-3) == "minecraft:air") fail;
+
 num branchAngle = randomInt(randPrecision)/randPrecision*2*pi;
 
 // tree trunk
