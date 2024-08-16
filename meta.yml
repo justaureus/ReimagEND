@@ -138,9 +138,9 @@ biome-distribution:
   # Controls the scale of aether regions. 
   # Default: 1000
 
-  aether-cloud-sea-scale: 500
+  aether-cloud-sea-scale: 200
   # Controls the scale of cloud sea zones. 
-  # Default: 500
+  # Default: 200
 
   aether-ancient-scale: 1000
   # Controls the scale of ancient aether zones. 
