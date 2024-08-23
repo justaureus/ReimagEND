@@ -57,8 +57,8 @@ structures:
     frequency: 0.005
   structures: 
     #- red_aurora_segment: 1 
-    #- yellow_aurora_segment: 1 
-    - lime_aurora_segment: 1 
+    - yellow_aurora_segment: 1
+    #- lime_aurora_segment: 1
     #- green_aurora_segment: 1 
     #- cyan_aurora_segment: 1
     - light_blue_aurora_segment: 1
