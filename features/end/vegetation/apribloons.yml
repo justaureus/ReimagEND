@@ -1,0 +1,47 @@
+id: APRIBLOONS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 18
+  padding: 14
+  salt: 4358
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 0
+        max: 235
+      amount: 1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:end_stone
+        offset: -5
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 10
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:orange_concrete
+          - minecraft:end_stone
+          - minecraft:orange_concrete_powder
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: apribloon_procedural
