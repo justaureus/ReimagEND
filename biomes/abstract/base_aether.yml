@@ -13,8 +13,8 @@ colors:
 #  water: 0xbadfe6
 #  water-fog: 0xbadfe6
 #  sky: 0xc8e8e7
-  grass: 0x8496b0
-  foliage: 0x8496b0
+  grass: 0x91BD59
+  foliage: 0x77AB2F
 
 # End Atmosphere
 # colors:

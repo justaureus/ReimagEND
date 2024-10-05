@@ -26,6 +26,7 @@ distribution-map: &distribution-map
 
 
 stages:
+  # ReimagEnd Aether Pockets
   - type: REPLACE
     sampler: *distribution-map
     from: frontier
@@ -35,3 +36,12 @@ stages:
       - AETHER_CLOUD_SEA: 8
       - STARFIELD: 96
       - frontier: 32
+
+  # BetterEnd Aether Pockets
+  - type: REPLACE
+    sampler: *distribution-map
+    from: betterEnd
+    to:
+      - betterEnd-aether: 48
+      - VOID: 96
+      - betterEnd: 32

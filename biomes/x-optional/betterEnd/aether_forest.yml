@@ -1,0 +1,10 @@
+id: AETHER_FOREST
+type: BIOME
+extends: [ AETHER ]
+color: $biomes/colors.yml:AETHER_FOREST
+vanilla: minecraft:the_end
+
+features:
+  trees:
+    - OAK_BUSHES
+    - OAK_TREES

@@ -1,0 +1,10 @@
+id: AETHER_HIGHLANDS_FOREST
+type: BIOME
+extends: [ AETHER_HIGHLANDS ]
+color: $biomes/colors.yml:AETHER_HIGHLANDS
+vanilla: minecraft:the_end
+
+features:
+  trees:
+    - SPRUCE_BUSHES
+    - SPRUCE_TREES
